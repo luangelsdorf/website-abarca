@@ -1,5 +1,30 @@
 import '../styles/styles.scss';
+import { Merriweather } from '@next/font/google';
+import { Inter } from '@next/font/google';
+
+const merriweather = Merriweather({
+  display: 'swap',
+  subsets: ['latin'],
+});
+
+const inter = Inter({
+  display: 'swap',
+  subsets: ['latin'],
+});
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <style jsx global>{`
+        html {
+          --merriweather: ${merriweather.style.fontFamily};
+          --inter: ${inter.style.fontFamily};
+          font-family: var(--inter);
+        }
+      `}
+      </style>
+
+      <Component {...pageProps} />
+    </>
+  )
 }
