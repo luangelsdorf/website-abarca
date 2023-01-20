@@ -19,7 +19,6 @@ export default function App({ Component, pageProps }) {
         html {
           --merriweather: ${merriweather.style.fontFamily};
           --inter: ${inter.style.fontFamily};
-          font-family: var(--inter);
         }
       `}
       </style>
