@@ -32,8 +32,15 @@ body {
   font: var(--body-default);
   font-family: var(--inter);
   background-color: rgb(var(--black));
+  color: rgb(var(--gray));
 }
 
 small {
   font: var(--detail-bold);
+}
+
+.overline {
+  padding: 16px 24px;
+  background-color: rgb(var(--black));
+  color: rgb(var(--dark-gray));
 }
