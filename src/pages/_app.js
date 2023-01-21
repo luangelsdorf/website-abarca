@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap-grid.css';
 import '../styles/styles.scss';
 import { Merriweather } from '@next/font/google';
 import { Inter } from '@next/font/google';
