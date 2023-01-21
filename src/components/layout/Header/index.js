@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 export default function Header({ content }) {
   return (
-    <header className={styles.header}>
-      <div className="container">
+    <div className={`container ${styles.header}`}>
+      <header>
         <nav>
           <Link href="/" style={{ color: 'rgb(var(--white))' }}>
             <Logo />
@@ -29,7 +29,7 @@ export default function Header({ content }) {
             <Link href="#" className="btn sm">Começar Projeto</Link>
           </div>
         </nav>
-      </div>
-    </header>
+      </header>
+    </div>
   )
 }

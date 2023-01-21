@@ -9,8 +9,6 @@ export default function Home() {
         <meta name="description" content="A Br.Storm é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
       </Head>
 
-      <Header />
-      
       <main>
         Home
       </main>

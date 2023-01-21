@@ -1,9 +1,12 @@
 .header {
-  backdrop-filter: blur(10px);
   position: fixed;
-  top: 0;
-  width: 100%;
+  z-index: 999;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  backdrop-filter: blur(10px);
   mix-blend-mode: difference;
+  clip-path: inset(0 12px round 56px);
 
   nav {
     display: flex;
