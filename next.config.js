@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
 
   webpack(config) {
-    config.modules.push({
+    config.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
       use: [
@@ -16,7 +16,9 @@ const nextConfig = {
           }
         }
       ],
-    })
+    });
+
+    return config;
   }
 }
 

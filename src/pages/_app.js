@@ -6,6 +6,7 @@ import { Inter } from '@next/font/google';
 const merriweather = Merriweather({
   display: 'swap',
   subsets: ['latin'],
+  weight: ['400'],
 });
 
 const inter = Inter({

@@ -1,11 +1,20 @@
 .btn {
   font: var(--body-bold);
   padding: 16px 24px;
+  border: 1px solid;
   color: rgb(var(--black));
   background-color: rgb(var(--white));
+  border-color: rgb(var(--white));
   display: inline-flex;
   align-items: center;
+  border-radius: 56px;
   gap: 8px;
+  transition: all 350ms;
+
+  &:hover {
+    color: rgb(var(--white));
+    background-color: rgb(var(--black));
+  }
 
   &.sm {
     padding: 12px 24px;
@@ -17,5 +26,10 @@
   &.outline {
     color: rgb(var(--white));
     background-color: rgb(var(--black));
+
+    &:hover {
+      color: rgb(var(--black));
+      background-color: rgb(var(--white));
+    }
   }
 }
