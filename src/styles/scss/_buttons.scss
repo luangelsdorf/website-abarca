@@ -1,0 +1,21 @@
+.btn {
+  font: var(--body-bold);
+  padding: 16px 24px;
+  color: rgb(var(--black));
+  background-color: rgb(var(--white));
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  &.sm {
+    padding: 12px 24px;
+  }
+  &.lg {
+    padding: 16px 32px;
+  }
+
+  &.outline {
+    color: rgb(var(--white));
+    background-color: rgb(var(--black));
+  }
+}
