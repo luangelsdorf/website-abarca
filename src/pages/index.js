@@ -1,16 +1,19 @@
 import Head from 'next/head';
-import Header from 'src/components/layout/Header';
+import Hero from 'src/components/landing-pages/brand/Hero';
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>Brand | Br.Storm</title>
-        <meta name="description" content="A Br.Storm é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
       </Head>
 
       <main>
-        Home
+        <Hero />
+        <h1>1</h1>
+        <h1>2</h1>
+        <h1>3</h1>
+        <h1>4</h1>
       </main>
     </>
   )

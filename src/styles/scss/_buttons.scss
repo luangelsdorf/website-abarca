@@ -1,6 +1,6 @@
 .btn {
   font: var(--body-bold);
-  padding: 16px 24px;
+  padding: 12px 24px;
   border: 1px solid;
   color: rgb(var(--black));
   background-color: rgb(var(--white));
@@ -17,7 +17,7 @@
   }
 
   &.sm {
-    padding: 12px 24px;
+    padding: 8px 24px;
   }
   &.lg {
     padding: 16px 32px;
