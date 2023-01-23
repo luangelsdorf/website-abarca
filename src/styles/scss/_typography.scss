@@ -37,9 +37,24 @@ strong {
 }
 
 .overline {
-  padding: 16px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 24px;
   background-color: rgb(var(--black));
-  color: rgb(var(--dark-gray));
+  color: rgb(var(--light-gray));
+  border: 1px solid rgb(var(--dark-gray));
+  border-radius: 56px;
+}
+
+.h-sans {
+  font-family: var(--inter);
+  color: rgb(var(--light-gray));
+}
+
+.h-serif {
+  font-family: var(--merriweather);
+  color: rgb(var(--white));
 }
 
 p,
