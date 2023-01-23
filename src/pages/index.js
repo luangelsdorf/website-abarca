@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Section from 'src/components/common/Section';
+import About from 'src/components/landing-pages/brand/About';
 import Hero from 'src/components/landing-pages/brand/Hero';
 
 export default function Home() {
@@ -9,7 +11,13 @@ export default function Home() {
       </Head>
 
       <main>
-        <Hero />
+        <Section id="home">
+          <Hero />
+        </Section>
+
+        <Section id="about" pt="200" pb="200">
+          <About />
+        </Section>
       </main>
     </>
   )

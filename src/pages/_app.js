@@ -9,6 +9,7 @@ const merriweather = Merriweather({
   display: 'swap',
   subsets: ['latin'],
   weight: ['400'],
+  style: 'italic',
 });
 
 const inter = Inter({
