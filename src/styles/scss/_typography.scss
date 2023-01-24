@@ -28,14 +28,6 @@ body {
   color: rgb(var(--gray));
 }
 
-small {
-  font: var(--detail-default);
-}
-strong {
-  font: var(--body-bold);
-  color: rgb(var(--white));
-}
-
 .overline {
   display: inline-flex;
   align-items: center;
@@ -91,8 +83,27 @@ h6 {
   }
 }
 
+small {
+  font: var(--detail-default);
+}
+strong {
+  font: var(--body-bold);
+  color: rgb(var(--white));
+}
+
 p {
   color: rgb(var(--gray));
+}
+
+a {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+  transition: all 350ms;
+
+  &:hover {
+    color: rgb(var(--white));
+  }
 }
 
 h1 {

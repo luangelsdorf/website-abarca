@@ -1,4 +1,4 @@
-@use "../../../../styles/scss/mixins";
+@use "../../../styles/scss/mixins";
 
 .section {
 }
@@ -6,7 +6,7 @@
 .learnMore {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 86px;
   margin-bottom: 150px;
 

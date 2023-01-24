@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import Section from 'src/components/common/Section';
 import About from 'src/components/landing-pages/brand/About';
+import Contact from 'src/components/home/Contact';
 import Hero from 'src/components/landing-pages/brand/Hero';
 import Projects from 'src/components/landing-pages/brand/Projects';
+import Footer from 'src/components/layout/Footer';
 
 export default function Home() {
   return (
@@ -23,11 +25,9 @@ export default function Home() {
         <Section id="projects" pt="80" pt="120">
           <Projects />
         </Section>
-        
-        <Section id="contact" pt="120" pb="96">
-          
-        </Section>
       </main>
+
+      <Footer />
     </>
   )
 }

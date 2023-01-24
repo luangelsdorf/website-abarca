@@ -26,16 +26,6 @@ blockquote {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: all 350ms;
-
-  &:hover {
-    color: rgb(var(--white));
-  }
-}
-
 address {
   font-style: normal;
 }

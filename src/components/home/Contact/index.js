@@ -8,7 +8,7 @@ export default function Contact({ content }) {
     <div className={styles.section}>
       <div className="container">
         <div className="row">
-          <div className="col-12 col-lg-10 offset-lg-1">
+          <div className="col-12 col-xxl-10 offset-xxl-1">
             <div className={styles.learnMore}>
               <h2>{'Vamos Iniciar \nseu Projeto'}</h2>
               <p>Quer saber mais sobre como podemos lhe ajudar ou sanar alguma dúvida? <strong>Marque uma reunião</strong>, será um prazer lhe atender.</p>

@@ -1,0 +1,27 @@
+.footer {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgb(var(--shadow));
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    font: var(--detail-default);
+    color: rgb(var(--shadow));
+
+    &:first-child {
+      svg {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    gap: 16px;
+  }
+}
