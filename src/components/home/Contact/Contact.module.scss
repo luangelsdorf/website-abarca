@@ -1,0 +1,63 @@
+@use "../../../../styles/scss/mixins";
+
+.section {
+}
+
+.learnMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 86px;
+  margin-bottom: 150px;
+
+  h2 {
+    font: var(--heading-serif-large);
+  }
+
+  p {
+    width: 336px;
+  }
+
+  a {
+    display: flex;
+    height: 120px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(var(--dark-gray));
+    border-radius: 50%;
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  white-space: break-spaces;
+
+  a {
+    display: block;
+  }
+
+  & > div {
+    font: var(--detail-default);
+    color: rgb(var(--dark-gray));
+
+    h3 {
+      font: var(--detail-bold);
+      color: rgb(var(--gray));
+      margin-bottom: 8px;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      text-align: center;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  @include mixins.sm {
+    white-space: normal;
+  }
+}
