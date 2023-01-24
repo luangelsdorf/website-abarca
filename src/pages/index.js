@@ -5,6 +5,7 @@ import Contact from 'src/components/home/Contact';
 import Hero from 'src/components/landing-pages/brand/Hero';
 import Projects from 'src/components/landing-pages/brand/Projects';
 import Footer from 'src/components/layout/Footer';
+import Testimonials from 'src/components/landing-pages/brand/Testimonials';
 
 export default function Home() {
   return (
@@ -22,8 +23,12 @@ export default function Home() {
           <About />
         </Section>
 
-        <Section id="projects" pt="80" pt="120">
+        <Section id="projects" pt="80" pb="120">
           <Projects />
+        </Section>
+
+        <Section id="testimonials" pt="160" pb="160">
+          <Testimonials />
         </Section>
       </main>
 

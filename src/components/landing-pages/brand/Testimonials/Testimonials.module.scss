@@ -1,0 +1,16 @@
+.section {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 96px;
+
+    p {
+      padding: 0 56px;
+    }
+
+    a {
+      align-self: flex-end;
+    }
+  }
+}

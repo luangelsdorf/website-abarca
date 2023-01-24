@@ -1,0 +1,16 @@
+.card {
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid rgb(var(--shadow));
+
+  blockquote {
+    margin: 40px 0;
+  }
+
+  figcaption {
+    :first-child {
+      font: var(--body-bold);
+      color: rgb(var(--white));
+    }
+  }
+}
