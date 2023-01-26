@@ -1,0 +1,100 @@
+@mixin floatingLabel {
+  transform: translateY(-15%) scale(0.75);
+  color: rgb(var(--dark-gray));
+}
+
+input,
+textarea,
+select {
+  border: 0;
+
+  font: var(--body-default);
+  background-color: transparent;
+  color: rgb(var(--light-gray));
+  padding: 20px 0;
+  padding-right: 16px;
+  width: 100%;
+  height: 72px;
+  border-bottom: 1px solid rgb(var(--shadow));
+  transition: all 350ms;
+
+  &::placeholder {
+    color: rgb(51, 51, 51, 0.5);
+  }
+
+  &:focus {
+    outline: 0;
+    border-bottom-color: rgb(var(--white));
+  }
+}
+
+select {
+  appearance: none;
+  background-image: url("/images/icons/CaretDown.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 16px) center;
+
+  option {
+    color: rgb(var(--gray));
+    background-color: rgb(var(--black));
+  }
+
+  & + label {
+    pointer-events: none;
+  }
+
+  @supports selector(:has(option:not(:first-child):checked)) {
+    &:focus,
+    &:has(option:not(:first-child):checked) {
+      & + label {
+        @include floatingLabel;
+      }
+    }
+  }
+}
+
+textarea {
+  font-family: inherit;
+  resize: none;
+  overflow: hidden;
+
+  &:focus {
+    height: 4lh;
+  }
+}
+
+.floating {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  input[type="text"],
+  textarea {
+    &::placeholder {
+      transition: all 350ms;
+      opacity: 0;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      & + label {
+        @include floatingLabel;
+      }
+
+      &::placeholder {
+        opacity: 1;
+      }
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(var(--light-gray));
+    transform-origin: left;
+    transform: translateY(65%);
+    transition: all 350ms;
+  }
+}
