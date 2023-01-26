@@ -4,6 +4,7 @@ import React from 'react';
 export default function Button({
   children,
   link = false,
+  type = 'button',
   btnElement = false,
   divElement = false,
   nativeLink = false,
@@ -27,7 +28,7 @@ export default function Button({
 
   if (btnElement) {
     return (
-      <button {...baseProps} type="button">
+      <button {...baseProps} type={type}>
         <Children />
       </button>
     )

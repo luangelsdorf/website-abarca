@@ -1,0 +1,50 @@
+.section {
+}
+
+.textContent {
+  h2 {
+    margin-bottom: 72px;
+  }
+
+  p {
+    &:first-of-type {
+      margin-bottom: 40px;
+    }
+
+    span {
+      font: var(--body-bold);
+      color: rgb(var(--white));
+    }
+  }
+}
+
+.form {
+  form {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    width: 100%;
+
+    & > div {
+      &:nth-child(1),
+      &:nth-child(4) {
+        flex-grow: 1;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        flex-grow: 0;
+      }
+      &:nth-child(5),
+      &:nth-child(6) {
+        width: calc(50% - 12px);
+      }
+      &:nth-last-child(2) {
+        width: 100%;
+      }
+    }
+
+    [type="submit"] {
+      margin-top: 24px;
+    }
+  }
+}

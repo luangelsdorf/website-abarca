@@ -70,6 +70,8 @@ textarea {
   flex-direction: column;
 
   input[type="text"],
+  input[type="tel"],
+  input[type="email"],
   textarea {
     &::placeholder {
       transition: all 350ms;
@@ -96,5 +98,6 @@ textarea {
     transform-origin: left;
     transform: translateY(65%);
     transition: all 350ms;
+    cursor: text;
   }
 }
