@@ -5,6 +5,8 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Button from 'src/components/common/Button';
 import Arrow from 'public/images/icons/Arrow.svg';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Projects({ content }) {
 
@@ -29,6 +31,51 @@ export default function Projects({ content }) {
     return () => ctx.revert();
   }, []);
 
+  const data = [
+    {
+      client: 'PetsVida',
+      segment: 'Pet Shop E-commerce',
+      services: 'Identidade Visual',
+      local: "São Paulo | Brasil",
+    },
+    {
+      client: 'Maptrack',
+      segment: 'Startup de Rastreamento',
+      services: 'Identidade Visual',
+      local: "Brisbane | Austrália",
+    },
+    {
+      client: 'M2',
+      segment: 'Empreendimentos',
+      services: 'Identidade Visual',
+      local: "Araricá | Brasil",
+    },
+    {
+      client: 'Bronzo',
+      segment: 'Restaurante Italiano',
+      services: 'Website\nIdentidade Visual',
+      local: "Londres | Inglaterra",
+    },
+    {
+      client: 'Abarca',
+      segment: 'Escritório de Relações Públicas',
+      services: 'Identidade Visual',
+      local: "Campo Bom | Brasil",
+    },
+    {
+      client: 'Rivana',
+      segment: 'E-commerce de Vestuário',
+      services: 'Identidade Visual',
+      local: "Doha | Catar",
+    },
+    {
+      client: 'Casulo',
+      segment: 'Centro Canino',
+      services: 'Website\nIdentidade Visual',
+      local: "Araricá | Brasil",
+    },
+  ]
+
   return (
     <div className={styles.section}>
       <header>
@@ -40,27 +87,31 @@ export default function Projects({ content }) {
       </header>
       <div className="container">
         <div className="row flex-nowrap horizontal">
-          <div className="col-12 col-lg-8">
-            <div className={styles.project} />
-          </div>
-          <div className="col-12 col-lg-8">
-            <div className={styles.project} />
-          </div>
-          <div className="col-12 col-lg-8">
-            <div className={styles.project} />
-          </div>
-          <div className="col-12 col-lg-8">
-            <div className={styles.project} />
-          </div>
-          <div className="col-12 col-lg-8">
-            <div className={styles.project} />
-          </div>
-          <div className="col-12 col-lg-8">
-            <div className={styles.project} />
-          </div>
-          <div className="col-12 col-lg-8">
-            <div className={styles.project} />
-          </div>
+
+          {
+            data.map((project, index) => (
+              <div className="col-12 col-lg-8" key={index}>
+                <div className={styles.project}>
+                  <Link href="#">
+                    <Image sizes="100vw" src={`/images/portfolio/hover/${project.client}.jpg`} fill alt="" />
+                    <Image sizes="100vw" src={`/images/portfolio/${project.client}.jpg`} fill alt="" />
+                  </Link>
+                  <div className={styles.infos}>
+                    <div>
+                      <h3>{project.client}</h3>
+                      <p>{project.segment}</p>
+                    </div>
+                    <p>{project.services}</p>
+                  </div>
+                  <div className={styles.localTag}>
+                    <div><span>{project.local}</span></div>
+                    <Pin />
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+
           <div className={`col-12 col-lg-8 ${styles.cta}`}>
             <div className={styles.project}>
               <h3 className="sans-before">{'Veja como podemos \ntransformar sua marca'}</h3>
