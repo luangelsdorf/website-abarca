@@ -10,8 +10,11 @@ export default function About({ content }) {
         <div className="row">
           <div className="col-12 col-lg-4 offset-lg-1">
             <div className={styles.intro}>
-              <h2 className="sans-before">Sua marca muito além do visual</h2>
-              <Button href="" className="outline lg" RightIcon={Arrow}>Comece seu Projeto Agora</Button>
+              <h2>
+                <span className="h-sans">Sua marca muito </span>
+                <span>além do visual</span>
+              </h2>
+              <Button href="#" className="outline lg d-none d-lg-flex" RightIcon={Arrow}>Comece seu Projeto Agora</Button>
             </div>
           </div>
           <div className="col-12 col-lg-5 offset-lg-1">
@@ -19,8 +22,9 @@ export default function About({ content }) {
               <p>A <span>Br.Storm</span> é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais.</p>
               <p>Criamos marcas fortes e memoráveis que refletem a essência da sua empresa. Elaboramos desde a ideia até as mais diversas aplicações do seu projeto.</p>
             </div>
+            <Button href="#" className="lg d-flex d-lg-none" RightIcon={Arrow}>Comece seu Projeto Agora</Button>
           </div>
-          <div className="col-12 col-lg-10 offset-lg-1">
+          <div className="col-lg-10 offset-lg-1 d-none d-lg-block">
             <div className={styles.details}>
               <article>
                 <h3>{'Feito Sob Medida \npara o seu Negócio'}</h3>

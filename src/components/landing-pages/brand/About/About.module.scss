@@ -1,9 +1,15 @@
+@use '../../../../styles/scss/mixins';
+
 .section {
 }
 
 .intro {
   h2 {
     margin-bottom: 56px;
+
+    @include mixins.lg {
+      margin-bottom: 48px;
+    }
   }
 }
 
@@ -21,6 +27,12 @@
         font: var(--body-bold);
       }
     }
+  }
+
+  @include mixins.lg {
+    height: auto;
+
+    margin-bottom: 56px;
   }
 }
 
