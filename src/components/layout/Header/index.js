@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Header.module.scss';
 import Logo from 'public/images/brstorm.svg';
 import Link from 'next/link';
+import Open from 'public/images/icons/Open.svg';
 
 export default function Header({ content }) {
   return (
@@ -11,7 +12,7 @@ export default function Header({ content }) {
           <Link href="/" style={{ color: 'rgb(var(--white))' }}>
             <Logo />
           </Link>
-          <ul className="collapse" id="links">
+          <ul className="collapse d-none d-lg-flex" id="links">
             <li>
               <Link href="#">Sobre</Link>
             </li>
@@ -26,7 +27,8 @@ export default function Header({ content }) {
             </li>
           </ul>
           <div>
-            <Link href="#" className="btn sm">Começar Projeto</Link>
+            <Link href="#" className="btn sm d-none d-lg-flex">Começar Projeto</Link>
+            <button type="button" className="btn d-flex d-lg-none"><Open /></button>
           </div>
         </nav>
       </header>

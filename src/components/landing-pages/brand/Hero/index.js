@@ -7,31 +7,38 @@ export default function Hero({ content }) {
   return (
     <div className={styles.section}>
       <header>
-        <h1 className="sans-after">{'Dê vida à sua marca \ne torne-a inesquecível'}</h1>
+        {/* <h1 className="sans-after">{'Dê vida à sua marca \ne torne-a inesquecível'}</h1> */}
+        <h1>
+          <span>Dê vida à sua marca</span>
+          <br />
+          <span className="h-sans d-none d-lg-inline">e torne-a inesquecível</span>
+        </h1>
         <p>{'Marque sua presença no mercado com uma marca forte e memorável. \nVeja abaixo como podemos lhe ajudar nessa jornada.'}</p>
-        <Button className="outline sm" href="#" RightIcon={Arrow}>Ver Projetos</Button>
+        <Button className="outline sm" href="#" RightIcon={Arrow}>
+          <span className="d-none d-lg-inline">Ver Projetos</span>
+        </Button>
       </header>
 
       <div className={styles.mosaic}>
         <div>
-          <div style={{ height: '480px', backgroundColor: 'rgb(var(--shadow))' }} />
-          <div style={{ height: '480px', backgroundColor: 'rgb(var(--shadow))' }} />
+          <div className={styles.lg} />
+          <div className={styles.lg} />
         </div>
         <div>
-          <div style={{ height: '320px', backgroundColor: 'rgb(var(--shadow))' }} />
-          <div style={{ height: '400px', backgroundColor: 'rgb(var(--shadow))' }} />
+          <div className={styles.sm} />
+          <div className={styles.md} />
         </div>
         <div>
-          <div style={{ height: '480px', backgroundColor: 'rgb(var(--shadow))' }} />
-          <div style={{ height: '320px', backgroundColor: 'rgb(var(--shadow))' }} />
+          <div className={styles.lg} />
+          <div className={styles.sm} />
         </div>
         <div>
-          <div style={{ height: '480px', backgroundColor: 'rgb(var(--shadow))' }} />
-          <div style={{ height: '320px', backgroundColor: 'rgb(var(--shadow))' }} />
+          <div className={styles.lg} />
+          <div className={styles.sm} />
         </div>
         <div>
-          <div style={{ height: '480px', backgroundColor: 'rgb(var(--shadow))' }} />
-          <div style={{ height: '320px', backgroundColor: 'rgb(var(--shadow))' }} />
+          <div className={styles.lg} />
+          <div className={styles.sm} />
         </div>
       </div>
     </div>
