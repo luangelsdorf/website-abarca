@@ -1,4 +1,5 @@
 import 'swiper/css';
+import 'swiper/css/autoplay';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import '../styles/styles.scss';
 import { Merriweather } from '@next/font/google';

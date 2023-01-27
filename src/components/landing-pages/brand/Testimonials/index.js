@@ -3,7 +3,7 @@ import Button from 'src/components/common/Button';
 import styles from './Testimonials.module.scss';
 import Arrow from 'public/images/icons/Arrow.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, FreeMode } from 'swiper';
+import { Autoplay } from 'swiper';
 import TestimonialCard from 'src/components/common/TestimonialCard';
 
 export default function Testimonials({ content }) {
@@ -42,9 +42,13 @@ export default function Testimonials({ content }) {
         <div className="row">
           <div className="col-12">
             <header>
-              <h2 className="sans-after">{'O seu sucesso é o \nnosso sucesso'}</h2>
+              <h2>
+                <span>O seu sucesso é o </span>
+                <br className="d-none d-lg-block" />
+                <span className="h-sans">nosso sucesso</span>
+              </h2>
               <p>{'Veja depoimentos de como a Br.Storm tem \najudado empresas em todo mundo a se destacar \nno mercado e se conectar com seus clientes.'}</p>
-              <Button className="lg" RightIcon={Arrow} >Iniciar um Projeto</Button>
+              <Button className="lg d-none d-lg-flex" RightIcon={Arrow} >Iniciar um Projeto</Button>
             </header>
           </div>
 
@@ -55,17 +59,18 @@ export default function Testimonials({ content }) {
             centeredSlides
             loop
             speed={1500}
-            modules={[Autoplay, FreeMode]}
-            freeMode
+            onTransitionEnd={self => self.params.speed = 1500}
+            onTouchStart={self => { self.params.speed = 300; }}
+            modules={[Autoplay]}
             autoplay={{
-              delay: 200,
-              disableOnInteraction: false,
+              delay: 300,
+              disableOnInteraction: true,
               pauseOnMouseEnter: true,
             }}
           >
             {
               data.map((card, index) => (
-                <SwiperSlide key={index} className="col-12 col-lg-5">
+                <SwiperSlide key={index} className="col-lg-5">
                   <TestimonialCard {...card} />
                 </SwiperSlide>
               ))

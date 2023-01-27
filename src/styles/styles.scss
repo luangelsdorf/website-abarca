@@ -76,5 +76,6 @@ menu {
 @include mixins.sm {
   .col-12 {
     padding: 0 30px;
+    text-align: center;
   }
 }

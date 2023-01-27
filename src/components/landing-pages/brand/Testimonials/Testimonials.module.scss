@@ -1,3 +1,5 @@
+@use '../../../../styles/scss/mixins';
+
 .section {
   header {
     display: flex;
@@ -11,6 +13,24 @@
 
     a {
       align-self: flex-end;
+    }
+
+    @include mixins.lg {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 48px;
+
+      h2 {
+        margin-bottom: 40px;
+      }
+
+      p {
+        padding: 0;
+      }
+
+      a {
+        align-self: center;
+      }
     }
   }
 }
