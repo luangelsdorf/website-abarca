@@ -1,3 +1,5 @@
+@use "../../../styles/scss/mixins";
+
 .footer {
   height: 96px;
   display: flex;
@@ -7,6 +9,10 @@
   .inner {
     display: flex;
     justify-content: space-between;
+
+    @include mixins.lg {
+      justify-content: center;
+    }
   }
 
   p {

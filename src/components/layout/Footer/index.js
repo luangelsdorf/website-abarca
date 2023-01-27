@@ -10,12 +10,12 @@ export default function Footer({ content }) {
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.inner}>
-          <p>
+          <p className="d-none d-lg-block">
             <Pin />
             <span>Rio Grande do Sul, Brasil</span>
           </p>
 
-          <div className={styles.social}>
+          <div className={`d-none d-lg-block ${styles.social}`}>
             <a href="#">
               <Instagram />
             </a>
