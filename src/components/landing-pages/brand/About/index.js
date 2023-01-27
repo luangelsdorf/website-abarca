@@ -22,7 +22,7 @@ export default function About({ content }) {
               <p>A <span>Br.Storm</span> é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais.</p>
               <p>Criamos marcas fortes e memoráveis que refletem a essência da sua empresa. Elaboramos desde a ideia até as mais diversas aplicações do seu projeto.</p>
             </div>
-            <Button href="#" className="lg d-flex d-lg-none" RightIcon={Arrow}>Comece seu Projeto Agora</Button>
+            <Button href="#" className="lg d-flex d-lg-none justify-content-center" RightIcon={Arrow}>Comece seu Projeto</Button>
           </div>
           <div className="col-lg-10 offset-lg-1 d-none d-lg-block">
             <div className={styles.details}>

@@ -1,3 +1,5 @@
+@use "../../../../styles/scss/mixins";
+
 .section {
   header {
     text-align: center;
@@ -25,6 +27,33 @@
     h2 {
       font: var(--heading-sans-medium);
       color: rgb(var(--light-gray));
+    }
+
+    @include mixins.lg {
+      margin-bottom: 0;
+      p {
+        margin-bottom: 40px;
+        &::before {
+          content: none;
+        }
+      }
+    }
+  }
+
+  @include mixins.lg {
+    :global(.pin-spacer .col-12) {
+      padding: 0 12px;
+      transform: translateY(25%);
+    }
+
+    .project {
+      height: 60vh;
+
+      .infos {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 }
@@ -105,6 +134,7 @@
     position: absolute;
     z-index: 1;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
@@ -145,6 +175,7 @@
 
     a {
       height: auto;
+      display: inline-flex;
     }
 
     h3 {
@@ -154,6 +185,11 @@
 
     &::before {
       content: none;
+    }
+
+    @include mixins.lg {
+      padding: 0;
+      align-items: center;
     }
   }
 }

@@ -80,8 +80,9 @@ export default function Projects({ content }) {
     <div className={styles.section}>
       <header>
         <p className="overline">
-          <Pin />
-          <span>Projetos em Todo o Mundo</span>
+          <Pin className="d-none d-lg-block" />
+          <span className="d-none d-lg-inline">Projetos em Todo o Mundo</span>
+          <span className="d-inline d-lg-none">Nossos Projetos</span>
         </p>
         <h2>Conheça <span className="h-serif">o que criamos</span> por aqui</h2>
       </header>
@@ -114,7 +115,10 @@ export default function Projects({ content }) {
 
           <div className={`col-12 col-lg-8 ${styles.cta}`}>
             <div className={styles.project}>
-              <h3 className="sans-before">{'Veja como podemos \ntransformar sua marca'}</h3>
+              <h3 className="sans-before">
+                <span className="h-sans">Veja como podemos </span>
+                <span>transformar sua marca</span>
+              </h3>
               <Button RightIcon={Arrow}>Solicite uma Proposta</Button>
             </div>
           </div>
