@@ -1,3 +1,5 @@
+@use "../../../../styles/scss/mixins";
+
 .section {
 }
 
@@ -14,6 +16,14 @@
     span {
       font: var(--body-bold);
       color: rgb(var(--white));
+    }
+  }
+
+  @include mixins.lg {
+    margin-bottom: 56px;
+
+    h2 {
+      margin-bottom: 40px;
     }
   }
 }
@@ -41,10 +51,21 @@
       &:nth-last-child(2) {
         width: 100%;
       }
+
+      @include mixins.lg {
+        &:nth-child(n) {
+          flex-grow: 1;
+          width: auto;
+        }
+      }
     }
 
     [type="submit"] {
       margin-top: 24px;
+    }
+
+    @include mixins.lg {
+      justify-content: center;
     }
   }
 }
