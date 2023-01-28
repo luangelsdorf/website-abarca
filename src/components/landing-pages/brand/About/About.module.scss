@@ -24,7 +24,7 @@
       margin-bottom: 24px;
       span {
         color: rgb(var(--white));
-        font: var(--body-bold);
+        font: var(--body-bold-lg);
       }
     }
   }
@@ -46,12 +46,12 @@
     margin: 24px 0;
 
     h3 {
-      font: var(--body-bold);
+      font: var(--body-bold-lg);
       margin-bottom: 16px;
     }
 
     p {
-      font: var(--detail-default);
+      font: var(--body-default-lg-md);
     }
 
     &:not(:last-child) {

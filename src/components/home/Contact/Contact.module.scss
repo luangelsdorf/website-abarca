@@ -39,11 +39,11 @@
   }
 
   & > div {
-    font: var(--detail-default);
+    font: var(--body-default-lg-md);
     color: rgb(var(--dark-gray));
 
     h3 {
-      font: var(--detail-bold);
+      font: var(--body-bold-lg-md);
       color: rgb(var(--gray));
       margin-bottom: 8px;
     }

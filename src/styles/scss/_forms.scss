@@ -1,5 +1,5 @@
 @mixin floatingLabel {
-  transform: translateY(-15%) scale(0.75);
+  transform: translateY(-33%) scale(0.75);
   color: rgb(var(--dark-gray));
 }
 
@@ -8,7 +8,7 @@ textarea,
 select {
   border: 0;
 
-  font: var(--body-default);
+  font: var(--body-default-lg);
   background-color: transparent;
   color: rgb(var(--light-gray));
   padding: 20px 0;
@@ -99,5 +99,9 @@ textarea {
     transform: translateY(65%);
     transition: all 350ms;
     cursor: text;
+
+    & + span {
+      color: rgb(var(--error));
+    }
   }
 }
