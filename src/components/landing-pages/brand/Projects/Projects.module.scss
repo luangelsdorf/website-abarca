@@ -177,7 +177,6 @@
     justify-content: center;
     align-items: flex-start;
     padding: 0 146px;
-    height: auto;
 
     a {
       height: auto;
@@ -196,6 +195,7 @@
     @include mixins.lg {
       padding: 0;
       align-items: center;
+      height: auto;
 
       a {
         margin-top: 24px;
