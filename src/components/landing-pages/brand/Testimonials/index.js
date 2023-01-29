@@ -47,7 +47,13 @@ export default function Testimonials({ content }) {
                 <br className="d-none d-lg-block" />
                 <span className="h-sans">nosso sucesso</span>
               </h2>
-              <p>{'Veja depoimentos de como a Br.Storm tem \najudado empresas em todo mundo a se destacar \nno mercado e se conectar com seus clientes.'}</p>
+              <p>
+                Veja depoimentos de como a <span>Br.Storm</span> tem
+                <br />
+                ajudado empresas em todo mundo a se destacar
+                <br />
+                no mercado e se conectar com seus clientes.
+              </p>
               <Button className="lg d-none d-lg-flex" RightIcon={Arrow} >Iniciar um Projeto</Button>
             </header>
           </div>
@@ -60,7 +66,7 @@ export default function Testimonials({ content }) {
             loop
             speed={1500}
             onTransitionEnd={self => self.params.speed = 1500}
-            onTouchStart={self => { self.params.speed = 300; }}
+            onTouchStart={self => self.params.speed = 300}
             modules={[Autoplay]}
             autoplay={{
               delay: 300,

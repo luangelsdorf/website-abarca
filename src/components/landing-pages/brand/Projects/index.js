@@ -13,7 +13,8 @@ export default function Projects({ content }) {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const ctx = gsap.context(() => {
+    let mm = gsap.matchMedia();
+    mm.add('(min-width: 992px)', () => {
       gsap.to('.horizontal', {
         x: (index, target) => -(target.scrollWidth - innerWidth + 250),
         ease: 'none',
@@ -26,9 +27,9 @@ export default function Projects({ content }) {
           invalidateOnRefresh: true,
         },
       });
-    })
+    });
 
-    return () => ctx.revert();
+    return () => mm.revert();
   }, []);
 
   const data = [
@@ -87,7 +88,7 @@ export default function Projects({ content }) {
         <h2>Conheça <span className="h-serif">o que criamos</span> por aqui</h2>
       </header>
       <div className="container">
-        <div className="row flex-nowrap horizontal">
+        <div className="row gy-4 gy-lg-0 flex-lg-nowrap gy-4 horizontal">
 
           {
             data.map((project, index) => (
@@ -115,7 +116,7 @@ export default function Projects({ content }) {
 
           <div className={`col-12 col-lg-8 ${styles.cta}`}>
             <div className={styles.project}>
-              <h3 className="sans-before">
+              <h3 className="sans-before d-none d-lg-block">
                 <span className="h-sans">Veja como podemos </span>
                 <span>transformar sua marca</span>
               </h3>

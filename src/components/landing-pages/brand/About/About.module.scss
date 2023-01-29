@@ -1,6 +1,17 @@
 @use '../../../../styles/scss/mixins';
 
 .section {
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + 139px);
+    bottom: -140px;
+    left: 24px;
+    right: 24px;
+    background-color: rgb(var(--shadow));
+  }
 }
 
 .intro {

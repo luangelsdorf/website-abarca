@@ -16,7 +16,7 @@ export default function Contact({ content }) {
         <div className="row">
           <div className="col-12 col-lg-4">
             <div className={styles.textContent}>
-              <h2 className="d-none d-lg-block">Vamos Iniciar seu Projeto</h2>
+              <h2 className="d-none d-lg-block">{'Vamos Iniciar \nseu Projeto'}</h2>
               <h2 className="d-block d-lg-none">Inicie seu Projeto</h2>
               <p className="d-none d-lg-block">Não importa se você tem uma ideia vaga ou um projeto já em andamento, <span>vamos ajudá-lo</span></p>
               <p>Estamos ansiosos para ouvir sobre seus projetos. Entre em contato conosco, basta responder as perguntas ao lado que entraremos em contato.</p>
