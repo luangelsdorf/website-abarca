@@ -4,9 +4,10 @@ import { useForm } from 'react-hook-form';
 import Button from 'src/components/common/Button';
 import Arrow from 'public/images/icons/Arrow.svg';
 import submitForm from 'src/utils/submitForm';
+import Spinner from 'src/components/common/Spinner';
 
 export default function Contact({ content }) {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors, isSubmitting, isSubmitSuccessful } } = useForm();
   const errorMessage = 'Este campo é obrigatório.';
 
   return (
@@ -81,6 +82,8 @@ export default function Contact({ content }) {
                   <label htmlFor="info">Informações Adicionais</label>
                 </div>
                 <Button btnElement type="submit" className="lg" RightIcon={Arrow}>Enviar Solicitação</Button>
+                <Spinner style={{ display: isSubmitting ? 'block' : 'none' }} />
+                <span style={{ opacity: isSubmitSuccessful ? '1' : '0' }}>✓ Enviada com sucesso!</span>
               </form>
             </div>
           </div>
