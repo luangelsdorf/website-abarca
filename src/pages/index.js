@@ -19,19 +19,19 @@ export default function Home() {
           <Hero />
         </Section>
 
-        <Section id="about" pt="200" pb="200">
+        <Section id="about" pt="200 80" pb="200 140">
           <About />
         </Section>
 
-        <Section id="projects" pt="80" pb="120">
+        <Section id="projects" pt="80 120" pb="120 80">
           <Projects />
         </Section>
 
-        <Section id="testimonials" pt="160" pb="160">
+        <Section id="testimonials" pt="160 80" pb="160 96">
           <Testimonials />
         </Section>
 
-        <Section id="contact" pb="160">
+        <Section id="contact" pt="120 96" pb="160 96">
           <Contact />
         </Section>
       </main>

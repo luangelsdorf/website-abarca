@@ -15,7 +15,7 @@ export default function Footer({ content }) {
             <span>Rio Grande do Sul, Brasil</span>
           </p>
 
-          <div className={`d-none d-lg-block ${styles.social}`}>
+          <div className={`d-none d-lg-flex ${styles.social}`}>
             <a href="#">
               <Instagram />
             </a>
