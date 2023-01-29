@@ -15,7 +15,8 @@ select {
   padding-right: 16px;
   width: 100%;
   height: 72px;
-  border-bottom: 1px solid rgb(var(--shadow));
+  border-bottom: 1px solid;
+  border-bottom-color: rgb(var(--shadow));
   transition: all 350ms;
 
   &::placeholder {
@@ -101,7 +102,31 @@ textarea {
     cursor: text;
 
     & + span {
+      font: var(--body-default-sm);
       color: rgb(var(--error));
+      margin-left: auto;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translateY(calc(100% + 8px));
+      transition: all 350ms;
+      opacity: 0;
+
+      &:not(:empty) {
+        opacity: 1;
+      }
     }
   }
+
+  &.error {
+    input,
+    select {
+      border-bottom-color: rgb(var(--error));
+    }
+  }
+}
+
+form [disabled] {
+  pointer-events: none;
+  opacity: 0.4;
 }

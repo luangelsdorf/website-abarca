@@ -55,7 +55,7 @@
       @include mixins.lg {
         &:nth-child(n) {
           flex-grow: 1;
-          width: auto;
+          width: 100%;
         }
       }
     }

@@ -94,8 +94,8 @@ export default function Projects({ content }) {
               <div className="col-12 col-lg-8" key={index}>
                 <div className={styles.project}>
                   <Link href="#">
-                    <Image sizes="100vw" src={`/images/portfolio/hover/${project.client}.jpg`} fill alt="" />
-                    <Image sizes="100vw" src={`/images/portfolio/${project.client}.jpg`} fill alt="" />
+                    <Image sizes="100vw" src={`/images/portfolio/hover/${project.client}.jpg`} width="200" height="200" alt="" />
+                    <Image sizes="100vw" src={`/images/portfolio/${project.client}.jpg`} width="200" height="200" alt="" />
                   </Link>
                   <div className={styles.infos}>
                     <div>
