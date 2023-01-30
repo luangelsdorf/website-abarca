@@ -21,6 +21,14 @@ html {
   padding: 0;
 }
 
+#viewport {
+  transition: all 650ms ease;
+
+  &.active {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
 figure,
 blockquote {
   margin: 0;

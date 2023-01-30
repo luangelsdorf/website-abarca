@@ -36,6 +36,7 @@ export default function Header({ content }) {
 
   function handleClick() {
     document.querySelector(`.${styles.menu}`).classList.toggle(styles.active);
+    document.querySelector('#viewport').classList.toggle('active');
   }
 
   return (

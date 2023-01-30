@@ -46,7 +46,6 @@
 
   transition: all 600ms ease;
   transform: translateY(-100%);
-  opacity: 0;
 
   ul {
     font: var(--heading-serif-medium);
@@ -69,6 +68,5 @@
 
   &.active {
     transform: translateY(0);
-    opacity: 1;
   }
 }
