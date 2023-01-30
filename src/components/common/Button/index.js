@@ -12,6 +12,7 @@ export default function Button({
   className,
   LeftIcon,
   RightIcon,
+  ...otherProps
 }) {
 
   const Children = () => (
@@ -28,7 +29,7 @@ export default function Button({
 
   if (btnElement) {
     return (
-      <button {...baseProps} type={type}>
+      <button {...baseProps} type={type} {...otherProps}>
         <Children />
       </button>
     )
@@ -36,7 +37,7 @@ export default function Button({
 
   else if (divElement) {
     return (
-      <div {...baseProps} role="link">
+      <div {...baseProps} role="link" {...otherProps}>
         <Children />
       </div>
     )
@@ -44,7 +45,7 @@ export default function Button({
 
   else if (nativeLink) {
     return (
-      <a {...baseProps} href={href}>
+      <a {...baseProps} href={href} {...otherProps}>
         <Children />
       </a>
     )
@@ -52,7 +53,7 @@ export default function Button({
 
   else {
     return (
-      <Link {...baseProps} href={href}>
+      <Link {...baseProps} href={href} {...otherProps}>
         <Children />
       </Link>
     )
