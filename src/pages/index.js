@@ -40,3 +40,5 @@ export default function Home() {
     </>
   )
 }
+
+Home.floatingHeader = false;

@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }) {
       `}
       </style>
 
-      <Header />
+      <Header floating={Component.floatingHeader} />
 
       <div id="viewport">
         <div id="content">

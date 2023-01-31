@@ -1,3 +1,5 @@
+@use "../../../styles/scss/mixins";
+
 .header {
   position: fixed;
   z-index: 50;
@@ -7,6 +9,40 @@
   backdrop-filter: blur(10px);
   mix-blend-mode: difference;
   clip-path: inset(0 12px round 56px);
+  transition: all 350ms;
+
+  a,
+  ul,
+  .floatingBtn {
+    transition: all 350ms;
+  }
+  .floatingBtn {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+  }
+
+  @mixin floatingHeader {
+    backdrop-filter: none;
+    mix-blend-mode: normal;
+
+    a,
+    ul {
+      opacity: 0;
+    }
+
+    nav {
+      border-color: transparent;
+    }
+
+    .floatingBtn {
+      opacity: 1;
+    }
+  }
+
+  &.floating {
+    @include floatingHeader;
+  }
 
   nav {
     display: flex;
@@ -27,6 +63,15 @@
     & > :last-child {
       display: flex;
       justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  @include mixins.lg {
+    top: 16px;
+    
+    nav {
+      padding: 12px 12px 12px 24px;
     }
   }
 }

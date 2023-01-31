@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Arrow from 'public/images/icons/Arrow.svg'
 import Button from 'src/components/common/Button';
 import styles from './Header.module.scss';
@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Open from 'public/images/icons/Open.svg';
 import Pin from 'public/images/icons/Pin.svg';
 
-export default function Header({ content }) {
+export default function Header({ floating }) {
 
   const MenuMobile = () => (
     <div className={`d-flex d-lg-none ${styles.menu}`}>
@@ -39,10 +39,25 @@ export default function Header({ content }) {
     document.querySelector('#viewport').classList.toggle('active');
   }
 
+  function floatingClick(e) {
+    e.target.closest(`.${styles.header}`).classList.toggle(styles.floating);
+  }
+
+  useEffect(() => {
+    if (!floating) return;
+
+    function onScroll() {
+      document.querySelector(`.${styles.header}`).classList.add(styles.floating);
+    }
+
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <>
       <MenuMobile />
-      <div className={`container ${styles.header}`}>
+      <div className={`container ${styles.header} ${floating ? styles.floating : ''}`}>
         <header>
           <nav>
             <Link href="/" style={{ color: 'rgb(var(--white))' }}>
@@ -64,7 +79,16 @@ export default function Header({ content }) {
             </ul>
             <div>
               <Link href="#" className="btn sm d-none d-lg-flex">Começar Projeto</Link>
-              <button onClick={handleClick} type="button" className="btn d-flex d-lg-none"><Open /></button>
+              <button onClick={handleClick} type="button" className="btn d-flex d-lg-none">
+                <Open />
+              </button>
+              {
+                floating ? (
+                  <button onClick={floatingClick} type="button" className={`btn d-none d-lg-flex ${styles.floatingBtn}`}>
+                    <Open />
+                  </button>
+                ) : null
+              }
             </div>
           </nav>
         </header>
