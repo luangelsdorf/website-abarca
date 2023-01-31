@@ -1,0 +1,21 @@
+.section {
+  [class*="col-lg"] > div {
+    text-align: left;
+  }
+
+  :global(.row) {
+    gap: 56px;
+  }
+}
+
+.heading {
+  h2 {
+    font: var(--heading-sans-small);
+  }
+}
+
+.text {
+  p {
+    padding-bottom: 96px;
+  }
+}
