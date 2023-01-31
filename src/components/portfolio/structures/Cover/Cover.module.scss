@@ -17,23 +17,6 @@
     position: relative;
     flex-direction: column;
     gap: 96px;
-
-    .info {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-
-      h2 {
-        font: var(--body-default-md);
-        color: rgb(var(--gray));
-      }
-
-      p,
-      li {
-        font: var(--body-bold-lg);
-        color: rgb(var(--white));
-      }
-    }
   }
 
   h1 {

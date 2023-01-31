@@ -1,0 +1,16 @@
+@use "../../../../styles/scss/mixins";
+
+.section {
+  padding: 120px 0;
+
+  [class*="col-lg"] > div {
+    text-align: left;
+  }
+
+  @include mixins.lg {
+    padding: 96px 0;
+  }
+}
+
+.text {
+}
