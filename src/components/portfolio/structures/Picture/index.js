@@ -3,7 +3,7 @@ import styles from './Picture.module.scss';
 
 export default function Picture({ full, children }) {
   return (
-    <div className={styles.section}>
+    <div className={`${styles.section}${full ? ' ' + styles.full : ''}`}>
       {
         !full ? (
           <div className="container">

@@ -1,3 +1,9 @@
 .section {
   padding-bottom: 96px;
+
+  &.full {
+    img {
+      border-radius: 0;
+    }
+  }
 }

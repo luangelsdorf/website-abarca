@@ -4,7 +4,7 @@ import styles from './DoublePicture.module.scss';
 export default function DoublePicture({ children }) {
   return (
     <div className={styles.section}>
-      <div className="row">
+      <div className="row gy-4">
         <div className="col-12 col-lg-6">
           <div className={styles.firstImage}>
             {children[0]}

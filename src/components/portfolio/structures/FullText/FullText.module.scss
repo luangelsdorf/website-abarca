@@ -1,8 +1,4 @@
 .section {
-  [class*="col-lg"] > div {
-    text-align: left;
-  }
-
   :global(.row) {
     gap: 56px;
   }

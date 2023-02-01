@@ -11,9 +11,10 @@ export default function FullText({ title, children }) {
               <h2>
                 {
                   title.split('\\n').map((line, index) => (
-                    <div key={index}>
+                    <span key={index}>
                       <span>{line}</span>
-                    </div>
+                      <br />
+                    </span>
                   ))
                 }
               </h2>

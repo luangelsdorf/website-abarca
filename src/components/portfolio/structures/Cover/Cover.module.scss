@@ -32,6 +32,10 @@
     top: 24px;
   }
 
+  & > img {
+    border-radius: 0 !important;
+  }
+
   img,
   video {
     z-index: -1;
