@@ -1,0 +1,46 @@
+@use "../../../../styles/scss/mixins";
+
+.section {
+  position: relative;
+  padding-bottom: 96px;
+  /* .first {
+    position: absolute;
+    top: 0;
+    right: 50.7%;
+    bottom: 0;
+    left: 0;
+  } */
+  // 👆 é preciso calcular a altura renderizada da imagem, pois `position: absolute`.
+
+  @include mixins.lg {
+    :global(.row) {
+      gap: 80px;
+    }
+  }
+
+  &.flipped {
+    :global(.row) {
+      & > :first-child {
+        order: 1;
+        @include mixins.lg {
+          order: 0;
+        }
+      }
+    }
+  }
+}
+
+.first,
+.last {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.last {
+  h2 {
+    font: var(--heading-sans-small);
+    margin-bottom: 56px;
+  }
+}
