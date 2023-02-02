@@ -7,6 +7,7 @@ import Button from 'src/components/common/Button';
 import Arrow from 'public/images/icons/Arrow.svg';
 import Image from 'next/image';
 import Link from 'next/link';
+import ProjectCard from 'src/components/common/ProjectCard';
 
 export default function Projects({ content }) {
 
@@ -93,23 +94,7 @@ export default function Projects({ content }) {
           {
             data.map((project, index) => (
               <div className="col-12 col-lg-8" key={index}>
-                <div className={styles.project}>
-                  <Link href="#">
-                    <Image sizes="100vw" src={`/images/portfolio/hover/${project.client}.jpg`} width="200" height="200" alt="" />
-                    <Image sizes="100vw" src={`/images/portfolio/${project.client}.jpg`} width="200" height="200" alt="" />
-                  </Link>
-                  <div className={styles.infos}>
-                    <div>
-                      <h3>{project.client}</h3>
-                      <p>{project.segment}</p>
-                    </div>
-                    <p>{project.services}</p>
-                  </div>
-                  <div className={styles.localTag}>
-                    <div><span>{project.local}</span></div>
-                    <Pin />
-                  </div>
-                </div>
+                <ProjectCard {...project} />
               </div>
             ))
           }
