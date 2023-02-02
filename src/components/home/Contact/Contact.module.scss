@@ -18,7 +18,7 @@
     width: 336px;
   }
 
-  a {
+  .circleButton {
     display: flex;
     height: 120px;
     width: 120px;
@@ -26,6 +26,14 @@
     align-items: center;
     border: 1px solid rgb(var(--dark-gray));
     border-radius: 50%;
+  }
+
+  @include mixins.lg {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+    margin-bottom: 0px;
   }
 }
 

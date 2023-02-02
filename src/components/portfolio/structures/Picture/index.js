@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Picture.module.scss';
 
-export default function Picture({ full, children }) {
+export default function Picture({ full, noMargin, children }) {
   return (
-    <div className={`${styles.section}${full ? ' ' + styles.full : ''}`}>
+    <div className={`${styles.section}${full ? ' ' + styles.full : ''}${noMargin ? ' ' + styles.noMargin : ''}`}>
       {
         !full ? (
           <div className="container">
