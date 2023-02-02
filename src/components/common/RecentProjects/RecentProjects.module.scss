@@ -1,0 +1,28 @@
+@use '../../../styles/scss/mixins';
+
+.section {
+  :global(.container) {
+    & > div:first-child {
+      position: relative;
+      margin-bottom: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: rgb(var(--shadow));
+        right: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      @include mixins.lg {
+        margin-bottom: 64px;
+      }
+    }
+  }
+}
