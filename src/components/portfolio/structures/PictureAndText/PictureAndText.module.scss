@@ -3,29 +3,50 @@
 .section {
   position: relative;
   padding-bottom: 96px;
-  /* .first {
-    position: absolute;
-    top: 0;
-    right: 50.7%;
-    bottom: 0;
-    left: 0;
-  } */
-  // 👆 é preciso calcular a altura renderizada da imagem, pois `position: absolute`.
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > div:first-child :global(.row) {
+    width: calc(100vw + 24px);
+  }
 
   @include mixins.lg {
-    :global(.row) {
-      gap: 80px;
+    flex-direction: column;
+    gap: 80px;
+    
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  img {
+    height: 720px;
+
+    @include mixins.md {
+      height: 640px;
+    }
+  }
+
+  &:not(.flipped) {
+    img {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
     }
   }
 
   &.flipped {
-    :global(.row) {
-      & > :first-child {
-        order: 1;
-        @include mixins.lg {
-          order: 0;
-        }
-      }
+    img {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+  }
+
+  :global(.container) {
+    position: absolute;
+
+    @include mixins.lg {
+      position: relative;
     }
   }
 }

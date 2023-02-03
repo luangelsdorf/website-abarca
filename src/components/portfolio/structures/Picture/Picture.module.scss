@@ -1,6 +1,10 @@
 .section {
   padding-bottom: 96px;
 
+  img {
+    border-radius: 8px;
+  }
+
   &.full {
     img {
       border-radius: 0;

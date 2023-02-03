@@ -1,3 +1,17 @@
 .section {
   padding-bottom: 96px;
 }
+
+.firstImage {
+  & > img {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
+
+.lastImage {
+  & > img {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+}
