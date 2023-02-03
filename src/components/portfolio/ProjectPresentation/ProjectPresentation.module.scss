@@ -20,5 +20,9 @@
         align-items: flex-start;
       }
     }
+
+    & > div {
+      margin: -2px auto;
+    }
   }
 }
