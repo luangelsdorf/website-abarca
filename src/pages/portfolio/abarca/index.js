@@ -71,7 +71,7 @@ export default function Abarca() {
           </Section>
           <Section>
             <Picture full noMargin>
-              <Image loading="eager" quality="100" src={basePath + 'Fabric-Print.png'} width="1400" height="800" alt="" />
+              <Image loading="eager" quality="75" src={basePath + 'Fabric-Print.png'} width="1400" height="800" alt="" />
             </Picture>
           </Section>
           <Section>

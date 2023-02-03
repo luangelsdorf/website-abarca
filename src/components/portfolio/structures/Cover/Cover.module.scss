@@ -24,12 +24,17 @@
   }
 
   .localTag {
+    font: var(--body-bold-md);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     position: absolute;
     top: 24px;
+    padding: 8px 16px;
+    color: rgb(var(--light-gray));
+    border: 1px solid rgb(var(--gray));
+    border-radius: 56px;
   }
 
   & > img {
