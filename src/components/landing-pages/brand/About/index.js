@@ -27,16 +27,22 @@ export default function About({ content }) {
           <div className="col-lg-10 offset-lg-1 d-none d-lg-block">
             <div className={styles.details}>
               <article>
-                <h3>{'Feito Sob Medida \npara o seu Negócio'}</h3>
-                <p>{'Design exclusivo, criado \nespecialmente para o seu negócio.'}</p>
+                <div>
+                  <h3>{'Feito Sob Medida \npara o seu Negócio'}</h3>
+                  <p>{'Design exclusivo, criado \nespecialmente para o seu negócio.'}</p>
+                </div>
               </article>
               <article>
-                <h3>{'Equipe experiente \ne Especializada'}</h3>
-                <p>{'Garantia de qualidade e eficácia \nna entrega do seu projeto.'}</p>
+                <div>
+                  <h3>{'Equipe experiente \ne Especializada'}</h3>
+                  <p>{'Garantia de qualidade e eficácia \nna entrega do seu projeto.'}</p>
+                </div>
               </article>
               <article>
-                <h3>{'Abordagem Estratégica \npara Soluções Assertivas'}</h3>
-                <p>{'Mapeamos a essência do seu \nnegócio para criar algo singular.'}</p>
+                <div>
+                  <h3>{'Abordagem Estratégica \npara Soluções Assertivas'}</h3>
+                  <p>{'Mapeamos a essência do seu \nnegócio para criar algo singular.'}</p>
+                </div>
               </article>
             </div>
           </div>
