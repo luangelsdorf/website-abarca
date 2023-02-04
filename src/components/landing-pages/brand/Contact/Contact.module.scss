@@ -4,6 +4,11 @@
 }
 
 .textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
   h2 {
     margin-bottom: 72px;
   }
@@ -54,7 +59,7 @@
         margin-bottom: 24px;
       }
 
-      @include mixins.lg {
+      @include mixins.xl {
         &:nth-child(n) {
           flex-grow: 1;
           width: 100%;

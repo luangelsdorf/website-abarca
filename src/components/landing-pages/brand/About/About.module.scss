@@ -1,16 +1,18 @@
-@use '../../../../styles/scss/mixins';
+@use "../../../../styles/scss/mixins";
 
 .section {
   position: relative;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    top: calc(100% + 139px);
-    bottom: -140px;
-    left: 24px;
-    right: 24px;
-    background-color: rgb(var(--shadow));
+
+  @include mixins.lg {
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(100% + 139px);
+      bottom: -140px;
+      left: 24px;
+      right: 24px;
+      background-color: rgb(var(--shadow));
+    }
   }
 }
 
@@ -71,7 +73,7 @@
 
     &:not(:last-child) {
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         height: 100%;
         width: 1px;
