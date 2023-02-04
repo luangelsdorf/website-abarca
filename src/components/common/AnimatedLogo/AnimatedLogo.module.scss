@@ -1,0 +1,13 @@
+@use '../../../styles/scss/animations';
+
+@include animations.stroke-fill(logo-animation, true);
+
+.logo {
+  stroke: rgb(var(--white));
+
+  path {
+    &:last-child {
+      animation: logo-animation 5s ease-in-out infinite alternate;
+    }
+  }
+}

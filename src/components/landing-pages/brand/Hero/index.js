@@ -7,7 +7,6 @@ export default function Hero({ content }) {
   return (
     <div className={styles.section}>
       <header>
-        {/* <h1 className="sans-after">{'Dê vida à sua marca \ne torne-a inesquecível'}</h1> */}
         <h1>
           <span>Dê vida à sua marca</span>
           <br />
