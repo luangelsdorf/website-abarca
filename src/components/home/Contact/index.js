@@ -5,13 +5,13 @@ import ArrowLarge from 'public/images/icons/ArrowLarge.svg';
 import Arrow from 'public/images/icons/Arrow.svg';
 import Button from 'src/components/common/Button';
 
-export default function Contact({ content }) {
+export default function Contact({ noLinks }) {
   return (
     <div className={styles.section}>
       <div className="container">
         <div className="row">
           <div className="col-12 col-xxl-10 offset-xxl-1">
-            <div className={styles.learnMore}>
+            <div className={styles.learnMore} style={noLinks ? { marginBottom: 0 } : undefined}>
               <h2>
                 <span className="d-none d-lg-inline">Vamos Iniciar <br />seu Projeto</span>
                 <span className="d-inline d-lg-none">Inicie seu <br />Projeto</span>
@@ -22,7 +22,7 @@ export default function Contact({ content }) {
               </Link>
               <Button RightIcon={Arrow} className="outline large d-flex d-lg-none">Solicite uma Proposta</Button>
             </div>
-            <div className={`${styles.links} d-none d-lg-flex`}>
+            <div className={`${styles.links} ${noLinks ? 'd-none' : 'd-none d-lg-flex'}`}>
               <div>
                 <h3>Contatos</h3>
                 <address>
