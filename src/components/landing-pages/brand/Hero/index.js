@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './Hero.module.scss';
 import Arrow from 'public/images/icons/Arrow.svg';
 import Button from 'src/components/common/Button';
+import Image from 'next/image';
+import AnimatedLogo from 'src/components/common/AnimatedLogo';
 
 export default function Hero({ content }) {
   return (
@@ -24,20 +26,32 @@ export default function Hero({ content }) {
           <div className={styles.lg} />
         </div>
         <div>
-          <div className={styles.sm} />
-          <div className={styles.md} />
+          <div className={styles.lg}>
+            <Image fill src="/images/hero/abarca/stand.png" alt="" />
+          </div>
+          <div className={styles.sm}>
+            {/* <Image fill src="/images/hero/abarca/Pattern.gif" alt="" /> */}
+          </div>
         </div>
         <div>
           <div className={styles.lg} />
           <div className={styles.sm} />
         </div>
         <div>
-          <div className={styles.lg} />
-          <div className={styles.sm} />
+          <div className={styles.sm}>
+            <video src="/images/hero/maptrack/grid-animation.mp4" loop muted autoPlay />
+          </div>
+          <div className={styles.lg}>
+            <Image fill src="/images/hero/maptrack/stationery.jpg" alt="" />
+          </div>
         </div>
         <div>
-          <div className={styles.lg} />
-          <div className={styles.sm} />
+          <div className={styles.lg}>
+            <Image fill src="/images/hero/bronzo/packing-cropped.jpg" alt="" />
+          </div>
+          <div className={styles.sm} style={{ backgroundColor: '#CE7A24' }}>
+            <AnimatedLogo />
+          </div>
         </div>
       </div>
     </div>
