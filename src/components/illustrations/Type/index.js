@@ -3,11 +3,10 @@ import letters from './letters';
 import styles from './Type.module.scss';
 
 export default function Type({ single = false }) {
-  const [docVisibility, setDocVisibility] = useState('visible');
   const wrapper = useRef(null);
-  let combination = Array(8).fill(0).map(() => getRandomInt(7));
+  let combination = Array(5).fill(0).map(() => getRandomInt(4));
 
-  const word = ['B', 'R', 'Dot', 'S', 'T', 'O', 'R', 'M'];
+  const word = ['S', 'T', 'O', 'R', 'M'];
 
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -16,54 +15,23 @@ export default function Type({ single = false }) {
     return Math.floor(Math.random() * (max - min) + min);
   }
 
-  const keyframesIn = [
-    {
-      opacity: 0,
-      transform: 'rotateX(180deg)',
-    },
-    {
-      opacity: 1,
-      transform: 'rotateX(360deg)',
-    },
-  ];
-  const keyframesOut = [
-    {
-      opacity: 1,
-      transform: 'rotateX(0deg)',
-    },
-    {
-      opacity: 0,
-      transform: 'rotateX(180deg)',
-    },
-  ];
-  const options = { duration: 500, fill: 'both' };
-
-  function updateLetter(charToChange, nextVariantIndex, reflow) {
+  function updateLetter(charToChange, nextVariantIndex) {
     const charElement = wrapper.current.querySelectorAll('[data-letter]')[charToChange];
     const currentVariant = charElement.querySelector(`.${styles.visible}`);
     const nextVariant = charElement.children[nextVariantIndex];
 
-    charElement.animate(keyframesOut, { easing: 'ease-in', ...options }).finished.then(() => {
-      currentVariant?.classList.remove(styles.visible);
-      if (reflow) {
-        charElement.style.width = nextVariant.querySelector('svg').width.baseVal.value + 'px';
-      }
-      nextVariant?.classList.add(styles.visible);
-      charElement.animate(keyframesIn, { easing: 'ease-out', ...options });
-    });
+    currentVariant?.classList.remove(styles.visible);
+    nextVariant?.classList.add(styles.visible);
   }
 
   useEffect(() => {
-    document.querySelectorAll('[data-letter]').forEach(letter => {
-      letter.style.width = letter.querySelector('svg').width.baseVal.value + 'px';
-    });
-  }, []);
-
-  useEffect(() => {
     let letterChangeTimeout;
+    let prevIndex;
 
     function changeLetter() {
-      const randomIndex = getRandomInt(combination.length);
+      let randomIndex = getRandomInt(combination.length);
+      while (prevIndex === randomIndex) randomIndex = getRandomInt(combination.length);
+      prevIndex = randomIndex;
       const charToChange = word[randomIndex];
       const letterVariantArray = letters[charToChange];
       const nextCombination = combination.map((item, i) => getRandomInt(letters[word[i]].length));
@@ -76,18 +44,15 @@ export default function Type({ single = false }) {
         });
       }
 
-      if (document.visibilityState === 'visible') letterChangeTimeout = setTimeout(changeLetter, 3000);
+      letterChangeTimeout = setTimeout(changeLetter, 50);
     }
 
-    if (document.visibilityState === 'visible') letterChangeTimeout = setTimeout(changeLetter, 3000);
+    letterChangeTimeout = setTimeout(changeLetter, 50);
+
+    wrapper.current.start = () => letterChangeTimeout = setTimeout(changeLetter, 50);
+    wrapper.current.stop = () => clearTimeout(letterChangeTimeout);
 
     return () => clearTimeout(letterChangeTimeout);
-  }, [docVisibility]);
-
-  useEffect(() => {
-    const onVisibilityChange = () => setDocVisibility(document.visibilityState);
-    document.addEventListener('visibilitychange', onVisibilityChange);
-    return () => document.removeEventListener('visibilitychange', onVisibilityChange);
   }, []);
 
   return (
