@@ -1,0 +1,30 @@
+import gsap from 'gsap';
+import React, { useEffect } from 'react';
+import styles from './Loader.module.scss';
+
+export default function Loader({ content }) {
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      let tl = gsap.timeline();
+      tl.to('#viewport', { opacity: 0, duration: 0.2 });
+      tl.fromTo('#loader', { yPercent: 100 }, { yPercent: 0, duration: 0.4 });
+
+      tl.fromTo('#white', { yPercent: 100 }, { yPercent: 0, delay: 3, onComplete: () => gsap.to('#viewport', { opacity: 1, duration: 0.1 }) });
+
+      tl.fromTo('#loader', { yPercent: 0 }, { yPercent: -100, duration: 0.4 });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <div className={styles.loader} id="loader">
+      <div>
+        WE ARE <span>Storm</span>
+      </div>
+
+      <div className={styles.white} id="white" />
+    </div>
+  )
+}

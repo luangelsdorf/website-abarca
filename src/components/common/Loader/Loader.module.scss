@@ -1,0 +1,32 @@
+.loader,
+.white {
+  position: fixed;
+  z-index: 51;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(var(--black));
+
+  & > div {
+    font-size: 64px;
+    span {
+      font-family: var(--merriweather);
+    }
+  }
+}
+.white {
+  background-color: rgb(var(--light-gray));
+}
+
+
+.slideIn {
+  transform: translate3d(0, 0, 0);
+}
+
+.slideOut {
+  transform: translate3d(0, -100%, 0);
+}

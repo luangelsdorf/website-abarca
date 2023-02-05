@@ -1,0 +1,49 @@
+@keyframes ani {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+.logotype {
+  display: flex;
+  gap: 2.2%;
+  width: 500px;
+  perspective: 750px;
+  transform-style: preserve-3d;
+}
+
+.char {
+  position: relative;
+  transition: width 300ms ease-out;
+  transform-origin: center center -80px;
+  backface-visibility: hidden;
+
+  &:first-child {
+    /* width: 0%;
+    width: 140px; */
+    /* & > div {
+      width: 0%;
+      width: 100%;
+    } */
+  }
+
+  & > div {
+    display: none;
+
+    &.visible {
+      display: flex;
+    }
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+
+    /* &:not(:nth-child(3)) {
+      display: none;
+    } */
+  }
+}
