@@ -30,7 +30,7 @@ export default function Hero({ content }) {
             <Image fill src="/images/hero/abarca/stand.png" alt="" />
           </div>
           <div className={styles.sm}>
-            {/* <Image fill src="/images/hero/abarca/Pattern.gif" alt="" /> */}
+            <video src="/images/hero/abarca/pattern.mp4" loop muted autoPlay />
           </div>
         </div>
         <div>

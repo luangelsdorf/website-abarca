@@ -10,6 +10,7 @@ import useSmoothScroll from 'src/hooks/useSmoothScroll';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import Loader from 'src/components/common/Loader';
+import { isDev } from 'src/utils/env';
 
 const merriweather = Merriweather({
   display: 'swap',
@@ -57,7 +58,7 @@ export default function App({ Component, pageProps }) {
 
       <Header floating={Component.floatingHeader} />
 
-      <Loader />
+      {isDev ? null : <Loader />}
 
       <div id="viewport">
         <div id="content">

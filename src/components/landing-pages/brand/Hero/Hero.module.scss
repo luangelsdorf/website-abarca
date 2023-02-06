@@ -71,6 +71,9 @@
       position: relative;
       /* outline: 1px dashed rgb(var(--shadow)); */
       background-color: rgb(var(--shadow));
+      display: flex;
+      align-items: center;
+      overflow: hidden;
       &,
       img,
       video {
@@ -78,6 +81,13 @@
         @include mixins.lg {
           border-radius: 12px;
         }
+      }
+
+      video {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
 
@@ -91,11 +101,8 @@
     &:nth-child(2) {
       margin-bottom: 120px;
 
-      & > div:last-child {
-        background-image: url("/images/hero/abarca/Pattern.gif");
-        background-repeat: no-repeat;
-        background-size: 190%;
-        background-position: center;
+      video {
+        height: 102%;
       }
     }
 
@@ -106,10 +113,7 @@
       margin-bottom: 90px;
 
       video {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: 145%;
       }
 
       @include mixins.lg {
@@ -124,7 +128,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 56px;
+        padding: 72px;
       }
 
       @include mixins.lg {
