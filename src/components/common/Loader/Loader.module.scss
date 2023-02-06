@@ -10,23 +10,26 @@
   width: 100vw;
   height: 100vh;
   background-color: rgb(var(--black));
-
-  & > div {
-    font-size: 64px;
-    span {
-      font-family: var(--merriweather);
-    }
-  }
 }
+
 .white {
   background-color: rgb(var(--light-gray));
+  opacity: 0;
 }
 
+.text {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 
-.slideIn {
-  transform: translate3d(0, 0, 0);
-}
+  & > :first-child {
+    position: relative;
+    left: -100%;
+    margin-right: 16px;
+  }
 
-.slideOut {
-  transform: translate3d(0, -100%, 0);
+  & > :last-child {
+    position: absolute;
+    width: 100vw;
+  }
 }

@@ -57,7 +57,7 @@ export default function Type({ single = false }) {
 
   return (
     <div>
-      <div className={styles.logotype} ref={wrapper}>
+      <div className={styles.logotype} ref={wrapper} id="type-animation">
         {
           word.map((char, charIndex) => {
             return (

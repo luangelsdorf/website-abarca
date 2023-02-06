@@ -57,7 +57,7 @@ export default function App({ Component, pageProps }) {
 
       <Header floating={Component.floatingHeader} />
 
-      {/* <Loader /> */}
+      <Loader />
 
       <div id="viewport">
         <div id="content">
