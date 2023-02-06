@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import GoogleTagManager from 'src/components/scripts/GoogleTagManager'
 import { isDev } from 'src/utils/env'
 
 export default function Document() {
