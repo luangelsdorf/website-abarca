@@ -3,7 +3,7 @@ import styles from './ProjectInfos.module.scss';
 
 export default function ProjectInfos({ info, className }) {
   return (
-    <div className={`${className} ${styles.info}`}>
+    <div className={`${className} ${styles.info} infos`}>
       <div>
         <h2>Cliente</h2>
         <p>{info.client}</p>

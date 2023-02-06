@@ -20,8 +20,47 @@
       }
     }
 
-    & > div {
-      margin: -2px auto;
+    &:not(:first-child) {
+      & > div {
+        margin: -2px auto;
+      }
+    }
+  }
+
+  &.light {
+    section:not(:first-child) {
+      background-color: rgb(var(--white));
+    }
+
+    h2 {
+      color: rgb(var(--black));
+    }
+
+    p,
+    li {
+      color: rgb(var(--dark-gray));
+    }
+
+    :global(.infos) {
+      h2 {
+        color: rgb(var(--dark-gray));
+      }
+
+      p,
+      li {
+        color: rgb(var(--black));
+      }
+
+      @include mixins.lg {
+        h2 {
+          color: rgb(var(--gray));
+        }
+
+        p,
+        li {
+          color: rgb(var(--white));
+        }
+      }
     }
   }
 }
