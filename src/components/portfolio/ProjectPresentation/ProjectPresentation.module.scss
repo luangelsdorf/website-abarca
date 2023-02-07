@@ -30,6 +30,9 @@
   &.light {
     section:not(:first-child) {
       background-color: rgb(var(--white));
+      & > div {
+        background-color: rgb(var(--white));
+      }
     }
 
     h2 {

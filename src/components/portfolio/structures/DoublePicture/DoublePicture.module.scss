@@ -1,6 +1,4 @@
-.section {
-  padding-bottom: 96px;
-}
+@use "../../../../styles/scss/mixins";
 
 .firstImage {
   & > img {
@@ -13,5 +11,22 @@
   & > img {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+  }
+}
+
+.section {
+  padding-bottom: 96px;
+
+  .firstImage > img,
+  .lastImage > img {
+    height: 720px;
+
+    @include mixins.lg {
+      border-radius: 8px;
+    }
+
+    @include mixins.md {
+      height: 640px;
+    }
   }
 }
