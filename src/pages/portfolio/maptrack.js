@@ -31,7 +31,7 @@ export default function MapTrack() {
         </Section>
 
         <Section>
-          <Intro info={{ client: 'Abarca Comunicação Integrada', segment: 'Escritório de Relações Públicas', services: ['Estratégia', 'Website', 'Identidade Visual'] }}>
+          <Intro info={{ client: 'Maptrack', segment: 'Startup de Rastreamento', services: ['Estratégia', 'Website', 'Identidade Visual'] }}>
             MapTrack é uma startup que oferece serviços de rastreamento de ativos através de um software simples e poderoso. Ela atua em toda a Austrália e seu público-alvo é composto por grandes empresas do setor de construção, logística e de outras diversas áreas.
             <br />
             <br />
@@ -63,7 +63,7 @@ export default function MapTrack() {
             Para a construção do novo símbolo o conceito preexistente foi mantido, no entanto, ao invés de o marcador estar sobre o mapa da Australia, agora ele foi posicionado acima da palavra “Map” (Mapa) que compõe a primeira metade do nome.
             <br />
             <br />
-            O novo símbolo é formado utilizando o espaço negativo da letra "M" e a silhueta do topo do marcador de mapa.
+            O novo símbolo é formado utilizando o espaço negativo da letra &rdquo;M&rdquo; e a silhueta do topo do marcador de mapa.
           </PictureAndText>
         </Section>
 
