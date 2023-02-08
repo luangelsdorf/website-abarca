@@ -18,7 +18,7 @@ export default function Button({
   const Children = () => (
     <>
       {LeftIcon && <LeftIcon />}
-      {children}
+      <span>{children}</span>
       {RightIcon && <RightIcon />}
     </>
   );

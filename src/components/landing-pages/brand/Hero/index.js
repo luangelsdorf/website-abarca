@@ -22,8 +22,12 @@ export default function Hero({ content }) {
 
       <div className={styles.mosaic}>
         <div>
-          <div className={styles.lg} />
-          <div className={styles.lg} />
+          <div className={styles.lg}>
+            <Image fill src="/images/hero/casulo/Logos-Casulo.gif" alt="" />
+          </div>
+          <div className={styles.lg}>
+            <Image fill src="/images/hero/casulo/banner-hero.jpg" alt="" />
+          </div>
         </div>
         <div>
           <div className={styles.lg}>
