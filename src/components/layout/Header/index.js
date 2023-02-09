@@ -4,7 +4,7 @@ import Button from 'src/components/common/Button';
 import styles from './Header.module.scss';
 import Logo from 'public/images/brstorm.svg';
 import Link from 'next/link';
-import Open from 'public/images/icons/Open.svg';
+import Open from 'public/images/icons/open.svg';
 import Pin from 'public/images/icons/Pin.svg';
 
 export default function Header({ floating }) {
@@ -79,9 +79,7 @@ export default function Header({ floating }) {
             </ul>
             <div>
               <Link href="#" className="btn sm d-none d-lg-flex">Começar Projeto</Link>
-              <button onClick={handleClick} type="button" className="btn d-flex d-lg-none">
-                <Open />
-              </button>
+              <Button className="d-flex d-lg-none" onClick={handleClick} type="button" floating btnElement />
               {
                 floating ? (
                   <button onClick={floatingClick} type="button" className={`btn d-none d-lg-flex ${styles.floatingBtn}`}>

@@ -1,10 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
+import Open from 'public/images/icons/open.svg';
+import Close from 'public/images/icons/close.svg';
 
 export default function Button({
   children,
   link = false,
   type = 'button',
+  floating = false,
   btnElement = false,
   divElement = false,
   nativeLink = false,
@@ -18,13 +21,21 @@ export default function Button({
   const Children = () => (
     <>
       {LeftIcon && <LeftIcon />}
-      <span>{children}</span>
+      {
+        children && <span>{children}</span>
+      }
+      {
+        floating && (<>
+          <Open />
+          <Close />
+        </>)
+      }
       {RightIcon && <RightIcon />}
     </>
   );
 
   const baseProps = {
-    className: `${link ? '' : 'btn'}${className ? ' ' + className : ''}`,
+    className: `${link ? '' : 'btn'} ${floating ? 'floating-btn' : ''} ${className ? ' ' + className : ''}`,
   };
 
   if (btnElement) {

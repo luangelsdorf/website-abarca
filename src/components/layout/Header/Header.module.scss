@@ -126,5 +126,14 @@
 
   &.active {
     transform: translateY(0);
+
+    & + div :global(.floating-btn) {
+      svg:first-child {
+        display: none;
+      }
+      svg:last-child {
+        display: block;
+      }
+    }
   }
 }
