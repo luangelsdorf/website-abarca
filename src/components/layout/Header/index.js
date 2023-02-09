@@ -13,19 +13,19 @@ export default function Header({ floating }) {
     <div className={`d-flex d-lg-none ${styles.menu}`}>
       <ul>
         <li>
-          <Link href="#">Sobre</Link>
+          <Link onClick={handleClick} href="#about">Sobre</Link>
         </li>
         <li>
-          <Link href="#">Projetos</Link>
+          <Link onClick={handleClick} href="#projects">Projetos</Link>
         </li>
         <li>
-          <Link href="#">Clientes</Link>
+          <Link onClick={handleClick} href="#testimonials">Clientes</Link>
         </li>
         <li>
-          <Link href="#">Contato</Link>
+          <Link onClick={handleClick} href="#contact">Contato</Link>
         </li>
       </ul>
-      <Button href="#" RightIcon={Arrow} className="outline">Começar Projeto</Button>
+      <Button href="#contact" RightIcon={Arrow} className="outline">Começar Projeto</Button>
 
       <div className={styles.footer}>
         <Pin />
@@ -65,16 +65,16 @@ export default function Header({ floating }) {
             </Link>
             <ul className="collapse d-none d-lg-flex" id="links">
               <li>
-                <Link href="#">Sobre</Link>
+                <Link href="#about">Sobre</Link>
               </li>
               <li>
-                <Link href="#">Projetos</Link>
+                <Link href="#projects">Projetos</Link>
               </li>
               <li>
-                <Link href="#">Detalhes</Link>
+                <Link href="#about">Detalhes</Link>
               </li>
               <li>
-                <Link href="#">Contato</Link>
+                <Link href="#contact">Contato</Link>
               </li>
             </ul>
             <div>

@@ -39,7 +39,7 @@ export default function Casulo() {
 
         <Section>
           <Picture full>
-            <Image quality="100" loading="eager" src={basePath + 'Photography.jpg'} width="1400" height="800" alt="" />
+            <Image quality="100" loading="eager" src={basePath + 'Photography.jpeg'} width="1400" height="800" alt="" />
           </Picture>
         </Section>
 

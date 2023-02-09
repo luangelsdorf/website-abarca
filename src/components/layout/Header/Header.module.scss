@@ -69,9 +69,18 @@
 
   @include mixins.lg {
     top: 16px;
-    
+
     nav {
       padding: 12px 12px 12px 24px;
+      height: 64px;
+
+      a svg {
+        width: 130px;
+      }
+
+      & > div {
+        width: 56px;
+      }
     }
   }
 }

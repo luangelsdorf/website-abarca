@@ -21,6 +21,9 @@
 
       @include mixins.lg {
         padding: 12px !important;
+        span {
+          display: none;
+        }
       }
     }
   }
