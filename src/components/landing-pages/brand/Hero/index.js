@@ -38,8 +38,12 @@ export default function Hero({ content }) {
           </div>
         </div>
         <div>
-          <div className={styles.lg} />
-          <div className={styles.sm} />
+          <div className={styles.sm}>
+            <video src="/images/hero/pegada/logo-textures.mp4" loop muted autoPlay />
+          </div>
+          <div className={styles.lg}>
+            <Image fill src="/images/hero/pegada/woman.jpg" alt="" />
+          </div>
         </div>
         <div>
           <div className={styles.sm}>
