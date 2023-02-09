@@ -15,7 +15,7 @@ export default function Hero({ content }) {
           <span className="h-sans d-none d-lg-inline">e torne-a inesquecível</span>
         </h1>
         <p>{'Marque sua presença no mercado com uma marca forte e memorável. \nVeja abaixo como podemos lhe ajudar nessa jornada.'}</p>
-        <Button className="outline sm" href="#" RightIcon={Arrow}>
+        <Button id="hero-projects" className="outline sm" href="#projects" RightIcon={Arrow} onClick={e => e.preventDefault()}>
           <span className="d-none d-lg-inline">Ver Projetos</span>
         </Button>
       </header>

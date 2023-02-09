@@ -107,7 +107,7 @@ export default function Projects({ content }) {
                 <span className="h-sans">Veja como podemos </span>
                 <span>transformar sua marca</span>
               </h3>
-              <Button RightIcon={Arrow}>Solicite uma Proposta</Button>
+              <Button href="#contact" id="projects-contact" RightIcon={Arrow}>Solicite uma Proposta</Button>
             </div>
           </div>
         </div>

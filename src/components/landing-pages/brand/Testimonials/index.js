@@ -54,7 +54,7 @@ export default function Testimonials({ content }) {
                 <br className="d-none d-lg-block" />
                 no mercado e se conectar com seus clientes.
               </p>
-              <Button className="lg d-none d-lg-flex" RightIcon={Arrow} >Iniciar um Projeto</Button>
+              <Button id="testimonials-contact" href="#contact" className="lg d-none d-lg-flex" RightIcon={Arrow} >Iniciar um Projeto</Button>
             </header>
           </div>
 

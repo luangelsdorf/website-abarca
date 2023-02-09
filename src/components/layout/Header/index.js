@@ -25,7 +25,7 @@ export default function Header({ floating }) {
           <Link onClick={handleClick} href="#contact">Contato</Link>
         </li>
       </ul>
-      <Button href="#contact" RightIcon={Arrow} className="outline">Começar Projeto</Button>
+      <Button href="#contact" RightIcon={Arrow} className="outline" id="menu-contact">Começar Projeto</Button>
 
       <div className={styles.footer}>
         <Pin />
@@ -60,26 +60,26 @@ export default function Header({ floating }) {
       <div className={`container ${styles.header} ${floating ? styles.floating : ''}`}>
         <header>
           <nav>
-            <Link href="/" style={{ color: 'rgb(var(--white))' }}>
+            <Link id="logo" href="/" style={{ color: 'rgb(var(--white))' }}>
               <Logo />
             </Link>
             <ul className="collapse d-none d-lg-flex" id="links">
               <li>
-                <Link href="#about">Sobre</Link>
+                <Link id="header-nav-about" href="#about">Sobre</Link>
               </li>
               <li>
-                <Link href="#projects">Projetos</Link>
+                <Link id="header-nav-projects" href="#projects">Projetos</Link>
               </li>
               <li>
-                <Link href="#about">Detalhes</Link>
+                <Link id="header-nav-about" href="#about">Detalhes</Link>
               </li>
               <li>
-                <Link href="#contact">Contato</Link>
+                <Link id="header-nav-contact" href="#contact">Contato</Link>
               </li>
             </ul>
             <div>
-              <Link href="#" className="btn sm d-none d-lg-flex">Começar Projeto</Link>
-              <Button className="d-flex d-lg-none" onClick={handleClick} type="button" floating btnElement />
+              <Link id="header-contact" href="#contact" className="btn sm d-none d-lg-flex">Começar Projeto</Link>
+              <Button id="menu-expand" className="d-flex d-lg-none" onClick={handleClick} type="button" floating btnElement />
               {
                 floating ? (
                   <button onClick={floatingClick} type="button" className={`btn d-none d-lg-flex ${styles.floatingBtn}`}>
