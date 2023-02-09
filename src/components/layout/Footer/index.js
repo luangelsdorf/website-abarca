@@ -16,13 +16,13 @@ export default function Footer({ content }) {
           </p>
 
           <div className={`d-none d-lg-flex ${styles.social}`}>
-            <a href="#">
+            <a href="https://instagram.com/brstorm.design" target="_blank" rel="noopener noreferrer">
               <Instagram />
             </a>
-            <a href="#">
+            <a href="https://www.behance.net/brstorm-design" target="_blank" rel="noopener noreferrer">
               <Behance />
             </a>
-            <a href="#">
+            <a href="https://dribbble.com/brstorm-design/about" target="_blank" rel="noopener noreferrer">
               <Dribbble />
             </a>
           </div>

@@ -46,6 +46,22 @@ export default function App({ Component, pageProps }) {
     }
   }, []); */
 
+  useEffect(() => {
+    function handleLinkClick(e) {
+      e.preventDefault();
+      let id = e.currentTarget.href.split('#').at(-1);
+      let scrollPosition = document.getElementById(id).offsetTop;
+      scrollTo(0, scrollPosition);
+    }
+
+    let links = Array.from(document.querySelectorAll('a'));
+    let anchors = links.filter(link => link.href.includes('/#'));
+
+    anchors.forEach(anchor => anchor.addEventListener('click', handleLinkClick));
+
+    return () => anchors.forEach(anchor => anchor.removeEventListener('click', handleLinkClick));
+  }, []);
+
   return (
     <>
       <style jsx global>{`

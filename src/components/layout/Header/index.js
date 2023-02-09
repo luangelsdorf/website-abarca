@@ -13,16 +13,16 @@ export default function Header({ floating }) {
     <div className={`d-flex d-lg-none ${styles.menu}`}>
       <ul>
         <li>
-          <Link onClick={handleClick} href="#about">Sobre</Link>
+          <Link id="menu-about" onClick={handleClick} href="#about">Sobre</Link>
         </li>
         <li>
-          <Link onClick={handleClick} href="#projects">Projetos</Link>
+          <Link id="menu-projects" onClick={handleClick} href="#projects">Projetos</Link>
         </li>
         <li>
-          <Link onClick={handleClick} href="#testimonials">Clientes</Link>
+          <Link id="menu-testimonials" onClick={handleClick} href="#testimonials">Clientes</Link>
         </li>
         <li>
-          <Link onClick={handleClick} href="#contact">Contato</Link>
+          <Link id="menu-contact" onClick={handleClick} href="#contact">Contato</Link>
         </li>
       </ul>
       <Button href="#contact" RightIcon={Arrow} className="outline" id="menu-contact">Começar Projeto</Button>
@@ -71,7 +71,7 @@ export default function Header({ floating }) {
                 <Link id="header-nav-projects" href="#projects">Projetos</Link>
               </li>
               <li>
-                <Link id="header-nav-about" href="#about">Detalhes</Link>
+                <Link id="header-nav-about" href="#testimonials">Depoimentos</Link>
               </li>
               <li>
                 <Link id="header-nav-contact" href="#contact">Contato</Link>

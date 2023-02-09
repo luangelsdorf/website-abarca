@@ -35,46 +35,32 @@ export default function Projects({ content }) {
 
   const data = [
     {
-      client: 'PetsVida',
-      segment: 'Pet Shop E-commerce',
-      services: 'Identidade Visual',
-      local: "São Paulo | Brasil",
-    },
-    {
       client: 'Maptrack',
       segment: 'Startup de Rastreamento',
       services: 'Identidade Visual',
       local: "Brisbane | Austrália",
-    },
-    {
-      client: 'M2',
-      segment: 'Empreendimentos',
-      services: 'Identidade Visual',
-      local: "Araricá | Brasil",
+      slug: 'maptrack',
     },
     {
       client: 'Bronzo',
       segment: 'Restaurante Italiano',
       services: 'Website\nIdentidade Visual',
       local: "Londres | Inglaterra",
+      slug: 'bronzo',
     },
     {
       client: 'Abarca',
       segment: 'Escritório de Relações Públicas',
       services: 'Identidade Visual',
       local: "Campo Bom | Brasil",
-    },
-    {
-      client: 'Rivana',
-      segment: 'E-commerce de Vestuário',
-      services: 'Identidade Visual',
-      local: "Doha | Catar",
+      slug: 'abarca',
     },
     {
       client: 'Casulo',
       segment: 'Centro Canino',
       services: 'Website\nIdentidade Visual',
       local: "Araricá | Brasil",
+      slug: 'casulo',
     },
   ]
 
