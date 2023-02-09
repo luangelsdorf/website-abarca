@@ -16,7 +16,7 @@
   }
 
   p {
-    font: var(--body-default-lg-md);
+    font: var(--body-default-md);
     color: rgb(var(--shadow));
 
     &:first-child {
@@ -28,5 +28,10 @@
 
   .social {
     gap: 16px;
+
+    a {
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
