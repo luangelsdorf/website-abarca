@@ -4,6 +4,7 @@
   position: relative;
 
   @include mixins.lg {
+    
     &::after {
       content: "";
       position: absolute;
@@ -49,8 +50,14 @@
 
   @include mixins.lg {
     height: auto;
-
+    padding: 0;
     margin-bottom: 56px;
+    justify-content: center;
+
+    & + a {
+      width: max-content;
+      margin: auto;
+    }
   }
 }
 

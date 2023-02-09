@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Brand | Br.Storm</title>
+        <title>Deixe sua Marca no Mundo | Br.Storm</title>
       </Head>
 
       <main>
@@ -27,11 +27,11 @@ export default function Home() {
           <Projects />
         </Section>
 
-        <Section id="testimonials" pt="160 80" pb="160 96">
+        <Section id="testimonials" pt="160 80" pb="160 120">
           <Testimonials />
         </Section>
 
-        <Section id="contact" pt="120 96" pb="160 96">
+        <Section id="contact" pt="120 96" pb="160 0">
           <Contact />
         </Section>
       </main>

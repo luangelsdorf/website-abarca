@@ -80,14 +80,16 @@ export default function Projects({ content }) {
 
   return (
     <div className={styles.section}>
-      <header>
-        <p className="overline">
-          <Pin className="d-none d-lg-block" />
-          <span className="d-none d-lg-inline">Projetos em Todo o Mundo</span>
-          <span className="d-inline d-lg-none">Nossos Projetos</span>
-        </p>
-        <h2>Conheça <span className="h-serif">o que criamos</span> por aqui</h2>
-      </header>
+      <div className="col-12">
+        <header>
+          <p className="overline">
+            <Pin className="d-none d-lg-block" />
+            <span className="d-none d-lg-inline">Projetos em Todo o Mundo</span>
+            <span className="d-inline d-lg-none">Nossos Projetos</span>
+          </p>
+          <h2>Conheça <span className="h-serif">o que criamos</span> por aqui</h2>
+        </header>
+      </div>
       <div className="container">
         <div className="row gy-4 gy-lg-0 flex-lg-nowrap gy-4 horizontal">
 

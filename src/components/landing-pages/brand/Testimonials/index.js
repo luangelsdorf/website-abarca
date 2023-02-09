@@ -49,9 +49,9 @@ export default function Testimonials({ content }) {
               </h2>
               <p>
                 Veja depoimentos de como a <span>Br.Storm</span> tem
-                <br />
+                <br className="d-none d-lg-block" />
                 ajudado empresas em todo mundo a se destacar
-                <br />
+                <br className="d-none d-lg-block" />
                 no mercado e se conectar com seus clientes.
               </p>
               <Button className="lg d-none d-lg-flex" RightIcon={Arrow} >Iniciar um Projeto</Button>

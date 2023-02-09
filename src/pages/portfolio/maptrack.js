@@ -31,7 +31,7 @@ export default function MapTrack() {
         </Section>
 
         <Section>
-          <Intro info={{ client: 'Maptrack', segment: 'Startup de Rastreamento', services: ['Estratégia', 'Website', 'Identidade Visual'] }}>
+          <Intro info={{ client: 'Maptrack', segment: 'Startup de Rastreamento', services: ['Identidade Visual'] }}>
             MapTrack é uma startup que oferece serviços de rastreamento de ativos através de um software simples e poderoso. Ela atua em toda a Austrália e seu público-alvo é composto por grandes empresas do setor de construção, logística e de outras diversas áreas.
             <br />
             <br />

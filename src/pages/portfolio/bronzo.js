@@ -163,7 +163,7 @@ export default function Bronzo() {
 
         <Section>
           <Picture full noMargin>
-            <Image loading="eager" quality="75" src={basePath + 'Seal And Stamp.jpg'} width="1400" height="800" alt="" />
+            <Image loading="eager" quality="75" src={basePath + 'Seal and Stamp.jpg'} width="1400" height="800" alt="" />
           </Picture>
         </Section>
 

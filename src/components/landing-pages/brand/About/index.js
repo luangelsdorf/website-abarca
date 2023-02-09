@@ -12,7 +12,7 @@ export default function About({ content }) {
             <div className={styles.intro}>
               <h2>
                 <span className="h-sans">Sua marca muito </span>
-                <span>além do visual</span>
+                <span>além<br className="d-block d-lg-none" /> do visual</span>
               </h2>
               <Button href="#" className="outline lg d-none d-lg-flex" RightIcon={Arrow}>Comece seu Projeto Agora</Button>
             </div>
@@ -34,7 +34,7 @@ export default function About({ content }) {
               </article>
               <article>
                 <div>
-                  <h3>{'Equipe experiente \ne Especializada'}</h3>
+                  <h3>{'Equipe Experiente \ne Especializada'}</h3>
                   <p>{'Garantia de qualidade e eficácia \nna entrega do seu projeto.'}</p>
                 </div>
               </article>

@@ -26,6 +26,10 @@
         }
       }
     }
+
+    @include mixins.lg {
+      padding-top: 128px;
+    }
   }
 
   &::before {
@@ -58,7 +62,7 @@
   @include mixins.lg {
     width: 285.5%;
     left: -95%;
-    margin-top: -24px;
+    margin-top: -48px;
   }
 
   & > div {
