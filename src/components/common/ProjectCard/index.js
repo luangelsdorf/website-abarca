@@ -4,12 +4,12 @@ import Pin from 'public/images/icons/Pin.svg';
 import React from 'react';
 import styles from './ProjectCard.module.scss';
 
-export default function ProjectCard({ client, segment, services, local, slug }) {
+export default function ProjectCard({ client, segment, services, local, cover, hover, slug }) {
   return (
     <div className={styles.project}>
       <Link href={`/portfolio/${slug}`}>
-        <Image loading="eager" sizes="100vw" src={`/images/portfolio/hover/${client}.jpg`} width="200" height="200" alt="" />
-        <Image loading="eager" sizes="100vw" src={`/images/portfolio/${client}.jpg`} width="200" height="200" alt="" />
+        <Image loading="eager" sizes="100vw" src={`/images/portfolio/hover/${hover}`} width="200" height="200" alt="" />
+        <Image loading="eager" sizes="100vw" src={`/images/portfolio/${cover}`} width="200" height="200" alt="" />
       </Link>
       <div className={styles.infos}>
         <div>
