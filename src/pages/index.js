@@ -23,7 +23,7 @@ export default function Home() {
           <About />
         </Section>
 
-        <Section id="projects" pt="80 120" pb="120 80">
+        <Section id="projects" pt="0 120" pb="120 80">
           <Projects />
         </Section>
 

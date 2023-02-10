@@ -53,7 +53,7 @@ export default function Header({ floating }) {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
+  
   return (
     <>
       <MenuMobile />

@@ -53,8 +53,8 @@ export default function Abarca() {
           </Picture>
         </Section>
 
-        <Section style={{ background: '#001E62' }}>
-          <Picture>
+        <Section>
+          <Picture style={{ background: '#001E62' }}>
             <Image loading="eager" quality="100" src={basePath + 'Pattern.gif'} width="1400" height="800" alt="" />
           </Picture>
         </Section>
