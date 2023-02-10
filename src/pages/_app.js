@@ -26,9 +26,7 @@ const inter = Inter({
 
 export default function App({ Component, pageProps }) {
 
-  const scroller = useSmoothScroll();
-
-  const router = useRouter();
+  /* const scroller = useSmoothScroll(); */
 
   /* useEffect(() => {
     const onRouteStart = () => {
@@ -46,7 +44,7 @@ export default function App({ Component, pageProps }) {
     }
   }, []); */
 
-  useEffect(() => {
+  /* useEffect(() => {
     function handleLinkClick(e) {
       e.preventDefault();
       let id = e.currentTarget.href.split('#').at(-1);
@@ -60,7 +58,7 @@ export default function App({ Component, pageProps }) {
     anchors.forEach(anchor => anchor.addEventListener('click', handleLinkClick));
 
     return () => anchors.forEach(anchor => anchor.removeEventListener('click', handleLinkClick));
-  }, []);
+  }, []); */
 
   return (
     <>

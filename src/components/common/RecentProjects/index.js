@@ -3,19 +3,25 @@ import ProjectCard from '../ProjectCard';
 import styles from './RecentProjects.module.scss';
 
 export default function RecentProjects({ content }) {
-  const petsvida = {
-    client: 'PetsVida',
-    segment: 'Pet Shop E-commerce',
-    services: 'Identidade Visual',
-    local: "São Paulo | Brasil",
-  }
+  const casulo = {
+    client: 'Casulo',
+    segment: 'Centro Canino',
+    services: 'Website\nIdentidade Visual',
+    local: "Araricá | Brasil",
+    cover: 'Casulo.jpg',
+    hover: 'Casulo.jpg',
+    slug: 'casulo',
+  };
 
-  const maptrack = {
-    client: 'Maptrack',
-    segment: 'Startup de Rastreamento',
+  const abarca = {
+    client: 'Abarca',
+    segment: 'Escritório de Relações Públicas',
     services: 'Identidade Visual',
-    local: "Brisbane | Austrália",
-  }
+    local: "Campo Bom | Brasil",
+    cover: 'Abarca.png',
+    hover: 'Abarca.png',
+    slug: 'abarca',
+  };
 
   return (
     <div className={styles.section}>
@@ -25,10 +31,10 @@ export default function RecentProjects({ content }) {
         </div>
         <div className="row gy-4">
           <div className="col-12 col-lg-6">
-            <ProjectCard {...petsvida} />
+            <ProjectCard {...casulo} />
           </div>
           <div className="col-12 col-lg-6">
-            <ProjectCard {...maptrack} />
+            <ProjectCard {...abarca} />
           </div>
         </div>
       </div>

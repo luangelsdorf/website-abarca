@@ -25,7 +25,7 @@ export default function Header({ floating }) {
           <Link id="menu-contact" onClick={handleClick} href="#contact">Contato</Link>
         </li>
       </ul>
-      <Button href="#contact" RightIcon={Arrow} className="outline" id="menu-contact">Começar Projeto</Button>
+      <Button onClick={handleClick} href="#contact" RightIcon={Arrow} className="outline" id="menu-contact">Começar Projeto</Button>
 
       <div className={styles.footer}>
         <Pin />

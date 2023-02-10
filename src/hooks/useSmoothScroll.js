@@ -77,9 +77,12 @@ export default function useSmoothScroll() {
 
   useLayoutEffect(() => {
     function initScroll() {
-      return smoothScroll("#content", undefined, 1.5);
+      console.log('routeChangeComplete');
+      let s = smoothScroll("#content", undefined, 1.5);
+      window?.dispatchEvent(new Event('resize'));
+      return s;
     }
-    
+
     gsap.registerPlugin(ScrollTrigger);
     let init = initScroll();
     router.events.on('routeChangeComplete', initScroll);

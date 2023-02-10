@@ -19,11 +19,7 @@
   &:hover {
     color: rgb(var(--white));
     background-color: rgb(var(--black));
-    transform: scale(0.92);
-
-    span {
-      transform: scale(1.087);
-    }
+    transform: scale(0.96);
   }
 
   &.sm {
