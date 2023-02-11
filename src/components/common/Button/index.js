@@ -19,7 +19,7 @@ export default function Button({
 }) {
 
   const Children = () => (
-    <>
+    <div>
       {LeftIcon && <LeftIcon />}
       {
         children && <span>{children}</span>
@@ -31,7 +31,7 @@ export default function Button({
         </>)
       }
       {RightIcon && <RightIcon />}
-    </>
+    </div>
   );
 
   const baseProps = {

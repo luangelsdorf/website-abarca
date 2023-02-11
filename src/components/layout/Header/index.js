@@ -53,7 +53,7 @@ export default function Header({ floating }) {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-  
+
   return (
     <>
       <MenuMobile />
@@ -78,7 +78,7 @@ export default function Header({ floating }) {
               </li>
             </ul>
             <div>
-              <Link id="header-contact" href="#contact" className="btn sm d-none d-lg-flex">Começar Projeto</Link>
+              <Button id="header-contact" href="#contact" className="sm d-none d-lg-flex">Começar Projeto</Button>
               <Button id="menu-expand" className="d-flex d-lg-none" onClick={handleClick} type="button" floating btnElement />
               {
                 floating ? (

@@ -12,14 +12,21 @@
   transition: all 350ms;
   cursor: pointer;
 
-  span {
+  & > div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
     transition: transform 350ms;
   }
 
   &:hover {
     color: rgb(var(--white));
     background-color: rgb(var(--black));
-    transform: scale(0.96);
+    transform: scale(0.95);
+
+    & > div {
+      transform: scale(calc(1 / 0.95));
+    }
   }
 
   &.sm {
