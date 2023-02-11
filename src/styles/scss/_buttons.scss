@@ -1,3 +1,7 @@
+@use "animations";
+
+@include animations.tip-animation;
+
 .btn {
   font: var(--body-bold-lg);
   padding: 12px 24px;
@@ -26,6 +30,13 @@
 
     & > div {
       transform: scale(calc(1 / 0.95));
+    }
+
+    .arrow-shaft {
+      animation: draw-tip 400ms both;
+    }
+    .arrow-tip {
+      animation: draw-tip 400ms 400ms both;
     }
   }
 

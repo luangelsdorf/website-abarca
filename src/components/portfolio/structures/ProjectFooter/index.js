@@ -11,7 +11,7 @@ export default function ProjectFooter({ content }) {
         <RecentProjects />
       </Section>
 
-      <Section pt="120 96" pb="96 120">
+      <Section pt="120 96" pb="160 120">
         <Contact noLinks />
       </Section>
     </div>
