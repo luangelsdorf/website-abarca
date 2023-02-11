@@ -127,12 +127,18 @@
   &.active {
     transform: translateY(0);
 
-    & + div :global(.floating-btn) {
-      svg:first-child {
-        display: none;
+    & + div {
+      nav {
+        border-color: transparent;
       }
-      svg:last-child {
-        display: block;
+
+      :global(.floating-btn) {
+        svg:first-child {
+          display: none;
+        }
+        svg:last-child {
+          display: block;
+        }
       }
     }
   }

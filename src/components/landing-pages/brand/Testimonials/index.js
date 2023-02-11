@@ -10,29 +10,24 @@ export default function Testimonials({ content }) {
 
   const data = [
     {
-      quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
-      client: 'Client Name',
-      business: 'Business',
+      quote: 'O processo deles realmente nos ajudou a trazer a alma do nosso negócio à tona, mas foi a execução que nos surpreendeu de verdade. Não poderíamos estar mais felizes!',
+      client: 'Sara & Fabio',
+      business: 'Bronzo',
     },
     {
-      quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
-      client: 'Client Name',
-      business: 'Business',
+      quote: 'O melhor time com quem já trabalhei, entendem muito sobre design e cuidaram de cada detalhe para que o resultado ficasse único como eu queria.',
+      client: 'Kétlin Pacheco',
+      business: 'Abarca',
     },
     {
-      quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
-      client: 'Client Name',
-      business: 'Business',
+      quote: 'Vocês são incríveis! A gente não pode mensurar a alegria dessa parceria, sabemos que estamos amparadas na caminhada pra chegar onde queremos. Obrigada!',
+      client: 'Thabata & Denise',
+      business: 'Casulo',
     },
     {
-      quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
-      client: 'Client Name',
-      business: 'Business',
-    },
-    {
-      quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
-      client: 'Client Name',
-      business: 'Business',
+      quote: 'Eles entregaram um projeto que atendeu e superou nossas expectativas, de primeira. A marca que nos foi apresentada foi simples (da melhor forma possível) e capturou quem somos como empresa. Com certeza recomendo!',
+      client: 'Jarrod Milford',
+      business: 'Maptrack',
     },
   ];
 
