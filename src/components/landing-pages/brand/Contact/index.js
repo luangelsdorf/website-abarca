@@ -81,7 +81,7 @@ export default function Contact({ content }) {
                   <textarea id="info" placeholder="Nos conte um pouco mais sobre a sua ideia e como podemos lhe ajudar." {...register('entry_776223444')}></textarea>
                   <label htmlFor="info">Informações Adicionais</label>
                 </div>
-                <Button btnElement type="submit" className="lg" RightIcon={Arrow}>Enviar Solicitação</Button>
+                <Button id="form-submit" btnElement type="submit" className="lg form-submit" RightIcon={Arrow}>Enviar Solicitação</Button>
                 <Spinner style={{ display: isSubmitting ? 'block' : 'none' }} />
                 <span style={{ opacity: isSubmitSuccessful ? '1' : '0' }}>✓ Enviada com sucesso!</span>
               </form>
