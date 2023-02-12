@@ -42,3 +42,19 @@
     }
   }
 }
+
+@mixin draw-circle {
+  @keyframes draw-circle {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+@mixin draw-arrow-shaft {
+  @keyframes draw-arrow-shaft {
+    50%, 100% {
+      stroke-dashoffset: 0;
+    }
+  }
+}

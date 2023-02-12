@@ -1,0 +1,19 @@
+<svg width="122" height="122" viewBox="0 0 122 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="bottom-layer">
+    <g class="gray-arrow">
+      <path d="M24 61H97.61" stroke="#666666" />
+      <path d="M83.084 76.6302C83.084 68.3099 89.6756 61.5649 97.8067 61.5649" stroke="#666666" stroke-miterlimit="10" />
+      <path d="M83.084 45.3698C83.084 53.6901 89.6756 60.4351 97.8067 60.4351" stroke="#666666" stroke-miterlimit="10" />
+    </g>
+    <circle id="gray-circle" cx="61" cy="61" r="60" transform="rotate(-90 61 61)" stroke="#666666" />
+  </g>
+
+  <g class="top-layer">
+    <g class="white-arrow">
+      <path class="big-arrow-shaft" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"  d="M24 61H97.61" stroke="white" stroke-width="1.5" />
+      <path class="big-arrow-tip" pathLength="1" stroke-dasharray="1" stroke-dashoffset="-1" d="M83.084 76.6302C83.084 68.3099 89.6756 61.5649 97.8067 61.5649" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10" />
+      <path class="big-arrow-tip" pathLength="1" stroke-dasharray="1" stroke-dashoffset="-1" d="M83.084 45.3698C83.084 53.6901 89.6756 60.4351 97.8067 60.4351" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10" />
+    </g>
+    <circle pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" class="white-circle" cx="61" cy="61" r="60" transform="rotate(180 61 61)" stroke="#FFFFFF" stroke-width="1.5" />
+  </g>
+</svg>

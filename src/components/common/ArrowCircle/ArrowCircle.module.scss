@@ -1,0 +1,13 @@
+@use '../../../styles/scss/animations';
+
+@include animations.draw-circle;
+@include animations.draw-arrow-shaft;
+
+.arrow {
+  /* :global(.white-circle) {
+    animation: draw-circle 4s infinite;
+  }
+  :global(.big-arrow-shaft) {
+    animation: draw-arrow-shaft 1.2s 2.4s both;
+  } */
+}

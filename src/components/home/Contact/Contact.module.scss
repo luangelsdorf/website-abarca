@@ -19,13 +19,28 @@
   }
 
   .circleButton {
-    display: flex;
     height: 120px;
     width: 120px;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgb(var(--dark-gray));
-    border-radius: 50%;
+
+    path,
+    line,
+    circle {
+      transition: 350ms;
+    }
+
+    &:hover {
+      :global(.top-layer) {
+        opacity: 0;
+      }
+
+      path,
+      line,
+      circle {
+        stroke: rgb(var(--white));
+      }
+    }
   }
 
   @include mixins.lg {
