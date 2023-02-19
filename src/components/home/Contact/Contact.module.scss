@@ -28,11 +28,28 @@
     line,
     circle {
       transition: 350ms;
+      transform-origin: center;
+    }
+
+    circle {
+      transform: rotate(180deg);
     }
 
     &:hover {
       :global(.top-layer) {
         opacity: 0;
+      }
+
+      circle {
+        transform: rotate(180deg) scale(0.95);
+      }
+
+      path:first-child {
+        transform: scaleX(0.4);
+      }
+
+      path:not(:first-child) {
+        transform: translateX(-20px);
       }
 
       path,
