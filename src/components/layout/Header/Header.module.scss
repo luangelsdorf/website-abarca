@@ -11,7 +11,16 @@
   clip-path: inset(0 12px round 56px);
   transition: all 350ms;
 
-  a,
+  ul {
+    a {
+      color: rgb(var(--white));
+
+      &:hover {
+        color: rgb(var(--gray));
+      }
+    }
+  }
+  
   ul,
   .floatingBtn {
     transition: all 350ms;

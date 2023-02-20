@@ -58,6 +58,106 @@
   }
 }
 
+a {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+  transition: all 350ms;
+  position: relative;
+
+  span {
+    transition: transform 350ms;
+    display: inline-block;
+  }
+
+  &.large {
+    & > div {
+      &::after,
+      &::before {
+        border: 1px solid rgba(var(--gray));
+        height: 8px;
+        width: 8px;
+      }
+    }
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+
+    &::after,
+    &::before {
+      height: 4px;
+      width: 4px;
+      border-radius: 50%;
+      border: 1px solid rgba(var(--gray));
+      display: block;
+      position: absolute;
+      transition: all 350ms;
+      opacity: 0;
+    }
+  }
+
+  &.right {
+    & > div {
+      justify-content: flex-end;
+      &::after {
+        content: "";
+        right: -8px;
+      }
+    }
+    &:hover {
+      & > div {
+        &::after {
+          opacity: 1;
+        }
+      }
+      span {
+        transform: translateX(-8px);
+      }
+    }
+  }
+
+  &.bottom {
+    & > div {
+      justify-content: center;
+      &::after {
+        content: "";
+        bottom: -8px;
+      }
+    }
+    &:hover {
+      & > div {
+        &::after {
+          opacity: 1;
+        }
+      }
+      span {
+        transform: translateY(-4px);
+      }
+    }
+  }
+
+  &.large {
+    & > div {
+      &::before {
+        content: "";
+        left: 0;
+      }
+    }
+    &:hover {
+      & > div {
+        &::before {
+          opacity: 1;
+        }
+      }
+      span {
+        transform: translateX(24px);
+      }
+    }
+  }
+}
+
 .floating-btn {
   svg:last-child {
     display: none;

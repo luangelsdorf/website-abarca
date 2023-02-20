@@ -99,17 +99,6 @@ p {
   color: rgb(var(--gray));
 }
 
-a {
-  display: inline-flex;
-  text-decoration: none;
-  color: inherit;
-  transition: all 350ms;
-
-  &:hover {
-    color: rgb(var(--white));
-  }
-}
-
 h1 {
   font: var(--heading-serif-large);
 }

@@ -27,22 +27,22 @@ export default function Contact({ noLinks }) {
               <div>
                 <h3>Contatos</h3>
                 <address>
-                  <a href="tel:+5551989836186">+55 51 98983.6186</a>
-                  <a href="mailto:contact@brstorm.design">contact@brstorm.design</a>
+                  <Button link nativeLink className="left" href="tel:+5551989836186">+55 51 98983.6186</Button>
+                  <Button link nativeLink className="left" href="mailto:contact@brstorm.design">contact@brstorm.design</Button>
                 </address>
               </div>
               <div>
                 <h3>Brand Design</h3>
-                <Link href="#">{'Sua Marca Muito \nAlém do Visual'}</Link>
+                <Button link className="bottom">{'Sua Marca Muito \nAlém do Visual'}</Button>
               </div>
               <div>
                 <h3>Digital Design</h3>
-                <Link href="#">{'Tenha uma Vitrine \n24/7 do seu Negócio'}</Link>
+                <Button link className="bottom">{'Tenha uma Vitrine \n24/7 do seu Negócio'}</Button>
               </div>
               <div>
                 <h3>Outros Links</h3>
-                <Link href="#">Termos de Uso</Link>
-                <Link href="#">Política de Privacidade</Link>
+                <Button link className="right">Termos de Uso</Button>
+                <Button link className="right">Política de Privacidade</Button>
               </div>
             </div>
           </div>

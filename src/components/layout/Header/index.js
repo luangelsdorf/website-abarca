@@ -13,16 +13,16 @@ export default function Header({ floating }) {
     <div className={`d-flex d-lg-none ${styles.menu}`}>
       <ul>
         <li>
-          <Link id="menu-about" onClick={handleClick} href="/#about">Sobre</Link>
+          <Button className="left large" link id="menu-about" onClick={handleClick} href="/#about">Sobre</Button>
         </li>
         <li>
-          <Link id="menu-projects" onClick={handleClick} href="/#projects">Projetos</Link>
+          <Button className="left large" link id="menu-projects" onClick={handleClick} href="/#projects">Projetos</Button>
         </li>
         <li>
-          <Link id="menu-testimonials" onClick={handleClick} href="/#testimonials">Clientes</Link>
+          <Button className="left large" link id="menu-testimonials" onClick={handleClick} href="/#testimonials">Clientes</Button>
         </li>
         <li>
-          <Link id="menu-contact" onClick={handleClick} href="/#contact">Contato</Link>
+          <Button className="left large" link id="menu-contact" onClick={handleClick} href="/#contact">Contato</Button>
         </li>
       </ul>
       <Button onClick={handleClick} href="/#contact" RightIcon={Arrow} className="outline" id="menu-contact">Começar Projeto</Button>
@@ -65,16 +65,16 @@ export default function Header({ floating }) {
             </Link>
             <ul className="collapse d-none d-lg-flex" id="links">
               <li>
-                <Link id="header-nav-about" href="/#about">Sobre</Link>
+                <Button link className="bottom" id="header-nav-about" href="/#about">Sobre</Button>
               </li>
               <li>
-                <Link id="header-nav-projects" href="/#projects">Projetos</Link>
+                <Button link className="bottom" id="header-nav-projects" href="/#projects">Projetos</Button>
               </li>
               <li>
-                <Link id="header-nav-about" href="/#testimonials">Depoimentos</Link>
+                <Button link className="bottom" id="header-nav-about" href="/#testimonials">Depoimentos</Button>
               </li>
               <li>
-                <Link id="header-nav-contact" href="/#contact">Contato</Link>
+                <Button link className="bottom" id="header-nav-contact" href="/#contact">Contato</Button>
               </li>
             </ul>
             <div>
