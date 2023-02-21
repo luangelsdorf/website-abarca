@@ -124,9 +124,42 @@ textarea {
       border-bottom-color: rgb(var(--error));
     }
   }
+
+  &.sm {
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+      height: 48px;
+    }
+
+    label {
+      transform: translateY(35%);
+    }
+  }
+
+  &.light {
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+      color: rgb(var(--shadow));
+      border-bottom-color: rgb(var(--gray));
+    }
+
+    label {
+      color: rgb(var(--dark-gray));
+    }
+  }
 }
 
-form [disabled] {
-  pointer-events: none;
-  opacity: 0.4;
+form {
+  [disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  [type="submit"] ~ span {
+    font: var(--body-default-md);
+    color: rgb(var(--success));
+    transition: all 500ms;
+  }
 }

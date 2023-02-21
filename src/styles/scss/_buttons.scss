@@ -98,6 +98,25 @@ a {
     }
   }
 
+  &.left {
+    & > div {
+      &::after {
+        content: "";
+        left: -8px;
+      }
+    }
+    &:hover {
+      & > div {
+        &::after {
+          opacity: 1;
+        }
+      }
+      span {
+        transform: translateX(8px);
+      }
+    }
+  }
+
   &.right {
     & > div {
       justify-content: flex-end;

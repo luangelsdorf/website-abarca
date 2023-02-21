@@ -4,21 +4,25 @@ import Arrow from 'public/images/icons/Arrow.svg';
 import Button from 'src/components/common/Button';
 import Image from 'next/image';
 import AnimatedLogo from 'src/components/common/AnimatedLogo';
+import ShortForm from 'src/components/common/ShortForm';
 
 export default function Hero({ content }) {
   return (
     <div className={styles.section}>
-      <header>
-        <h1>
-          <span>Dê vida à sua marca</span>
-          <br />
-          <span className="h-sans d-none d-lg-inline">e torne-a inesquecível</span>
-        </h1>
-        <p>{'Marque sua presença no mercado com uma marca forte e memorável. \nVeja abaixo como podemos lhe ajudar nessa jornada.'}</p>
-        <Button id="hero-projects" className="outline sm" href="#projects" RightIcon={Arrow}>
-          <span className="d-none d-lg-inline">Ver Projetos</span>
-        </Button>
-      </header>
+      <div className="col-12">
+        <header>
+          <h1>
+            <span>Dê vida à sua marca</span>
+            <br />
+            <span className="h-sans d-none d-lg-inline">e torne-a inesquecível</span>
+          </h1>
+          <div className="col-12 col-sm-8 col-lg-6 mx-auto p-0">
+            <ShortForm />
+          </div>
+          <p>{'Preencha o formulário acima e deixe sua \nmarca se destacar no mercado. '}</p>
+          <Button id="hero-projects" className="outline sm" href="#projects" RightIcon={Arrow} />
+        </header>
+      </div>
 
       <div className={styles.mosaic}>
         <div>
