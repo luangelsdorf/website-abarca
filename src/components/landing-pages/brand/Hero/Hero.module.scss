@@ -1,4 +1,8 @@
 @use "../../../../styles/scss/mixins";
+@use "../../../../styles/scss/animations";
+
+@include animations.infinite-arrow-shaft;
+@include animations.infinite-arrow-tip;
 
 .section {
   position: relative;
@@ -29,6 +33,14 @@
         span {
           display: none;
         }
+      }
+
+      :global(.arrow-shaft) {
+        animation: infinite-arrow-shaft 2s infinite alternate;
+      }
+
+      :global(.arrow-tip) {
+        animation: infinite-arrow-tip 2s infinite alternate;
       }
     }
 

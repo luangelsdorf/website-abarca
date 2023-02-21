@@ -53,7 +53,32 @@
 
 @mixin draw-arrow-shaft {
   @keyframes draw-arrow-shaft {
-    50%, 100% {
+    50%,
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+@mixin infinite-arrow-shaft {
+  @keyframes infinite-arrow-shaft {
+    0%, 20% {
+      stroke-dashoffset: 1;
+    }
+
+    80%, 100% {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+@mixin infinite-arrow-tip {
+  @keyframes infinite-arrow-tip {
+    0%, 40% {
+      stroke-dashoffset: 1;
+    }
+
+    60%, 100% {
       stroke-dashoffset: 0;
     }
   }
