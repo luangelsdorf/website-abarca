@@ -63,20 +63,20 @@ export default function Bronzo() {
           </Picture>
         </Section>
 
-        <Section>
+        {/* <Section>
           <Text>
             Com base nos resultados que obtivemos empregamos uma série de técnicas de análise que auxiliaram na extração das principais diretrizes e características do projeto. A execução criteriosa deste passo foi imprescindível para guiar as etapas de design posteriores.
           </Text>
-        </Section>
+        </Section> */}
 
-        <Section>
+        {/* <Section>
           <DoublePicture>
             <Image loading="eager" quality="75" src={basePath + 'Briefing.png'} width="1400" height="800" alt="" />
             <Image loading="eager" quality="75" src={basePath + 'Analysis.png'} width="1400" height="800" alt="" />
           </DoublePicture>
-        </Section>
+        </Section> */}
 
-        <Section>
+        {/* <Section>
           <PictureAndText title="Tradição e Força" flipped>
             <Image loading="eager" quality="75" src={basePath + 'History.jpg'} width="1400" height="800" alt="" />
             Entender o significado das coisa é primordial para criar algo que se destaque. As palavras têm poder e carregam consigo a história do mundo. Sabendo disso buscamos compreender o que é a “Bronzo” (do italiano, Bronze).
@@ -87,7 +87,7 @@ export default function Bronzo() {
             <br />
             Há milênios ferramentas são confeccionadas com ele. Este forte material dá nome ao negócio, pois faz parte do principal ambiente do restaurante, a cozinha. Dele é feita a Trafila, peça utilizada para dar forma as massas.
           </PictureAndText>
-        </Section>
+        </Section> */}
 
         <Section>
           <Picture full>
@@ -95,7 +95,7 @@ export default function Bronzo() {
           </Picture>
         </Section>
 
-        <Section pb="120">
+        {/* <Section pb="120">
           <PictureAndText title="Pintadera Sardegna">
             <Image loading="eager" quality="75" src={basePath + 'Pintadera.jpg'} width="1400" height="800" alt="" />
             Um símbolo relacionado com a origem dos proprietários do restaurante, que vieram da Ilha da Sardenha na Itália.
@@ -106,7 +106,7 @@ export default function Bronzo() {
             <br />
             Um artefato típico de culturas pré-históricas como a civilização Nurágica, povo que habitou a Ilha da Sardenha no final da Idade do Bronze.
           </PictureAndText>
-        </Section>
+        </Section> */}
 
         <Section pb="120">
           <Picture full>
@@ -130,7 +130,7 @@ export default function Bronzo() {
           </Picture>
         </Section>
 
-        <Section pb="200">
+        <Section>
           <Text>
             A tipografia desenhada para o projeto com seu estilo singular, moderno e arrojado, cria um ótimo contraste com as referências históricas que constituem o símbolo, resultando assim em uma ótima combinação.
           </Text>
@@ -149,11 +149,11 @@ export default function Bronzo() {
           Também foi desenvolvida uma composição secundária para agregar mais versatilidade a marca. Essas cores permitem segmentar os produtos, facilitando a experiência do consumidor.
         </FullText>
 
-        <Section>
+        {/* <Section>
           <Picture full>
             <Image loading="eager" quality="75" src={basePath + 'Secundary-Colors.jpg'} width="1400" height="800" alt="" />
           </Picture>
-        </Section>
+        </Section> */}
 
         <Section>
           <Picture full noMargin>
