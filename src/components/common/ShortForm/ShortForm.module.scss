@@ -14,7 +14,6 @@
     display: flex;
     width: 100%;
     gap: 16px;
-    align-items: center;
 
     :global(.floating) {
       flex-grow: 1;
@@ -38,7 +37,9 @@
 
       & ~ div {
         position: absolute;
-        right: -8%;;
+        right: -8%;
+        bottom: 50%;
+        transform: translateY(50%);
       }
 
       span {
@@ -69,11 +70,11 @@
       :global(.floating) {
         align-items: center;
         width: 100%;
-  
+
         & > span {
-          bottom: 4px ;
+          bottom: 4px;
         }
-  
+
         label {
           transform-origin: center;
           left: auto;
