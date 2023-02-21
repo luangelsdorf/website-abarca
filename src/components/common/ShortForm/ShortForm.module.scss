@@ -1,6 +1,7 @@
 @use "../../../styles/scss/mixins";
 
 .form {
+  position: relative;
   background-color: rgb(var(--white));
   padding-top: 8px;
   padding-bottom: 8px;
@@ -13,9 +14,16 @@
     display: flex;
     width: 100%;
     gap: 16px;
+    align-items: center;
 
     :global(.floating) {
       flex-grow: 1;
+
+      & > span {
+        left: 0;
+        right: auto;
+        bottom: -8px;
+      }
     }
 
     [type="submit"] {
@@ -25,6 +33,12 @@
 
       & ~ span {
         position: absolute;
+        top: -32px;
+      }
+
+      & ~ div {
+        position: absolute;
+        right: -8%;;
       }
 
       span {
@@ -40,15 +54,6 @@
     padding-left: 20px;
     padding-bottom: 16px;
 
-    :global(.floating) {
-      align-items: center;
-      width: 100%;
-
-      label {
-        transform-origin: center;
-      }
-    }
-
     input {
       text-align: center;
       &::placeholder {
@@ -61,11 +66,30 @@
       align-items: center;
       gap: 24px;
 
+      :global(.floating) {
+        align-items: center;
+        width: 100%;
+  
+        & > span {
+          bottom: 4px ;
+        }
+  
+        label {
+          transform-origin: center;
+          left: auto;
+        }
+      }
+
       [type="submit"] {
         padding: 16px 32px;
 
         span {
           display: inline;
+        }
+
+        & ~ div {
+          right: 8px;
+          top: 8px;
         }
       }
     }

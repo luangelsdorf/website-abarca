@@ -38,7 +38,6 @@ export default function ArrowCircle({ content }) {
           drawButton(currentDirecton);
           currentDirecton = currentDirecton === 'normal' ? 'reverse' : 'normal';
         }, 800));
-        console.log(timeout);
       });
     }
 

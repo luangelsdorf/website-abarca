@@ -121,7 +121,7 @@ textarea {
   &.error {
     input,
     select {
-      border-bottom-color: rgb(var(--error));
+      border-bottom-color: rgb(var(--error)) !important;
     }
   }
 
@@ -133,7 +133,7 @@ textarea {
     }
 
     label {
-      transform: translateY(35%);
+      transform: translateY(30%);
     }
   }
 
