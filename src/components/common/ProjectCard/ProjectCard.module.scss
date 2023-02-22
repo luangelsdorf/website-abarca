@@ -6,6 +6,10 @@
   overflow: hidden;
   height: 78vh;
 
+  &[data-small] {
+    height: 535px;
+  }
+
   a {
     position: relative;
     display: block;
@@ -104,7 +108,10 @@
   }
 
   @include mixins.lg {
-    height: 340px;
+    &,
+    &[data-small] {
+      height: 340px;
+    }
 
     img {
       border-radius: 8px;

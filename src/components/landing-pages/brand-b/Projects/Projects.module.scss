@@ -1,0 +1,53 @@
+@use "../../../../styles/scss/mixins";
+
+.section {
+  header {
+    text-align: center;
+    margin-bottom: 96px;
+
+    p {
+      position: relative;
+      margin-bottom: 40px;
+      justify-content: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 440px;
+        height: 1px;
+        background-color: rgb(var(--shadow));
+      }
+
+      svg {
+        color: var(--white);
+      }
+    }
+
+    h2 {
+      font: var(--heading-sans-medium);
+      color: rgb(var(--light-gray));
+    }
+
+    @include mixins.lg {
+      margin-bottom: 64px;
+      p {
+        margin-bottom: 40px;
+        &::before {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+.project {
+  &:nth-child(even) {
+    position: relative;
+    top: 56px;
+
+    @include mixins.lg {
+      position: static;
+    }
+  }
+}
