@@ -1,0 +1,17 @@
+.section {
+
+}
+
+.textContent {
+  margin-top: 32px;
+
+  p {
+    margin: 40px 0;
+  }
+
+  a {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+}

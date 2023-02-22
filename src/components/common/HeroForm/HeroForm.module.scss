@@ -1,0 +1,56 @@
+@use "../../../styles/scss/mixins";
+
+.form {
+  position: relative;
+  background-color: rgb(var(--white));
+  padding: 32px 24px;
+  border-radius: 48px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+
+    :global(.floating) {
+      width: 100%;
+    }
+
+    [type="submit"] {
+      filter: invert(1);
+
+      & ~ div {
+        position: absolute;
+        bottom: 24px;
+        right: 24px;
+        filter: invert(1);
+      }
+
+      & ~ span {
+        position: absolute;
+        bottom: 8px;
+        left: 32px;
+      }
+    }
+  }
+
+  @include mixins.lg {
+    border-radius: 16px;
+
+    form {
+      align-items: center;
+
+      [type="submit"] {
+        & ~ div {
+          position: absolute;
+          bottom: 8px;
+          right: 8px;
+        }
+
+        & ~ span {
+          left: auto;
+        }
+      }
+    }
+  }
+}

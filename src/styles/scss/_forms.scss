@@ -138,15 +138,25 @@ textarea {
   }
 
   &.light {
-    input[type="text"],
+    filter: invert(1);
+    /* input[type="text"],
     input[type="tel"],
     input[type="email"] {
       color: rgb(var(--shadow));
       border-bottom-color: rgb(var(--gray));
+
+      &::placeholder {
+        color: rgb(153, 153, 153, 0.5);
+      }
     }
 
     label {
       color: rgb(var(--dark-gray));
+    } */
+
+    option {
+      color: rgb(var(--shadow));
+      background-color: rgb(var(--white));
     }
   }
 }
