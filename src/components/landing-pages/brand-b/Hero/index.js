@@ -17,7 +17,7 @@ export default function Hero({ content }) {
                 <span>para sua marca</span>
               </h1>
               <p>Marque sua presença no mercado com uma marca forte e memorável. Veja abaixo como podemos lhe ajudar nessa jornada. <strong>Fortaleça sua marca conosco!</strong></p>
-              <Button href="#packages" className="sm outline" RightIcon={Arrow}>Ver Pacotes de Serviços</Button>
+              <Button href="#pricing" className="sm outline" RightIcon={Arrow}>Ver Pacotes de Serviços</Button>
             </div>
           </div>
           <div className="col-12 col-lg-4 offset-lg-1">

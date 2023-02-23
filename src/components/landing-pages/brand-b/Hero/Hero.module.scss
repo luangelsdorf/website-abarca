@@ -1,5 +1,11 @@
-.section {
+@use '../../../../styles/scss/mixins';
 
+.section {
+  @include mixins.lg {
+    :global(.row) {
+      gap: 40px;
+    }
+  }
 }
 
 .textContent {

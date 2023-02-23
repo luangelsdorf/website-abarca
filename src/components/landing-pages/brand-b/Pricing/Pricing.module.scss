@@ -1,0 +1,229 @@
+@use "../../../../styles/scss/mixins";
+
+@mixin active-card {
+  transform: translateY(-20px);
+  opacity: 1;
+  background-color: rgb(var(--white));
+  color: rgb(var(--dark-gray));
+
+  & > div:first-child {
+    p {
+      color: rgb(var(--dark-gray));
+    }
+  }
+
+  & > div:nth-child(2) {
+    & > ul > li {
+      &::marker {
+        color: rgb(var(--black));
+      }
+      p {
+        color: rgb(var(--black));
+      }
+    }
+  }
+
+  & > div:nth-child(3) {
+    & > div {
+      p {
+        color: rgb(var(--black));
+      }
+
+      span {
+        color: rgb(var(--gray));
+
+        & ~ p {
+          color: rgb(var(--black));
+        }
+      }
+    }
+  }
+
+  p {
+    color: rgb(var(--dark-gray));
+  }
+
+  h3 {
+    color: rgb(var(--black));
+  }
+}
+
+.section {
+  & > div > header {
+    text-align: center;
+    margin-bottom: 80px;
+
+    h2 {
+      margin: 32px 0;
+    }
+
+    p:first-child {
+      position: relative;
+      justify-content: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 336px;
+        height: 1px;
+        background-color: rgb(var(--shadow));
+
+        @include mixins.sm {
+          display: none;
+        }
+      }
+    }
+
+    p:last-child {
+      max-width: 420px;
+      margin: auto;
+    }
+  }
+}
+
+.pack {
+  background-color: rgb(255, 255, 255, 0.02);
+  border: 1px solid rgb(var(--dark-gray));
+  padding: 40px;
+  opacity: 0.6;
+  transition: all 350ms ease;
+  margin-top: 20px;
+  border-radius: 24px;
+
+  @include mixins.md {
+    padding: 32px 16px;
+    opacity: 1;
+  }
+
+  @include mixins.lg {
+    opacity: 1;
+    text-align: left !important;
+  }
+
+  &:hover {
+    @media (min-width: 992px) {
+      @include active-card;
+    }
+  }
+
+  // Card Header
+  & > div:first-child {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    h3 {
+      line-height: 40px;
+    }
+
+    p {
+      font: var(--body-bold-md);
+      color: rgb(var(--light-gray));
+      text-align: right;
+    }
+  }
+
+  // Card Body
+  & > div:nth-child(2) {
+    font: var(--body-default-md);
+    border-top: 1px solid rgb(var(--dark-gray));
+    border-bottom: 1px solid rgb(var(--dark-gray));
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+
+      p {
+        color: rgb(var(--light-gray));
+      }
+    }
+
+    ul {
+      list-style: circle;
+      padding: 0;
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    & > ul {
+      font: var(--body-bold-md);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 32px;
+
+      li {
+        cursor: pointer;
+
+        &[aria-expanded="true"] {
+          list-style: disc;
+        }
+      }
+
+      ul {
+        font: var(--body-default-sm);
+        padding-top: 8px;
+      }
+    }
+  }
+
+  // Card Footer
+  & > div:nth-child(3) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+
+    & > p:first-child {
+      font: var(--body-bold-sm);
+      color: rgb(var(--gray));
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      color: rgb(var(--white));
+      font-weight: 500;
+      text-align: right;
+
+      p {
+        color: rgb(var(--white));
+        font-size: 20px;
+      }
+
+      span {
+        font: var(--body-bold-sm);
+        display: inline-flex;
+        color: rgb(var(--gray));
+        line-height: 4px;
+
+        & ~ p {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  // Note:
+  small {
+    font: var(--body-default-sm);
+    display: flex;
+  }
+}
+
+.active {
+  @include active-card;
+
+  @include mixins.lg {
+    transform: initial;
+  }
+}
