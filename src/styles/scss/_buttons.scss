@@ -79,6 +79,13 @@ a {
         width: 8px;
       }
     }
+    &.left {
+      &:hover {
+        span {
+          transform: translateX(24px);
+        }
+      }
+    }
   }
 
   & > div {
@@ -153,25 +160,6 @@ a {
       }
       span {
         transform: translateY(-4px);
-      }
-    }
-  }
-
-  &.large {
-    & > div {
-      &::before {
-        content: "";
-        left: 0;
-      }
-    }
-    &:hover {
-      & > div {
-        &::before {
-          opacity: 1;
-        }
-      }
-      span {
-        transform: translateX(24px);
       }
     }
   }

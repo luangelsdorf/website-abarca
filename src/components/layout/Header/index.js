@@ -1,41 +1,14 @@
 import React, { useEffect } from 'react';
-import Arrow from 'public/images/icons/Arrow.svg'
 import Button from 'src/components/common/Button';
 import styles from './Header.module.scss';
 import Logo from 'public/images/brstorm.svg';
 import Link from 'next/link';
 import Open from 'public/images/icons/open.svg';
-import Pin from 'public/images/icons/Pin.svg';
+import MenuMobile from '../MenuMobile';
 
-export default function Header({ floating }) {
-
-  const MenuMobile = () => (
-    <div className={`d-flex d-lg-none ${styles.menu}`}>
-      <ul>
-        <li>
-          <Button className="left large" link id="menu-about" onClick={handleClick} href="/#about">Sobre</Button>
-        </li>
-        <li>
-          <Button className="left large" link id="menu-projects" onClick={handleClick} href="/#projects">Projetos</Button>
-        </li>
-        <li>
-          <Button className="left large" link id="menu-testimonials" onClick={handleClick} href="/#testimonials">Clientes</Button>
-        </li>
-        <li>
-          <Button className="left large" link id="menu-contact" onClick={handleClick} href="/#contact">Contato</Button>
-        </li>
-      </ul>
-      <Button onClick={handleClick} href="/#contact" RightIcon={Arrow} className="outline" id="menu-contact">Começar Projeto</Button>
-
-      <div className={styles.footer}>
-        <Pin />
-        <span>Rio Grande do Sul, Brasil</span>
-      </div>
-    </div>
-  );
-
+export default function Header({ floating, links }) {
   function handleClick() {
-    document.querySelector(`.${styles.menu}`).classList.toggle(styles.active);
+    document.querySelector('[data-menu]').classList.toggle('active');
     document.querySelector('#viewport').classList.toggle('active');
   }
 
@@ -54,28 +27,42 @@ export default function Header({ floating }) {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const desktopLinks = links ?? [
+    {
+      name: 'Sobre',
+      href: '/#about',
+    },
+    {
+      name: 'Projetos',
+      href: '/#projects',
+    },
+    {
+      name: 'Depoimentos',
+      href: '/#testimonials',
+    },
+    {
+      name: 'Contato',
+      href: '/#contact',
+    },
+  ];
+
   return (
     <>
-      <MenuMobile />
+      <MenuMobile links={desktopLinks} />
       <div className={`container ${styles.header} ${floating ? styles.floating : ''}`}>
         <header>
           <nav>
-            <Link id="logo" href="/" style={{ color: 'rgb(var(--white))' }}>
+            <Link id="logo" href="#" style={{ color: 'rgb(var(--white))' }}>
               <Logo />
             </Link>
             <ul className="collapse d-none d-lg-flex" id="links">
-              <li>
-                <Button link className="bottom" id="header-nav-about" href="/#about">Sobre</Button>
-              </li>
-              <li>
-                <Button link className="bottom" id="header-nav-projects" href="/#projects">Projetos</Button>
-              </li>
-              <li>
-                <Button link className="bottom" id="header-nav-about" href="/#testimonials">Depoimentos</Button>
-              </li>
-              <li>
-                <Button link className="bottom" id="header-nav-contact" href="/#contact">Contato</Button>
-              </li>
+              {
+                desktopLinks.map((link, index) => (
+                  <li key={index}>
+                    <Button link className="bottom" href={link.href}>{link.name}</Button>
+                  </li>
+                ))
+              }
             </ul>
             <div>
               <Button id="header-contact" href="/#contact" className="sm d-none d-lg-flex">Começar Projeto</Button>

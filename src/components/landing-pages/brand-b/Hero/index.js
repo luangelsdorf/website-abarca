@@ -12,7 +12,7 @@ export default function Hero({ content }) {
           <div className="col-12 col-lg-5 offset-lg-1">
             <div className={styles.textContent}>
               <h1>
-                <span className="h-sans">Design Único</span>
+                <span className="h-sans">Design único</span>
                 <br />
                 <span>para sua marca</span>
               </h1>

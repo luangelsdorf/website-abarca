@@ -43,3 +43,21 @@ export default function PricingPage() {
 }
 
 PricingPage.floatingHeader = false;
+PricingPage.links = [
+  {
+    name: 'Projetos',
+    href: '#projects',
+  },
+  {
+    name: 'Depoimentos',
+    href: '#testimonials',
+  },
+  {
+    name: 'Serviços',
+    href: '#pricing',
+  },
+  {
+    name: 'Contato',
+    href: '#contact',
+  },
+]

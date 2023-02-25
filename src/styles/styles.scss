@@ -23,11 +23,10 @@ html {
 }
 
 #viewport {
-  transition: none;
   height: 100vh;
+  transition: all 650ms ease;
 
   &.active {
-    transition: all 650ms ease;
     transform: translate3d(0, 100%, 0);
   }
 }

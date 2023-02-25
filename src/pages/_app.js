@@ -70,7 +70,7 @@ export default function App({ Component, pageProps }) {
       `}
       </style>
 
-      <Header floating={Component.floatingHeader} />
+      <Header floating={Component.floatingHeader} links={Component.links} />
 
       {isDev ? null : <Loader />}
 
