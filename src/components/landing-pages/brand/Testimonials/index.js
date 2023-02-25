@@ -38,8 +38,9 @@ export default function Testimonials({ content }) {
           <div className="col-12">
             <header>
               <h2>
-                <span>O seu sucesso é o </span>
+                <span>O seu sucesso </span>
                 <br className="d-none d-lg-block" />
+                <span>é o </span>
                 <span className="h-sans">nosso sucesso</span>
               </h2>
               <p>

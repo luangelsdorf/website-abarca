@@ -186,8 +186,8 @@ export default function Pricing({ content }) {
           <p className="overline">Nossos pacotes de Serviços</p>
           <h2>
             <span>A melhor escolha</span>
-            <br />
-            <span>para o seu negócio</span>
+            <br className="d-none d-lg-block" />
+            <span className="h-sans"> para o seu negócio</span>
           </h2>
           <p>Não importa o tamanho ou a fase do seu negócio, <strong>nós certamente podemos lhe ajudar</strong>, escolha o pacote que lhe atende.</p>
         </header>
