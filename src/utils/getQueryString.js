@@ -2,6 +2,10 @@ export default (object) => {
   const data = { ...object };
   const params = new URLSearchParams();
 
+  const utmParams = new URLSearchParams(location.search);
+  let utmValues = '';
+  utmParams.forEach((val, key) => utmValues += `${key}: ${val};` + '\n');
+
   for (let key in data) {
     let value = data[key];
     if (key.includes('entry')) {
@@ -15,6 +19,8 @@ export default (object) => {
       }
     }
   }
+
+  params.append('entry.1323860073', utmValues);
 
   return params;
 }
