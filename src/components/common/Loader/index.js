@@ -7,7 +7,12 @@ export default function Loader({ content }) {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let tl = gsap.timeline({ onComplete: () => { document.querySelector('#type-animation').stop() } });
+      let tl = gsap.timeline({
+        onComplete: () => {
+          document.querySelector('#type-animation').stop();
+          document.documentElement.classList.remove('o-hidden');
+        }
+      });
       tl.to('#viewport', { opacity: 0, duration: 0.2 });
 
       tl.fromTo('#white', { opacity: 0 }, { opacity: 1 });

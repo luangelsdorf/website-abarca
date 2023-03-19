@@ -4,7 +4,7 @@ import { isDev } from 'src/utils/env'
 
 export default function Document() {
   return (
-    <Html lang="pt">
+    <Html lang="pt" className={isDev ? undefined : 'o-hidden'}>
       <Head>
         {
           isDev ? null : (
