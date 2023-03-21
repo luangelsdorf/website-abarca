@@ -16,4 +16,6 @@ export default async (data, event) => {
   if (!request) {
     window.location.reload();
   }
+
+  window?.location.replace('/success');
 }

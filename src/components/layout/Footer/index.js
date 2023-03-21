@@ -5,9 +5,9 @@ import Dribbble from 'public/images/icons/Dribbble.svg';
 import Instagram from 'public/images/icons/Instagram.svg';
 import Behance from 'public/images/icons/Behance.svg';
 
-export default function Footer({ content }) {
+export default function Footer({ fullHeight }) {
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer}${fullHeight ? ' ' + styles.fullHeight : ''}`}>
       <div className="container">
         <div className={styles.inner}>
           <p className="d-none d-lg-block">

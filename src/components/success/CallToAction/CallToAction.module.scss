@@ -1,0 +1,59 @@
+@use "../../../styles/scss/mixins";
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  header {
+    margin-bottom: 40px;
+    text-align: center;
+    p {
+      justify-content: center;
+      margin-bottom: 64px;
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 300px;
+        height: 1px;
+        background-color: rgb(var(--shadow));
+      }
+    }
+  }
+
+  & > p {
+    margin-bottom: 40px;
+  }
+
+  & > a {
+    background-color: rgb(var(--success));
+    border-color: transparent;
+    color: rgb(var(--white));
+
+    &:hover {
+      border-color: rgb(var(--success));
+    }
+  }
+
+  @include mixins.md {
+    height: auto;
+    padding-top: calc(64px + 16px + 40px);
+    margin-bottom: 96px;
+
+    header {
+      h1 {
+        font: var(--heading-serif-medium);
+      }
+
+      p {
+        margin-bottom: 40px;
+        &::before {
+          content: none;
+        }
+      }
+    }
+  }
+}

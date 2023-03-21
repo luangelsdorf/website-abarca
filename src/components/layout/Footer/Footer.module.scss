@@ -1,7 +1,7 @@
 @use "../../../styles/scss/mixins";
 
 .footer {
-  height: 96px;
+  padding: 36px 0;
   display: flex;
   align-items: center;
   border-top: 1px solid rgb(var(--shadow));
@@ -9,8 +9,12 @@
   .inner {
     display: flex;
     justify-content: space-between;
+  }
 
-    @include mixins.lg {
+  @include mixins.lg {
+    padding: 28px 0;
+    
+    .inner {
       justify-content: center;
     }
   }
@@ -32,6 +36,17 @@
     a {
       justify-content: center;
       align-items: center;
+    }
+  }
+
+  &.fullHeight {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    @include mixins.md {
+      position: static;
+      width: auto;
     }
   }
 }
