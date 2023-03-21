@@ -15,7 +15,7 @@ export default function CallToAction() {
             <span className="h-serif"> WhatsApp</span> agora!
           </h1>
         </header>
-        <p>Adiante o seu atendimento nos<br className="d-block d-md-none" /> chamando agora no WhatsApp.<br className="d-block d-md-none" /> <strong>Fale conosco!</strong></p>
+        <p>Adiante o seu atendimento nos<br className="d-block d-md-none" /> chamando<br className="d-none d-md-block" /> agora no WhatsApp.<br className="d-block d-md-none" /> <strong>Fale conosco!</strong></p>
         <Button href={`https://wa.me/send?phone=555195604623`} className="lg" LeftIcon={WhatsApp}>Nosso WhatsApp</Button>
       </section>
     </div>
