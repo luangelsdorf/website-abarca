@@ -15,7 +15,8 @@ export default async (data, event) => {
 
   if (!request) {
     window.location.reload();
+    return;
   }
 
-  window?.location.replace('/success');
+  window?.dispatchEvent(new Event('submitted'));
 }

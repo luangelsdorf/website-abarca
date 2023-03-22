@@ -25,7 +25,7 @@ const inter = Inter({
 });
 
 export default function App({ Component, pageProps }) {
-
+  const router = useRouter();
   /* const scroller = useSmoothScroll(); */
 
   /* useEffect(() => {
@@ -59,6 +59,14 @@ export default function App({ Component, pageProps }) {
 
     return () => anchors.forEach(anchor => anchor.removeEventListener('click', handleLinkClick));
   }, []); */
+
+  useEffect(() => {
+    function onSubmitted() {
+      router.push('/success');
+    }
+    window.addEventListener('submitted', onSubmitted);
+    return () => window.removeEventListener('submitted', onSubmitted);
+  }, []);
 
   return (
     <>
