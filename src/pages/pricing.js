@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React from 'react'
+import styles from '../styles/pages/landingpages.module.scss';
 import Section from 'src/components/common/Section';
 import Contact from 'src/components/landing-pages/brand/Contact';
 import Hero from 'src/components/landing-pages/brand-b/Hero';
@@ -10,7 +10,7 @@ import Footer from 'src/components/layout/Footer';
 
 export default function PricingPage() {
   return (
-    <>
+    <div className={styles.page}>
       <Head>
         <title>Deixe sua Marca no Mundo | Br.Storm</title>
       </Head>
@@ -38,7 +38,7 @@ export default function PricingPage() {
       </main>
 
       <Footer />
-    </>
+    </div>
   )
 }
 

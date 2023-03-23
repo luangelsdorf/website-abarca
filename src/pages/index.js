@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import styles from '../styles/pages/landingpages.module.scss';
 import Section from 'src/components/common/Section';
 import About from 'src/components/landing-pages/brand/About';
 import Hero from 'src/components/landing-pages/brand/Hero';
@@ -9,7 +10,7 @@ import Contact from 'src/components/landing-pages/brand/Contact';
 
 export default function Home() {
   return (
-    <>
+    <div className={styles.page}>
       <Head>
         <title>Deixe sua Marca no Mundo | Br.Storm</title>
       </Head>
@@ -37,7 +38,7 @@ export default function Home() {
       </main>
 
       <Footer />
-    </>
+    </div>
   )
 }
 
