@@ -1,13 +1,42 @@
-@use '../../../styles/scss/animations';
+@use "../../../styles/scss/animations";
 
 @include animations.draw-circle;
 @include animations.draw-arrow-shaft;
 
 .arrow {
-  /* :global(.white-circle) {
-    animation: draw-circle 4s infinite;
+  :global(.white-circle) {
+    transform-origin: center;
+    transform: rotate(180deg);
   }
-  :global(.big-arrow-shaft) {
-    animation: draw-arrow-shaft 1.2s 2.4s both;
-  } */
+
+  path,
+  line,
+  circle {
+    transition: 350ms;
+    transform-origin: center;
+  }
+
+  &:hover {
+    :global(.top-layer) {
+      opacity: 0;
+    }
+
+    circle {
+      transform: rotate(180deg) scale(0.95);
+    }
+
+    path:first-child {
+      transform: scaleX(0.4);
+    }
+
+    path:not(:first-child) {
+      transform: translateX(-20px);
+    }
+
+    path,
+    line,
+    circle {
+      stroke: rgb(var(--white));
+    }
+  }
 }

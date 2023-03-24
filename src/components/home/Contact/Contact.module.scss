@@ -18,48 +18,6 @@
     width: 336px;
   }
 
-  .circleButton {
-    height: 120px;
-    width: 120px;
-    justify-content: center;
-    align-items: center;
-
-    path,
-    line,
-    circle {
-      transition: 350ms;
-      transform-origin: center;
-    }
-
-    circle {
-      transform: rotate(180deg);
-    }
-
-    &:hover {
-      :global(.top-layer) {
-        opacity: 0;
-      }
-
-      circle {
-        transform: rotate(180deg) scale(0.95);
-      }
-
-      path:first-child {
-        transform: scaleX(0.4);
-      }
-
-      path:not(:first-child) {
-        transform: translateX(-20px);
-      }
-
-      path,
-      line,
-      circle {
-        stroke: rgb(var(--white));
-      }
-    }
-  }
-
   @include mixins.lg {
     flex-direction: column;
     justify-content: center;

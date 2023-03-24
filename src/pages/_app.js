@@ -60,12 +60,30 @@ export default function App({ Component, pageProps }) {
     return () => anchors.forEach(anchor => anchor.removeEventListener('click', handleLinkClick));
   }, []); */
 
+  /*** Push sucess page when any form finishes submitting ***/
   useEffect(() => {
     function onSubmitted() {
       router.push('/success');
     }
     window.addEventListener('submitted', onSubmitted);
     return () => window.removeEventListener('submitted', onSubmitted);
+  }, []);
+
+  /*** Close any open menu when a route changes ***/
+  useEffect(() => {
+    function closeMenu() {
+      document.querySelector('[data-menu]').classList.remove('active');
+      document.querySelector('#viewport').classList.remove('active');
+      document.documentElement.classList.remove('no-scroll');
+    }
+
+    router.events.on('routeChangeStart', closeMenu);
+    router.events.on('hashChangeStart', closeMenu);
+
+    return () => {
+      router.events.off('routeChangeStart', closeMenu);
+      router.events.off('hashChangeStart', closeMenu);
+    }
   }, []);
 
   return (

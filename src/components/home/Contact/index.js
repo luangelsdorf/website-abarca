@@ -19,7 +19,7 @@ export default function Contact({ noLinks }) {
               </h2>
               <p>Quer saber mais sobre como podemos lhe ajudar ou sanar alguma dúvida? <strong>Marque uma reunião</strong>, será um prazer lhe atender.</p>
               <Link href="/#contact" className={`d-none d-lg-flex ${styles.circleButton}`}>
-                <ArrowCircle />
+                <ArrowCircle id="projectfooter" />
               </Link>
               <Button RightIcon={Arrow} className="outline large d-flex d-lg-none">Solicite uma Proposta</Button>
             </div>

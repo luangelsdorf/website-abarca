@@ -12,7 +12,7 @@ export default function ProjectFooter({ content }) {
       </Section>
 
       <Section pt="120 96" pb="160 120">
-      <Contact noLinks />
+        <Contact noLinks />
       </Section>
     </div>
   )

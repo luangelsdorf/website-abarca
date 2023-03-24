@@ -10,7 +10,7 @@ export default function Loader({ content }) {
       let tl = gsap.timeline({
         onComplete: () => {
           document.querySelector('#type-animation').stop();
-          document.documentElement.classList.remove('o-hidden');
+          document.documentElement.classList.remove('no-scroll');
         }
       });
       tl.to('#viewport', { opacity: 0, duration: 0.2 });

@@ -1,24 +1,25 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './ArrowCircle.module.scss';
 import ArrowRound from 'public/images/icons/ArrowRound.svg';
 import gsap from 'gsap';
 import Link from 'next/link';
 
-export default function ArrowCircle({ content }) {
+export default function ArrowCircle({ id }) {
+  const intervalRef = useRef(0);
 
   useEffect(() => {
-    let timeout;
+    let interval;
     let currentDirecton = 'reverse';
 
     function drawButton(direction) {
-      document.querySelector('.white-circle').animate({ strokeDashoffset: [1, 0] }, {
+      document.querySelector(`#${id} .white-circle`).animate({ strokeDashoffset: [1, 0] }, {
         duration: 2400,
         fill: 'both',
         easing: 'ease-in-out',
         direction: direction,
       });
 
-      document.querySelector('.big-arrow-shaft').animate({ strokeDashoffset: [1, 0] }, {
+      document.querySelector(`#${id} .big-arrow-shaft`).animate({ strokeDashoffset: [1, 0] }, {
         duration: 800,
         delay: 1600,
         fill: 'both',
@@ -26,30 +27,32 @@ export default function ArrowCircle({ content }) {
         direction: direction,
       });
 
-      document.querySelectorAll('.big-arrow-tip').forEach(el => {
+      document.querySelectorAll(`#${id} .big-arrow-tip`).forEach(el => {
         el.animate({ strokeDashoffset: [-1, 0] }, {
           duration: 800,
           delay: 2400,
           fill: 'both',
           easing: 'ease-in-out',
           direction: direction,
-        }).finished.then(() => timeout = setTimeout(() => {
-          clearTimeout(timeout);
-          drawButton(currentDirecton);
-          currentDirecton = currentDirecton === 'normal' ? 'reverse' : 'normal';
-        }, 800));
+        }).finished.then(() => {
+
+        });
       });
     }
 
-    drawButton();
+    interval = setInterval(() => {
+      currentDirecton = currentDirecton === 'normal' ? 'reverse' : 'normal';
+      drawButton(currentDirecton);
+    }, 4000);
+    /* console.log(`set interval %c${interval}`, 'color:lime'); */
 
     return () => {
-      clearTimeout(timeout);
-    };
-
+      /* console.log(`clear interval %c${interval}`, 'color:tomato'); */
+      clearInterval(interval);
+    }
   }, []);
 
   return (
-    <ArrowRound className={styles.arrow} />
+    <ArrowRound id={id} className={styles.arrow} />
   )
 }

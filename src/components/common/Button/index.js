@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import Open from 'public/images/icons/open.svg';
 import Close from 'public/images/icons/close.svg';
+import { useRouter } from 'next/router';
 
 export default function Button({
   children,
@@ -17,6 +18,11 @@ export default function Button({
   RightIcon,
   ...otherProps
 }) {
+
+  const router = useRouter();
+  let prefix = '';
+  if (router.query.referrer) prefix = '/' + router.query.referrer;
+
 
   const Children = () => (
     <div>
@@ -63,8 +69,9 @@ export default function Button({
   }
 
   else {
+    prefix + href
     return (
-      <Link {...baseProps} href={href} {...otherProps}>
+      <Link {...baseProps} href={prefix + href} {...otherProps}>
         <Children />
       </Link>
     )
