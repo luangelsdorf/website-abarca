@@ -3,7 +3,7 @@ import styles from './MenuMobile.module.scss';
 import Arrow from 'public/images/icons/Arrow.svg'
 import Pin from 'public/images/icons/Pin.svg';
 import Button from 'src/components/common/Button';
-import Link from 'next/link';
+import Logo from 'public/images/brstorm.svg';
 import ArrowCircle from 'src/components/common/ArrowCircle';
 import { useRouter } from 'next/router';
 
@@ -36,7 +36,12 @@ export default function MenuMobile({ links }) {
 
   return (
     <div className={`${styles.menu}`} data-menu>
-      <div className="container" style={{ height: '100%' }}>
+      <div className="container" style={{ height: '100%', }}>
+        <div className={styles.menuLogo}>
+          <Button link href="/" className="menu-logo">
+            <Logo />
+          </Button>
+        </div>
         <div className={styles.leftBg} />
         <div className={styles.rightBg} />
         <div className="row">

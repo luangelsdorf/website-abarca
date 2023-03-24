@@ -27,7 +27,8 @@
     }
 
     .firstHalf,
-    .secondHalf {
+    .secondHalf,
+    .menuLogo {
       visibility: visible;
       opacity: 1;
       transform: translateY(0);
@@ -71,8 +72,15 @@
   }
 }
 
+.menuLogo {
+  top: 24px;
+  position: absolute;
+  color: rgb(var(--white));
+}
+
 .firstHalf,
-.secondHalf {
+.secondHalf,
+.menuLogo {
   visibility: hidden;
   opacity: 0;
   transform: translateY(16px);

@@ -112,11 +112,7 @@
   right: 12px;
   opacity: 0;
   transition: all 350ms;
-  pointer-events: all;
-
-  &:hover {
-    transform: translateY(-25%) scale(0.95);
-  }
+  pointer-events: auto;
 }
 
 .sentinel {
