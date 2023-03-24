@@ -8,10 +8,10 @@ import ShortForm from 'src/components/common/ShortForm';
 import { useRouter } from 'next/router';
 
 export default function Hero({ content }) {
-
   const router = useRouter();
+  const referrer = router.route.split('/').at(-1);
 
-  const handleClick = project => router.push(`/portfolio/${project}`);
+  const handleClick = project => router.push(`/portfolio/${project}?referrer=${referrer}`, `/portfolio/${project}`);
 
   return (
     <div className={styles.section}>
