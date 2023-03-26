@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './ProjectPresentation.module.scss';
+import styles from './Wrapper.module.scss';
 
-export default function ProjectPresentation({ children, light, style }) {
+export default function Wrapper({ children, light, style }) {
   return (
     <article className={`${styles.presentation}${light ? ' ' + styles.light : ''}`} style={style}>
       {

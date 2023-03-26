@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 import Section from 'src/components/common/Section';
 import Footer from 'src/components/layout/Footer';
-import ProjectPresentation from 'src/components/portfolio/ProjectPresentation';
+import Wrapper from 'src/components/portfolio/structures/Wrapper';
 import Cover from 'src/components/portfolio/structures/Cover';
 import FullText from 'src/components/portfolio/structures/FullText';
 import Intro from 'src/components/portfolio/structures/Intro';
@@ -21,7 +21,7 @@ export default function Casulo() {
         <title>Casulo</title>
       </Head>
 
-      <ProjectPresentation light>
+      <Wrapper light>
         <Section>
           <Cover title="Casulo" local="Araricá | Brazil" info={{ client: 'WalerDog', segment: 'Treinamento Canino', services: ['Identidade Visual'] }}>
             <Image quality="100" loading="eager" src={basePath + 'Cover.jpg'} width="1400" height="800" alt="" />
@@ -169,11 +169,9 @@ export default function Casulo() {
           </Picture>
         </Section>
 
-      </ProjectPresentation>
+      </Wrapper>
       <ProjectFooter />
       <Footer />
     </>
   )
 }
-
-Casulo.floatingHeader = true;

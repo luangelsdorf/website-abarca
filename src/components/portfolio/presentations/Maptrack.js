@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React from 'react'
 import Section from 'src/components/common/Section';
 import Footer from 'src/components/layout/Footer';
-import ProjectPresentation from 'src/components/portfolio/ProjectPresentation';
+import Wrapper from 'src/components/portfolio/structures/Wrapper';
 import Cover from 'src/components/portfolio/structures/Cover';
 import DoublePicture from 'src/components/portfolio/structures/DoublePicture';
 import FullText from 'src/components/portfolio/structures/FullText';
@@ -23,7 +23,7 @@ export default function MapTrack() {
         <title>Maptrack</title>
       </Head>
 
-      <ProjectPresentation light>
+      <Wrapper light>
         <Section>
           <Cover title="Maptrack" local="Brisbane | Austrália" info={{ client: 'Maptrack', segment: 'Startup de Rastreamento', services: ['Identidade Visual'] }}>
             <Image loading="eager" quality="100" src={basePath + 'Cover.jpg'} width="1400" height="800" alt="" />
@@ -140,12 +140,10 @@ export default function MapTrack() {
             <Image loading="eager" quality="100" src={basePath + 'Before-After.jpg'} width="1400" height="800" alt="" />
           </Picture>
         </Section>
-      </ProjectPresentation>
+      </Wrapper>
 
       <ProjectFooter />
       <Footer />
     </>
   )
 }
-
-MapTrack.floatingHeader = true;

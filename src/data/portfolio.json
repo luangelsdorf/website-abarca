@@ -1,0 +1,20 @@
+{
+  "brand": [
+    {
+      "name": "Abarca",
+      "slug": "abarca"
+    },
+    {
+      "name": "Bronzo",
+      "slug": "bronzo"
+    },
+    {
+      "name": "Casulo",
+      "slug": "casulo"
+    },
+    {
+      "name": "Maptrack",
+      "slug": "maptrack"
+    }
+  ]
+}

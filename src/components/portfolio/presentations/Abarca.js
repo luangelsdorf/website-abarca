@@ -1,9 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import React, { useEffect } from 'react'
 import Section from 'src/components/common/Section'
 import Footer from 'src/components/layout/Footer';
-import ProjectPresentation from 'src/components/portfolio/ProjectPresentation'
+import Wrapper from 'src/components/portfolio/structures/Wrapper'
 import Cover from 'src/components/portfolio/structures/Cover'
 import Intro from 'src/components/portfolio/structures/Intro';
 import Picture from 'src/components/portfolio/structures/Picture';
@@ -19,7 +18,7 @@ export default function Abarca() {
         <title>Abarca</title>
       </Head>
 
-      <ProjectPresentation light>
+      <Wrapper light>
         <Section>
           <Cover title="Abarca" local="Campo Bom | Brasil" info={{ client: 'Abarca Comunicação Integrada', segment: 'Escritório de Relações Públicas', services: ['Estratégia', 'Website', 'Identidade Visual'] }}>
             <video src={basePath + 'Animação.mp4'} autoPlay muted loop />
@@ -132,12 +131,10 @@ export default function Abarca() {
         </Section>
 
 
-      </ProjectPresentation>
+      </Wrapper>
 
       <ProjectFooter />
       <Footer />
     </>
   )
 }
-
-Abarca.floatingHeader = true;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import ProjectPresentation from 'src/components/portfolio/ProjectPresentation';
+import Wrapper from 'src/components/portfolio/structures/Wrapper';
 import Section from 'src/components/common/Section';
 import Cover from 'src/components/portfolio/structures/Cover';
 import Intro from 'src/components/portfolio/structures/Intro';
@@ -23,7 +23,7 @@ export default function Bronzo() {
         <title>Bronzo</title>
       </Head>
 
-      <ProjectPresentation>
+      <Wrapper>
         <Section>
           <Cover title="Bronzo" local="Londres | Inglaterra" info={{ client: 'Bronzo', segment: 'Restaurante Italiano', services: ['Estratégia', 'Identidade Visual', 'Website'] }}>
             <video src={basePath + 'Cover.mp4'} autoPlay muted loop />
@@ -262,12 +262,10 @@ export default function Bronzo() {
             <Image loading="eager" quality="75" src={basePath + 'Apron.jpg'} width="1400" height="800" alt="" />
           </Picture>
         </Section>
-      </ProjectPresentation>
+      </Wrapper>
       
       <ProjectFooter />
       <Footer />
     </>
   )
 }
-
-Bronzo.floatingHeader = true;

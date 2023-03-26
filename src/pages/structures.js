@@ -9,7 +9,7 @@ import Section from 'src/components/common/Section';
 import Text from 'src/components/portfolio/structures/Text';
 import FullText from 'src/components/portfolio/structures/FullText';
 import DoublePicture from 'src/components/portfolio/structures/DoublePicture';
-import ProjectPresentation from 'src/components/portfolio/ProjectPresentation';
+import Wrapper from 'src/components/portfolio/structures/Wrapper';
 import PictureAndText from 'src/components/portfolio/structures/PictureAndText';
 import ProjectFooter from 'src/components/portfolio/structures/ProjectFooter';
 import Footer from 'src/components/layout/Footer';
@@ -21,7 +21,7 @@ export default function Structures() {
         <title>Structures</title>
       </Head>
 
-      <ProjectPresentation>
+      <Wrapper>
         <Section>
           <Cover title="Nome do Projeto" local="Cidade | País" info={{ client: 'Nome do Cliente', segment: 'Segmento do Proejto', services: ['Website', 'Identidade Visual'] }}>
             <Image fill sizes="100vw" src="/images/portfolio/placeholder.png" alt="" />
@@ -96,7 +96,7 @@ export default function Structures() {
             <Image src="/images/portfolio/placeholder.png" width="1400" height="800" alt="" />
           </Picture>
         </Section>
-      </ProjectPresentation>
+      </Wrapper>
 
       <ProjectFooter />
       <Footer />
