@@ -1,0 +1,32 @@
+@use '../../../../styles/scss/mixins';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+
+  h3 {
+    font: var(--body-bold-lg);
+  }
+
+  p {
+    font: var(--body-default-md);
+  }
+
+  .localTag {
+    font: var(--body-bold-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    color: rgb(var(--light-gray));
+    border: 1px solid rgb(var(--gray));
+    border-radius: 56px;
+  }
+
+  @include mixins.xxl {
+    padding: 24px 56px;
+  }
+}

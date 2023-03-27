@@ -68,7 +68,7 @@ export default function Header({ floating = false, links }) {
     <>
       <MenuMobile links={desktopLinks} />
       {/* <div className={styles.sentinel} /> */}
-      <div className={`${styles.navigation}${floating ? ' ' + styles.floating : ''}`}>
+      <div className={`${styles.navigation}${floating ? ' ' + styles.floating : ''}`} data-navigation>
 
         <div className={`container ${styles.header}`}>
           <header>

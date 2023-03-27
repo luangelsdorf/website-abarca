@@ -1,0 +1,44 @@
+@use "../../../styles/scss/mixins";
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgb(var(--black), 0.2);
+  backdrop-filter: blur(5px);
+  z-index: 11;
+  display: none;
+  opacity: 0;
+  transform: translateY(50px);
+  overflow-y: overlay;
+  overflow-x: hidden;
+  flex-direction: column;
+}
+
+.button {
+  display: flex;
+  position: sticky;
+  margin-left: auto;
+  top: 24px;
+  right: 24px;
+  padding: 0;
+  z-index: 12;
+  border: none;
+  background: transparent;
+  color: rgb(var(--dark-gray));
+  cursor: pointer;
+}
+
+.modalContent {
+  margin-bottom: 120px;
+  padding-bottom: 160px;
+  overflow: hidden;
+
+  @media (min-width: 1400px) {
+    max-width: 100%;
+    margin: 0 96px;
+    width: auto;
+  }
+}

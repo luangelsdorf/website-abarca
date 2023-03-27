@@ -1,9 +1,20 @@
+import Head from 'next/head';
+import Footer from 'src/components/layout/Footer';
 import ProjectPresentation from 'src/components/portfolio/ProjectPresentation';
+import ProjectFooter from 'src/components/portfolio/structures/ProjectFooter';
 import brandProjects from 'src/data/portfolio.json';
 
 export default function Project(props) {
   return (
-    <ProjectPresentation project={props.slug} />
+    <>
+      <Head>
+        <title>{props.name}</title>
+      </Head>
+
+      <ProjectPresentation project={props} />
+      <ProjectFooter />
+      <Footer />
+    </>
   )
 }
 

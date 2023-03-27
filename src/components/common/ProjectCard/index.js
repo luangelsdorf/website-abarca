@@ -11,7 +11,7 @@ export default function ProjectCard({ client, segment, services, local, cover, h
 
   return (
     <div className={styles.project} {...rest}>
-      <Link href={`/portfolio/${slug}?referrer=${referrer}`} as={`/portfolio/${slug}`} scroll>
+      <Link href={`/portfolio/${slug}?referrer=${referrer}`} /* href={`?project=${slug}`} */ as={`/portfolio/${slug}`} scroll/* ={false} */>
         <Image loading="eager" sizes="100vw" src={`/images/portfolio/hover/${hover}`} width="200" height="200" alt="" />
         <Image loading="eager" sizes="100vw" src={`/images/portfolio/${cover}`} width="200" height="200" alt="" />
       </Link>

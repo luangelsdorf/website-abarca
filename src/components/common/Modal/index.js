@@ -5,7 +5,7 @@ import styles from './Modal.module.scss';
 export default function Modal({ children, label, noButton, ...props }) {
 
   function handleClick(e) {
-    e.target.previousElementSibling.showModal();
+    e.currentTarget.previousElementSibling.showModal();
   }
 
   return (

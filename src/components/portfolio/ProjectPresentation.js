@@ -12,7 +12,7 @@ export default function ProjectPresentation({ project }) {
     'maptrack': MapTrack,
   }
   
-  const ProjectComponent = projectComponents[project];
+  const ProjectComponent = projectComponents[project.slug];
 
   return <ProjectComponent />
 }
