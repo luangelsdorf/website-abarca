@@ -14,7 +14,6 @@ export default function Document() {
           )
         }
         <link rel="shortcut icon" href="/images/icons/favicon.svg" />
-        <meta name="description" content="A Br.Storm é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
         <meta name="og:image" content="/images/preview.jpg" />
       </Head>
       <body>
