@@ -1,0 +1,69 @@
+@use "../../../../styles/scss/mixins";
+
+.section {
+  img {
+    width: 100%;
+  }
+
+  :global {
+    .swiper-slide {
+      width: 600px;
+    }
+  }
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+
+  h4 {
+    margin: 0 auto 25px;
+  }
+  h1 {
+    margin-bottom: 50px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+
+  @include mixins.md {
+    margin-bottom: 50px;
+    h1 {
+      white-space: break-spaces;
+    }
+  }
+}
+
+.row1 {
+  margin-bottom: 24px;
+
+  @include mixins.lg {
+    :global {
+      .swiper-wrapper {
+        flex-direction: column;
+        row-gap: 24px;
+      }
+
+      .swiper-slide {
+        width: 100%;
+        height: 344px;
+        padding: 0 calc(12px + 30px);
+      }
+    }
+  }
+}
+
+.row2 {
+  margin-bottom: 100px;
+}
+
+.row1,
+.row2 {
+  &:active {
+    a {
+      cursor: grabbing;
+    }
+  }
+}
