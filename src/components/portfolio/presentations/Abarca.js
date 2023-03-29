@@ -15,7 +15,7 @@ export default function Abarca() {
       <Head>
         <meta name="description" content="A Abarca é um Escritório de Relações Públicas que funciona como Coletivo de Comunicação, formado por profissionais especialistas em suas áreas, que se reúne de acordo com as demandas de cada projeto." />
         <meta property="og:description" content="A Abarca é um Escritório de Relações Públicas que funciona como Coletivo de Comunicação, formado por profissionais especialistas em suas áreas, que se reúne de acordo com as demandas de cada projeto." />
-        <meta property="og:image" content="/images/portfolio/preview/Abarca.png" />
+        <meta property="og:image" content="https://brstorm.design/images/portfolio/preview/Abarca.png" />
       </Head>
 
       <Wrapper light>

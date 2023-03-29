@@ -19,7 +19,7 @@ export default function MapTrack() {
       <Head>
         <meta name="description" content="MapTrack é uma startup que oferece serviços de rastreamento de ativos através de um software simples e poderoso." />
         <meta property="og:description" content="MapTrack é uma startup que oferece serviços de rastreamento de ativos através de um software simples e poderoso." />
-        <meta property="og:image" content="/images/portfolio/preview/Maptrack.jpg" />
+        <meta property="og:image" content="https://brstorm.design/images/portfolio/preview/Maptrack.jpg" />
       </Head>
 
       <Wrapper light>

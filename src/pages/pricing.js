@@ -16,6 +16,8 @@ export default function PricingPage() {
         <meta property="og:title" content="Deixe sua Marca no Mundo | Br.Storm" />
         <meta name="description" content="A Br.Storm é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
         <meta property="og:description" content="A Br.Storm é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
+        <meta property="og:image" content="https://brstorm.design/images/preview.jpg" />
+        <meta property="og:url" content="https://brand.brstorm.design/pricing" />
       </Head>
 
       <main>

@@ -14,10 +14,8 @@ export default function Document() {
           )
         }
         <link rel="shortcut icon" href="/images/icons/favicon.svg" />
-        <meta property="og:title" content="Br.Storm Design" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Br.Storm" />
-        <meta property="og:image" content="https://brstorm.design/images/preview.jpg" />
       </Head>
       <body>
         <Main />

@@ -19,7 +19,7 @@ export default function Bronzo() {
       <Head>
         <meta name="description" content="A Bronzo é um restaurante italiano localizado no coração de Londres. Um local que oferece um ambiente aconchegante para quem deseja saborear a autêntica comida italiana." />
         <meta property="og:description" content="A Bronzo é um restaurante italiano localizado no coração de Londres. Um local que oferece um ambiente aconchegante para quem deseja saborear a autêntica comida italiana." />
-        <meta property="og:image" content="/images/portfolio/preview/Bronzo.png" />
+        <meta property="og:image" content="https://brstorm.design/images/portfolio/preview/Bronzo.png" />
       </Head>
 
       <Wrapper>

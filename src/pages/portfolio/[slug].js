@@ -1,15 +1,20 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import Footer from 'src/components/layout/Footer';
 import ProjectPresentation from 'src/components/portfolio/ProjectPresentation';
 import ProjectFooter from 'src/components/portfolio/structures/ProjectFooter';
 import brandProjects from 'src/data/portfolio.json';
 
 export default function Project(props) {
+  const title = `${props.name} | Br.Storm`;
+  const router = useRouter();
+
   return (
     <>
       <Head>
-        <title>{props.name} | Br.Storm</title>
-        <meta property="og:title" content={`${props.name} | Br.Storm`} />
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+        <meta property="og:url" content={`https://brand.brstorm.design${router.asPath}`} />
       </Head>
 
       <ProjectPresentation project={props} />
