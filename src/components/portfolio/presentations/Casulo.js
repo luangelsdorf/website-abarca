@@ -17,6 +17,8 @@ export default function Casulo() {
     <>
       <Head>
         <meta name="description" content="A Casulo é um centro de treinamento canino que recentemente passou por um momento de reestruturação geral, onde não só sua estrutura física foi ampliada, mas também toda sua cultura e metodologia de trabalho foi revista." />
+        <meta property="og:description" content="A Casulo é um centro de treinamento canino que recentemente passou por um momento de reestruturação geral, onde não só sua estrutura física foi ampliada, mas também toda sua cultura e metodologia de trabalho foi revista." />
+        <meta property="og:image" content="/images/portfolio/preview/Casulo.jpg" />
       </Head>
 
       <Wrapper light>

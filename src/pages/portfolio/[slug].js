@@ -8,7 +8,8 @@ export default function Project(props) {
   return (
     <>
       <Head>
-        <title>{props.name}</title>
+        <title>{props.name} | Br.Storm</title>
+        <meta property="og:title" content={`${props.name} | Br.Storm`} />
       </Head>
 
       <ProjectPresentation project={props} />

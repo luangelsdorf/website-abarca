@@ -13,7 +13,9 @@ export default function Home() {
     <div className={styles.page}>
       <Head>
         <title>Deixe sua Marca no Mundo | Br.Storm</title>
+        <meta property="og:title" content="Deixe sua Marca no Mundo | Br.Storm" />
         <meta name="description" content="A Br.Storm é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
+        <meta property="og:description" content="A Br.Storm é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
       </Head>
 
       <main>
