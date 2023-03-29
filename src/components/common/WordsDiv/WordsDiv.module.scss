@@ -1,0 +1,18 @@
+@keyframes slide {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.div {
+  font-size: 96px;
+  color: rgb(var(--shadow));
+  font-family: var(--merriweather);
+  white-space: pre;
+  opacity: 0.5;
+
+  span {
+    display: inline-block;
+    animation: slide 16s linear infinite;
+  }
+}
