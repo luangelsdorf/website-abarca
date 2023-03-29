@@ -5,9 +5,10 @@ import Button from 'src/components/common/Button';
 import Arrow from 'public/images/icons/Arrow.svg';
 import submitForm from 'src/utils/submitForm';
 import Spinner from 'src/components/common/Spinner';
+import { onChange } from 'src/utils/phoneMask';
 
 export default function Contact({ content }) {
-  const { register, handleSubmit, formState: { errors, isSubmitting, isSubmitSuccessful } } = useForm();
+  const { register, handleSubmit, setValue, formState: { errors, isSubmitting, isSubmitSuccessful } } = useForm();
   const errorMessage = 'Este campo é obrigatório.';
 
   return (
@@ -37,9 +38,10 @@ export default function Contact({ content }) {
                   <span>{errors.entry_2104795631 && errorMessage}</span>
                 </div>
 
-                <div className={`floating${!errors.entry_1354793341 ? '' : ' ' + 'error'}`}>
-                  <input id="phone" placeholder="+55 51 98983.6186" type="tel" {...register('entry_1354793341', { required: errorMessage })} />
+                <div className={`floating${!errors.entry_1354793341 ? '' : ' ' + 'error'} prefixed`}>
+                  <input id="phone" placeholder="(51) 98983.6186" type="tel" {...register('entry_1354793341', { required: errorMessage, minLength: 14, onChange: e => onChange(e, setValue) })} />
                   <label htmlFor="phone">Telefone</label>
+                  <span className="prefix">+55</span>
                   <span>{errors.entry_1354793341 && errorMessage}</span>
                 </div>
 

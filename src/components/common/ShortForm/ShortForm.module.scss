@@ -18,7 +18,7 @@
     :global(.floating) {
       flex-grow: 1;
 
-      & > span {
+      & > span:not(:global(.prefix)) {
         left: 0;
         right: auto;
         bottom: -8px;

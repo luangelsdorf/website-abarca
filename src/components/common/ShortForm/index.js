@@ -5,9 +5,10 @@ import Button from '../Button';
 import Spinner from '../Spinner';
 import styles from './ShortForm.module.scss';
 import Arrow from 'public/images/icons/Arrow.svg';
+import { onChange } from 'src/utils/phoneMask';
 
 export default function ShortForm({ content }) {
-  const { register, handleSubmit, formState: { errors, isSubmitting, isSubmitSuccessful } } = useForm();
+  const { register, handleSubmit, setValue, formState: { errors, isSubmitting, isSubmitSuccessful } } = useForm();
   const errorMessage = 'Este campo é obrigatório.';
 
   return (
@@ -19,9 +20,10 @@ export default function ShortForm({ content }) {
           <span>{errors.entry_443452100 && errorMessage}</span>
         </div>
 
-        <div className={`floating${!errors.entry_1354793341 ? '' : ' ' + 'error'} sm light`}>
-          <input id="phone_cover" placeholder="+55 51 98983.6186" type="tel" {...register('entry_1354793341', { required: errorMessage })} />
+        <div className={`floating${!errors.entry_1354793341 ? '' : ' ' + 'error'} sm light prefixed`}>
+          <input id="phone_cover" placeholder="(51) 98983.6186" type="tel" {...register('entry_1354793341',  { required: errorMessage, minLength: 14, onChange: e => onChange(e, setValue) })} />
           <label htmlFor="phone_cover">Telefone para Contato</label>
+          <span className="prefix">+55</span>
           <span>{errors.entry_1354793341 && errorMessage}</span>
         </div>
 

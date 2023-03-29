@@ -1,6 +1,8 @@
 import getQueryString from "./getQueryString";
 
 export default async (data, event) => {
+  data['entry_1354793341'] = '55' + data['entry_1354793341'].replace('(', '').replace(')', '').replace('-', '').replace(' ', '');
+  
   const fields = Array.from(event.target.elements);
   fields.forEach(field => field.disabled = true);
   await new Promise(r => setTimeout(r, 2000));

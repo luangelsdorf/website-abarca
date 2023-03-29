@@ -4,7 +4,7 @@ import Button from 'src/components/common/Button';
 import styles from './Hero.module.scss';
 import HeroForm from 'src/components/common/HeroForm';
 
-export default function Hero({ content }) {
+export default function Hero({ shortForm }) {
   return (
     <div className={styles.section}>
       <div className="container">
@@ -21,7 +21,7 @@ export default function Hero({ content }) {
             </div>
           </div>
           <div className="col-12 col-lg-4 offset-lg-1">
-            <HeroForm />
+            <HeroForm short={shortForm} />
             <p style={{ marginTop: '24px' }} className="d-sm-none">Preencha o formulário acima e deixe sua <br /> marca se destacar no mercado.</p>
           </div>
         </div>
