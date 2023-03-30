@@ -20,7 +20,7 @@ export default function Arca() {
 
       <Wrapper light>
         <Section>
-          <Cover title="Arca" local="Campo Bom | Brasil" info={{ client: 'Instituto Arca', segment: 'ONG de Proteção Animal', services: ['Website'] }}>
+          <Cover title="" local="Campo Bom | Brasil" info={{ client: 'Instituto Arca', segment: 'ONG de Proteção Animal', services: ['Website'] }}>
           <Image quality="100" loading="eager" src={basePath + 'Cover-Arca.jpg'} width="1400" height="800" alt="" />
           </Cover>
         </Section>
