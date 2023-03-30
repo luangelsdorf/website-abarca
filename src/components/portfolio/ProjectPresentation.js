@@ -10,6 +10,7 @@ import BRC from './presentations/BRC';
 import Certivale from './presentations/Certivale';
 import UtilFacilities from './presentations/UtilFacilities';
 import PegadaNeutra from './presentations/PegadaNeutra';
+import NefroSinos from './presentations/NefroSinos';
 
 export default function ProjectPresentation({ project }) {
   const projectComponents = {
@@ -24,6 +25,7 @@ export default function ProjectPresentation({ project }) {
     'certivale': Certivale,
     'util-facilities': UtilFacilities,
     'pegada-neutra': PegadaNeutra,
+    'nefro-sinos': NefroSinos,
   }
   
   const ProjectComponent = projectComponents[project.slug];
