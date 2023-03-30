@@ -11,6 +11,7 @@ import Certivale from './presentations/Certivale';
 import UtilFacilities from './presentations/UtilFacilities';
 import PegadaNeutra from './presentations/PegadaNeutra';
 import NefroSinos from './presentations/NefroSinos';
+import Robtec from './presentations/Robtec';
 
 export default function ProjectPresentation({ project }) {
   const projectComponents = {
@@ -26,6 +27,7 @@ export default function ProjectPresentation({ project }) {
     'util-facilities': UtilFacilities,
     'pegada-neutra': PegadaNeutra,
     'nefro-sinos': NefroSinos,
+    'robtec': Robtec,
   }
   
   const ProjectComponent = projectComponents[project.slug];
