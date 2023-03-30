@@ -21,8 +21,8 @@
       "slug": "arca"
     },
     {
-      "name": "RodrigoCarvalho",
-      "slug": "rodrigoCarvalho"
+      "name": "Rodrigo Carvalho",
+      "slug": "rodrigo-carvalho"
     },
     {
       "name": "Grana",
@@ -35,6 +35,14 @@
     {
       "name": "Certivale",
       "slug": "certivale"
+    },
+    {
+      "name": "Útil Facilities",
+      "slug": "util-facilities"
+    },
+    {
+      "name": "Pegada Neutra",
+      "slug": "pegada-neutra"
     }
   ]
 }

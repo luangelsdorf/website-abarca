@@ -8,6 +8,8 @@ import RodrigoCarvalho from './presentations/RodrigoCarvalho';
 import Grana from './presentations/Grana';
 import BRC from './presentations/BRC';
 import Certivale from './presentations/Certivale';
+import UtilFacilities from './presentations/UtilFacilities';
+import PegadaNeutra from './presentations/PegadaNeutra';
 
 export default function ProjectPresentation({ project }) {
   const projectComponents = {
@@ -16,10 +18,12 @@ export default function ProjectPresentation({ project }) {
     'casulo': Casulo,
     'maptrack': MapTrack,
     'arca': Arca,
-    'rodrigoCarvalho': RodrigoCarvalho,
+    'rodrigo-carvalho': RodrigoCarvalho,
     'grana': Grana,
     'brc': BRC,
     'certivale': Certivale,
+    'util-facilities': UtilFacilities,
+    'pegada-neutra': PegadaNeutra,
   }
   
   const ProjectComponent = projectComponents[project.slug];
