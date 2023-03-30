@@ -6,6 +6,7 @@ import MapTrack from './presentations/Maptrack';
 import Arca from './presentations/Arca';
 import RodrigoCarvalho from './presentations/RodrigoCarvalho';
 import Grana from './presentations/Grana';
+import BRC from './presentations/BRC';
 
 export default function ProjectPresentation({ project }) {
   const projectComponents = {
@@ -16,6 +17,7 @@ export default function ProjectPresentation({ project }) {
     'arca': Arca,
     'rodrigoCarvalho': RodrigoCarvalho,
     'grana': Grana,
+    'brc': BRC,
   }
   
   const ProjectComponent = projectComponents[project.slug];
