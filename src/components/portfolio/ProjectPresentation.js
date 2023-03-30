@@ -12,6 +12,7 @@ import UtilFacilities from './presentations/UtilFacilities';
 import PegadaNeutra from './presentations/PegadaNeutra';
 import NefroSinos from './presentations/NefroSinos';
 import Robtec from './presentations/Robtec';
+import RossiDorneles from './presentations/RossiDorneles';
 
 export default function ProjectPresentation({ project }) {
   const projectComponents = {
@@ -28,6 +29,7 @@ export default function ProjectPresentation({ project }) {
     'pegada-neutra': PegadaNeutra,
     'nefro-sinos': NefroSinos,
     'robtec': Robtec,
+    'rossi-dorneles': RossiDorneles,
   }
   
   const ProjectComponent = projectComponents[project.slug];

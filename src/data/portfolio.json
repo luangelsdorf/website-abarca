@@ -51,6 +51,10 @@
     {
       "name": "RobTec",
       "slug": "robtec"
+    },
+    {
+      "name": "Rossi & Dorneles",
+      "slug": "rossi-dorneles"
     }
   ]
 }
