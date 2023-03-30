@@ -3,6 +3,7 @@ import Abarca from './presentations/Abarca';
 import Bronzo from './presentations/Bronzo';
 import Casulo from './presentations/Casulo';
 import MapTrack from './presentations/Maptrack';
+import Arca from './presentations/Arca';
 
 export default function ProjectPresentation({ project }) {
   const projectComponents = {
@@ -10,6 +11,7 @@ export default function ProjectPresentation({ project }) {
     'bronzo': Bronzo,
     'casulo': Casulo,
     'maptrack': MapTrack,
+    'arca': Arca,
   }
   
   const ProjectComponent = projectComponents[project.slug];

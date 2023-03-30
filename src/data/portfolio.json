@@ -15,6 +15,10 @@
     {
       "name": "Maptrack",
       "slug": "maptrack"
+    },
+    {
+      "name": "Arca",
+      "slug": "arca"
     }
   ]
 }
