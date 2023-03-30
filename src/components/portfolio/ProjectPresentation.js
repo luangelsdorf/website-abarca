@@ -7,6 +7,7 @@ import Arca from './presentations/Arca';
 import RodrigoCarvalho from './presentations/RodrigoCarvalho';
 import Grana from './presentations/Grana';
 import BRC from './presentations/BRC';
+import Certivale from './presentations/Certivale';
 
 export default function ProjectPresentation({ project }) {
   const projectComponents = {
@@ -18,6 +19,7 @@ export default function ProjectPresentation({ project }) {
     'rodrigoCarvalho': RodrigoCarvalho,
     'grana': Grana,
     'brc': BRC,
+    'certivale': Certivale,
   }
   
   const ProjectComponent = projectComponents[project.slug];
