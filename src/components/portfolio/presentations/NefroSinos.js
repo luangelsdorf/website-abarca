@@ -34,7 +34,7 @@ export default function NefroSinos() {
           </Intro>
         </Section>
 
-        <Section mt="96">
+        <Section pt="96" style={{backgroundColor: '#DCE0E7'}}>
           <Picture style={{backgroundColor: '#DCE0E7'}}>
             <video src={basePath + 'Loop-Nefrosinos.mp4'} autoPlay muted loop style={{ width: '100%', height: '100%', borderRadius: '16px' }} />
           </Picture>

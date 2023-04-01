@@ -40,7 +40,7 @@ export default function Arca() {
           </Picture>
         </Section>
 
-        <Section mt="96">
+        <Section pt="96" style={{ backgroundColor: '#F3A801'}}>
           <Picture style={{ backgroundColor: '#F3A801'}}>
             <video src={basePath + 'Loop-Arca.mp4'} autoPlay muted loop style={{ width: '100%', height: '100%', borderRadius: '16px' }} />
           </Picture>
