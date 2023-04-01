@@ -32,12 +32,12 @@ export default function Hero({
     let mm = gsap.matchMedia();
 
     mm.add('(min-width: 992px)', () => {
-      gsap.fromTo(`.${styles.mosaic} > div:nth-child(odd)`,
+      gsap.fromTo(`.${styles.mosaic} > div:nth-child(odd):not(:nth-child(3))`,
         {
           yPercent: -4,
         },
         {
-          yPercent: 12,
+          yPercent: 16,
           scrollTrigger: {
             trigger: `.${styles.mosaic}`,
             scrub: 0.5,
@@ -45,7 +45,7 @@ export default function Hero({
         }
       );
 
-      gsap.fromTo(`.${styles.mosaic} > div:nth-child(even)`,
+      gsap.fromTo(`.${styles.mosaic} > div:nth-child(even):not(:nth-child(3))`,
         {
           yPercent: 4,
         },
