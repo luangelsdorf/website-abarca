@@ -5,13 +5,17 @@ import Pin from 'public/images/icons/Pin.svg';
 import React from 'react';
 import styles from './ProjectCard.module.scss';
 
-export default function ProjectCard({ client, segment, services, local, cover, hover, slug, ...rest }) {
+export default function ProjectCard({ client, segment, services, local, cover, hover, slug, modal, ...rest }) {
   const router = useRouter();
   const referrer = router.route.split('/').at(-1);
 
   return (
     <div className={styles.project} {...rest}>
-      <Link href={`/portfolio/${slug}?referrer=${referrer}`} /* href={`?project=${slug}`} */ as={`/portfolio/${slug}`} scroll/* ={false} */>
+      <Link
+        as={`/portfolio/${slug}`}
+        href={modal ? `?project=${slug}` : `/portfolio/${slug}?referrer=${referrer}`}
+        scroll={modal ? false : true}
+      >
         <Image loading="eager" sizes="100vw" src={`/images/portfolio/hover/${hover}`} width="200" height="200" alt="" />
         <Image loading="eager" sizes="100vw" src={`/images/portfolio/${cover}`} width="200" height="200" alt="" />
       </Link>

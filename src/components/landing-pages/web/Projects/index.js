@@ -3,6 +3,9 @@ import styles from './Projects.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, FreeMode } from 'swiper';
 import ProjectCard from 'src/components/common/ProjectCard';
+import PresentationModal from 'src/components/common/PresentationModal';
+import ModalWrapper from 'src/components/portfolio/structures/ModalWrapper';
+import { useRouter } from 'next/router';
 
 export default function Projects() {
   const portfolio = [
@@ -71,6 +74,8 @@ export default function Projects() {
     },
   ];
 
+  const router = useRouter();
+
   const topSwiper = useRef(null);
   const [isMobile, setIsMobile] = useState(true);
 
@@ -105,7 +110,7 @@ export default function Projects() {
             portfolio.map((project, index) => {
               return (
                 <SwiperSlide key={`top-row-${index}`}>
-                  <ProjectCard {...project} />
+                  <ProjectCard modal {...project} />
                 </SwiperSlide>
               )
             })
@@ -133,13 +138,17 @@ export default function Projects() {
             portfolio.map((project, index) => {
               return (
                 <SwiperSlide key={`bottom-row-${index}`}>
-                  <ProjectCard {...project} />
+                  <ProjectCard modal {...project} />
                 </SwiperSlide>
               )
             })
           }
         </Swiper>
       </div>
+
+      <PresentationModal open={!!router.query.project} toggleOpen={() => router.push(router.asPath, undefined, { scroll: false })}>
+        {router.query.project && <ModalWrapper project={portfolio.find(p => p.slug === router.query.project)} />}
+      </PresentationModal>
     </section>
   )
 }
