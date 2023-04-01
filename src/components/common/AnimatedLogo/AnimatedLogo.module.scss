@@ -1,10 +1,12 @@
-@use '../../../styles/scss/animations';
+@use "../../../styles/scss/animations";
 
 @include animations.stroke-fill(logo-animation, true);
 
 .logo {
   stroke: rgb(var(--white));
-  background-color: #CE7A24;
+  background-color: #ce7a24;
+  max-width: 185px;
+  max-height: 185px;
 
   path {
     &:last-child {

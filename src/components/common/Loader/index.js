@@ -7,10 +7,27 @@ export default function Loader({ content }) {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
+      gsap.set('#mosaic > div', { y: 80, opacity: 0 });
       let tl = gsap.timeline({
         onComplete: () => {
           document.querySelector('#type-animation').stop();
           document.documentElement.classList.remove('no-scroll');
+
+          gsap.fromTo(`#mosaic > div`,
+            {
+              y: 80,
+              opacity: 0,
+            },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.9,
+              ease: 'ease',
+              stagger: {
+                amount: 0.6,
+              }
+            }
+          );
         }
       });
       tl.to('#viewport', { opacity: 0, duration: 0.2 });

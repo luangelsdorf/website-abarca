@@ -7,6 +7,8 @@ import Projects from 'src/components/landing-pages/brand/Projects';
 import Footer from 'src/components/layout/Footer';
 import Testimonials from 'src/components/landing-pages/brand/Testimonials';
 import Contact from 'src/components/landing-pages/brand/Contact';
+import Image from 'next/image';
+import AnimatedLogo from 'src/components/common/AnimatedLogo';
 
 export default function Home() {
   return (
@@ -22,7 +24,27 @@ export default function Home() {
 
       <main>
         <Section id="home">
-          <Hero />
+          <Hero
+            slot01={<Image data-project="casulo" fill src="/images/hero/casulo/Logos-Casulo.gif" alt="" />}
+            slot02={<Image data-project="casulo" fill src="/images/hero/casulo/banner-hero.jpg" alt="" />}
+            slot03={<Image data-project="abarca" fill src="/images/hero/abarca/stand.png" alt="" />}
+            slot04={<video data-project="abarca" src="/images/hero/abarca/pattern.mp4" loop muted autoPlay />}
+            slot05={<video data-project="pegada" src="/images/hero/pegada/logo-textures.mp4" loop muted autoPlay />}
+            slot06={<Image data-project="pegada" fill src="/images/hero/pegada/woman.jpg" alt="" />}
+            slot07={<video data-project="maptrack" src="/images/hero/maptrack/grid-animation.mp4" loop muted autoPlay />}
+            slot08={<Image data-project="maptrack" fill src="/images/hero/maptrack/stationery.jpg" alt="" />}
+            slot09={<Image data-project="bronzo" fill src="/images/hero/bronzo/packing-cropped.jpg" alt="" />}
+            slot10={
+              <div data-project="bronzo" style={{ backgroundColor: '#CE7A24', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <AnimatedLogo />
+              </div>
+            }>
+            <h1>
+              <span>Dê vida à sua marca</span>
+              <br />
+              <span className="h-sans d-none d-lg-inline">e torne-a inesquecível</span>
+            </h1>
+          </Hero>
         </Section>
 
         <Section id="about" pt="200 80" pb="200 140">

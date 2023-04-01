@@ -96,8 +96,6 @@
 
     & > div {
       position: relative;
-      /* outline: 1px dashed tomato; */
-      background-color: rgb(var(--shadow));
       display: flex;
       align-items: center;
       overflow: hidden;
@@ -155,13 +153,6 @@
 
     &:nth-child(5) {
       margin-bottom: 270px;
-
-      & > div:last-child {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 72px;
-      }
 
       @include mixins.lg {
         margin-bottom: 0;
