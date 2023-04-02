@@ -21,7 +21,7 @@ export default function PegadaNeutra() {
       <Wrapper light>
         <Section>
           <Cover title="" local="Novo Hamburgo | Brasil" info={{ client: 'Pegada Neutra', segment: 'Compensação Ambiental', services: ['Website'] }}>
-          <Image quality="100" loading="eager" src={basePath + 'Cover-Pegada-Neutra.jpg'} width="1400" height="800" alt="" />
+            <Image quality="100" loading="eager" src={basePath + 'Cover-Pegada-Neutra.jpg'} width="1400" height="800" alt="" />
           </Cover>
         </Section>
 
@@ -47,7 +47,8 @@ export default function PegadaNeutra() {
         </Section>
 
         <Section>
-          <Picture full noMargin>
+          <Picture full noMargin style={{ position: 'relative' }}>
+            {/* <video src={basePath + 'Mobile-Pegada-Neutra.mp4'} autoPlay muted loop style={{position: 'absolute', top: '212px', right: '88px', width: '286px', height: '582px', borderRadius: '22px'}} /> */}
             <Image loading="eager" quality="100" src={basePath + 'Home-Pegada-Neutra_03.jpg'} width="1400" height="800" alt="" />
           </Picture>
         </Section>
@@ -59,7 +60,7 @@ export default function PegadaNeutra() {
         </Section>
 
         <Section>
-          <Picture style={{backgroundColor: '#18332F'}}>
+          <Picture style={{ backgroundColor: '#18332F' }}>
             <video src={basePath + 'Loop-Pegada-Neutra.mp4'} autoPlay muted loop style={{ width: '100%', height: '100%', borderRadius: '16px' }} />
           </Picture>
         </Section>
