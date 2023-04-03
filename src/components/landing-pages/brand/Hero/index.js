@@ -34,7 +34,7 @@ export default function Hero({
     mm.add('(min-width: 992px)', () => {
       gsap.fromTo(`.${styles.mosaic} > div:nth-child(odd):not(:nth-child(3))`,
         {
-          yPercent: -4,
+          yPercent: -8,
         },
         {
           yPercent: 16,

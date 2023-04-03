@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './Projects.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, FreeMode } from 'swiper';
+import { Autoplay } from 'swiper';
 import ProjectCard from 'src/components/common/ProjectCard';
 import PresentationModal from 'src/components/common/PresentationModal';
 import ModalWrapper from 'src/components/portfolio/structures/ModalWrapper';
@@ -15,8 +15,8 @@ export default function Projects() {
       segment: 'ONG de Proteção Animal',
       services: 'Website',
       local: 'Campo Bom | Brasil',
-      cover: 'Maptrack.jpg',
-      hover: 'Maptrack.jpg',
+      cover: 'Cover-Arca.jpg',
+      hover: 'Cover-Arca.jpg',
     },
     {
       client: 'Rodrigo Carvalho',
@@ -24,8 +24,8 @@ export default function Projects() {
       segment: 'Barbearia',
       services: 'Website',
       local: 'Bristol | Inglaterra',
-      cover: 'Maptrack.jpg',
-      hover: 'Maptrack.jpg',
+      cover: 'Cover-Rodrigo-Carvalho.png',
+      hover: 'Cover-Rodrigo-Carvalho.png',
     },
     {
       client: 'Grana Capital',
@@ -33,8 +33,8 @@ export default function Projects() {
       segment: 'Fintech',
       services: 'Website',
       local: 'Rio de Janeiro | Brasil',
-      cover: 'Maptrack.jpg',
-      hover: 'Maptrack.jpg',
+      cover: 'Cover-Grana.jpg',
+      hover: 'Cover-Grana.jpg',
     },
     {
       client: 'BRC',
@@ -42,8 +42,8 @@ export default function Projects() {
       segment: 'Escritório de Advocacia',
       services: 'Website',
       local: 'São Paulo | Brasil',
-      cover: 'Maptrack.jpg',
-      hover: 'Maptrack.jpg',
+      cover: 'Cover-BRC.jpg',
+      hover: 'Cover-BRC.jpg',
     },
     {
       client: 'Certivale',
@@ -51,8 +51,8 @@ export default function Projects() {
       segment: 'Certificação Digital',
       services: 'Website',
       local: 'São Leopoldo | Brasil',
-      cover: 'Maptrack.jpg',
-      hover: 'Maptrack.jpg',
+      cover: 'Certivale.jpg',
+      hover: 'Certivale.jpg',
     },
     {
       client: 'Útil Facilities',
@@ -60,8 +60,8 @@ export default function Projects() {
       segment: 'Facilities',
       services: 'Website',
       local: 'Rio de Janeiro | Brasil',
-      cover: 'Maptrack.jpg',
-      hover: 'Maptrack.jpg',
+      cover: 'Cover-Util-Facilities.jpg',
+      hover: 'Cover-Util-Facilities.jpg',
     },
     {
       client: 'Pegada Neutra',
@@ -69,8 +69,8 @@ export default function Projects() {
       segment: 'Compensação Ambiental',
       services: 'Website',
       local: 'Novo Hamburgo | Brasil',
-      cover: 'Maptrack.jpg',
-      hover: 'Maptrack.jpg',
+      cover: 'Cover-Pegada-Neutra.jpg',
+      hover: 'Cover-Pegada-Neutra.jpg',
     },
     {
       client: 'NefroSinos',
@@ -78,8 +78,8 @@ export default function Projects() {
       segment: 'Clínica de Nefrologia',
       services: 'Website',
       local: 'Novo Hamburgo | Brasil',
-      cover: 'Maptrack.jpg',
-      hover: 'Maptrack.jpg',
+      cover: 'Cover-Nefrosinos.jpg',
+      hover: 'Cover-Nefrosinos.jpg',
     },
     {
       client: 'RobTec',
@@ -87,8 +87,8 @@ export default function Projects() {
       segment: 'Tecnologia da Informação',
       services: 'Website',
       local: 'São Paulo | Brasil',
-      cover: 'Maptrack.jpg',
-      hover: 'Maptrack.jpg',
+      cover: 'Cover-Robtec.jpg',
+      hover: 'Cover-Robtec.jpg',
     },
     {
       client: 'Rossi & Dorneles',
@@ -96,8 +96,8 @@ export default function Projects() {
       segment: 'Escritório de Advocacia',
       services: 'Website',
       local: 'Canoas | Brasil',
-      cover: 'Maptrack.jpg',
-      hover: 'Maptrack.jpg',
+      cover: 'Cover-RD.jpg',
+      hover: 'Cover-RD.jpg',
     },
   ];
 
@@ -122,10 +122,10 @@ export default function Projects() {
           ref={topSwiper}
           spaceBetween={24}
           slidesPerView={'auto'}
-          modules={[Autoplay, FreeMode]}
+          modules={[Autoplay]}
           loop
           speed={1800}
-          freeMode
+          centeredSlides
           autoplay={{
             delay: 200,
             disableOnInteraction: false,
@@ -136,7 +136,7 @@ export default function Projects() {
           {
             portfolio.map((project, index) => {
               return (
-                <SwiperSlide key={`top-row-${index}`}>
+                <SwiperSlide key={`top-row-${index}`} className="col-12 col-lg-8">
                   <ProjectCard modal {...project} />
                 </SwiperSlide>
               )
@@ -150,21 +150,21 @@ export default function Projects() {
           initialSlide={4}
           spaceBetween={24}
           slidesPerView={'auto'}
-          modules={[Autoplay, FreeMode]}
+          modules={[Autoplay]}
           loop
           speed={1800}
-          freeMode
+          centeredSlides
           autoplay={{
             delay: 200,
             disableOnInteraction: false,
-            pauseOnMouseEnter: false,
+            pauseOnMouseEnter: true,
             reverseDirection: true,
           }}
         >
           {
             portfolio.map((project, index) => {
               return (
-                <SwiperSlide key={`bottom-row-${index}`}>
+                <SwiperSlide key={`bottom-row-${index}`} className="col-12 col-lg-8">
                   <ProjectCard modal {...project} />
                 </SwiperSlide>
               )
