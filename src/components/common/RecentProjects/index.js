@@ -8,8 +8,8 @@ export default function RecentProjects({ content }) {
     segment: 'Centro Canino',
     services: 'Website\nIdentidade Visual',
     local: "Araricá | Brasil",
-    cover: 'Casulo.jpg',
-    hover: 'Casulo.jpg',
+    cover: 'cover.jpg',
+    hover: 'hover.jpg',
     slug: 'casulo',
   };
 
@@ -18,8 +18,8 @@ export default function RecentProjects({ content }) {
     segment: 'Escritório de Relações Públicas',
     services: 'Identidade Visual',
     local: "Campo Bom | Brasil",
-    cover: 'Abarca.png',
-    hover: 'Abarca.png',
+    cover: 'cover.png',
+    hover: 'hover.png',
     slug: 'abarca',
   };
 

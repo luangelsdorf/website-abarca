@@ -41,8 +41,8 @@ export default function Projects({ content }) {
       segment: 'Startup de Rastreamento',
       services: 'Identidade Visual',
       local: "Brisbane | Austrália",
-      cover: 'Maptrack.jpg',
-      hover: 'Maptrack.jpg',
+      cover: 'cover.jpg',
+      hover: 'hover.jpg',
       slug: 'maptrack',
     },
     {
@@ -50,8 +50,8 @@ export default function Projects({ content }) {
       segment: 'Restaurante Italiano',
       services: 'Website\nIdentidade Visual',
       local: "Londres | Inglaterra",
-      cover: 'Bronzo.png',
-      hover: 'Bronzo.jpg',
+      cover: 'cover.png',
+      hover: 'hover.jpg',
       slug: 'bronzo',
     },
     {
@@ -59,8 +59,8 @@ export default function Projects({ content }) {
       segment: 'Escritório de Relações Públicas',
       services: 'Identidade Visual',
       local: "Campo Bom | Brasil",
-      cover: 'Abarca.png',
-      hover: 'Abarca.png',
+      cover: 'cover.png',
+      hover: 'hover.png',
       slug: 'abarca',
     },
     {
@@ -68,8 +68,8 @@ export default function Projects({ content }) {
       segment: 'Centro Canino',
       services: 'Website\nIdentidade Visual',
       local: "Araricá | Brasil",
-      cover: 'Casulo.jpg',
-      hover: 'Casulo.jpg',
+      cover: 'cover.jpg',
+      hover: 'hover.jpg',
       slug: 'casulo',
     },
   ]
