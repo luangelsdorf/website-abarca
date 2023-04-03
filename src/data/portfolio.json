@@ -15,6 +15,46 @@
     {
       "name": "Maptrack",
       "slug": "maptrack"
+    },
+    {
+      "name": "Arca",
+      "slug": "arca"
+    },
+    {
+      "name": "Rodrigo Carvalho",
+      "slug": "rodrigo-carvalho"
+    },
+    {
+      "name": "Grana",
+      "slug": "grana"
+    },
+    {
+      "name": "BRC",
+      "slug": "brc"
+    },
+    {
+      "name": "Certivale",
+      "slug": "certivale"
+    },
+    {
+      "name": "Útil Facilities",
+      "slug": "util-facilities"
+    },
+    {
+      "name": "Pegada Neutra",
+      "slug": "pegada-neutra"
+    },
+    {
+      "name": "Nefro Sinos",
+      "slug": "nefro-sinos"
+    },
+    {
+      "name": "RobTec",
+      "slug": "robtec"
+    },
+    {
+      "name": "Rossi & Dorneles",
+      "slug": "rossi-dorneles"
     }
   ]
 }
