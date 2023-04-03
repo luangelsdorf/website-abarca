@@ -38,15 +38,15 @@
     },
     {
       "name": "Útil Facilities",
-      "slug": "util-facilities"
+      "slug": "util"
     },
     {
       "name": "Pegada Neutra",
       "slug": "pegada-neutra"
     },
     {
-      "name": "Nefro Sinos",
-      "slug": "nefro-sinos"
+      "name": "NefroSinos",
+      "slug": "nefrosinos"
     },
     {
       "name": "RobTec",

@@ -8,7 +8,7 @@ import RodrigoCarvalho from './presentations/RodrigoCarvalho';
 import Grana from './presentations/Grana';
 import BRC from './presentations/BRC';
 import Certivale from './presentations/Certivale';
-import UtilFacilities from './presentations/UtilFacilities';
+import Util from './presentations/Util';
 import PegadaNeutra from './presentations/PegadaNeutra';
 import NefroSinos from './presentations/NefroSinos';
 import Robtec from './presentations/Robtec';
@@ -25,9 +25,9 @@ export default function ProjectPresentation({ project }) {
     'grana': Grana,
     'brc': BRC,
     'certivale': Certivale,
-    'util-facilities': UtilFacilities,
+    'util': Util,
     'pegada-neutra': PegadaNeutra,
-    'nefro-sinos': NefroSinos,
+    'nefrosinos': NefroSinos,
     'robtec': Robtec,
     'rossi-dorneles': RossiDorneles,
   }
