@@ -1,0 +1,104 @@
+.section {
+  & > div {
+    & > header {
+      text-align: center;
+      margin-bottom: 80px;
+
+      h2 {
+        font: var(--heading-serif-large);
+      }
+
+      p {
+        position: relative;
+        margin-bottom: 32px;
+        justify-content: center;
+
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          width: 336px;
+          height: 1px;
+          background-color: rgb(var(--shadow));
+        }
+      }
+    }
+  }
+
+  :global(.row) {
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+      &:nth-child(odd) {
+        article {
+          margin-right: 14px;
+        }
+      }
+      &:nth-child(even) {
+        article {
+          margin-left: 14px;
+        }
+      }
+    }
+  }
+}
+
+.question {
+  cursor: pointer;
+  border-bottom: 1px solid rgb(var(--shadow));
+  transition: 350ms;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(var(--light-gray));
+    padding: 24px 8px 24px 24px;
+    transition: 350ms;
+
+    h3 {
+      color: rgb(var(--light-gray));
+      font: var(--heading-serif-small);
+      transition: 350ms;
+    }
+  }
+
+  &:hover {
+    border-color: rgb(var(--white));
+    header {
+      color: rgb(var(--white));
+      h3 {
+        color: rgb(var(--white));
+      }
+    }
+  }
+
+  & > div > div {
+    padding: 24px 40px 40px 24px;
+  }
+
+  path {
+    transition: 350ms;
+    transform-origin: center;
+  }
+
+  &.active {
+    border-color: rgb(var(--white));
+
+    svg {
+      & > path {
+        fill: transparent;
+        transform: rotate(180deg);
+      }
+    }
+
+    header {
+      color: rgb(var(--white));
+
+      h3 {
+        color: rgb(var(--white));
+      }
+    }
+  }
+}
