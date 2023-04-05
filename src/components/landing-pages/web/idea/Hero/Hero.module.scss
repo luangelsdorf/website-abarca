@@ -1,0 +1,93 @@
+@use "../../../../../styles/scss/mixins";
+
+@keyframes slide-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% + 100vh));
+  }
+}
+
+.section {
+  height: 1080px;
+  overflow: hidden;
+
+  :global(.row) {
+    &::after {
+      content: '';
+      position: absolute;
+      width: 75%;
+      height: 1080px;
+      margin-left: 50%;
+      background: linear-gradient(180deg, rgba(1, 1, 1, 0) 0%, #010101 100%);
+    }
+  }
+}
+
+.textContent {
+  padding-top: 48px;
+
+  & > a {
+    color: rgb(var(--white));
+    margin-bottom: 80px;
+  }
+
+  h1 {
+    margin-bottom: 48px;
+  }
+
+  p {
+    margin-bottom: 48px;
+  }
+
+  & > div:last-child {
+    max-width: 440px;
+  }
+}
+
+.column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: slide-up 30s cubic-bezier(0.25, 0, 0.75, 1) infinite;
+
+  &:nth-child(odd) {
+    animation-direction: alternate;
+  }
+  &:nth-child(even) {
+    animation-direction: alternate-reverse;
+  }
+
+  img {
+    border-radius: 24px;
+  }
+}
+
+.sm,
+.md,
+.lg {
+  position: relative;
+}
+
+.lg {
+  height: 448px;
+  @include mixins.md {
+    height: 295px;
+  }
+}
+
+.md {
+  height: 350px;
+  @include mixins.md {
+    height: 245px;
+  }
+}
+
+.sm {
+  height: 300px;
+  @include mixins.md {
+    height: 195px;
+  }
+}
