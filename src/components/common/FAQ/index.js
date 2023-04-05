@@ -64,15 +64,15 @@ export default function FAQ() {
       }
     }
 
-    faq.current?.childNodes.forEach(q => {
-      q.firstChild.addEventListener('shown.bs.collapse', handleCollapse);
-      q.firstChild.addEventListener('hidden.bs.collapse', handleCollapse);
+    faq.current?.firstChild.childNodes.forEach(q => {
+      q.addEventListener('shown.bs.collapse', handleCollapse);
+      q.addEventListener('hidden.bs.collapse', handleCollapse);
     });
 
     return () => {
-      faqElement?.childNodes.forEach(q => {
-        q.firstChild.removeEventListener('shown.bs.collapse', handleCollapse);
-        q.firstChild.removeEventListener('hidden.bs.collapse', handleCollapse);
+      faqElement?.firstChild.childNodes.forEach(q => {
+        q.removeEventListener('shown.bs.collapse', handleCollapse);
+        q.removeEventListener('hidden.bs.collapse', handleCollapse);
       });
     }
   }, []);
@@ -101,14 +101,7 @@ export default function FAQ() {
           <h2><span className="h-sans">Perguntas</span> Frequentes</h2>
         </header>
         <div className="container">
-          <div className="row" ref={faq} >
-            {/* {
-              data.map((question, index) => (
-                <div className="col-12 col-lg-6" key={index}>
-                  <Question {...question} id={index} />
-                </div>
-              ))
-            } */}
+          <div className="row" ref={faq}>
             <div className="col-12 col-lg-6">
               {
                 firstHalf.map((question, index) => (
