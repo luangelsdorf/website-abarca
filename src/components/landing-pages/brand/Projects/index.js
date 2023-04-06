@@ -6,12 +6,8 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Button from 'src/components/common/Button';
 import Arrow from 'public/images/icons/Arrow.svg';
 import ProjectCard from 'src/components/common/ProjectCard';
-import { useRouter } from 'next/router';
-import PresentationModal from 'src/components/common/PresentationModal';
-import ModalWrapper from 'src/components/portfolio/structures/ModalWrapper';
 
-export default function Projects({ content }) {
-  const router = useRouter();
+export default function Projects() {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -108,10 +104,6 @@ export default function Projects({ content }) {
           </div>
         </div>
       </div>
-
-      {/* <PresentationModal open={!!router.query.project} toggleOpen={() => router.push(router.asPath, undefined, { scroll: false })}>
-        {router.query.project && <ModalWrapper project={data.find(p => p.slug === router.query.project)} />}
-      </PresentationModal> */}
     </div>
   )
 }
