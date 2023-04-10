@@ -2,9 +2,11 @@ import Head from 'next/head';
 import React from 'react';
 import FAQ from 'src/components/common/FAQ';
 import Section from 'src/components/common/Section';
+import Pricing from 'src/components/landing-pages/brand-b/Pricing';
 import Projects from 'src/components/landing-pages/brand-b/Projects';
 import Contact from 'src/components/landing-pages/brand/Contact';
 import Testimonials from 'src/components/landing-pages/brand/Testimonials';
+import Features from 'src/components/landing-pages/web/idea/Features';
 import Hero from 'src/components/landing-pages/web/idea/Hero';
 import Mobile from 'src/components/landing-pages/web/idea/Mobile';
 import Footer from 'src/components/layout/Footer';
@@ -23,20 +25,28 @@ export default function Idea() {
       </Head>
 
       <main>
-        <Section>
+        <Section id="home">
           <Hero />
         </Section>
 
-        <Section>
-          <Mobile pt="96" pb="96" />
+        <Section id="mobile" pt="96" pb="96">
+          <Mobile />
         </Section>
 
-        <Section pt="96" pb="80">
+        <Section id="projects" pt="96" pb="80">
           <Projects web />
         </Section>
 
-        <Section pt="120" pb="120">
+        <Section id="testimonials" pt="120" pb="120">
           <Testimonials />
+        </Section>
+
+        <Section id="features" pt="96">
+          <Features />
+        </Section>
+
+        <Section id="pricing" pt="120" pb="96">
+          <Pricing />
         </Section>
 
         <Section id="faq" pt="120" pb="144">
@@ -52,3 +62,5 @@ export default function Idea() {
     </div>
   )
 }
+
+Idea.scrollHeader = true;

@@ -29,8 +29,8 @@ export default function Home() {
             slot02={<Image data-project="casulo" fill src="/images/hero/casulo/banner-hero.jpg" alt="" />}
             slot03={<Image data-project="abarca" fill src="/images/hero/abarca/stand.png" alt="" />}
             slot04={<video data-project="abarca" src="/images/hero/abarca/pattern.mp4" loop muted autoPlay />}
-            slot05={<video data-project="pegada" src="/images/hero/pegada/logo-textures.mp4" loop muted autoPlay />}
-            slot06={<Image data-project="pegada" fill src="/images/hero/pegada/woman.jpg" alt="" />}
+            slot05={<video data-project="pegada-neutra" src="/images/hero/pegada-neutra/logo-textures.mp4" loop muted autoPlay />}
+            slot06={<Image data-project="pegada-neutra" fill src="/images/hero/pegada-neutra/woman.jpg" alt="" />}
             slot07={<video data-project="maptrack" src="/images/hero/maptrack/grid-animation.mp4" loop muted autoPlay />}
             slot08={<Image data-project="maptrack" fill src="/images/hero/maptrack/stationery.jpg" alt="" />}
             slot09={<Image data-project="bronzo" fill src="/images/hero/bronzo/packing-cropped.jpg" alt="" />}

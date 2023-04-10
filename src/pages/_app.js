@@ -96,7 +96,7 @@ export default function App({ Component, pageProps }) {
       `}
       </style>
 
-      <Header floating={Component.floatingHeader} links={Component.links} />
+      <Header floating={Component.floatingHeader} scroll={Component.scrollHeader} links={Component.links} />
 
       {isDev ? null : <Loader />}
 

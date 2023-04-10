@@ -69,11 +69,6 @@ export default function Hero() {
 
   const shuffledPortfolio = useRef([shuffle(portfolio), shuffle(portfolio), shuffle(portfolio)]);
 
-  useEffect(() => {
-    document.querySelector('[data-navigation]').style.visibility = 'hidden';
-  }, []);
-
-
   return (
     <div className={styles.section}>
       <div className="container">

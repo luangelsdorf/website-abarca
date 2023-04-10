@@ -3,10 +3,10 @@ import Button from 'src/components/common/Button';
 import styles from './Header.module.scss';
 import Logo from 'public/images/brstorm.svg';
 import Link from 'next/link';
-import Open from 'public/images/icons/open.svg';
 import MenuMobile from '../MenuMobile';
 
-export default function Header({ floating = false, links }) {
+export default function Header({ floating = false, scroll, links }) {
+  
   function handleClick(e) {
     e.currentTarget.classList.toggle(styles.floating);
     document.querySelector('[data-menu]').classList.toggle('active');
@@ -15,24 +15,13 @@ export default function Header({ floating = false, links }) {
   }
 
   useEffect(() => {
-    /* if (!floating) return;
-
-    function onScroll() {
-      document.querySelector(`.${styles.header}`).classList.add(styles.floating);
-    }
-
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll); */
-  }, [])
-
-  useEffect(() => {
-    /* if (!showNavbar) return;
+    if (!scroll) return;
     function callback(entries) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          target.classList.remove(styles.floating);
-        } else {
           target.classList.add(styles.floating);
+        } else {
+          target.classList.remove(styles.floating);
         }
       })
     }
@@ -42,7 +31,7 @@ export default function Header({ floating = false, links }) {
     const target = document.querySelector(`.${styles.navigation}`);
     observer.observe(sentinel);
 
-    return () => observer.unobserve(sentinel); */
+    return () => observer.unobserve(sentinel);
   }, []);
 
   const desktopLinks = links ?? [
@@ -67,7 +56,7 @@ export default function Header({ floating = false, links }) {
   return (
     <>
       <MenuMobile links={desktopLinks} />
-      {/* <div className={styles.sentinel} /> */}
+      {scroll && <div className={styles.sentinel} />}
       <div className={`${styles.navigation}${floating ? ' ' + styles.floating : ''}`} data-navigation>
 
         <div className={`container ${styles.header}`}>
@@ -87,13 +76,13 @@ export default function Header({ floating = false, links }) {
               </ul>
               <div>
                 <Button className="sm d-none d-lg-flex" id="header-contact" href="/#contact">Começar Projeto</Button>
-                <Button className="d-flex d-lg-none" onClick={handleClick} type="button" floating btnElement />
+                <Button className={`${scroll ? 'd-none' : 'd-flex d-lg-none'}`} onClick={handleClick} type="button" floating btnElement />
               </div>
             </nav>
           </header>
         </div>
 
-        <div className={`container ${styles.floatingWrapper}`}>
+        <div className={`container ${styles.floatingWrapper} ${scroll ? 'd-none' : 'd-block'}`}>
           <Button btnElement onClick={handleClick} floating type="button" className={`${styles.floatingBtn}`} />
         </div>
       </div>
