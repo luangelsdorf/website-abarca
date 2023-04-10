@@ -25,54 +25,138 @@ export default function Hero() {
   }
 
   const portfolio = [
-    {
-      name: "arca",
-      size: "lg",
-    },
-    {
-      name: "rodrigo-carvalho",
-      size: "lg",
-    },
-    {
-      name: "grana",
-      size: "lg",
-    },
-    {
-      name: "brc",
-      size: "lg",
-    },
-    {
-      name: "certivale",
-      size: "sm",
-    },
-    {
-      name: "util",
-      size: "sm",
-    },
-    {
-      name: "pegada-neutra",
-      size: "sm",
-    },
-    {
-      name: "nefrosinos",
-      size: "sm",
-    },
-    {
-      name: "robtec",
-      size: "lg",
-    },
-    {
-      name: "rossi-dorneles",
-      size: "lg",
-    },
+    [
+      {
+        name: "certivale",
+        size: "sm",
+      },
+      {
+        name: "brc",
+        size: "lg",
+      },
+      {
+        name: "rodrigo-carvalho",
+        size: "lg",
+      },
+      {
+        name: "arca",
+        size: "lg",
+      },
+      {
+        name: "grana",
+        size: "lg",
+      },
+      {
+        name: "pegada-neutra",
+        size: "sm",
+      },
+      {
+        name: "util",
+        size: "sm",
+      },
+      {
+        name: "nefrosinos",
+        size: "sm",
+      },
+      {
+        name: "robtec",
+        size: "lg",
+      },
+      {
+        name: "rossi-dorneles",
+        size: "lg",
+      },
+    ],
+    [
+      {
+        name: "arca",
+        size: "lg",
+      },
+      {
+        name: "brc",
+        size: "lg",
+      },
+      {
+        name: "certivale",
+        size: "sm",
+      },
+      {
+        name: "rodrigo-carvalho",
+        size: "lg",
+      },
+      {
+        name: "rossi-dorneles",
+        size: "lg",
+      },
+      {
+        name: "pegada-neutra",
+        size: "sm",
+      },
+      {
+        name: "nefrosinos",
+        size: "sm",
+      },
+      {
+        name: "robtec",
+        size: "lg",
+      },
+      {
+        name: "util",
+        size: "sm",
+      },
+      {
+        name: "grana",
+        size: "lg",
+      },
+    ],
+    [
+      {
+        name: "pegada-neutra",
+        size: "sm",
+      },
+      {
+        name: "nefrosinos",
+        size: "sm",
+      },
+      {
+        name: "robtec",
+        size: "lg",
+      },
+      {
+        name: "rossi-dorneles",
+        size: "lg",
+      },
+      {
+        name: "brc",
+        size: "lg",
+      },
+      {
+        name: "certivale",
+        size: "sm",
+      },
+      {
+        name: "arca",
+        size: "lg",
+      },
+      {
+        name: "rodrigo-carvalho",
+        size: "lg",
+      },
+      {
+        name: "util",
+        size: "sm",
+      },
+      {
+        name: "grana",
+        size: "lg",
+      },
+    ]
   ];
-
-  const shuffledPortfolio = useRef([shuffle(portfolio), shuffle(portfolio), shuffle(portfolio)]);
 
   return (
     <div className={styles.section}>
       <div className="container">
-        <div className="row flex-nowrap" style={{position: 'relative'}}>
+        <div className="row flex-nowrap" style={{ position: 'relative' }}>
           <div className="col-12 col-lg-6">
             <div className={styles.textContent}>
               <Link href="#">
@@ -88,7 +172,7 @@ export default function Hero() {
             </div>
           </div>
           {
-            shuffledPortfolio.current.map((column, index) => (
+            portfolio.map((column, index) => (
               <div className={`col-12 col-lg-3 ${styles.column}`} key={index}>
                 {
                   column.map(project => (
