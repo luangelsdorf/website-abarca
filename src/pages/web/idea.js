@@ -9,6 +9,7 @@ import Testimonials from 'src/components/landing-pages/brand/Testimonials';
 import Features from 'src/components/landing-pages/web/idea/Features';
 import Hero from 'src/components/landing-pages/web/idea/Hero';
 import Mobile from 'src/components/landing-pages/web/idea/Mobile';
+import Support from 'src/components/landing-pages/web/idea/Support';
 import Footer from 'src/components/layout/Footer';
 import styles from 'src/styles/pages/landingpages.module.scss';
 
@@ -43,6 +44,10 @@ export default function Idea() {
 
         <Section id="features" pt="96">
           <Features />
+        </Section>
+
+        <Section id="support" pt="96" pb="64">
+          <Support />
         </Section>
 
         <Section id="pricing" pt="120" pb="96">

@@ -65,6 +65,10 @@ video {
   object-position: center;
 }
 
+video {
+  pointer-events: none;
+}
+
 ul,
 ol,
 dl,
