@@ -1,0 +1,70 @@
+@use "sass:math";
+
+.p {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 1px;
+    background-color: rgb(var(--shadow));
+    transform: scaleX(0);
+    transition: 500ms;
+    transition-delay: 750ms;
+  }
+
+  rect {
+    fill: rgb(var(--black));
+    stroke: rgb(var(--dark-gray));
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: 750ms;
+    transition-delay: 240ms;
+  }
+
+  text {
+    fill: rgb(var(--light-gray));
+    transition: 250ms;
+    transform: translateY(100%);
+  }
+
+  & + h2 {
+    overflow: hidden;
+    span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: 500ms cubic-bezier(0.25, 0.1, 0.06, 0.99);
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          transition-delay: #{(math.div($i, 10) + 1.1)}s;
+        }
+      }
+    }
+  }
+}
+
+.visible {
+  text {
+    transform: translateY(0);
+  }
+
+  &::before {
+    transform: scaleX(1);
+  }
+
+  rect {
+    stroke-dashoffset: 0;
+  }
+
+  & + h2 {
+    span {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

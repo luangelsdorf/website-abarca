@@ -5,7 +5,7 @@
 @use "scss/forms";
 
 :root {
-  overflow: overlay;
+  overflow-y: overlay;
   &.no-scroll {
     overflow: hidden;
   }
