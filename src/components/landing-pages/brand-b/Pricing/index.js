@@ -189,7 +189,7 @@ export default function Pricing({ content }) {
             <br className="d-none d-lg-block" />
             <span className="h-sans"> para o seu negócio</span>
           </h2>
-          <p>Não importa o tamanho ou a fase do seu negócio, <strong>nós certamente podemos lhe ajudar</strong>, escolha o pacote que lhe atende.</p>
+          <p>Não importa o tamanho ou a fase do seu negócio, <strong>nós certamente podemos lhe ajudar</strong>, escolha o <br className="d-none d-lg-none" />pacote que lhe atende.</p>
         </header>
       </div>
       <div className="container">

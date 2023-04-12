@@ -102,7 +102,6 @@ export default function Projects() {
   ];
 
   const router = useRouter();
-
   const topSwiper = useRef(null);
   const [isMobile, setIsMobile] = useState(true);
 
@@ -173,7 +172,7 @@ export default function Projects() {
         </Swiper>
       </div>
 
-      <PresentationModal open={!!router.query.project} toggleOpen={() => router.push(router.asPath, undefined, { scroll: false })}>
+      <PresentationModal open={!!router.query.project} toggleOpen={() => router.back()}>
         {router.query.project && <ModalWrapper project={portfolio.find(p => p.slug === router.query.project)} />}
       </PresentationModal>
     </section>
