@@ -24,12 +24,12 @@ export default function Remember() {
             web
             slot01={<Image data-project="rodrigo-carvalho" fill src="/images/hero/rodrigo-carvalho/cover.jpg" alt="" />}
             slot02={<Image data-project="grana" fill src="/images/hero/grana/cover.jpg" alt="" />}
-            slot03={<Image data-project="rd-advogados" fill src="/images/hero/rd-advogados/cover.jpg" alt="" />}
+            slot03={<Image data-project="rossi-dorneles" fill src="/images/hero/rossi-dorneles/cover.jpg" alt="" />}
             slot04={<Image data-project="certivale" fill src="/images/hero/certivale/cover.jpg" alt="" />}
             slot05={<Image data-project="nefrosinos" fill src="/images/hero/nefrosinos/cover.jpg" alt="" />}
             slot06={<Image data-project="arca" fill src="/images/hero/arca/cover.jpg" alt="" />}
-            slot07={<Image data-project="pegada" fill src="/images/hero/pegada/cover.jpg" alt="" />}
-            slot08={<Image data-project="brc-advogados" fill src="/images/hero/brc-advogados/cover.jpg" alt="" />}
+            slot07={<Image data-project="pegada-neutra" fill src="/images/hero/pegada-neutra/cover.jpg" alt="" />}
+            slot08={<Image data-project="brc" fill src="/images/hero/brc/cover.jpg" alt="" />}
             slot09={<Image data-project="robtec" fill src="/images/hero/robtec/cover.jpg" alt="" />}
             slot10={<Image data-project="util" fill src="/images/hero/util/cover.jpg" alt="" />}
           >
