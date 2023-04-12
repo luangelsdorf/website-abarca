@@ -172,7 +172,7 @@ export default function Projects() {
         </Swiper>
       </div>
 
-      <PresentationModal open={!!router.query.project} toggleOpen={() => router.push(router.pathname, undefined, { scroll: false })}>
+      <PresentationModal open={!!router.query.project} toggleOpen={() => router.push(router.pathname, router.asPath, { scroll: false })}>
         {router.query.project && <ModalWrapper project={portfolio.find(p => p.slug === router.query.project)} />}
       </PresentationModal>
     </section>
