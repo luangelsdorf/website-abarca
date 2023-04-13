@@ -57,7 +57,7 @@ export default function Header({ floating = false, scroll, links }) {
     <>
       <MenuMobile links={desktopLinks} />
       {scroll && <div className={styles.sentinel} />}
-      <div className={`${styles.navigation}${floating ? ' ' + styles.floating : ''}`} data-navigation>
+      <div className={`${styles.navigation}${floating ? ' ' + styles.floating : ''}${scroll ? ' ' + styles.floating : ''}`} data-navigation>
 
         <div className={`container ${styles.header}`}>
           <header>

@@ -12,6 +12,7 @@ export default function Loader({ content }) {
         onComplete: () => {
           document.querySelector('#type-animation').stop();
           document.documentElement.classList.remove('no-scroll');
+          window.dispatchEvent(new Event('loadFinish'));
 
           gsap.fromTo(`#mosaic > div`,
             {

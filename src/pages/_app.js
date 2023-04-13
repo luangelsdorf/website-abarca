@@ -86,6 +86,11 @@ export default function App({ Component, pageProps }) {
     }
   }, []);
 
+  useEffect(() => {
+    if (!isDev) return;
+    window.dispatchEvent(new Event('loadFinish'));
+  });
+
   return (
     <>
       <style jsx global>{`
