@@ -8,7 +8,7 @@ import MenuMobile from '../MenuMobile';
 export default function Header({ floating = false, scroll, links }) {
   
   function handleClick(e) {
-    e.currentTarget.classList.toggle(styles.floating);
+    e.currentTarget.classList.toggle('floatingHeader');
     document.querySelector('[data-menu]').classList.toggle('active');
     document.querySelector('#viewport').classList.toggle('active');
     document.documentElement.classList.toggle('no-scroll');
@@ -19,9 +19,9 @@ export default function Header({ floating = false, scroll, links }) {
     function callback(entries) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          target.classList.add(styles.floating);
+          target.classList.add('floatingHeader');
         } else {
-          target.classList.remove(styles.floating);
+          target.classList.remove('floatingHeader');
         }
       })
     }
@@ -57,7 +57,7 @@ export default function Header({ floating = false, scroll, links }) {
     <>
       <MenuMobile links={desktopLinks} />
       {scroll && <div className={styles.sentinel} />}
-      <div className={`${styles.navigation}${floating ? ' ' + styles.floating : ''}${scroll ? ' ' + styles.floating : ''}`} data-navigation>
+      <div className={`${styles.navigation}${floating ? ' ' + 'floatingHeader' : ''}${scroll ? ' ' + 'floatingHeader' : ''}`} data-navigation>
 
         <div className={`container ${styles.header}`}>
           <header>

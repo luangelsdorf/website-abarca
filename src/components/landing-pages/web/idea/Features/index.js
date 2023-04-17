@@ -24,11 +24,24 @@ export default function Features({ content }) {
         ease: 'none',
         scrollTrigger: {
           trigger: `[data-trigger]`,
+          start: 'top 24',
           end: self => `top ${-(self.trigger.scrollWidth - self.trigger.clientWidth)}`,
           scrub: true,
           pin: true,
           invalidateOnRefresh: true,
+          onEnter: () => document.querySelector('[data-navigation]').classList.add('floatingHeader'),
+          onLeave: () => document.querySelector('[data-navigation]').classList.remove('floatingHeader'),
+          onEnterBack: () => document.querySelector('[data-navigation]').classList.add('floatingHeader'),
+          onLeaveBack: () => document.querySelector('[data-navigation]').classList.remove('floatingHeader'),
         },
+      });
+
+      ScrollTrigger.create({
+        trigger: `.${styles.section} header`,
+        start: 'top 24',
+        end: () => `top ${-(document.querySelector('[data-trigger]').scrollWidth - document.querySelector('[data-trigger]').clientWidth)}`,
+        pin: true,
+        pinSpacer: false,
       });
     });
 
@@ -89,7 +102,7 @@ export default function Features({ content }) {
   return (
     <div className={styles.section}>
       <div className="container">
-        {/* <div className="col-12">
+        <div className="col-12">
           <header>
             <p className="overline">Recursos e Vantagens</p>
             <h2>
@@ -98,19 +111,8 @@ export default function Features({ content }) {
               precisa em um só lugar
             </h2>
           </header>
-        </div> */}
+        </div>
         <div className={styles.rowWrapper} data-trigger>
-          <div className="col-12">
-            <header>
-              <p className="overline">Recursos e Vantagens</p>
-              <h2>
-                <span className="h-sans">Tudo que seu negócio</span>
-                <br />
-                precisa em um só lugar
-              </h2>
-            </header>
-          </div>
-
           <div className="row container flex-nowrap" data-reveal-parent={0.1}>
             {
               data.map((feature, index) => (

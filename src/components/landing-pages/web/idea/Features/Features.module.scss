@@ -2,6 +2,11 @@
   display: block;
   position: relative;
 
+  & > :global(.container > .col-12) {
+    position: absolute;
+    left: 0;
+  }
+
   header {
     text-align: center;
 
@@ -13,12 +18,11 @@
 
 .rowWrapper {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
-  justify-content: center;
 
   :global(.row) {
-    margin-top: 104px;
+    margin-top: calc(24px + 210px + 64px);
   }
 }
 
@@ -49,13 +53,14 @@
     color: rgb(var(--black));
   }
 
-  & > p {
+  &>p {
     color: rgb(var(--shadow));
     margin: 32px 0;
   }
 
-  & > div {
+  &>div {
     padding: 0;
+
     [type="submit"] {
       margin-top: 24px;
     }
