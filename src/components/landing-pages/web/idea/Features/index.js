@@ -89,7 +89,7 @@ export default function Features({ content }) {
   return (
     <div className={styles.section}>
       <div className="container">
-        <div className="col-12">
+        {/* <div className="col-12">
           <header>
             <p className="overline">Recursos e Vantagens</p>
             <h2>
@@ -98,9 +98,20 @@ export default function Features({ content }) {
               precisa em um só lugar
             </h2>
           </header>
-        </div>
+        </div> */}
         <div className={styles.rowWrapper} data-trigger>
-          <div className="row container flex-nowrap">
+          <div className="col-12">
+            <header>
+              <p className="overline">Recursos e Vantagens</p>
+              <h2>
+                <span className="h-sans">Tudo que seu negócio</span>
+                <br />
+                precisa em um só lugar
+              </h2>
+            </header>
+          </div>
+
+          <div className="row container flex-nowrap" data-reveal-parent={0.1}>
             {
               data.map((feature, index) => (
                 <div className="col-12 col-lg-4" key={index}>

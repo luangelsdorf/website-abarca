@@ -102,7 +102,7 @@ export default function FAQ() {
         </header>
         <div className="container">
           <div className="row" ref={faq}>
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-6" data-reveal-parent={0.2}>
               {
                 firstHalf.map((question, index) => (
                   <Question {...question} id={'first-' + index} key={index} />
@@ -110,7 +110,7 @@ export default function FAQ() {
               }
             </div>
 
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-6" data-reveal-parent={0.4}>
               {
                 secondHalf.map((question, index) => (
                   <Question {...question} id={'second-' + index} key={index} />

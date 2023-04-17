@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Pin from 'public/images/icons/Pin.svg';
 import styles from './Projects.module.scss';
 import ProjectCard from 'src/components/common/ProjectCard';
+import PresentationModal from 'src/components/common/PresentationModal';
+import ModalWrapper from 'src/components/portfolio/structures/ModalWrapper';
+import { useRouter } from 'next/router';
 
 export default function Projects({ web }) {
   let data;
@@ -136,6 +139,8 @@ export default function Projects({ web }) {
     },
   ];
 
+  const router = useRouter();
+
   return (
     <div className={styles.section}>
       <div className="col-12">
@@ -153,12 +158,19 @@ export default function Projects({ web }) {
           {
             data.map((project, index) => (
               <div className={`col-12 col-lg-6 ${styles.project}`} key={index}>
-                <ProjectCard data-small {...project} />
+                <ProjectCard modal data-small data-reveal {...project} />
               </div>
             ))
           }
         </div>
       </div>
+      {
+        web ? (
+          <PresentationModal open={!!router.query.project} toggleOpen={() => router.push(router.pathname, router.asPath, { scroll: false })}>
+            {router.query.project && <ModalWrapper project={data.find(p => p.slug === router.query.project)} />}
+          </PresentationModal>
+        ) : null
+      }
     </div>
   )
 }

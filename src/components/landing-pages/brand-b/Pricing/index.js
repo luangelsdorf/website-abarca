@@ -193,7 +193,7 @@ export default function Pricing({ content }) {
         </header>
       </div>
       <div className="container">
-        <div className="row">
+        <div className="row" data-reveal-parent={0.4}>
           {/* loop dos pacotes */}
           {
             packages.map((pack, packIndex) => {
@@ -219,7 +219,7 @@ export default function Pricing({ content }) {
                                 <p>{included.name}</p>
                                 <div id={`item-${includedIndex}-${packIndex}`} className={`collapse ${included.expand ? 'show' : ''}`}>
                                   <ul>
-                                    {/* loop dos sub-itens dos inclusos */}
+                                    {/* loop dos sub-itens */}
                                     {
                                       included.items.map((item, index) => {
                                         return (

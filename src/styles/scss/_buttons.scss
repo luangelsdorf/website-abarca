@@ -13,7 +13,7 @@
   align-items: center;
   border-radius: 56px;
   gap: 8px;
-  transition: all 350ms;
+  transition: background-color 350ms, color 350ms, scale 350ms;
   cursor: pointer;
 
   & > div {
@@ -26,7 +26,7 @@
   &:hover {
     color: rgb(var(--white));
     background-color: rgb(var(--black));
-    transform: scale(0.95);
+    scale: 0.95 !important;
 
     & > div {
       transform: scale(calc(1 / 0.95));

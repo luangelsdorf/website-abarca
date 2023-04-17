@@ -11,6 +11,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import Loader from 'src/components/common/Loader';
 import { isDev } from 'src/utils/env';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const merriweather = Merriweather({
   display: 'swap',
@@ -89,6 +90,42 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     if (!isDev) return;
     window.dispatchEvent(new Event('loadFinish'));
+  });
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    let ctx = gsap.context(() => {
+      gsap.utils.toArray('[data-reveal]').forEach(el => {
+        gsap.from(el, {
+          autoAlpha: 0,
+          yPercent: 25,
+          stagger: 1,
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 60%',
+          },
+        });
+      });
+
+      gsap.utils.toArray('[data-reveal-parent]').forEach(el => {
+        let target = el;
+        if (el.children.length <= 1) target = el.firstChild;
+        gsap.from(target.children, {
+          autoAlpha: 0,
+          yPercent: 25,
+          duration: 0.75,
+          ease: 'power2.out',
+          stagger: el.dataset.revealParent,
+          scrollTrigger: {
+            trigger: target,
+            start: 'top 60%',
+          },
+        });
+      });
+    });
+
+    return () => ctx.revert();
   });
 
   return (

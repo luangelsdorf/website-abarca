@@ -36,7 +36,7 @@ export default function Testimonials({ content }) {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <header>
+            <header data-reveal-parent={0.35}>
               <h2>
                 <span>O seu sucesso </span>
                 <br className="d-none d-lg-block" />
@@ -55,6 +55,7 @@ export default function Testimonials({ content }) {
           </div>
 
           <Swiper
+            data-reveal-parent={0.1}
             slidesPerView="auto"
             spaceBetween={24}
             grabCursor

@@ -6,6 +6,7 @@
 
 :root {
   overflow-y: overlay;
+
   &.no-scroll {
     overflow: hidden;
   }
@@ -89,12 +90,34 @@ dialog {
   background-color: transparent;
 }
 
+[data-reveal] {
+  visibility: hidden;
+}
+
+[data-reveal-parent] {
+  & > * {
+    visibility: hidden;
+  }
+}
+
+.swiper[data-reveal-parent] {
+  & > * {
+    visibility: visible;
+  }
+
+  .swiper-slide {
+    visibility: hidden;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background-color: rgb(153, 153, 153, 0);
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: rgb(153, 153, 153, 0.5);
   border-radius: 56px;
@@ -106,7 +129,7 @@ dialog {
 
 @include mixins.lg {
   [class*="col-lg"] {
-    & > div {
+    &>div {
       text-align: center;
       align-items: center;
     }

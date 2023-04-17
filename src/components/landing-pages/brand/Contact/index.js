@@ -16,7 +16,7 @@ export default function Contact({ content }) {
       <div className="container">
         <div className="row">
           <div className="col-12 col-lg-4">
-            <div className={styles.textContent}>
+            <div className={styles.textContent} data-reveal-parent={0.4}>
               <h2 className="d-none d-xl-block">{'Vamos Iniciar \nseu Projeto'}</h2>
               <h2 className="d-block d-xl-none">Inicie seu Projeto</h2>
               <p className="d-none d-lg-block">Não importa se você tem uma ideia vaga ou um projeto já em andamento, <span>vamos ajudá-lo!</span></p>
