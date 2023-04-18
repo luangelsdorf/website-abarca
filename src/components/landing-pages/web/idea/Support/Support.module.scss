@@ -19,7 +19,7 @@
       font-size: 112px;
       line-height: 160px;
 
-      &>span {
+      & > span {
         display: inline-block;
         width: 100%;
 
@@ -37,10 +37,10 @@
       }
     }
 
-    &>div {
+    & > div {
       position: relative;
 
-      &>div {
+      & > div {
         position: absolute;
         top: 0;
         right: 0;
@@ -72,6 +72,14 @@
 .formWrapper {
   margin-top: 64px;
   width: 440px;
+
+  .cta {
+    margin-bottom: 24px;
+
+    strong {
+      color: rgb(var(--black));
+    }
+  }
 }
 
 .formContainer {

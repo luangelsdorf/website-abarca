@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import styles from './Contact.module.scss';
 import { useForm } from 'react-hook-form';
 import Button from 'src/components/common/Button';
@@ -10,6 +10,8 @@ import { onChange } from 'src/utils/phoneMask';
 export default function Contact({ content }) {
   const { register, handleSubmit, setValue, formState: { errors, isSubmitting, isSubmitSuccessful } } = useForm();
   const errorMessage = 'Este campo é obrigatório.';
+
+  const formId = useId();
 
   return (
     <div className={styles.section}>
@@ -27,32 +29,32 @@ export default function Contact({ content }) {
             <div className={styles.form}>
               <form onSubmit={handleSubmit(submitForm)}>
                 <div className={`floating${!errors.entry_443452100 ? '' : ' ' + 'error'}`}>
-                  <input id="name" placeholder="Como podemos lhe chamar?" type="text" {...register('entry_443452100', { required: errorMessage })} />
-                  <label htmlFor="name">Nome</label>
+                  <input id={`name_${formId}`} placeholder="Como podemos lhe chamar?" type="text" {...register('entry_443452100', { required: errorMessage })} />
+                  <label htmlFor={`name_${formId}`}>Nome</label>
                   <span>{errors.entry_443452100 && errorMessage}</span>
                 </div>
 
                 <div className={`floating${!errors.entry_2104795631 ? '' : ' ' + 'error'}`}>
-                  <input id="business" placeholder="Qual o nome do seu negócio" type="text" {...register('entry_2104795631', { required: errorMessage })} />
-                  <label htmlFor="business">Empresa</label>
+                  <input id={`business_${formId}`} placeholder="Qual o nome do seu negócio" type="text" {...register('entry_2104795631', { required: errorMessage })} />
+                  <label htmlFor={`business_${formId}`}>Empresa</label>
                   <span>{errors.entry_2104795631 && errorMessage}</span>
                 </div>
 
                 <div className={`floating${!errors.entry_1354793341 ? '' : ' ' + 'error'} prefixed`}>
-                  <input id="phone" placeholder="(51) 98983.6186" type="tel" {...register('entry_1354793341', { required: errorMessage, minLength: 14, onChange: e => onChange(e, setValue) })} />
-                  <label htmlFor="phone">Telefone</label>
+                  <input id={`phone_${formId}`} placeholder="(51) 98983.6186" type="tel" {...register('entry_1354793341', { required: errorMessage, minLength: 14, onChange: e => onChange(e, setValue) })} />
+                  <label htmlFor={`phone_${formId}`}>Telefone</label>
                   <span className="prefix">+55</span>
                   <span>{errors.entry_1354793341 && errorMessage}</span>
                 </div>
 
                 <div className={`floating${!errors.entry_1305055579 ? '' : ' ' + 'error'}`}>
-                  <input id="email" placeholder="contato@brstorm.design" type="email" {...register('entry_1305055579', { required: errorMessage })} />
-                  <label htmlFor="email">E-mail</label>
+                  <input id={`email_${formId}`} placeholder="contato@brstorm.design" type="email" {...register('entry_1305055579', { required: errorMessage })} />
+                  <label htmlFor={`email_${formId}`}>E-mail</label>
                   <span>{errors.entry_1305055579 && errorMessage}</span>
                 </div>
 
                 <div className={`floating${!errors.entry_1921266371 ? '' : ' ' + 'error'}`}>
-                  <select defaultValue="" id="service" {...register('entry_1921266371', { required: errorMessage })}>
+                  <select defaultValue="" id={`service_${formId}`} {...register('entry_1921266371', { required: errorMessage })}>
                     <option hidden />
                     <option value="Marca">Marca</option>
                     <option value="Estratégia">Estratégia</option>
@@ -61,12 +63,12 @@ export default function Contact({ content }) {
                     <option value="Landing Page">Landing Page</option>
                     <option value="E-commerce">E-commerce</option>
                   </select>
-                  <label htmlFor="service">Serviços Necessários</label>
+                  <label htmlFor={`service_${formId}`}>Serviços Necessários</label>
                   <span>{errors.entry_1921266371 && errorMessage}</span>
                 </div>
 
                 <div className={`floating${!errors.entry_589211067 ? '' : ' ' + 'error'}`}>
-                  <select defaultValue="" id="investment" {...register('entry_589211067', { required: errorMessage })}>
+                  <select defaultValue="" id={`investment_${formId}`} {...register('entry_589211067', { required: errorMessage })}>
                     <option value="" hidden />
                     <option value="Menos de R$2.000">Menos de R$2.000</option>
                     <option value="R$2.000 - R$5.000">R$2.000 - R$5.000</option>
@@ -75,7 +77,7 @@ export default function Contact({ content }) {
                     <option value="R$15.000 - R$20.000">R$15.000 - R$20.000</option>
                     <option value="Mais de R$20.000">Mais de R$20.000</option>
                   </select>
-                  <label htmlFor="investment">Estimativa de Investimento</label>
+                  <label htmlFor={`investment_${formId}`}>Estimativa de Investimento</label>
                   <span>{errors.entry_589211067 && errorMessage}</span>
                 </div>
 
