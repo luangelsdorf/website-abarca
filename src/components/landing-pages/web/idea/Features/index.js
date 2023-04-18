@@ -11,6 +11,7 @@ import Target from 'public/images/icons/features/Target.svg'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import HeroForm from 'src/components/common/HeroForm';
+import Overline from 'src/components/common/Overline';
 
 export default function Features({ content }) {
 
@@ -104,11 +105,11 @@ export default function Features({ content }) {
       <div className="container">
         <div className="col-12">
           <header>
-            <p className="overline">Recursos e Vantagens</p>
+            <Overline lineLength={390}>Recursos e Vantagens</Overline>
             <h2>
               <span className="h-sans">Tudo que seu negócio</span>
               <br />
-              precisa em um só lugar
+              <span>precisa em um só lugar</span>
             </h2>
           </header>
         </div>

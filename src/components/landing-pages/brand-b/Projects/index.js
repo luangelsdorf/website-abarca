@@ -5,6 +5,7 @@ import ProjectCard from 'src/components/common/ProjectCard';
 import PresentationModal from 'src/components/common/PresentationModal';
 import ModalWrapper from 'src/components/portfolio/structures/ModalWrapper';
 import { useRouter } from 'next/router';
+import Overline from 'src/components/common/Overline';
 
 export default function Projects({ web }) {
   let data;
@@ -145,12 +146,11 @@ export default function Projects({ web }) {
     <div className={styles.section}>
       <div className="col-12">
         <header>
-          <p className="overline">
-            <Pin className="d-none d-lg-block" />
-            <span className="d-none d-lg-inline">Projetos em Todo o Mundo</span>
-            <span className="d-inline d-lg-none">Nossos Projetos</span>
-          </p>
-          <h2>Conheça <span className="h-serif">o que criamos</span> por aqui</h2>
+          <Overline lineLength={440} icon>
+            <tspan className="d-none d-lg-inline">Projetos em Todo o Mundo</tspan>
+            <tspan className="d-inline d-lg-none">Nossos Projetos</tspan>
+          </Overline>
+          <h2><span>Conheça </span><span className="h-serif">o que criamos</span><span> por aqui</span></h2>
         </header>
       </div>
       <div className="container">

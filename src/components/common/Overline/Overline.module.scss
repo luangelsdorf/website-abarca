@@ -29,16 +29,24 @@
   text {
     fill: rgb(var(--light-gray));
     transition: 250ms;
+    transition-delay: 250ms;
     transform: translateY(100%);
+  }
+
+  .icon path {
+    transition: 250ms;
+    transform: translateY(-100%);
   }
 
   & + h2 {
     overflow: hidden;
+
     span {
       display: inline-block;
       opacity: 0;
       transform: translateY(100%);
       transition: 500ms cubic-bezier(0.25, 0.1, 0.06, 0.99);
+
       @for $i from 1 through 4 {
         &:nth-child(#{$i}) {
           transition-delay: #{(math.div($i, 10) + 1.1)}s;
@@ -46,10 +54,17 @@
       }
     }
   }
+
+  & ~ p {
+    opacity: 0;
+    transform: translateY(50%);
+    transition: 350ms;
+    transition-delay: 1.8s;
+  }
 }
 
 .visible {
-  text {
+  .icon path, text {
     transform: translateY(0);
   }
 
@@ -66,5 +81,10 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  & ~ p {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

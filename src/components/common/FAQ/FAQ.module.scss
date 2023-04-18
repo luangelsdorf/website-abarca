@@ -9,18 +9,7 @@
       }
 
       p {
-        position: relative;
         margin-bottom: 32px;
-        justify-content: center;
-
-        &::before {
-          content: "";
-          position: absolute;
-          z-index: -1;
-          width: 336px;
-          height: 1px;
-          background-color: rgb(var(--shadow));
-        }
       }
     }
   }

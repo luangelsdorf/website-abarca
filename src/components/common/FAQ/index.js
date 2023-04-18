@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './FAQ.module.scss';
 import Caret from 'public/images/icons/CaretDown.svg';
+import Overline from '../Overline';
 
 export default function FAQ() {
   const faq = useRef(null);
@@ -97,8 +98,8 @@ export default function FAQ() {
     <div className={styles.section}>
       <div className="col-12">
         <header>
-          <p className="overline">Criação de Websites</p>
-          <h2><span className="h-sans">Perguntas</span> Frequentes</h2>
+          <Overline lineLength={336}>Criação de Websites</Overline>
+          <h2><span className="h-sans">Perguntas</span><span> Frequentes</span></h2>
         </header>
         <div className="container">
           <div className="row" ref={faq}>

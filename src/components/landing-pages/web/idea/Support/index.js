@@ -6,6 +6,7 @@ import macbook from 'public/images/macbook.png';
 import HeroForm from 'src/components/common/HeroForm';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import Overline from 'src/components/common/Overline';
 
 export default function Support() {
 
@@ -53,7 +54,7 @@ export default function Support() {
       <div className="container">
         <div className="col-12 col-lg-10 mx-auto">
           <header>
-            <p className="overline">Suporte Br.Storm</p>
+            <Overline lineLength={390}>Suporte Br.Storm</Overline>
             <div>
               <div className={styles.seal}>
                 <Seal />
