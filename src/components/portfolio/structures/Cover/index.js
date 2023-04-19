@@ -12,7 +12,7 @@ export default function Cover({ title, local, info, children }) {
         <div className="row">
           <div className="col-12 col-lg-11 offset-lg-1">
             <div className={styles.content}>
-              <div className={`d-none d-lg-flex ${styles.localTag}`}>
+              <div className={`d-none d-lg-flex ${styles.localTag}`} data-tag>
                 <Pin />
                 <span>{local}</span>
               </div>

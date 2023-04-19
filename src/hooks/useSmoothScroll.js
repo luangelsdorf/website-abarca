@@ -78,7 +78,7 @@ export default function useSmoothScroll() {
   useLayoutEffect(() => {
     function initScroll() {
       console.log('routeChangeComplete');
-      let s = smoothScroll("#content", undefined, 1.5);
+      let s = smoothScroll("#content", undefined, 0.8);
       window?.dispatchEvent(new Event('resize'));
       return s;
     }

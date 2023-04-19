@@ -90,7 +90,7 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     if (!isDev) return;
     window.dispatchEvent(new Event('loadFinish'));
-  });
+  }, []);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);

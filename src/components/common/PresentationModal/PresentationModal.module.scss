@@ -6,7 +6,7 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: rgb(var(--black), 0.2);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(5px);
   z-index: 11;
   display: none;
