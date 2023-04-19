@@ -10,9 +10,27 @@
   --error: 255, 102, 115;
   --warning: 245, 214, 123;
   --success: 10, 194, 133;
+
+  [data-navigation] {
+    --black: 0, 0, 0;
+    --shadow: 51, 51, 51;
+    --dark-gray: 102, 102, 102;
+    --gray: 153, 153, 153;
+    --light-gray: 204, 204, 204;
+    --white: 255, 255, 255;
+  }
 }
 
 .light {
+  --black: 255, 255, 255;
+  --shadow: 204, 204, 204;
+  --dark-gray: 153, 153, 153;
+  --gray: 102, 102, 102;
+  --light-gray: 51, 51, 51;
+  --white: 0, 0, 0;
+}
+
+/* .light {
   background-color: rgb(var(--white));
   color: rgb(var(--shadow));
 
@@ -69,4 +87,4 @@
       }
     }
   }
-}
+} */

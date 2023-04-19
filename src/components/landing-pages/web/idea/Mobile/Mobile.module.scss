@@ -1,21 +1,5 @@
 .section {
   &.active {
-    .outer {
-      background-color: rgb(var(--white));
-    }
-
-    h2 {
-      color: rgb(var(--black));
-
-      span {
-        color: rgb(var(--shadow));
-      }
-    }
-
-    p {
-      color: rgb(var(--shadow));
-    }
-
     .inner {
       img {
         transform: initial;
@@ -27,6 +11,7 @@
 
 .outer {
   border: 1px solid rgb(var(--shadow));
+  background-color: rgb(var(--black));
   border-radius: 32px;
   transition: 350ms;
 }

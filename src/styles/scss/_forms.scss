@@ -109,6 +109,7 @@ textarea {
     position: absolute;
     opacity: 0;
     transition: 350ms;
+    transform: translateY(4px);
 
     & + input {
       padding-left: 4ch;

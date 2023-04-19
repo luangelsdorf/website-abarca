@@ -72,7 +72,12 @@ export default function Support() {
       <div className={`container ${styles.formContainer}`}>
         <div className="col-12 offset-xxl-1">
           <div className={styles.formWrapper} data-reveal>
-            <HeroForm light short />
+            <HeroForm light short>
+              <div className="light" style={{marginBottom: '24px'}}>
+                <strong>Quer ter um site incrível?</strong>
+                <span> Preencha agora o formulário abaixo e deixe-nos cuidar do resto!</span>
+              </div>
+            </HeroForm>
           </div>
         </div>
       </div>

@@ -18,6 +18,10 @@
   box-sizing: border-box;
 }
 
+body {
+  transition: background-color 1s;
+}
+
 body,
 html {
   overflow-x: clip;

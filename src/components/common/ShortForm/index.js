@@ -14,8 +14,8 @@ export default function ShortForm({ light }) {
   const formId = useId();
 
   return (
-    <div className={`${styles.form}${light ? ' light' : ''}`}>
-      <form onSubmit={handleSubmit(submitForm)}>
+    <div className={styles.form}>
+      <form onSubmit={handleSubmit(submitForm)} className={light ? ' light' : undefined}>
         <div className={`floating${!errors.entry_443452100 ? '' : ' ' + 'error'} sm`}>
           <input id={`name_${formId}`} placeholder="Como podemos lhe chamar?" type="text" {...register('entry_443452100', { required: errorMessage })} />
           <label htmlFor={`name_${formId}`}>Insira seu Nome</label>

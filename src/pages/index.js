@@ -59,7 +59,7 @@ export default function Home() {
           <Testimonials />
         </Section>
 
-        <Section id="contact" pt="120 96" pb="160 0">
+        <Section id="contact" pt="120 96" pb="160 0" style={{ overflow: 'hidden' }}>
           <Contact />
         </Section>
       </main>

@@ -1,4 +1,4 @@
-import React, { useId } from 'react';
+import React, { useEffect, useId } from 'react';
 import styles from './Contact.module.scss';
 import { useForm } from 'react-hook-form';
 import Button from 'src/components/common/Button';
@@ -12,6 +12,24 @@ export default function Contact({ content }) {
   const errorMessage = 'Este campo é obrigatório.';
 
   const formId = useId();
+
+  useEffect(() => {
+    function callback(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.body.classList.add('light');
+        } else {
+          document.body.classList.remove('light');
+        }
+      });
+    }
+
+    const observer = new IntersectionObserver(callback, { rootMargin: '0% 0% -60% 0%' });
+    const targets = document.querySelectorAll(`.${styles.section}`);
+    targets.forEach(target => observer.observe(target));
+
+    return () => targets.forEach(target => observer.unobserve(target));
+  }, []);
 
   return (
     <div className={styles.section}>
