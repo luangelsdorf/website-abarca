@@ -126,7 +126,7 @@ export default function Features({ content }) {
               <div className={styles.formCard}>
                 <h3>Vamos Iniciar seu Projeto</h3>
                 <p>Preencha o formulário abaixo que retornaremos o contato em breve.</p>
-                <HeroForm short />
+                <HeroForm light short />
               </div>
             </div>
           </div>

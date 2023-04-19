@@ -20,12 +20,12 @@ export default function Mobile({ content }) {
         if (entry.isIntersecting) {
           if (entry.intersectionRatio > 0.8) {
             entry.target.classList.add(styles.active);
-            entry.target.querySelectorAll('.floating').forEach(el => el.classList.add('light'));
+            entry.target.querySelector(`.${styles.textContent}`).classList.add('light');
           }
         } else {
           if (entry.intersectionRatio < 0.3) {
             entry.target.classList.remove(styles.active);
-            entry.target.querySelectorAll('.floating').forEach(el => el.classList.remove('light'));
+            entry.target.querySelector(`.${styles.textContent}`).classList.remove('light');
           }
         }
       });

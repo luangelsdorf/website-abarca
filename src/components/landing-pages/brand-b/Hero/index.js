@@ -21,7 +21,7 @@ export default function Hero({ shortForm }) {
             </div>
           </div>
           <div className="col-12 col-lg-4 offset-lg-1">
-            <HeroForm short={shortForm} />
+            <HeroForm light short={shortForm} />
             <p style={{ marginTop: '24px' }} className="d-sm-none">Preencha o formulário acima e deixe sua <br /> marca se destacar no mercado.</p>
           </div>
         </div>

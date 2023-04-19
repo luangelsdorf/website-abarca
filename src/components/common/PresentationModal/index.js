@@ -42,7 +42,7 @@ export default function PresentationModal({ children, open, toggleOpen }) {
         modalElement.current.style.display = 'flex';
         document.documentElement.classList.add('no-scroll');
         document.addEventListener('keydown', handleKeyDown, false);
-        document.querySelector('[data-navigation] > div').style.transform = 'translateX(-50%) translateY(-150%)';
+        document.querySelector('[data-navigation]').classList.add('floatingHeader');
         animation.play();
       } else {
         document.removeEventListener('keydown', handleKeyDown, false);
@@ -55,7 +55,7 @@ export default function PresentationModal({ children, open, toggleOpen }) {
       toggleOpen();
       modalElement.current.scrollTop = 0;
       modalElement.current.style.display = 'none';
-      document.querySelector('[data-navigation] > div').style.transform = 'translateX(-50%)';
+      document.querySelector('[data-navigation]').classList.remove('floatingHeader');
       playback.currentTarget.playbackRate = 1;
       document.documentElement.classList.remove('no-scroll');
     }

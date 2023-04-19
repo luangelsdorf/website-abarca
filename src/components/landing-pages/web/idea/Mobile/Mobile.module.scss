@@ -16,10 +16,6 @@
       color: rgb(var(--shadow));
     }
 
-    [type="submit"] {
-      filter: invert(1);
-    }
-
     .inner {
       img {
         transform: initial;
@@ -32,7 +28,7 @@
 .outer {
   border: 1px solid rgb(var(--shadow));
   border-radius: 32px;
-  transition: 500ms;
+  transition: 350ms;
 }
 
 .inner {

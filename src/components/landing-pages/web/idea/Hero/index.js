@@ -234,7 +234,7 @@ export default function Hero() {
                 <span>não é lembrado!</span>
               </h1>
               <p>{'Criamos websites marcantes feitos para gerar \nresultados para seu negócio.'} <strong>Solicite sua proposta!</strong></p>
-              <HeroForm short />
+              <HeroForm light short />
             </div>
           </div>
           {

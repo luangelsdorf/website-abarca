@@ -11,3 +11,62 @@
   --warning: 245, 214, 123;
   --success: 10, 194, 133;
 }
+
+.light {
+  background-color: rgb(var(--white));
+  color: rgb(var(--shadow));
+
+  p {
+    color: rgb(var(--shadow));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong {
+    color: rgb(var(--black));
+  }
+
+  label {
+    color: rgb(var(--dark-gray));
+  }
+
+  input,
+  textarea,
+  select {
+    color: rgb(var(--shadow));
+    border-bottom-color: rgb(var(--gray));
+
+    &:focus {
+      border-bottom-color: rgb(var(--black));
+    }
+  }
+  option {
+    color: rgb(var(--dark-gray));
+    background-color: rgb(var(--white));
+  }
+
+  .btn {
+    color: rgb(var(--white));
+    background-color: rgb(var(--black));
+    border-color: rgb(var(--black));
+
+    &:hover {
+      color: rgb(var(--black));
+      background-color: rgb(var(--white));
+    }
+
+    &.outline {
+      color: rgb(var(--black));
+      background-color: rgb(var(--white));
+
+      &:hover {
+        color: rgb(var(--white));
+        background-color: rgb(var(--black));
+      }
+    }
+  }
+}

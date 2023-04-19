@@ -17,13 +17,11 @@
     }
 
     [type="submit"] {
-      filter: invert(1);
 
       & ~ div {
         position: absolute;
         bottom: 24px;
         right: 24px;
-        filter: invert(1);
       }
 
       & ~ span {

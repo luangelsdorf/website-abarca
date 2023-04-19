@@ -7,14 +7,14 @@ import Button from '../Button';
 import Spinner from '../Spinner';
 import { onChange } from 'src/utils/phoneMask';
 
-export default function HeroForm({ short, children }) {
+export default function HeroForm({ short, light, children }) {
   const { register, handleSubmit, setValue, formState: { errors, isSubmitting, isSubmitSuccessful } } = useForm();
   const errorMessage = 'Este campo é obrigatório.';
 
   const formId = useId();
 
   return (
-    <div className={styles.form}>
+    <div className={`${styles.form}${light ? ' light' : ''}`}>
       {children}
       <form onSubmit={handleSubmit(submitForm)}>
         <div className={`floating${!errors.entry_443452100 ? '' : ' ' + 'error'} light`}>
