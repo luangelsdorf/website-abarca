@@ -25,15 +25,15 @@ export default function Home() {
       <main>
         <Section id="home">
           <Hero
-            slot01={<Image data-project="casulo" fill src="/images/hero/casulo/Logos-Casulo.gif" alt="" />}
-            slot02={<Image data-project="casulo" fill src="/images/hero/casulo/banner-hero.jpg" alt="" />}
-            slot03={<Image data-project="abarca" fill src="/images/hero/abarca/stand.png" alt="" />}
+            slot01={<Image priority data-project="casulo" fill src="/images/hero/casulo/Logos-Casulo.gif" alt="" />}
+            slot02={<Image priority data-project="casulo" fill src="/images/hero/casulo/banner-hero.jpg" alt="" />}
+            slot03={<Image priority data-project="abarca" fill src="/images/hero/abarca/stand.png" alt="" />}
             slot04={<video data-project="abarca" src="/images/hero/abarca/pattern.mp4" loop muted autoPlay />}
             slot05={<video data-project="pegada-neutra" src="/images/hero/pegada-neutra/logo-textures.mp4" loop muted autoPlay />}
-            slot06={<Image data-project="pegada-neutra" fill src="/images/hero/pegada-neutra/woman.jpg" alt="" />}
+            slot06={<Image priority data-project="pegada-neutra" fill src="/images/hero/pegada-neutra/woman.jpg" alt="" />}
             slot07={<video data-project="maptrack" src="/images/hero/maptrack/grid-animation.mp4" loop muted autoPlay />}
-            slot08={<Image data-project="maptrack" fill src="/images/hero/maptrack/stationery.jpg" alt="" />}
-            slot09={<Image data-project="bronzo" fill src="/images/hero/bronzo/packing-cropped.jpg" alt="" />}
+            slot08={<Image priority data-project="maptrack" fill src="/images/hero/maptrack/stationery.jpg" alt="" />}
+            slot09={<Image priority data-project="bronzo" fill src="/images/hero/bronzo/packing-cropped.jpg" alt="" />}
             slot10={
               <div data-project="bronzo" style={{ backgroundColor: '#CE7A24', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <AnimatedLogo />
