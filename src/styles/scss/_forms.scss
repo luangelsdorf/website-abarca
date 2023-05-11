@@ -7,7 +7,9 @@ label {
   color: rgb(var(--light-gray));
 }
 
-input,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
 textarea,
 select {
   border: 0;

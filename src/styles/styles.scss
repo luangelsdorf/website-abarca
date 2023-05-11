@@ -84,6 +84,10 @@ menu {
 }
 
 dialog {
+  padding: 0;
+}
+
+dialog.fullscreen {
   max-width: none;
   max-height: none;
   height: 100vh;
