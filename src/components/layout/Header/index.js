@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Button from 'src/components/common/Button';
 import styles from './Header.module.scss';
-import Logo from 'public/images/brstorm.svg';
+import Logo from 'public/images/logo.svg';
 import Link from 'next/link';
 import MenuMobile from '../MenuMobile';
 

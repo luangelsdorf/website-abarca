@@ -3,7 +3,7 @@ import styles from './MenuMobile.module.scss';
 import Arrow from 'public/images/icons/Arrow.svg'
 import Pin from 'public/images/icons/Pin.svg';
 import Button from 'src/components/common/Button';
-import Logo from 'public/images/brstorm.svg';
+import Logo from 'public/images/logo.svg';
 import ArrowCircle from 'src/components/common/ArrowCircle';
 import { useRouter } from 'next/router';
 

@@ -142,6 +142,24 @@ export default function Projects({ web }) {
 
   const router = useRouter();
 
+  useEffect(() => {
+    function callback(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.body.classList.add('dark');
+        } else {
+          document.body.classList.remove('dark');
+        }
+      });
+    }
+
+    const observer = new IntersectionObserver(callback, { rootMargin: '0% 0% -60% 0%' });
+    const targets = document.querySelectorAll(`.${styles.section}`);
+    targets.forEach(target => observer.observe(target));
+
+    return () => targets.forEach(target => observer.unobserve(target));
+  }, []);
+
   return (
     <div className={styles.section}>
       <div className="col-12">

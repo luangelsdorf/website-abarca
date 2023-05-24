@@ -13,7 +13,7 @@ export default function Contact({ content }) {
 
   const formId = useId();
 
-  useEffect(() => {
+  /* useEffect(() => {
     function callback(entries) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -29,7 +29,7 @@ export default function Contact({ content }) {
     targets.forEach(target => observer.observe(target));
 
     return () => targets.forEach(target => observer.unobserve(target));
-  }, []);
+  }, []); */
 
   return (
     <div className={styles.section}>

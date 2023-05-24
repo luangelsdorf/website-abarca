@@ -11,15 +11,15 @@
     position: absolute;
     z-index: -1;
     height: 1px;
-    background-color: rgb(var(--shadow));
+    background-color: rgb(var(--default-cyan));
     transform: scaleX(0);
     transition: 500ms;
     transition-delay: 750ms;
   }
 
   rect {
-    fill: rgb(var(--black));
-    stroke: rgb(var(--dark-gray));
+    fill: rgb(var(--blue));
+    stroke: rgb(var(--default-cyan));
     stroke-dasharray: 1;
     stroke-dashoffset: 1;
     transition: 750ms;
