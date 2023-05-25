@@ -3,6 +3,7 @@
 @use "scss/buttons";
 @use "scss/typography";
 @use "scss/forms";
+@use "scss/bootstrap";
 
 :root {
   overflow-y: overlay;
@@ -149,14 +150,4 @@ dialog.fullscreen {
     padding: 0 24px;
     text-align: center;
   }
-}
-
-.collapse:not(.show) {
-  display: none;
-}
-
-.collapsing {
-  height: 0;
-  overflow: hidden;
-  transition: height 0.35s ease;
 }
