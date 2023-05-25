@@ -168,7 +168,7 @@ export default function Projects({ web }) {
             <tspan className="d-none d-lg-inline">Projetos em Todo o Mundo</tspan>
             <tspan className="d-inline d-lg-none">Nossos Projetos</tspan>
           </Overline>
-          <h2><span>Conheça </span><span className="h-serif">o que criamos</span><span> por aqui</span></h2>
+          <h2>Conheça o que criamos por aqui</h2>
         </header>
       </div>
       <div className="container">

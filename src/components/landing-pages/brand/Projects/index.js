@@ -79,7 +79,7 @@ export default function Projects() {
             <span className="d-none d-lg-inline">Projetos em Todo o Mundo</span>
             <span className="d-inline d-lg-none">Nossos Projetos</span>
           </p>
-          <h2>Conheça <span className="h-serif">o que criamos</span> por aqui</h2>
+          <h2>Conheça o que criamos por aqui</h2>
         </header>
       </div>
       <div className="container">
