@@ -20,7 +20,6 @@ export default function Support() {
         },
         {
           xPercent: 0,
-
           ease: 'none',
           scrollTrigger: {
             trigger: '.supportHeading',
@@ -35,18 +34,35 @@ export default function Support() {
         },
         {
           xPercent: 0,
-
           ease: 'none',
           scrollTrigger: {
             trigger: '.supportHeading',
             scrub: 1,
-            end: 'top 25%'
+            end: 'top 25%',
           }
         }
       );
     });
 
     return () => ctx.revert();
+  }, []);
+
+  useEffect(() => {
+    function callback(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.body.classList.add('dark');
+        } else {
+          document.body.classList.remove('dark');
+        }
+      });
+    }
+
+    const observer = new IntersectionObserver(callback, { rootMargin: '-40% 0% -60% 0%' });
+    const targets = document.querySelectorAll(`#support`);
+    targets.forEach(target => observer.observe(target));
+
+    return () => targets.forEach(target => observer.unobserve(target));
   }, []);
 
   return (
@@ -73,7 +89,7 @@ export default function Support() {
         <div className="col-12 offset-xxl-1">
           <div className={styles.formWrapper} data-reveal>
             <HeroForm light short>
-              <div className="light" style={{marginBottom: '24px'}}>
+              <div className="light" style={{ marginBottom: '24px' }}>
                 <strong>Quer ter um site incrível?</strong>
                 <span> Preencha agora o formulário abaixo e deixe-nos cuidar do resto!</span>
               </div>
