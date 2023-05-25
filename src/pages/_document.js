@@ -4,7 +4,7 @@ import { isDev } from 'src/utils/env'
 
 export default function Document() {
   return (
-    <Html lang="pt" className={isDev ? undefined : 'no-scroll'}>
+    <Html lang="pt">
       <Head>
         {
           isDev ? null : (

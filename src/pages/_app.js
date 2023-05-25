@@ -2,7 +2,6 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import '../styles/styles.scss';
-import { Merriweather } from '@next/font/google';
 import { Inter } from '@next/font/google';
 import Header from 'src/components/layout/Header';
 import gsap from 'gsap';
@@ -12,13 +11,6 @@ import { useEffect } from 'react';
 import Loader from 'src/components/common/Loader';
 import { isDev } from 'src/utils/env';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-
-const merriweather = Merriweather({
-  display: 'swap',
-  subsets: ['latin'],
-  weight: ['400'],
-  style: 'italic',
-});
 
 const inter = Inter({
   display: 'swap',
@@ -132,7 +124,7 @@ export default function App({ Component, pageProps }) {
     <>
       <style jsx global>{`
         html {
-          --merriweather: ${merriweather.style.fontFamily};
+          --merriweather: ${inter.style.fontFamily};
           --inter: ${inter.style.fontFamily};
         }
       `}
@@ -140,7 +132,7 @@ export default function App({ Component, pageProps }) {
 
       <Header floating={Component.floatingHeader} scroll={Component.scrollHeader} links={Component.links} />
 
-      {isDev ? null : <Loader />}
+      {/* {isDev ? null : <Loader />} */}
 
       <div id="viewport">
         <div id="content">
