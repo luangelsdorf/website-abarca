@@ -1,36 +1,59 @@
 @use "mixins";
 
 :root {
+  // heading-fluid
+  --display-ext: 500 clamp(48px, 6.7vw, 120px) / clamp(56px, 7.2vw, 136px) var(--inter);
+  --display: 500 clamp(40px, 5.5vw, 100px) / clamp(48px, 6.7vw, 112px) var(--inter);
+  --heading-large: 500 clamp(36px, 4.4vw, 80px) / clamp(44px, 5.5vw, 96px) var(--inter);
+  --heading-medium: 500 clamp(32px, 3.3vw, 60px) / clamp(40px, 4.4vw, 80px) var(--inter);
+  --heading-small: 500 clamp(28px, 2.8vw, 48px) / clamp(36px, 3.9vw, 64px) var(--inter);
+  --heading-extra-small: 500 clamp(24px, 2.2vw, 40px) / clamp(32px, 2.8vw, 48px) var(--inter);
+
+  // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
   // heading serif
-  --heading-serif-large: 400 64px/80px var(--merriweather);
-  --heading-serif-medium: 400 48px/64px var(--merriweather);
-  --heading-serif-small: 400 40px/56px var(--merriweather);
-  --heading-serif-small: 400 32px/40px var(--merriweather);
+  --heading-serif-large: 500 clamp(36px, 4.4vw, 80px) / clamp(44px, 5.5vw, 96px) var(--inter);
+  --heading-serif-medium: 500 clamp(32px, 3.3vw, 60px) / clamp(40px, 4.4vw, 80px) var(--inter);
+  --heading-serif-small: 500 clamp(28px, 2.8vw, 48px) / clamp(36px, 3.9vw, 64px) var(--inter);
+  --heading-serif-extra-small: 500 clamp(24px, 2.2vw, 40px) / clamp(32px, 2.8vw, 48px) var(--inter);
 
   // heading sans-serif
-  --heading-sans-large: 400 64px/80px var(--inter);
-  --heading-sans-medium: 400 48px/64px var(--inter);
-  --heading-sans-small: 400 40px/56px var(--inter);
-  --heading-sans-extra-small: 400 32px/40px var(--inter);
+  --heading-sans-large: 500 clamp(36px, 4.4vw, 80px) / clamp(44px, 5.5vw, 96px) var(--inter);
+  --heading-sans-medium: 500 clamp(32px, 3.3vw, 60px) / clamp(40px, 4.4vw, 80px) var(--inter);
+  --heading-sans-small: 500 clamp(28px, 2.8vw, 48px) / clamp(36px, 3.9vw, 64px) var(--inter);
+  --heading-sans-extra-small: 500 clamp(24px, 2.2vw, 40px) / clamp(32px, 2.8vw, 48px) var(--inter);
 
-  // paragraph large
-  --body-default-lg: 400 16px/32px var(--inter);
-  --body-bold-lg: 500 16px/32px var(--inter);
+  --body-default-lg: 400 20px/28px var(--inter);
+  --body-default-md: 400 18px/24px var(--inter);
+  --body-default-sm: 400 14px/21px var(--inter);
+  --body-detail: 400 12px/18px var(--inter);
 
-  // paragraph medium
-  --body-default-md: 400 14px/24px var(--inter);
-  --body-bold-md: 500 14px/24px var(--inter);
+  @media (min-width: 576px) {
+    --body-default-lg: 400 24px/36px var(--inter);
+    --body-default-md: 400 20px/32px var(--inter);
+    --body-default-sm: 400 16px/24px var(--inter);
+    --body-detail: 400 14px/21px var(--inter);
+  }
 
-  // paragraph small
-  --body-default-sm: 400 12px/18px var(--inter);
-  --body-bold-sm: 500 12px/18px var(--inter);
+  @media (min-width: 1920px) {
+    --body-default-lg: 400 28px/40px var(--inter);
+    --body-default-md: 400 22px/34px var(--inter);
+    --body-default-sm: 400 18px/28px var(--inter);
+    --body-detail: 400 15px/22px var(--inter);
+  }
+
+  @media (min-width: 2560px) {
+    --body-default-lg: 400 32px/44px var(--inter);
+    --body-default-md: 400 24px/36px var(--inter);
+    --body-default-sm: 400 20px/32px var(--inter);
+    --body-detail: 400 16px/24px var(--inter);
+  }
 }
 
 body {
-  font: var(--body-default-lg);
+  font: var(--body-default-md);
   font-family: var(--inter);
-  background-color: rgb(var(--black));
-  color: rgb(var(--gray));
+  letter-spacing: 0.02em;
 }
 
 .overline {
@@ -46,7 +69,7 @@ body {
 
 .h-sans {
   font-family: var(--inter);
-  color: rgb(var(--light-gray));
+  color: rgb(var(--default-cyan));
 }
 
 .h-serif {
@@ -90,15 +113,20 @@ h6 {
 }
 
 small {
-  font: var(--body-default-lg-md);
+  font: var(--body-default-lg-sm);
 }
 strong {
   font: var(--body-bold-lg);
-  color: rgb(var(--white));
+  font-weight: 600;
 }
 
-p {
-  color: rgb(var(--gray));
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: normal;
 }
 
 h1 {
