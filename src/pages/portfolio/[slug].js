@@ -7,7 +7,7 @@ import ProjectFooter from 'src/components/portfolio/structures/ProjectFooter';
 import brandProjects from 'src/data/portfolio.json';
 
 export default function Project(props) {
-  const title = `${props.name} | Br.Storm`;
+  const title = `${props.name} | Abarca`;
   const router = useRouter();
 
   useEffect(() => { document.querySelector('[data-navigation]').style.display = 'none' }, []);
