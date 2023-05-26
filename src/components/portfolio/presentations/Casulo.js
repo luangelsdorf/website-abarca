@@ -24,7 +24,7 @@ export default function Casulo() {
       <Wrapper light>
         <Section>
           <Cover title="Casulo" local="Araricá | Brazil" info={{ client: 'WalerDog', segment: 'Treinamento Canino', services: ['Identidade Visual'] }}>
-            <Image quality="100" loading="eager" src={basePath + 'Cover.jpg'} width="1400" height="800" alt="" />
+            <Image quality="100" loading="eager" src={basePath + 'cover.jpg'} width="1400" height="800" alt="" />
           </Cover>
         </Section>
 
