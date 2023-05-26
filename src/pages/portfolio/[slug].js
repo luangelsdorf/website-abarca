@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import Footer from 'src/components/layout/Footer';
 import ProjectPresentation from 'src/components/portfolio/ProjectPresentation';
 import ProjectFooter from 'src/components/portfolio/structures/ProjectFooter';
@@ -8,6 +9,8 @@ import brandProjects from 'src/data/portfolio.json';
 export default function Project(props) {
   const title = `${props.name} | Br.Storm`;
   const router = useRouter();
+
+  useEffect(() => { document.querySelector('[data-navigation]').style.display = 'none' }, []);
 
   return (
     <>
@@ -18,8 +21,8 @@ export default function Project(props) {
       </Head>
 
       <ProjectPresentation project={props} />
-      <ProjectFooter />
-      <Footer />
+      {/* <ProjectFooter /> */}
+      {/* <Footer /> */}
     </>
   )
 }

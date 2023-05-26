@@ -1,3 +1,13 @@
+@mixin ext {
+  @media (max-width: 2400px) {
+    @content;
+  }
+}
+@mixin xxxl {
+  @media (max-width: 1880px) {
+    @content;
+  }
+}
 @mixin xxl {
   @media (max-width: 1400px) {
     @content;
