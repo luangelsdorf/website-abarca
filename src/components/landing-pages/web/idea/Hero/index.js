@@ -179,13 +179,13 @@ export default function Hero() {
         duration: 0.5,
         ease: 'cubic-bezier(0.25, 0.1, 0.06, 0.99)'
       }, '-=0.25');
-      
+
       tl.from('p', {
         yPercent: 100,
         autoAlpha: 0,
         duration: 0.35,
       });
-      
+
       tl.from('p + div', {
         yPercent: 50,
         autoAlpha: 0,
@@ -226,23 +226,29 @@ export default function Hero() {
                 <br />
                 <span>não é lembrado!</span>
               </h1>
-              <p>{'Criamos websites marcantes feitos para gerar \nresultados para seu negócio.'} <strong>Solicite sua proposta!</strong></p>
+              <p>
+                {'Criamos websites marcantes feitos para \ngerar resultados para seu negócio.'}
+                <br />
+                <strong>Solicite sua proposta!</strong>
+              </p>
               <HeroForm light short />
             </div>
           </div>
-          {
-            portfolio.map((column, index) => (
-              <div className={`col-12 col-lg-3 ${styles.column}`} key={index}>
-                {
-                  column.map(project => (
-                    <div className={styles[project.size]} key={project.name}>
-                      <Image fill src={`/images/hero/${project.name}/cover.jpg`} alt="" />
-                    </div>
-                  ))
-                }
-              </div>
-            ))
-          }
+          <div className="col-12 col-lg-9 row">
+            {
+              portfolio.map((column, index) => (
+                <div className={`col ${styles.column}`} key={index}>
+                  {
+                    column.map(project => (
+                      <div className={styles[project.size]} key={project.name}>
+                        <Image fill src={`/images/hero/${project.name}/cover.jpg`} alt="" />
+                      </div>
+                    ))
+                  }
+                </div>
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>
