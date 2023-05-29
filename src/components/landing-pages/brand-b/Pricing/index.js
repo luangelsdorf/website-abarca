@@ -182,7 +182,7 @@ export default function Pricing({ content }) {
 
   return (
     <div className={styles.section}>
-      <div className="col-12">
+      <div className="col-12 col-lg-4 mx-lg-auto">
         <header>
           <Overline lineLength={336}>Nossos pacotes de Serviços</Overline>
           <h2>
