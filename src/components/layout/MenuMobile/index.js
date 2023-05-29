@@ -72,7 +72,7 @@ export default function MenuMobile({ links }) {
                 </ul>
                 <Button href="/#contact" RightIcon={Arrow} className="d-inline-flex d-lg-none outline" id="menu-contact">Começar Projeto</Button>
               </div>
-              <small className="d-none d-lg-block">Br.Storm Design © 2023</small>
+              <small className="d-none d-lg-block">Abarca © 2023</small>
             </div>
           </div>
         </div>

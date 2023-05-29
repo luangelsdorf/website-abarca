@@ -14,10 +14,10 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <Head>
-        <title>Deixe sua Marca no Mundo | Br.Storm</title>
-        <meta property="og:title" content="Deixe sua Marca no Mundo | Br.Storm" />
-        <meta name="description" content="A Br.Storm é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
-        <meta property="og:description" content="A Br.Storm é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
+        <title>Deixe sua Marca no Mundo | Abarca</title>
+        <meta property="og:title" content="Deixe sua Marca no Mundo | Abarca" />
+        <meta name="description" content="A Abarca é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
+        <meta property="og:description" content="A Abarca é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
         <meta property="og:image" content="https://brstorm.design/images/preview.jpg" />
         <meta property="og:url" content="https://brand.brstorm.design" />
       </Head>

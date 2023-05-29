@@ -70,7 +70,7 @@ export default function Support() {
       <div className="container">
         <div className="col-12 col-lg-10 mx-auto">
           <header>
-            <Overline lineLength={390}>Suporte Br.Storm</Overline>
+            <Overline lineLength={390}>Suporte Abarca</Overline>
             <div>
               <div className={styles.seal}>
                 <Seal />

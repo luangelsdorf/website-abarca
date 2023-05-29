@@ -44,7 +44,7 @@ export default function Testimonials({ content }) {
                 <span className="h-sans">nosso sucesso</span>
               </h2>
               <p>
-                Veja depoimentos de como a <span>Br.Storm</span> tem
+                Veja depoimentos de como a <span>Abarca</span> tem
                 <br className="d-none d-lg-block" />
                 ajudado empresas em todo mundo a se destacar
                 <br className="d-none d-lg-block" />

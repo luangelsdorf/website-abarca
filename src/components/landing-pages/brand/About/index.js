@@ -19,7 +19,7 @@ export default function About({ content }) {
           </div>
           <div className="col-12 col-lg-5 offset-lg-1">
             <div className={styles.aboutUs}>
-              <p>A <span>Br.Storm</span> é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais.</p>
+              <p>A <span>Abarca</span> é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais.</p>
               <p>Criamos marcas fortes e memoráveis que refletem a essência da sua empresa. Elaboramos desde a ideia até as mais diversas aplicações do seu projeto.</p>
             </div>
             <Button href="#contact" id="about-contact_mobile" className="lg d-flex d-lg-none justify-content-center" RightIcon={Arrow}>Comece seu Projeto</Button>

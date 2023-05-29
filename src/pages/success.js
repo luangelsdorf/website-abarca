@@ -12,7 +12,7 @@ export default function Success() {
   return (
     <>
       <Head>
-        <title>Muito Obrigado | Br.Storm</title>
+        <title>Muito Obrigado | Abarca</title>
       </Head>
 
       <main>

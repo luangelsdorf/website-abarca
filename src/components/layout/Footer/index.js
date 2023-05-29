@@ -27,7 +27,7 @@ export default function Footer({ fullHeight }) {
             </a>
           </div>
 
-          <p>Br.Storm Design © 2023</p>
+          <p>Abarca © 2023</p>
         </div>
       </div>
     </footer>
