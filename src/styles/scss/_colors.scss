@@ -83,7 +83,9 @@ strong {
     color: rgb(var(--dark-gray));
   }
 
-  input,
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
   textarea,
   select {
     color: rgb(var(--shadow));
