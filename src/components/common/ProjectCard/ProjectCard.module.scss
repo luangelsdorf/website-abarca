@@ -43,17 +43,20 @@
     }
 
     p {
-      font: var(--body-bold-lg-md);
       color: rgb(var(--white));
-      /* text-align: right; */
+    }
+
+    & > p {
+      text-align: right;
     }
   }
 
   .localTag {
+    font: var(--body-default-sm);
     position: absolute;
     top: 24px;
     right: 24px;
-    color: rgb(var(--black));
+    color: rgb(var(--blue));
     background-color: rgb(var(--white));
     padding: 8px 16px;
     display: flex;
@@ -64,7 +67,6 @@
     transform: translateX(calc(100% + 28px));
 
     div {
-      font: var(--body-bold-lg-md);
       overflow: hidden;
     }
 
@@ -85,6 +87,7 @@
     transition: all 350ms;
     opacity: 0;
     pointer-events: none;
+    border-radius: 0 0 24px 24px;
   }
 
   &:hover {
