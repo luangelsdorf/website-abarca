@@ -20,7 +20,7 @@
   display: flex;
   justify-content: flex-end;
   position: relative;
-  padding: 72px 56px;
+  padding: 72px 0;
 
   h2 {
     transition: 500ms;
@@ -29,6 +29,10 @@
   p {
     margin: 32px 0;
     transition: 500ms;
+  }
+
+  h2, p {
+    padding: 0 48px;
   }
 
   img {
@@ -44,16 +48,16 @@
 }
 
 .textContent {
-  &>form {
-    max-width: 600px;
+  & > form {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 24px;
     flex-wrap: wrap;
+    padding-left: 48px;
+    padding-right: 56px;
 
-    &> :global(.floating) {
-
+    & > :global(.floating) {
       &:first-child,
       &:nth-child(4) {
         flex-grow: 1;
