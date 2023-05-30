@@ -20,10 +20,12 @@ export default function Mobile({ content }) {
         if (entry.isIntersecting) {
           if (entry.intersectionRatio > 0.8) {
             entry.target.classList.add(styles.active);
+            entry.target.querySelector(`.${styles.outer}`).classList.add('light');
           }
         } else {
           if (entry.intersectionRatio < 0.3) {
             entry.target.classList.remove(styles.active);
+            entry.target.querySelector(`.${styles.outer}`).classList.remove('light');
           }
         }
       });
@@ -46,7 +48,9 @@ export default function Mobile({ content }) {
             </div>
             <div className="col-12 col-lg-7">
               <div className={styles.textContent}>
-                <h2><span className="h-sans">Design que</span> cabe no bolso!</h2>
+                <h2>
+                  <span>Design que</span> cabe no bolso!
+                </h2>
                 <p>{'Por que esperar para ter um site incrível, vamos começar a criar seu \nsite hoje mesmo? Preencha o formulário abaixo e entre em contato agora!'}</p>
                 <form onSubmit={handleSubmit(submitForm)}>
                   <div className={`floating${!errors.entry_443452100 ? '' : ' ' + 'error'}`}>

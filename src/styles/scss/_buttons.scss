@@ -4,17 +4,17 @@
 
 .btn {
   font: var(--body-default-md);
+  cursor: pointer;
   padding: 12px 24px;
   border: 1px solid;
-  color: rgb(var(--black));
-  background-color: rgb(var(--white));
-  border-color: rgb(var(--white));
+  color: rgb(var(--white));
+  background-color: rgb(var(--default-cyan));
+  border-color: rgb(var(--default-cyan));
   display: inline-flex;
   align-items: center;
   border-radius: 56px;
   gap: 8px;
   transition: background-color 350ms, color 350ms, scale 350ms;
-  cursor: pointer;
 
   & > div {
     display: flex;
@@ -24,8 +24,8 @@
   }
 
   &:hover {
-    color: rgb(var(--white));
-    background-color: rgb(var(--black));
+    color: rgb(var(--default-cyan));
+    background-color: transparent;
     scale: 0.95 !important;
 
     & > div {
@@ -48,12 +48,12 @@
   }
 
   &.outline {
-    color: rgb(var(--white));
-    background-color: rgb(var(--black));
+    color: rgb(var(--default-cyan));
+    background-color: transparent;
 
     &:hover {
-      color: rgb(var(--black));
-      background-color: rgb(var(--white));
+      color: rgb(var(--white));
+      background-color: rgb(var(--default-cyan));
     }
   }
 }

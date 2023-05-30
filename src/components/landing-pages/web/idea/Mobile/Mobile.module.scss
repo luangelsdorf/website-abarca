@@ -1,5 +1,20 @@
 .section {
   &.active {
+    .outer {
+      background-color: rgb(var(--white));
+      border-color: rgb(var(--white));
+      
+      p {
+        color: rgb(var(--darker-blue));
+      }
+
+      h2 {
+        color: rgb(var(--default-cyan));
+        span {
+          color: rgb(var(--dark-blue));
+        }
+      }
+    }
     .inner {
       img {
         transform: initial;
@@ -10,8 +25,8 @@
 }
 
 .outer {
-  border: 1px solid rgb(var(--light-sea));
-  background-color: rgb(var(--blue));
+  border: 1px solid rgb(var(--darker-blue));
+  background-color: rgb(var(--dark-blue));
   border-radius: 32px;
   transition: 350ms;
 }
@@ -22,8 +37,13 @@
   position: relative;
 
   h2 {
-    transition: 500ms;
     font: var(--heading-small);
+    transition: 500ms;
+
+    span {
+      transition: 500ms;
+      color: rgb(var(--default-cyan));
+    }
   }
 
   p {
@@ -31,7 +51,8 @@
     transition: 500ms;
   }
 
-  h2, p {
+  h2,
+  p {
     padding: 0 48px;
   }
 
