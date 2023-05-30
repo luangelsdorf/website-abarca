@@ -2,6 +2,10 @@
   article > section:first-child {
     border-radius: 24px 24px 0 0;
     overflow: hidden;
+
+    & > div {
+      background: none;
+    }
   }
 
   [data-tag] {

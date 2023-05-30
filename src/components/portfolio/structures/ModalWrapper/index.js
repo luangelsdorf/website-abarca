@@ -10,7 +10,7 @@ export default function ModalWrapper({ project }) {
     <div className={styles.wrapper}>
       <Header {...project} />
       <ProjectPresentation project={project} />
-      <Section pt="120" pb="120" style={{ backgroundColor: 'rgb(var(--black))', borderRadius: '0 0 24px 24px', border: '1px solid rgb(var(--white), 0.3)' }}>
+      <Section pt="120" pb="120" style={{ backgroundColor: 'rgb(var(--blue))', borderRadius: '0 0 24px 24px' }}>
         <Contact noLinks />
       </Section>
     </div>
