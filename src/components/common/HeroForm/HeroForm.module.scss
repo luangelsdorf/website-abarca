@@ -17,7 +17,6 @@
     }
 
     [type="submit"] {
-
       & ~ div {
         position: absolute;
         bottom: 24px;
@@ -26,6 +25,7 @@
 
       & ~ span {
         position: absolute;
+        font: var(--body-default-sm);
         bottom: 8px;
         left: 32px;
       }
