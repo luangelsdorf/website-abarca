@@ -63,10 +63,10 @@ strong {
 
 .light {
   background-color: rgb(var(--white));
-  color: rgb(var(--shadow));
+  color: rgb(var(--dark-blue));
 
   p {
-    color: rgb(var(--shadow));
+    color: rgb(var(--dark-blue));
   }
 
   h1,
@@ -76,11 +76,11 @@ strong {
   h5,
   h6,
   strong {
-    color: rgb(var(--black));
+    color: rgb(var(--default-cyan));
   }
 
   label {
-    color: rgb(var(--dark-gray));
+    color: rgb(var(--dark-blue));
   }
 
   input[type="text"],
@@ -88,13 +88,31 @@ strong {
   input[type="email"],
   textarea,
   select {
-    color: rgb(var(--shadow));
-    border-bottom-color: rgb(var(--gray));
+    color: rgb(var(--dark-blue));
+    border-bottom-color: rgb(var(--default-sea));
 
-    &:focus {
+    &:focus,
+    &:not(:placeholder-shown) {
       border-bottom-color: rgb(var(--default-cyan));
+      & + label {
+        color: rgb(var(--lighter-blue)) !important;
+      }
+    }
+
+    &::placeholder {
+      color: rgb(var(--light-gray), 0.5);
     }
   }
+
+  select {
+    @supports selector(:has(option:not(:first-child):checked)) {
+      &:focus,
+      &:has(option:not(:first-child):checked) {
+        border-bottom-color: rgb(var(--default-cyan));
+      }
+    }
+  }
+
   option {
     color: rgb(var(--dark-gray));
     background-color: rgb(var(--white));
