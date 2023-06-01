@@ -61,11 +61,12 @@
 
   video {
     position: absolute;
-    top: 38.6px;
-    left: 402.1px;
-    width: 521.9px;
-    height: 465.2px;
-    transform: scale(1) rotateZ(0.2deg) rotateY(-1.1deg);
+    top: 91.4px;
+    left: 448.9px;
+    width: 545.1px;
+    height: 430.8px;
+    transform: scale(1) rotateZ(0deg) rotateY(-1.3deg);
+    object-fit: fill;
   }
 }
 
@@ -73,17 +74,16 @@
   margin-top: 64px;
   width: 440px;
 
-  .cta {
+  & > div {
     margin-bottom: 24px;
-
-    strong {
-      color: rgb(var(--black));
-    }
+    text-align: center;
   }
 }
 
 .formContainer {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+
+  & > div:first-child {
+    position: absolute;
+  }
 }

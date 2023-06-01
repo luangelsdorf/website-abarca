@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import styles from './Support.module.scss';
 import Seal from 'public/images/illustrations/seal.svg';
 import Image from 'next/image';
-import macbook from 'public/images/macbook.png';
+import macbook from 'public/images/mac.png';
 import HeroForm from 'src/components/common/HeroForm';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
@@ -86,21 +86,20 @@ export default function Support() {
       </div>
 
       <div className={`container ${styles.formContainer}`}>
-        <div className="col-12 offset-xxl-1">
+        <div className="offset-xxl-1">
           <div className={styles.formWrapper} data-reveal>
-            <HeroForm light short>
-              <div className="light" style={{ marginBottom: '24px' }}>
-                <strong>Quer ter um site incrível?</strong>
-                <span> Preencha agora o formulário abaixo e deixe-nos cuidar do resto!</span>
-              </div>
-            </HeroForm>
+            <div>
+              <strong>Quer ter um site incrível?</strong>
+              <span> Preencha o formulário e deixe-nos cuidar do resto!</span>
+            </div>
+            <HeroForm light short />
           </div>
         </div>
-      </div>
 
-      <div className={styles.mockup}>
-        <video src="/videos/video-mockup.mp4" muted loop autoPlay />
-        <Image quality={100} src={macbook} width="1126" height="735" alt="" />
+        <div className={styles.mockup}>
+          <video src="/videos/animation.mp4" muted loop autoPlay />
+          <Image quality={100} src={macbook} width="1126" height="735" alt="" />
+        </div>
       </div>
     </div>
   )
