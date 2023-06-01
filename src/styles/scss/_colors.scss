@@ -118,7 +118,7 @@ strong {
     background-color: rgb(var(--white));
   }
 
-  .btn {
+  .btn, &.btn {
     color: rgb(var(--white));
     background-color: rgb(var(--default-cyan));
     border-color: rgb(var(--default-cyan));

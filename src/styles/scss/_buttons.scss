@@ -50,10 +50,28 @@
   &.outline {
     color: rgb(var(--default-cyan));
     background-color: transparent;
-
     &:hover {
       color: rgb(var(--white));
       background-color: rgb(var(--default-cyan));
+    }
+  }
+
+  &.white {
+    color: rgb(var(--dark-blue));
+    background-color: rgb(var(--white));
+    border-color: rgb(var(--white));
+    &:hover {
+      color: rgb(var(--white));
+      background-color: transparent;
+    }
+
+    &.outline {
+      color: rgb(var(--white));
+      background-color: transparent;
+      &:hover {
+        color: rgb(var(--dark-blue));
+        background-color: rgb(var(--white));
+      }
     }
   }
 }
