@@ -57,7 +57,7 @@
   }
 
   &.white {
-    color: rgb(var(--dark-blue));
+    color: rgb(var(--blue));
     background-color: rgb(var(--white));
     border-color: rgb(var(--white));
     &:hover {
@@ -69,7 +69,7 @@
       color: rgb(var(--white));
       background-color: transparent;
       &:hover {
-        color: rgb(var(--dark-blue));
+        color: rgb(var(--blue));
         background-color: rgb(var(--white));
       }
     }
