@@ -38,10 +38,9 @@ export default function Testimonials({ content }) {
           <div className="col-12">
             <header data-reveal-parent={0.35}>
               <h2>
-                <span>O seu sucesso </span>
+                <span>O seu sucesso é </span>
                 <br className="d-none d-lg-block" />
-                <span>é o </span>
-                <span className="h-sans">nosso sucesso</span>
+                <span className="h-sans">o nosso sucesso</span>
               </h2>
               <p>
                 Veja depoimentos de como a <span>Abarca</span> tem
@@ -50,7 +49,7 @@ export default function Testimonials({ content }) {
                 <br className="d-none d-lg-block" />
                 no mercado e se conectar com seus clientes.
               </p>
-              <Button id="testimonials-contact" href="#contact" className="lg d-none d-lg-flex" RightIcon={Arrow} >Iniciar um Projeto</Button>
+              <Button id="testimonials-contact" href="#contact" className="white d-none d-lg-flex" RightIcon={Arrow} >Iniciar um Projeto</Button>
             </header>
           </div>
 

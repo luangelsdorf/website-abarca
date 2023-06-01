@@ -15,10 +15,6 @@
       }
     }
 
-    a {
-      align-self: flex-end;
-    }
-
     @include mixins.lg {
       flex-wrap: wrap;
       justify-content: center;
