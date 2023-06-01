@@ -49,7 +49,7 @@ export default function Mobile({ content }) {
             <div className="col-12 col-lg-7">
               <div className={styles.textContent}>
                 <h2>
-                  <span>Design que</span> cabe no bolso!
+                  <span>Um projeto que</span> cabe no bolso!
                 </h2>
                 <p>{'Por que esperar para ter um site incrível, vamos começar a criar seu \nsite hoje mesmo? Preencha o formulário abaixo e entre em contato agora!'}</p>
                 <form onSubmit={handleSubmit(submitForm)}>
