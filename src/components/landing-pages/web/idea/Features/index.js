@@ -93,7 +93,7 @@ export default function Features({ content }) {
   ];
 
   const Card = ({ icon, title, text }) => (
-    <article className={styles.card} style={{ background: 'white' }}>
+    <article className={styles.card}>
       {icon}
       <h3>{title}</h3>
       <p>{text}</p>

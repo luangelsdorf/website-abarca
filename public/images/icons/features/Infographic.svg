@@ -1,14 +1,14 @@
 <svg width="97" height="96" viewBox="0 0 97 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M27.4 29.9937V43.1937H14.2C6.904 43.1937 1 37.2897 1 29.9937C1 22.6977 6.904 16.8057 14.2 16.8057C21.496 16.8057 27.4 22.7097 27.4 30.0057V29.9937Z" stroke="black" stroke-width="2"/>
-<path d="M14.2 52.8062H27.4V66.0062C27.4 73.2902 21.496 79.2062 14.2 79.2062C6.904 79.2062 1 73.3022 1 66.0062C1 58.7102 6.904 52.8062 14.2 52.8062Z" stroke="black" stroke-width="2"/>
-<path d="M37 29.9939V43.1939H50.2C57.496 43.1939 63.4 37.2899 63.4 29.9939C63.4 22.7099 57.496 16.7939 50.2 16.7939C42.904 16.7939 37 22.6979 37 29.9939Z" stroke="black" stroke-width="2"/>
-<path d="M50.2 52.8062H37V66.0062C37 73.2902 42.904 79.2062 50.2 79.2062C57.496 79.2062 63.4 73.3022 63.4 66.0062C63.4 58.7102 57.496 52.8062 50.2 52.8062Z" stroke="black" stroke-width="2"/>
-<path d="M45.4004 27.606H55.0004" stroke="black" stroke-width="2"/>
-<path d="M45.4004 32.4058H52.6004" stroke="black" stroke-width="2"/>
-<path d="M19.0004 27.606H9.40039" stroke="black" stroke-width="2"/>
-<path d="M19.0008 32.4058H11.8008" stroke="black" stroke-width="2"/>
-<path d="M45.4004 67.2061H55.0004" stroke="black" stroke-width="2"/>
-<path d="M45.4004 62.4058H52.6004" stroke="black" stroke-width="2"/>
-<path d="M19.0004 67.2061H9.40039" stroke="black" stroke-width="2"/>
-<path d="M19.0008 62.4058H11.8008" stroke="black" stroke-width="2"/>
+<path d="M27.4 29.9937V43.1937H14.2C6.904 43.1937 1 37.2897 1 29.9937C1 22.6977 6.904 16.8057 14.2 16.8057C21.496 16.8057 27.4 22.7097 27.4 30.0057V29.9937Z" stroke="currentColor" stroke-width="2"/>
+<path d="M14.2 52.8062H27.4V66.0062C27.4 73.2902 21.496 79.2062 14.2 79.2062C6.904 79.2062 1 73.3022 1 66.0062C1 58.7102 6.904 52.8062 14.2 52.8062Z" stroke="currentColor" stroke-width="2"/>
+<path d="M37 29.9939V43.1939H50.2C57.496 43.1939 63.4 37.2899 63.4 29.9939C63.4 22.7099 57.496 16.7939 50.2 16.7939C42.904 16.7939 37 22.6979 37 29.9939Z" stroke="currentColor" stroke-width="2"/>
+<path d="M50.2 52.8062H37V66.0062C37 73.2902 42.904 79.2062 50.2 79.2062C57.496 79.2062 63.4 73.3022 63.4 66.0062C63.4 58.7102 57.496 52.8062 50.2 52.8062Z" stroke="currentColor" stroke-width="2"/>
+<path d="M45.4004 27.606H55.0004" stroke="currentColor" stroke-width="2"/>
+<path d="M45.4004 32.4058H52.6004" stroke="currentColor" stroke-width="2"/>
+<path d="M19.0004 27.606H9.40039" stroke="currentColor" stroke-width="2"/>
+<path d="M19.0008 32.4058H11.8008" stroke="currentColor" stroke-width="2"/>
+<path d="M45.4004 67.2061H55.0004" stroke="currentColor" stroke-width="2"/>
+<path d="M45.4004 62.4058H52.6004" stroke="currentColor" stroke-width="2"/>
+<path d="M19.0004 67.2061H9.40039" stroke="currentColor" stroke-width="2"/>
+<path d="M19.0008 62.4058H11.8008" stroke="currentColor" stroke-width="2"/>
 </svg>

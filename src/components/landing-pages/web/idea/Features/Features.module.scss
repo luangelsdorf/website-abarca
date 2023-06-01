@@ -27,38 +27,45 @@
 }
 
 .card {
-  padding: 64px 48px;
+  padding: 32px 48px 40px 48px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
   border-radius: 24px;
+  background-color: rgb(var(--white));
+
+  svg {
+    color: rgb(var(--default-cyan));
+  }
 
   h3 {
-    font: var(--heading-serif-small);
-    color: rgb(var(--black));
+    font: var(--heading-small);
+    color: rgb(var(--blue));
   }
 
   p {
-    color: rgb(var(--shadow));
+    color: rgb(var(--blue));
   }
 }
 
 .formCard {
   background-color: rgb(var(--white));
-  padding: 56px 40px 48px 40px;
+  padding: 40px;
   border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
   h3 {
-    font: var(--heading-serif-medium);
-    color: rgb(var(--black));
+    font: var(--heading-medium);
+    color: rgb(var(--blue));
   }
 
-  &>p {
-    color: rgb(var(--shadow));
-    margin: 32px 0;
+  & > p {
+    color: rgb(var(--blue));
   }
 
-  &>div {
+  & > div {
     padding: 0;
 
     [type="submit"] {
