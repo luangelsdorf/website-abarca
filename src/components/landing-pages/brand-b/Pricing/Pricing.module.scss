@@ -1,50 +1,51 @@
 @use "../../../../styles/scss/mixins";
 
 @mixin active-card {
-  transform: translateY(-20px);
-  opacity: 1;
   background-color: rgb(var(--white));
-  color: rgb(var(--dark-gray));
 
-  & > div:first-child {
-    p {
-      color: rgb(var(--dark-gray));
+  & > header {
+    h3 {
+      color: rgb(var(--blue));
     }
   }
 
   & > div:nth-child(2) {
-    & > ul > li {
-      &::marker {
-        color: rgb(var(--black));
-      }
-      p {
-        color: rgb(var(--black));
-      }
+    border-top-color: rgb(var(--light-gray));
+    border-bottom-color: rgb(var(--light-gray));
+
+    p {
+      color: rgb(var(--blue));
+    }
+
+    ul {
+      color: rgb(var(--blue));
     }
   }
 
-  & > div:nth-child(3) {
-    & > div {
-      p {
-        color: rgb(var(--black));
-      }
+  & > footer {
+    .price {
+      color: rgb(var(--blue));
 
-      span {
+      s {
+        color: rgb(var(--default-cyan));
+      }
+    }
+
+    a {
+      background-color: rgb(var(--default-cyan)) !important;
+      color: rgb(var(--white)) !important;
+
+      &:hover {
+        background-color: rgb(var(--white)) !important;
+        color: rgb(var(--default-cyan)) !important;
+      }
+    }
+
+    small {
+      div:last-child {
         color: rgb(var(--gray));
-
-        & ~ p {
-          color: rgb(var(--black));
-        }
       }
     }
-  }
-
-  p {
-    color: rgb(var(--dark-gray));
-  }
-
-  h3 {
-    color: rgb(var(--black));
   }
 }
 
@@ -60,147 +61,193 @@
 }
 
 .pack {
-  background-color: rgb(255, 255, 255, 0.02);
-  border: 1px solid rgb(var(--dark-gray));
-  padding: 40px;
-  opacity: 0.6;
+  position: relative;
+  border: 1px solid rgb(var(--default-sea));
+  background-color: rgb(var(--lighter-blue));
+  padding: 32px 40px;
   transition: all 350ms ease;
-  margin-top: 20px;
   border-radius: 24px;
+  box-shadow: 0px 0px 120px rgba(0, 14, 47, 0.25);
 
   @include mixins.md {
     padding: 32px 16px;
-    opacity: 1;
   }
 
   @include mixins.lg {
-    opacity: 1;
     text-align: left !important;
   }
 
   &:hover {
     @media (min-width: 992px) {
       @include active-card;
+      & > header {
+        &::before {
+          content: "";
+          position: absolute;
+          left: -40px;
+          top: -40px;
+          width: calc(100% + 80px);
+          height: calc(100% + 65px);
+          border-radius: 24px 24px 0 0;
+          background-color: rgb(var(--light-cyan));
+          border: 1px solid rgb(var(--light-cyan));
+        }
+
+        h3 {
+          color: rgb(var(--white));
+        }
+
+        p {
+          color: rgb(var(--blue));
+        }
+      }
     }
   }
 
   // Card Header
-  & > div:first-child {
+  & > header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    position: relative;
+
+    h3,
+    p {
+      position: relative;
+      z-index: 1;
+    }
 
     h3 {
-      line-height: 40px;
+      color: rgb(var(--light-cyan));
     }
 
     p {
-      font: var(--body-bold-md);
-      color: rgb(var(--light-gray));
+      font: var(--body-default-sm);
+      color: rgb(var(--default-cyan));
+      font-weight: 500;
       text-align: right;
+      margin-top: 4px;
     }
   }
 
   // Card Body
   & > div:nth-child(2) {
-    font: var(--body-default-md);
-    border-top: 1px solid rgb(var(--dark-gray));
-    border-bottom: 1px solid rgb(var(--dark-gray));
-    padding-top: 32px;
-    padding-bottom: 32px;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    font: var(--body-default-sm);
+    border-top: 1px solid rgb(var(--default-sea), 0.5);
+    border-bottom: 1px solid rgb(var(--default-sea), 0.5);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
 
-    a {
-      display: inline-flex;
-      align-items: center;
-
-      p {
-        color: rgb(var(--light-gray));
-      }
+    p {
+      color: rgb(var(--light-cyan));
+      margin-bottom: 24px;
     }
 
     ul {
-      list-style: circle;
-      padding: 0;
-      margin: 0;
-      padding-left: 18px;
-    }
-
-    & > ul {
-      font: var(--body-bold-md);
       display: flex;
       flex-direction: column;
-      gap: 24px;
-      margin-top: 32px;
+      gap: 16px;
+      color: rgb(var(--light-cyan));
 
       li {
-        cursor: pointer;
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        font-weight: 500;
 
-        &[aria-expanded="true"] {
-          list-style: disc;
+        &::before {
+          content: "";
+          width: 16px;
+          height: 16px;
+          background: url("/images/icons/Check.svg") no-repeat;
         }
-      }
 
-      ul {
-        font: var(--body-default-sm);
-        padding-top: 8px;
+        & > span {
+          & > span {
+            font: var(--body-detail);
+          }
+        }
       }
     }
   }
 
   // Card Footer
-  & > div:nth-child(3) {
-    width: 100%;
+  & > footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 32px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 24px;
 
-    & > p:first-child {
-      font: var(--body-bold-sm);
-      color: rgb(var(--gray));
-    }
-
-    & > div {
+    .price {
       display: flex;
-      flex-direction: column;
       align-items: flex-end;
-      color: rgb(var(--white));
-      font-weight: 500;
-      text-align: right;
+      justify-content: space-between;
+      color: rgb(var(--light-cyan));
 
-      p {
-        color: rgb(var(--white));
-        font-size: 20px;
+      & > span {
+        font: var(--body-detail);
+        white-space: break-spaces;
       }
 
-      span {
-        font: var(--body-bold-sm);
-        display: inline-flex;
-        color: rgb(var(--gray));
-        line-height: 4px;
+      & > div {
+        text-align: right;
+        s {
+          font: var(--body-default-sm);
+          font-weight: 500;
 
-        & ~ p {
-          font-size: 24px;
+          & + div > span:first-child {
+            font: var(--heading-small);
+            line-height: 40px;
+          }
         }
+
+        span:first-child {
+          font: var(--body-default-lg);
+        }
+
+        span:last-child {
+          font: var(--heading-small);
+          line-height: 40px;
+        }
+      }
+    }
+
+    a {
+      justify-content: center;
+    }
+
+    small {
+      font: var(--body-detail);
+      text-align: center;
+
+      div:first-child {
+        color: rgb(var(--default-cyan));
+        font-weight: 500;
+      }
+      div:last-child {
+        color: rgb(var(--default-sea));
       }
     }
   }
 
-  // Note:
-  small {
-    font: var(--body-default-sm);
-    display: flex;
+  &.mostSold {
+    &::after {
+      content: "Pacote Mais Vendido";
+      font: var(--body-detail);
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 50%;
+      background-color: rgb(var(--success));
+      padding: 8px 14px;
+      border-radius: 72px;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 
 .active {
   @include active-card;
-
-  @include mixins.lg {
-    transform: initial;
-  }
 }

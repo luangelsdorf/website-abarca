@@ -4,151 +4,92 @@ import React, { useEffect } from 'react';
 import useMediaQuery from 'src/hooks/useMediaQuery';
 import styles from './Pricing.module.scss';
 import Overline from 'src/components/common/Overline';
+import Button from 'src/components/common/Button';
 
 export default function Pricing({ content }) {
   const packages = [
     {
-      "name": "Básico",
-      "value": "R$980,00",
-      "shortText": "Somente a Marca",
-      "longText": "Tudo que é indispensável para dar início ao seu negócio. De vida à sua marca.",
-      "investmentText": "Investimento a partir de:",
-      "included": [
+      name: 'Básico',
+      value: '1.490',
+      hosting: '65',
+      shortText: 'Website Onepage',
+      longText: 'Apresente sua empresa em uma página única com visual moderno e dinâmico.',
+      mostSold: false,
+      included: [
         {
-          "name": "Desenho Exclusivo da Marca",
-          "expand": true,
-          "items": [
-            "JPG de Alta Qualidade e PNG Transparentes",
-            "Versões em Preto e Branco",
-            "Arquivos Vetoriais para Impressão"
-          ]
+          name: 'Layout Exclusivo',
+          note: 'Sob medida',
         },
         {
-          "name": "Identidade Visual",
-          "expand": true,
-          "items": [
-            "Paleta de Cores",
-            "Tipografia",
-            "Grafismos"
-          ]
-        }
-      ]
+          name: 'Design Responsivo',
+          note: 'Desktop e Mobile',
+        },
+        { name: 'Otimização de SEO para Google' },
+      ],
     },
+
     {
-      "name": "Essencial",
-      "value": "R$1580,00",
-      "shortText": "Marca & Materiais",
-      "longText": "Tenha uma marca profissional e materiais iniciais que impulsionem seu negócio.",
-      "investmentText": "Investimento a partir de:",
-      "included": [
+      name: 'Essencial',
+      fromValue: '4.890',
+      value: '1.580',
+      hosting: '95',
+      shortText: 'Website Pro',
+      longText: 'Alcance o reconhecimento e fortaleça sua empresa com website completo.',
+      mostSold: true,
+      included: [
         {
-          "name": "Desenho Exclusivo da Marca",
-          "expand": true,
-          "items": [
-            "JPG de Alta Qualidade e PNG Transparentes",
-            "Versões em Preto e Branco",
-            "Arquivos Vetoriais para Impressão"
-          ]
+          name: 'Múltiplas Páginas',
         },
         {
-          "name": "Identidade Visual",
-          "expand": true,
-          "items": [
-            "Paleta de Cores",
-            "Tipografia",
-            "Fotografia",
-            "Grafismos"
-          ]
+          name: 'Layout Exclusivo',
+          note: 'Sob medida',
         },
         {
-          "name": "Redes Sociais",
-          "expand": true,
-          "items": [
-            "Perfil e Capas",
-            "Destaques",
-            "Modelo de Post"
-          ]
+          name: 'Design Responsivo',
+          note: 'Desktop e Mobile',
         },
         {
-          "name": "Papelaria Básica",
-          "expand": false,
-          "items": [
-            "Cartões de Visitas",
-            "Timbrado",
-            "Envelope"
-          ]
+          name: 'Gerenciador de Conteúdo',
         },
         {
-          "name": "Manual de Uso da Marca",
-          "expand": false,
-          "items": [
-            "Manual de uso da marca com todas as diretrizes visuais."
-          ]
-        }
-      ]
+          name: 'Formulários e Integrações',
+        },
+      ],
     },
+
     {
-      "name": "Crescer",
-      "value": "Sob Consulta",
-      "shortText": "Marca & Website",
-      "longText": "Marca forte, presença online poderosa. O pacote ideal para o seu negócio crescer.",
-      "investmentText": "Investimento:",
-      "included": [
+      name: 'Comercial',
+      value: '4.890',
+      hosting: '145',
+      shortText: 'E-commerce',
+      longText: 'Venda produtos online através de uma plataforma feita para gerar resultados.',
+      mostSold: false,
+      included: [
         {
-          "name": "Website Institucional",
-          "expand": true,
-          "items": [
-            "Página Inicial",
-            "Sobre Nós",
-            "Serviços / Produtos",
-            "Contatos"
-          ]
+          name: 'Páginas de Produtos',
         },
         {
-          "name": "Desenho Exclusivo da Marca",
-          "expand": false,
-          "items": [
-            "JPG de Alta Qualidade e PNG Transparentes",
-            "Versões em Preto e Branco",
-            "Arquivos Vetoriais para Impressão"
-          ]
+          name: 'Integração com Correios',
         },
         {
-          "name": "Identidade Visual",
-          "expand": false,
-          "items": [
-            "Paleta de Cores",
-            "Tipografia",
-            "Grafismos"
-          ]
+          name: 'Carrinho de Compras Avançado',
         },
         {
-          "name": "Redes Sociais",
-          "expand": false,
-          "items": [
-            "Perfil",
-            "Capa",
-            "Destaques"
-          ]
+          name: 'Área do Cliente e Suporte',
         },
         {
-          "name": "Papelaria Básica",
-          "expand": false,
-          "items": [
-            "Cartões de Visitas",
-            "Timbrado",
-            "Envelope"
-          ]
+          name: 'Layout Exclusivo',
+          note: 'Sob medida',
         },
         {
-          "name": "Manual de Uso da Marca",
-          "expand": false,
-          "items": [
-            "Manual de uso da marca com todas as diretrizes visuais."
-          ]
-        }
-      ]
-    }
+          name: 'Design Responsivo',
+          note: 'Desktop e Mobile',
+        },
+        {
+          name: 'Gerenciador de Conteúdo',
+        },
+      ],
+    },
   ];
 
   const isMobile = useMediaQuery('lg');
@@ -156,10 +97,6 @@ export default function Pricing({ content }) {
   function toggleStyle() {
     document.querySelectorAll(`.${styles.pack}`)[1].classList.toggle(styles.active);
   }
-
-  useEffect(() => {
-    require('bootstrap/js/dist/collapse');
-  }, []);
 
 
   useEffect(() => {
@@ -194,63 +131,53 @@ export default function Pricing({ content }) {
         </header>
       </div>
       <div className="container">
-        <div className="row" data-reveal-parent={0.4}>
-          {/* loop dos pacotes */}
+        <div className="row align-items-center" data-reveal-parent={0.4}>
           {
             packages.map((pack, packIndex) => {
               return (
                 <div className="col-12 col-lg-4" key={`pack-${packIndex}`}>
-                  <div className={`${styles.pack} ${packIndex === 1 && !isMobile ? styles.active : ''}`}
+                  <article className={`${styles.pack} ${packIndex === 1 && !isMobile ? styles.active : ''} ${pack.mostSold ? styles.mostSold : ''}`}
                     onMouseEnter={isMobile ? null : toggleStyle}
                     onMouseLeave={isMobile ? null : toggleStyle}
+                    
                   >
-                    <div className={styles.title}>
+                    <header>
                       <h3>{pack.name}</h3>
                       <p>{pack.shortText}</p>
-                    </div>
+                    </header>
                     <div>
                       <p>{pack.longText}</p>
                       <ul>
-
-                        {/* loop dos itens inclusos */}
                         {
-                          pack.included.map((included, includedIndex) => {
-                            return (
-                              <li key={`inc-${includedIndex}`} data-bs-target={`#item-${includedIndex}-${packIndex}`} data-bs-toggle="collapse">
-                                <p>{included.name}</p>
-                                <div id={`item-${includedIndex}-${packIndex}`} className={`collapse ${included.expand ? 'show' : ''}`}>
-                                  <ul>
-                                    {/* loop dos sub-itens */}
-                                    {
-                                      included.items.map((item, index) => {
-                                        return (
-                                          <li key={`detail-${index}`}>
-                                            {item}
-                                          </li>
-                                        )
-                                      })
-                                    }
-                                  </ul>
-                                </div>
-                              </li>
-                            )
-                          })
+                          pack.included.map((included, includedIndex) => (
+                            <li key={includedIndex}>
+                              <span>
+                                {included.name}
+                                {included.note && <span> ({included.note})</span>}
+                              </span>
+                            </li>
+                          ))
                         }
                       </ul>
                     </div>
-                    <div>
-                      <p>{pack.investmentText}</p>
-                      <div>
-                        {
-                          packIndex === 1 ? (
-                            <span>De&nbsp;<s>R$2280,00</s>&nbsp;por</span>
-                          ) : null
-                        }
-                        <p className={styles.value}>{pack.value}</p>
+                    <footer>
+                      <div className={styles.price}>
+                        <span>{'Investimento \nà partir de:'}</span>
+                        <div>
+                          {pack.fromValue && <s>De {pack.fromValue} por</s>}
+                          <div>
+                            <span>R$</span>
+                            <span>{pack.value}</span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <small>Observação: Para saber mais sobre nossos prazos e condições de pagamento entre em contato conosco.</small>
-                  </div>
+                      <Button className="btn outline">Contratar Agora</Button>
+                      <small>
+                        <div>Hospedagem e Suporte - R${pack.hosting}/mês</div>
+                        <div>Para saber mais sobre nossos prazos e condições de pagamento entre em contato conosco.</div>
+                      </small>
+                    </footer>
+                  </article>
                 </div>
               )
             })
