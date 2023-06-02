@@ -27,6 +27,7 @@
   }
 
   text {
+    font: var(--body-default-sm);
     fill: rgb(var(--white));
     transition: 250ms;
     transition-delay: 250ms;

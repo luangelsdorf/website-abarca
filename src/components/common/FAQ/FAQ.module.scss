@@ -5,7 +5,7 @@
       margin-bottom: 80px;
 
       h2 {
-        font: var(--heading-serif-large);
+        font: var(--heading-medium);
       }
 
       p {
@@ -35,7 +35,7 @@
 
 .question {
   cursor: pointer;
-  border-bottom: 1px solid rgb(var(--shadow));
+  border-bottom: 1px solid rgb(var(--default-cyan));
   transition: border-color 350ms;
   user-select: none;
 
@@ -48,8 +48,8 @@
     transition: 350ms;
 
     h3 {
+      font: var(--heading-extra-small);
       color: rgb(var(--light-gray));
-      font: 400 24px/36px var(--merriweather);
       transition: 350ms;
     }
   }
@@ -74,7 +74,7 @@
   }
 
   &.active {
-    border-color: rgb(var(--white));
+    border-color: rgb(var(--default-cyan));
 
     svg {
       & > path {

@@ -99,7 +99,7 @@ export default function FAQ() {
       <div className="col-12">
         <header>
           <Overline lineLength={336}>Criação de Websites</Overline>
-          <h2><span className="h-sans">Perguntas</span><span> Frequentes</span></h2>
+          <h2>Perguntas Frequentes</h2>
         </header>
         <div className="container">
           <div className="row" ref={faq}>
