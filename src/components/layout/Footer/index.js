@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 import Pin from 'public/images/icons/Pin.svg';
-import Dribbble from 'public/images/icons/Dribbble.svg';
 import Instagram from 'public/images/icons/Instagram.svg';
+import Linkedin from 'public/images/icons/Linkedin.svg';
+import Youtube from 'public/images/icons/Youtube.svg';
 import Behance from 'public/images/icons/Behance.svg';
 
 export default function Footer({ fullHeight }) {
@@ -16,18 +17,21 @@ export default function Footer({ fullHeight }) {
           </p>
 
           <div className={`d-none d-lg-flex ${styles.social}`}>
-            <a href="https://instagram.com/brstorm.design" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com/abarca.comunica/" target="_blank" rel="noopener noreferrer">
               <Instagram />
             </a>
-            <a href="https://www.behance.net/brstorm-design" target="_blank" rel="noopener noreferrer">
-              <Behance />
+            <a href="https://linkedin.com/company/abarcacomunica/" target="_blank" rel="noopener noreferrer">
+              <Linkedin />
             </a>
-            <a href="https://dribbble.com/brstorm-design/about" target="_blank" rel="noopener noreferrer">
-              <Dribbble />
+            <a href="https://youtube.com/@abarcacomunicacaointegrada9702" target="_blank" rel="noopener noreferrer">
+              <Youtube />
+            </a>
+            <a href="https://www.behance.net/abarcacomunica" target="_blank" rel="noopener noreferrer">
+              <Behance />
             </a>
           </div>
 
-          <p>Abarca © 2023</p>
+          <p>Abarca Comunicação Integrada © 2023</p>
         </div>
       </div>
     </footer>

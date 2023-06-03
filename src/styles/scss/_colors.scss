@@ -62,7 +62,7 @@ strong {
 }
 
 .light {
-  background-color: rgb(var(--white));
+  background-color: rgb(var(--white)) !important;
   color: rgb(var(--blue));
 
   p {
@@ -86,8 +86,7 @@ strong {
   input[type="text"],
   input[type="tel"],
   input[type="email"],
-  textarea,
-  select {
+  textarea {
     color: rgb(var(--blue));
     border-bottom-color: rgb(var(--default-sea));
 
@@ -105,20 +104,27 @@ strong {
   }
 
   select {
+    border-bottom-color: rgb(var(--default-sea));
+    background-image: url("/images/icons/CaretDownLight.svg");
     @supports selector(:has(option:not(:first-child):checked)) {
       &:focus,
       &:has(option:not(:first-child):checked) {
         border-bottom-color: rgb(var(--default-cyan));
+        color: rgb(var(--blue));
+        & + label {
+          color: rgb(var(--lighter-blue));
+        }
       }
     }
   }
 
   option {
-    color: rgb(var(--dark-gray));
+    color: rgb(var(--blue));
     background-color: rgb(var(--white));
   }
 
-  .btn, &.btn {
+  .btn,
+  &.btn {
     color: rgb(var(--white));
     background-color: rgb(var(--default-cyan));
     border-color: rgb(var(--default-cyan));

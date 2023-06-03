@@ -1,41 +1,67 @@
 @use "../../../styles/scss/mixins";
 
 .footer {
-  padding: 36px 0;
+  position: relative;
+  height: 96px;
   display: flex;
   align-items: center;
-  border-top: 1px solid rgb(var(--shadow));
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+  }
+
+  &::before {
+    width: 43.6%;
+    background-color: rgb(var(--default-sea));
+  }
+
+  &::after {
+    width: 56.4%;
+    left: 43.6%;
+    background-color: rgb(var(--default-sea));
+  }
 
   .inner {
     display: flex;
     justify-content: space-between;
-  }
 
-  @include mixins.lg {
-    padding: 28px 0;
-    
-    .inner {
-      justify-content: center;
+    p {
+      font: var(--body-detail);
+      color: rgb(var(--default-sea));
+
+      &:first-child {
+        flex: 1;
+        svg {
+          margin-right: 8px;
+        }
+      }
+
+      &:last-child {
+        flex: 1;
+        text-align: right;
+      }
     }
-  }
 
-  p {
-    font: var(--body-default-md);
-    color: rgb(var(--shadow));
+    .social {
+      gap: 16px;
 
-    &:first-child {
-      svg {
-        margin-right: 8px;
+      a {
+        justify-content: center;
+        align-items: center;
       }
     }
   }
 
-  .social {
-    gap: 16px;
+  @include mixins.lg {
+    padding: 28px 0;
 
-    a {
+    .inner {
       justify-content: center;
-      align-items: center;
     }
   }
 

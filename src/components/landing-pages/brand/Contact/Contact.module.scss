@@ -2,6 +2,40 @@
 
 .section {
   position: relative;
+  padding-top: 120px;
+
+  & > :global(.container) {
+    margin-bottom: 120px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    width: 56.4%;
+    height: 100%;
+    background-color: rgb(var(--darker-blue));
+    border-top-left-radius: 40px;
+    transition: 500ms;
+  }
+
+  &.light {
+    footer {
+      p {
+        &:last-child {
+          color: rgb(var(--gray));
+        }
+      }
+      &::after {
+        background-color: rgb(var(--gray));
+      }
+    }
+    &::after {
+      background-color: rgb(var(--white));
+    }
+  }
 }
 
 .textContent {
@@ -20,8 +54,8 @@
     }
 
     span {
-      font: var(--body-bold-lg);
-      color: rgb(var(--white));
+      font-weight: 500;
+      color: rgb(var(--default-cyan));
     }
   }
 
@@ -41,6 +75,8 @@
     gap: 24px;
     flex-wrap: wrap;
     width: 100%;
+    background-color: rgb(var(--darker-blue));
+    transition: 500ms;
 
     & > div {
       &:nth-child(1),

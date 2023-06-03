@@ -7,6 +7,7 @@ import submitForm from 'src/utils/submitForm';
 import Spinner from 'src/components/common/Spinner';
 import { onChange } from 'src/utils/phoneMask';
 import fields from 'src/data/formFields.json';
+import Footer from 'src/components/layout/Footer';
 
 export default function Contact({ content }) {
   const { register, handleSubmit, setValue, formState: { errors, isSubmitting, isSubmitSuccessful } } = useForm();
@@ -14,13 +15,15 @@ export default function Contact({ content }) {
 
   const formId = useId();
 
-  /* useEffect(() => {
+  useEffect(() => {
     function callback(entries) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          document.body.classList.add('light');
+          entry.target.querySelector(`form`).classList.add('light');
+          entry.target.classList.add(styles.light);
         } else {
-          document.body.classList.remove('light');
+          entry.target.querySelector(`form`).classList.remove('light');
+          entry.target.classList.remove(styles.light);
         }
       });
     }
@@ -30,7 +33,7 @@ export default function Contact({ content }) {
     targets.forEach(target => observer.observe(target));
 
     return () => targets.forEach(target => observer.unobserve(target));
-  }, []); */
+  }, []);
 
   return (
     <div className={styles.section}>
@@ -112,6 +115,8 @@ export default function Contact({ content }) {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   )
 }

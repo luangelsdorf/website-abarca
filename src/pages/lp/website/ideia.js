@@ -30,11 +30,11 @@ export default function Idea() {
           <Hero />
         </Section>
 
-        <Section id="mobile" pt="96" pb="96">
+        <Section id="mobile" pt="120" pb="120">
           <Mobile />
         </Section>
 
-        <Section id="projects" pt="96" pb="80">
+        <Section id="projects" pt="120" pb="120">
           <Projects web />
         </Section>
 
@@ -42,28 +42,27 @@ export default function Idea() {
           <Testimonials />
         </Section>
 
-        <Section id="features" pt="96">
+        <Section id="features" pt="120" pb="120">
           <Features />
         </Section>
 
-        <Section id="support" pt="96" pb="64">
+        <Section id="support" pt="120" pb="120">
           <Support />
         </Section>
 
-        <Section id="pricing" pt="120" pb="96">
+        <Section id="pricing" pt="120" pb="146">
           <Pricing />
         </Section>
 
-        <Section id="faq" pt="120" pb="144">
+        <Section id="faq" pt="120" pb="200">
           <FAQ />
         </Section>
 
-        <Section id="contact" pt="120 96" pb="160 0">
+        <Section id="contact">
           <Contact />
         </Section>
       </main>
 
-      <Footer />
     </div>
   )
 }
