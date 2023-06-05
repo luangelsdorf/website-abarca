@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React from 'react';
+import React, { useEffect } from 'react';
 import FAQ from 'src/components/common/FAQ';
 import Section from 'src/components/common/Section';
 import Pricing from 'src/components/landing-pages/brand-b/Pricing';
@@ -10,12 +10,10 @@ import Features from 'src/components/landing-pages/web/idea/Features';
 import Hero from 'src/components/landing-pages/web/idea/Hero';
 import Mobile from 'src/components/landing-pages/web/idea/Mobile';
 import Support from 'src/components/landing-pages/web/idea/Support';
-import Footer from 'src/components/layout/Footer';
-import styles from 'src/styles/pages/landingpages.module.scss';
 
 export default function Idea() {
   return (
-    <div className={styles.page}>
+    <>
       <Head>
         <title>Title | Abarca</title>
         <meta property="og:title" content="Deixe sua Marca no Mundo | Abarca" />
@@ -63,7 +61,7 @@ export default function Idea() {
         </Section>
       </main>
 
-    </div>
+    </>
   )
 }
 

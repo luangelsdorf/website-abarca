@@ -66,9 +66,12 @@
     transform: rotate(-4deg) translateX(-80px);
     transform-origin: bottom;
     width: 41.6667%;
-    height: auto;
+    height: calc(100% + 64px);
+    object-fit: contain;
+    object-position: bottom left;
   }
 }
+
 
 .textContent {
   margin: 72px 0;

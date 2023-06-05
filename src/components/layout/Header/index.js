@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import Button from 'src/components/common/Button';
 import styles from './Header.module.scss';
-import Logo from 'public/images/logo.svg';
+import Logo from 'public/images/icons/favicon.svg';
 import Link from 'next/link';
 import MenuMobile from '../MenuMobile';
+import Arrow from 'public/images/icons/Arrow.svg';
 
 export default function Header({ floating = false, scroll, links }) {
   
@@ -59,23 +60,14 @@ export default function Header({ floating = false, scroll, links }) {
       {scroll && <div className={styles.sentinel} />}
       <div className={`${styles.navigation}${floating ? ' ' + 'floatingHeader' : ''}${scroll ? ' ' + 'floatingHeader' : ''}`} data-navigation>
 
-        <div className={`container ${styles.header}`}>
+        <div className={styles.header}>
           <header>
             <nav>
-              <Link id="logo" href="#" style={{ color: 'rgb(var(--white))' }}>
+              <Link id="logo" href="#">
                 <Logo />
               </Link>
-              <ul className="collapse d-none d-lg-flex" id="links">
-                {
-                  desktopLinks.map((link, index) => (
-                    <li key={index}>
-                      <Button link className="bottom" href={link.href}>{link.name}</Button>
-                    </li>
-                  ))
-                }
-              </ul>
               <div>
-                <Button className="sm d-none d-lg-flex" id="header-contact" href="/#contact">Começar Projeto</Button>
+                <Button className="sm d-none d-lg-flex" id="header-contact" href="/#contact" RightIcon={Arrow}>Iniciar Projeto</Button>
                 <Button className={`${scroll ? 'd-none' : 'd-flex d-lg-none'}`} onClick={handleClick} type="button" floating btnElement />
               </div>
             </nav>

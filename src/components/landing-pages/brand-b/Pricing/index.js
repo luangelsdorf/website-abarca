@@ -121,13 +121,13 @@ export default function Pricing({ content }) {
     <div className={styles.section}>
       <div className="col-12 col-lg-4 mx-lg-auto">
         <header>
-          <Overline lineLength={336}>Nossos pacotes de Serviços</Overline>
+          <Overline lineLength={336}>Nossos Pacotes de Serviços</Overline>
           <h2>
             <span>A melhor escolha</span>
             <br className="d-none d-lg-block" />
             <span className="h-sans"> para o seu negócio</span>
           </h2>
-          <p>Não importa o tamanho ou a fase do seu negócio, <strong>nós certamente podemos lhe ajudar</strong>, escolha o <br className="d-none d-lg-block" />pacote que lhe atende.</p>
+          {/* <p>Não importa o tamanho ou a fase do seu negócio, <strong>nós certamente podemos lhe ajudar</strong>, escolha o <br className="d-none d-lg-block" />pacote que lhe atende.</p> */}
         </header>
       </div>
       <div className="container">

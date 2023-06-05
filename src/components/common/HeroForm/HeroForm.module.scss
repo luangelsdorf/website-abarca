@@ -4,7 +4,7 @@
   position: relative;
   background-color: rgb(var(--white));
   padding: 32px 24px;
-  border-radius: 48px;
+  border-radius: 40px;
 
   form {
     display: flex;
@@ -33,8 +33,6 @@
   }
 
   @include mixins.lg {
-    border-radius: 16px;
-
     form {
       align-items: center;
 
