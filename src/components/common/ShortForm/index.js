@@ -18,13 +18,13 @@ export default function ShortForm({ light }) {
       <form onSubmit={handleSubmit(submitForm)} className={light ? ' light' : undefined}>
         <div className={`floating${!errors.entry_443452100 ? '' : ' ' + 'error'} sm`}>
           <input id={`name_${formId}`} placeholder="Como podemos lhe chamar?" type="text" {...register('entry_443452100', { required: errorMessage })} />
-          <label htmlFor={`name_${formId}`}>Insira seu Nome</label>
+          <label htmlFor={`name_${formId}`}>Nome</label>
           <span>{errors.entry_443452100 && errorMessage}</span>
         </div>
 
         <div className={`floating${!errors.entry_1354793341 ? '' : ' ' + 'error'} sm prefixed`}>
           <input id={`phone_${formId}`} placeholder="(51) 98983.6186" type="tel" {...register('entry_1354793341',  { required: errorMessage, minLength: 14, onChange: e => onChange(e, setValue) })} />
-          <label htmlFor={`phone_${formId}`}>Telefone para Contato</label>
+          <label htmlFor={`phone_${formId}`}>Telefone</label>
           <span className="prefix">+55</span>
           <span>{errors.entry_1354793341 && errorMessage}</span>
         </div>

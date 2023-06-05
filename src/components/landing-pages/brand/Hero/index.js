@@ -64,15 +64,17 @@ export default function Hero({
 
   return (
     <div className={styles.section}>
-      <div className="col-12">
-        <header>
-          {children}
-          <div className="col-12 col-sm-8 col-lg-6 mx-auto p-0">
-            <ShortForm light />
-          </div>
-          <p>{`Preencha o formulário acima e deixe sua \n${web ? 'empresa' : 'marca'} se destacar no mercado.`}</p>
-          <Button id="hero-projects" className="outline sm" href="#projects" RightIcon={Arrow} />
-        </header>
+      <div className="container">
+        <div className="col-12">
+          <header>
+            {children}
+            <div className="col-12 col-sm-8 col-lg-6 mx-auto p-0">
+              <ShortForm light />
+            </div>
+            <p>{`Preencha o formulário acima e deixe sua \n${web ? 'empresa' : 'marca'} se destacar no mercado.`}</p>
+            <Button id="hero-projects" className="outline white sm" href="#projects" RightIcon={Arrow} />
+          </header>
+        </div>
       </div>
 
       <div className={styles.mosaic} id="mosaic">

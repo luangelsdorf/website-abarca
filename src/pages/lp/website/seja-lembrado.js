@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
+import Overline from 'src/components/common/Overline';
 import Section from 'src/components/common/Section';
 import Hero from 'src/components/landing-pages/brand/Hero';
 import Projects from 'src/components/landing-pages/web/common/Projects';
@@ -33,10 +34,11 @@ export default function Remember() {
             slot09={<Image data-project="robtec" fill src="/images/hero/robtec/cover.jpg" alt="" />}
             slot10={<Image data-project="util" fill src="/images/hero/util/cover.jpg" alt="" />}
           >
+            <p>Oferta por tempo limitado: <span>0h 59min 28s</span></p>
             <h1>
-              <span className="h-sans">Quem não é visto,</span>
+              <span>Seu website com</span>
               <br />
-              <span>não é lembrado!</span>
+              <span className="h-sans">até 60% de desconto</span>
             </h1>
           </Hero>
         </Section>

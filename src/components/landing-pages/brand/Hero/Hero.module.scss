@@ -8,17 +8,34 @@
   position: relative;
 
   header {
-    padding-top: calc(110px + 96px);
+    padding-top: 72px;
     text-align: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h1 {
+      font: var(--display);
       margin-bottom: 40px;
     }
 
-    p {
-      margin-top: 16px;
-      margin-bottom: 56px;
+    & > p {
+      &:first-of-type {
+        font: var(--body-default-lg);
+        font-weight: 500;
+        margin-bottom: 24px;
+        padding: 16px 24px;
+        border: 1px solid rgb(var(--default-cyan));
+        border-radius: 72px;
+      }
+
+      &:not(:first-of-type) {
+        font: var(--body-default-sm);
+        color: rgb(var(--default-cyan));
+        margin-top: 24px;
+        margin-bottom: 40px;
+      }
     }
 
     a {
@@ -58,7 +75,7 @@
     z-index: 1;
     width: 100%;
     height: 880px;
-    background: linear-gradient(180deg, rgba(1, 1, 1, 0) 0%, #010101 100%);
+    background: linear-gradient(180deg, rgba(0, 30, 98, 0) 0%, #001e62 100%);
     pointer-events: none;
 
     @include mixins.lg {
