@@ -18,15 +18,11 @@ export default function Mobile({ content }) {
     function callback(entries) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          if (entry.intersectionRatio > 0.8) {
-            entry.target.classList.add(styles.active);
-            entry.target.querySelector(`.${styles.outer}`).classList.add('light');
-          }
+          entry.target.classList.add(styles.active);
+          entry.target.querySelector(`.${styles.outer}`).classList.add('light');
         } else {
-          if (entry.intersectionRatio < 0.3) {
-            entry.target.classList.remove(styles.active);
-            entry.target.querySelector(`.${styles.outer}`).classList.remove('light');
-          }
+          entry.target.classList.remove(styles.active);
+          entry.target.querySelector(`.${styles.outer}`).classList.remove('light');
         }
       });
     }
@@ -43,15 +39,17 @@ export default function Mobile({ content }) {
       <div className="container">
         <div className={styles.outer}>
           <div className={`row ${styles.inner}`}>
-            <div className="col-12 col-lg-5">
+            <div className="order-1 order-xl-0">
               <Image src={iphone} alt="" width="519" height="665" />
             </div>
-            <div className="col-12 col-lg-7">
+            <div className="col-xl-8 col-xxl-7 order-0 order-xl-1">
               <div className={styles.textContent}>
                 <h2>
                   <span>Um projeto que</span> cabe no bolso!
                 </h2>
-                <p>{'Por que esperar para ter um site incrível, vamos começar a criar seu \nsite hoje mesmo? Preencha o formulário abaixo e entre em contato agora!'}</p>
+                <p>
+                  Por que esperar para ter um site incrível, vamos começar a criar seu site hoje mesmo? Entre em contato agora!
+                </p>
                 <form onSubmit={handleSubmit(submitForm)}>
                   <div className={`floating${!errors.entry_443452100 ? '' : ' ' + 'error'}`}>
                     <input id={`name_${formId}`} placeholder="Como podemos lhe chamar?" type="text" {...register('entry_443452100', { required: errorMessage })} />
@@ -76,7 +74,7 @@ export default function Mobile({ content }) {
                   </div>
                   <Button id="form-submit" btnElement type="submit" className="lg form-submit" RightIcon={Arrow}>Enviar Solicitação</Button>
                   <Spinner style={{ display: isSubmitting ? 'block' : 'none' }} />
-                  <span style={{ opacity: isSubmitSuccessful ? '1' : '0' }}>✓ Enviada com sucesso!</span>
+                  <span style={{ display: isSubmitting ? 'block' : 'none' }}>✓ Enviada com sucesso!</span>
                 </form>
               </div>
             </div>

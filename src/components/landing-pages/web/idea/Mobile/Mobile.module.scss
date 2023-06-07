@@ -1,9 +1,11 @@
+@use "../../../../../styles/scss/mixins";
+
 .section {
   &.active {
     .outer {
       background-color: rgb(var(--white));
       border-color: rgb(var(--white));
-      
+
       p {
         color: rgb(var(--blue));
       }
@@ -29,6 +31,10 @@
   background-color: rgb(var(--dark-blue));
   border-radius: 32px;
   transition: 350ms;
+
+  @include mixins.lg {
+    margin: 0 12px;
+  }
 }
 
 .inner {
@@ -70,11 +76,34 @@
     object-fit: contain;
     object-position: bottom left;
   }
-}
 
+  @include mixins.xxl {
+    img {
+      width: 33.33333333%;
+      height: 100%;
+    }
+  }
+  @include mixins.xl {
+    img {
+      position: relative;
+      left: 0;
+    }
+  }
+  @include mixins.lg {
+    h2, p {
+      padding: 0;
+    }
+
+    img {
+      width: 105%;
+      height: 445px;
+    }
+  }
+}
 
 .textContent {
   margin: 72px 0;
+
   & > form {
     display: flex;
     align-items: center;
@@ -88,6 +117,13 @@
       &:first-child,
       &:nth-child(4) {
         flex-grow: 1;
+
+        @media (max-width: 1600px) {
+          flex-basis: 0%;
+        }
+        @include mixins.xl {
+          flex-basis: auto;
+        }
       }
 
       &:nth-child(4),
@@ -99,6 +135,34 @@
     [type="submit"] {
       margin-right: auto;
       transition: 500ms;
+    }
+  }
+
+  @include mixins.xl {
+    text-align: center;
+  }
+
+  @include mixins.lg {
+    padding: 0 24px;
+    margin-top: 64px;
+    margin-bottom: 24px;
+
+    & > form {
+      padding: 0;
+      flex-wrap: nowrap;
+      flex-direction: column;
+
+      & > :global(.floating) {
+        width: 100%;
+        margin-bottom: 0 !important;
+      }
+
+      [type="submit"] {
+        margin: auto;
+        width: 100%;
+        justify-content: center;
+        margin-top: 16px;
+      }
     }
   }
 }

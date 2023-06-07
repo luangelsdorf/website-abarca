@@ -23,9 +23,9 @@
   --heading-sans-small: 500 clamp(28px, 2.8vw, 48px) / clamp(36px, 3.9vw, 64px) var(--inter);
   --heading-sans-extra-small: 500 clamp(24px, 2.2vw, 40px) / clamp(32px, 2.8vw, 48px) var(--inter);
 
-  --body-default-lg: 400 20px/28px var(--inter);
-  --body-default-md: 400 18px/24px var(--inter);
-  --body-default-sm: 400 14px/21px var(--inter);
+  --body-default-lg: 400 20px/32px var(--inter);
+  --body-default-md: 400 18px/28px var(--inter);
+  --body-default-sm: 400 14px/24px var(--inter);
   --body-detail: 400 12px/18px var(--inter);
 
   @media (min-width: 576px) {

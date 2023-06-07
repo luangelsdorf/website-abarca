@@ -28,7 +28,7 @@ export default function Idea() {
           <Hero />
         </Section>
 
-        <Section id="mobile" pt="120" pb="120">
+        <Section id="mobile" pt="120 80" pb="120 80">
           <Mobile />
         </Section>
 
