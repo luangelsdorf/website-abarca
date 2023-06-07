@@ -227,14 +227,14 @@ export default function Hero() {
                 <span>não é lembrado!</span>
               </h1>
               <p>
-                {'Criamos websites marcantes feitos para \ngerar resultados para seu negócio.'}
-                <br />
+                {'Criamos websites marcantes feitos para \ngerar resultados para seu negócio. '}
+                <br className="d-none d-md-block" />
                 <strong>Solicite sua proposta!</strong>
               </p>
               <HeroForm light short />
             </div>
           </div>
-          <div className="col-12 col-lg-9 row">
+          <div className="col-12 col-lg-9 row d-none d-lg-flex">
             {
               portfolio.map((column, index) => (
                 <div className={`col ${styles.column}`} key={index}>

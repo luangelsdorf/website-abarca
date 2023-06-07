@@ -24,7 +24,7 @@ export default function Idea() {
       </Head>
 
       <main>
-        <Section id="home">
+        <Section id="home" pb="0 80">
           <Hero />
         </Section>
 
