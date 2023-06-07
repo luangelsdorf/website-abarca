@@ -28,7 +28,7 @@
     }
   }
 
-  @include mixins.xl {
+  @include mixins.xxl {
     height: auto;
   }
 
@@ -84,6 +84,16 @@
     & > a {
       position: relative;
       top: auto;
+    }
+  }
+
+  @include mixins.xxl {
+    height: auto;
+  }
+
+  @include mixins.xl {
+    & > div:last-child {
+      margin: auto;
     }
   }
 
