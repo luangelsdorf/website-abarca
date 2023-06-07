@@ -1,0 +1,67 @@
+@keyframes pulse-1 {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50%,
+  60% {
+    opacity: 0.2;
+    transform: scale(4);
+  }
+  70%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes pulse-2 {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50%,
+  60% {
+    opacity: 0.1;
+    transform: scale(2.5);
+  }
+}
+
+.dot {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  color: rgb(var(--white));
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    opacity: 0;
+    border-radius: 50%;
+  }
+
+  &::before {
+    animation: pulse-1 3000ms ease infinite;
+  }
+
+  &::after {
+    animation: pulse-2 3000ms ease infinite;
+  }
+
+  svg {
+    position: absolute;
+    top: -150%;
+    left: -150%;
+  }
+}

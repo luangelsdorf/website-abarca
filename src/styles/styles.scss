@@ -6,8 +6,6 @@
 @use "scss/bootstrap";
 
 :root {
-  overflow-y: overlay;
-
   &.no-scroll {
     overflow: hidden;
   }
@@ -86,6 +84,8 @@ menu {
 
 dialog {
   padding: 0;
+  border: 0;
+  outline: 0;
 }
 
 dialog.fullscreen {
@@ -124,7 +124,7 @@ dialog.fullscreen {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgb(153, 153, 153, 0);
+  background-color: rgb(var(--light-cyan), 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
