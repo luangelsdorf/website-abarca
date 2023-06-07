@@ -39,8 +39,8 @@ export default function Testimonials({ content }) {
             <header data-reveal-parent={0.35}>
               <h2>
                 <span>O seu sucesso é </span>
-                <br className="d-none d-lg-block" />
-                <span className="h-sans">o nosso sucesso</span>
+                <br />
+                <span className="h-sans"> o nosso sucesso</span>
               </h2>
               <p>
                 Veja depoimentos de como a <span>Abarca</span> tem
@@ -78,6 +78,7 @@ export default function Testimonials({ content }) {
               ))
             }
           </Swiper>
+          <Button style={{width: 'max-content', margin: 'auto', marginTop: '40px'}} className="d-flex d-lg-none" RightIcon={Arrow} href="#contact">Iniciar um Projeto</Button>
         </div>
       </div>
     </div>
