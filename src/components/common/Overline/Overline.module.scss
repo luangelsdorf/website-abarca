@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "src/styles/scss/mixins";
 
 .p {
   position: relative;
@@ -6,16 +7,9 @@
   justify-content: center;
   align-items: center;
 
-  /* &::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    height: 1px;
-    background-color: rgb(var(--default-cyan));
-    transform: scaleX(0);
-    transition: 500ms;
-    transition-delay: 750ms;
-  } */
+  & > svg {
+    overflow: visible;
+  }
 
   rect {
     fill: none;
@@ -62,10 +56,31 @@
     transition: 350ms;
     transition-delay: 1.8s;
   }
+
+  @include mixins.lg {
+    & > svg {
+      height: 40px;
+      margin-bottom: -8px;
+
+      & > svg {
+        overflow: visible;
+      }
+
+      & > rect {
+        height: 40px;
+        rx: 20px;
+      }
+
+      & > text {
+        transform: translateY(-5px);
+      }
+    }
+  }
 }
 
 .visible {
-  .icon path, text {
+  .icon path,
+  text {
     transform: translateY(0);
   }
 
@@ -87,5 +102,11 @@
   & ~ p {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  @include mixins.lg {
+    .icon path {
+      transform: translateY(-4px);
+    }
   }
 }

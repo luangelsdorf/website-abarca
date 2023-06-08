@@ -18,8 +18,7 @@ export default function Features({ content }) {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    let mm = gsap.matchMedia();
-    mm.add('(min-width: 992px)', () => {
+    let ctx = gsap.context(() => {
       gsap.to(`[data-trigger]`, {
         x: (index, target) => -(target.scrollWidth - target.clientWidth),
         ease: 'none',
@@ -46,7 +45,7 @@ export default function Features({ content }) {
       });
     });
 
-    return () => mm.revert();
+    return () => ctx.revert();
   }, []);
 
   const data = [
@@ -103,13 +102,13 @@ export default function Features({ content }) {
   return (
     <div className={styles.section}>
       <div className="container">
-        <div className="col-12">
+        <div className="col-12 p-0">
           <header>
             <Overline lineLength={390}>Recursos e Vantagens</Overline>
             <h2>
-              <span className="h-sans">Tudo que seu negócio</span>
-              <br />
-              <span>precisa em um só lugar</span>
+              <span className="h-sans">Tudo que seu <br className="d-block d-lg-none" />negócio </span>
+              <br className="d-none d-lg-block" />
+              <span>precisa <br className="d-block d-lg-none" />em um só lugar</span>
             </h2>
           </header>
         </div>
@@ -117,15 +116,15 @@ export default function Features({ content }) {
           <div className="row container flex-nowrap" data-reveal-parent={0.1}>
             {
               data.map((feature, index) => (
-                <div className="col-12 col-lg-4" key={index}>
+                <div className="col-12 col-sm-9 col-md-7 col-lg-5 col-xl-4" key={index}>
                   <Card {...feature} />
                 </div>
               ))
             }
-            <div className="col-12 col-lg-4">
+            <div className="col-12 col-sm-9 col-md-7 col-lg-5 col-xl-4">
               <div className={styles.formCard}>
-                <h3>Vamos Iniciar seu Projeto</h3>
-                <p>Preencha o formulário abaixo que retornaremos o contato em breve.</p>
+                <h3>Vamos Iniciar <br className="d-block d-lg-none" /> seu Projeto</h3>
+                <p>Preencha o formulário abaixo, retornaremos em breve.</p>
                 <HeroForm light short />
               </div>
             </div>

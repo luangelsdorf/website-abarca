@@ -1,41 +1,39 @@
-import { useEffect, useState } from 'react';
-import useMediaQuery from 'src/hooks/useMediaQuery';
+import { useId } from "react"
 
 export default function Section({
   children,
-  mt = 0,
-  mb,
-  pt,
-  pb,
-  style,
+  mt = '',
+  mb = '',
+  pt = '',
+  pb = '',
+  className,
   ...rest
 }) {
-
-  const [device, setDevice] = useState('desktop');
-
-  let spacing = {
-    desktop: {
-      ...(mt && { marginTop: `${mt.split?.(' ')[0]}px` }),
-      ...(mb && { marginBottom: `${mb.split?.(' ')[0]}px` }),
-      ...(pt && { paddingTop: `${pt.split?.(' ')[0]}px` }),
-      ...(pb && { paddingBottom: `${pb.split?.(' ')[0]}px` }),
-    },
-    mobile: {
-      ...(mt && { marginTop: `${mt.split?.(' ')[1]}px` }),
-      ...(mb && { marginBottom: `${mb.split?.(' ')[1]}px` }),
-      ...(pt && { paddingTop: `${pt.split?.(' ')[1]}px` }),
-      ...(pb && { paddingBottom: `${pb.split?.(' ')[1]}px` }),
-    }
-  }
-
-  let isMobile = useMediaQuery('lg');
-
-  useEffect(() => {
-    isMobile ? setDevice('mobile') : setDevice('desktop');
-  }, [isMobile]);
+  let id = useId();
+  id = '-' + id.replaceAll(':', '');
 
   return (
-    <section style={{ ...spacing[device], ...style }} {...rest}>
+    <section className={`${className ? className + ' ' : ''}section${id}`} {...rest}>
+      <style>
+        {`
+          .section${id} {
+            ${mt && `margin-top: ${mt.split?.(' ')[0]}px;`}
+            ${mb && `margin-bottom: ${mb.split?.(' ')[0]}px;`}
+            ${pt && `padding-top: ${pt.split?.(' ')[0]}px;`}
+            ${pb && `padding-bottom: ${pb.split?.(' ')[0]}px;`}
+          }
+
+          @media (max-width: 992px) {
+            .section${id} {
+              ${mt && `margin-top: ${mt.split?.(' ')[1]}px;`}
+              ${mb && `margin-bottom: ${mb.split?.(' ')[1]}px;`}
+              ${pt && `padding-top: ${pt.split?.(' ')[1]}px;`}
+              ${pb && `padding-bottom: ${pb.split?.(' ')[1]}px;`}
+            }
+          }
+        `}
+      </style>
+
       {children}
     </section>
   )

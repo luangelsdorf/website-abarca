@@ -32,15 +32,15 @@ export default function Idea() {
           <Mobile />
         </Section>
 
-        <Section id="projects" pt="120" pb="120">
+        <Section id="projects" pt="120 80" pb="120 80">
           <Projects web />
         </Section>
 
-        <Section id="testimonials" pt="120" pb="120">
+        <Section id="testimonials" pt="120 80" pb="120 80">
           <Testimonials />
         </Section>
 
-        <Section id="features" pt="120" pb="120">
+        <Section id="features" pt="120 80" pb="120 80">
           <Features />
         </Section>
 
