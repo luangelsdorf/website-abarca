@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
 
-  & > svg {
+  & > svg > svg {
     overflow: visible;
   }
 
@@ -59,9 +59,6 @@
 
   @include mixins.lg {
     & > svg {
-      height: 40px;
-      margin-bottom: -8px;
-
       & > svg {
         overflow: visible;
       }

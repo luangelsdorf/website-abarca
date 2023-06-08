@@ -41,7 +41,7 @@
     .row {
       margin-top: 300px;
 
-      @include mixins.lg {
+      @include mixins.xl {
         margin-top: 240px;
         .col-12 {
           padding: 0 12px;

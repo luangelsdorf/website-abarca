@@ -1,4 +1,4 @@
-@use "../../../../../styles/scss/mixins";
+@use "src/styles/scss/mixins";
 
 @keyframes spin {
   to {
@@ -48,6 +48,50 @@
       }
     }
   }
+
+  @include mixins.xxl {
+    header {
+      h2 {
+        font: var(--display-ext);
+      }
+
+      & > div {
+        & > div {
+          top: -50%;
+        }
+      }
+    }
+  }
+
+  @include mixins.lg {
+    header {
+      margin-bottom: 40px;
+      p {
+        margin-bottom: 24px;
+      }
+
+      & > div {
+        & > div {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include mixins.sm {
+    header {
+      h2 {
+        font: var(--display);
+        span:first-child, span:last-child {
+          text-align: center;
+        }
+      }
+    }
+
+    & > :global(.container) {
+      padding: 0;
+    }
+  }
 }
 
 .mockup {
@@ -68,15 +112,38 @@
     transform: scale(1) rotateZ(0deg) rotateY(-1.3deg);
     object-fit: fill;
   }
+
+  @include mixins.lg {
+    display: none;
+  }
 }
 
 .formWrapper {
+  position: relative;
   margin-top: 64px;
   width: 440px;
 
   & > div {
     margin-bottom: 24px;
     text-align: center;
+  }
+
+  @include mixins.xxl {
+    left: -8%;
+  }
+
+  @include mixins.lg {
+    left: auto;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    & > div {
+      margin-bottom: 48px;
+    }
+  }
+
+  @include mixins.md {
+    width: auto;
   }
 }
 
@@ -85,5 +152,11 @@
 
   & > div:first-child {
     position: absolute;
+  }
+
+  @include mixins.lg {
+    & > div:first-child {
+      position: relative;
+    }
   }
 }

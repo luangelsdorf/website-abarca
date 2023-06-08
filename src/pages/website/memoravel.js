@@ -44,19 +44,19 @@ export default function Idea() {
           <Features />
         </Section>
 
-        <Section id="support" pt="120" pb="120">
+        <Section id="support" pt="120 80" pb="120 80">
           <Support />
         </Section>
 
-        <Section id="pricing" pt="120" pb="146">
+        <Section id="pricing" pt="120 80" pb="146 80">
           <Pricing />
         </Section>
 
-        <Section id="faq" pt="120" pb="200">
+        <Section id="faq" pt="120 80" pb="200 80">
           <FAQ />
         </Section>
 
-        <Section id="contact">
+        <Section id="contact" pt="0 80" pb="0 0">
           <Contact />
         </Section>
       </main>
