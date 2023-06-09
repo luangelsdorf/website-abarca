@@ -1,0 +1,90 @@
+@mixin infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 64px;
+
+  & > div {
+    display: flex;
+    gap: 48px;
+    small {
+      display: block;
+      &:first-child {
+        font-weight: 700;
+      }
+      &:last-child {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  background-color: #0086ff;
+  overflow: hidden;
+  --pos: translateX(0);
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 12.5%;
+    background-color: #0072d9;
+    transform: var(--pos);
+  }
+}
+
+.deepBlue {
+  background-color: #0e1530;
+  height: 100vh;
+  width: 50vw;
+  @include infos;
+}
+
+.whiteBlue {
+  .skyBlue,
+  .white {
+    position: relative;
+    z-index: 1;
+    width: 50vw;
+    height: 50vh;
+  }
+
+  .skyBlue {
+    position: relative;
+    @include infos;
+  }
+
+  .white {
+    display: flex;
+    color: #0e1530;
+
+    h4 {
+      color: #0e1530;
+      font-weight: 700;
+    }
+
+    & > div {
+      width: 50%;
+      height: 100%;
+      @include infos;
+
+      &:first-child {
+        background-color: #eff3fb;
+      }
+      &:last-child {
+        background-color: #ffffff;
+      }
+    }
+  }
+}
+
+.deepBlue,
+.skyBlue {
+  h4 {
+    color: #eff3fb;
+  }
+  color: #eff3fb;
+}

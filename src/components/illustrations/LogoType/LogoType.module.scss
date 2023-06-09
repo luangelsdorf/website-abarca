@@ -1,0 +1,22 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EFF3FB;
+}
+
+.logo {
+  :global(.shield) {
+    visibility: hidden;
+  }
+  :global(.type path) {
+    visibility: hidden;
+    transform: translateY(100%);
+  }
+  :global(.tagline) {
+    visibility: hidden;
+    transform: translateY(100%);
+  }
+}

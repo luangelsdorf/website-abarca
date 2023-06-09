@@ -1,0 +1,17 @@
+@use "src/styles/scss/animations";
+
+@include animations.logo-animation;
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .shield {
+    :global(.shield) {
+      animation: logo-animation 4s infinite alternate;
+    }
+  }
+}
