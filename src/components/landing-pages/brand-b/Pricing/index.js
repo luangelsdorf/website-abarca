@@ -98,7 +98,6 @@ export default function Pricing({ content }) {
     document.querySelectorAll(`.${styles.pack}`)[1].classList.toggle(styles.active);
   }
 
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -107,8 +106,11 @@ export default function Pricing({ content }) {
       gsap.utils.toArray(`.${styles.pack}`).forEach(pack => {
         ScrollTrigger.create({
           trigger: pack,
-          start: 'top 20%',
+          start: '-148px 20%',
+          end: '70% 20%',
           onEnter: e => e.trigger.classList.add(styles.active),
+          onLeave: e => e.trigger.classList.remove(styles.active),
+          onEnterBack: e => e.trigger.classList.add(styles.active),
           onLeaveBack: e => e.trigger.classList.remove(styles.active),
         })
       });
@@ -135,11 +137,10 @@ export default function Pricing({ content }) {
           {
             packages.map((pack, packIndex) => {
               return (
-                <div className="col-12 col-lg-4" key={`pack-${packIndex}`}>
+                <div className="col-12 col-xl-4" key={`pack-${packIndex}`}>
                   <article className={`${styles.pack} ${packIndex === 1 && !isMobile ? styles.active : ''} ${pack.mostSold ? styles.mostSold : ''}`}
-                    onMouseEnter={isMobile ? null : toggleStyle}
-                    onMouseLeave={isMobile ? null : toggleStyle}
-                    
+                    onMouseEnter={toggleStyle}
+                    onMouseLeave={toggleStyle}
                   >
                     <header>
                       <h3>{pack.name}</h3>

@@ -1,4 +1,4 @@
-@use "../../../../styles/scss/mixins";
+@use "src/styles/scss/mixins";
 
 @mixin active-card {
   background-color: rgb(var(--white));
@@ -54,8 +54,30 @@
     text-align: center;
     margin-bottom: 72px;
 
-    h2 {
-      margin-top: 40px;
+    p {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include mixins.lg {
+    & > div > header {
+      margin-bottom: 48px;
+
+      p {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  @include mixins.xl {
+    :global(.row) {
+      gap: 64px;
+    }
+  }
+
+  @include mixins.md {
+    :global(.row) {
+      gap: 40px;
     }
   }
 }
@@ -69,37 +91,22 @@
   border-radius: 24px;
   box-shadow: 0px 0px 120px rgba(0, 14, 47, 0.25);
 
-  @include mixins.md {
-    padding: 32px 16px;
-  }
-
-  @include mixins.lg {
-    text-align: left !important;
-  }
-
   &:hover {
     @media (min-width: 992px) {
       @include active-card;
-      & > header {
-        &::before {
-          content: "";
-          position: absolute;
-          left: -40px;
-          top: -40px;
-          width: calc(100% + 80px);
-          height: calc(100% + 65px);
-          border-radius: 24px 24px 0 0;
-          background-color: rgb(var(--light-cyan));
-          border: 1px solid rgb(var(--light-cyan));
-        }
+    }
 
-        h3 {
-          color: rgb(var(--white));
-        }
+    & > header {
+      &::before {
+        opacity: 1;
+      }
 
-        p {
-          color: rgb(var(--blue));
-        }
+      h3 {
+        color: rgb(var(--white));
+      }
+
+      p {
+        color: rgb(var(--blue));
       }
     }
   }
@@ -112,10 +119,25 @@
     align-items: center;
     position: relative;
 
+    &::before {
+      content: "";
+      position: absolute;
+      left: -40px;
+      top: -32px;
+      width: calc(100% + 80px);
+      height: calc(100% + 57px);
+      border-radius: 24px 24px 0 0;
+      background-color: rgb(var(--light-cyan));
+      border: 1px solid rgb(var(--light-cyan));
+      transition: 350ms;
+      opacity: 0;
+    }
+
     h3,
     p {
       position: relative;
       z-index: 1;
+      transform: 350ms;
     }
 
     h3 {
@@ -244,6 +266,21 @@
       padding: 8px 14px;
       border-radius: 72px;
       transform: translate(-50%, -50%);
+    }
+  }
+
+  @include mixins.lg {
+    text-align: left !important;
+  }
+
+  @include mixins.md {
+    padding: 32px 16px;
+
+    & > header {
+      &::before {
+        width: calc(100% + 32px);
+        left: -16px;
+      }
     }
   }
 }
