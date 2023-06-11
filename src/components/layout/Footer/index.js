@@ -16,7 +16,7 @@ export default function Footer({ fullHeight }) {
             <span>Rio Grande do Sul, Brasil</span>
           </p>
 
-          <div className={`d-none d-lg-flex ${styles.social}`}>
+          <div className={styles.social}>
             <a href="https://instagram.com/abarca.comunica/" target="_blank" rel="noopener noreferrer">
               <Instagram />
             </a>

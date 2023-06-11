@@ -28,7 +28,9 @@ export default function Contact({ content }) {
       });
     }
 
-    const observer = new IntersectionObserver(callback, { rootMargin: '0% 0% -60% 0%' });
+    let margin = matchMedia('(max-width: 768px)').matches ? '80% 0% -120% 0%' : '0% 0% -60% 0%';
+
+    const observer = new IntersectionObserver(callback, { rootMargin: margin });
     const targets = document.querySelectorAll(`.${styles.section}`);
     targets.forEach(target => observer.observe(target));
 
@@ -39,15 +41,14 @@ export default function Contact({ content }) {
     <div className={styles.section}>
       <div className="container">
         <div className="row">
-          <div className="col-12 col-lg-4">
+          <div className="col-12 col-xl-4">
             <div className={styles.textContent} data-reveal-parent={0.4}>
-              <h2 className="d-none d-xl-block">{'Vamos Iniciar \nseu Projeto'}</h2>
-              <h2 className="d-block d-xl-none">Inicie seu Projeto</h2>
-              <p className="d-none d-lg-block">Não importa se você tem uma ideia vaga ou um projeto já em andamento, <span>vamos ajudá-lo!</span></p>
+              <h2>{'Vamos Iniciar \nseu Projeto'}</h2>
+              <p>Não importa se você tem uma ideia vaga ou um projeto já em andamento, <span>vamos ajudá-lo!</span></p>
               <p>Estamos ansiosos para ouvir sobre seus projetos. Entre em contato conosco, basta responder as perguntas ao lado que entraremos em contato.</p>
             </div>
           </div>
-          <div className="col-12 col-lg-6 offset-lg-2">
+          <div className="col-12 col-xl-6 offset-xl-2">
             <div className={styles.form}>
               <form onSubmit={handleSubmit(submitForm)}>
                 <div className={`floating${!errors[fields.name] ? '' : ' ' + 'error'}`}>
@@ -107,9 +108,9 @@ export default function Contact({ content }) {
                   <textarea id="info" placeholder="Nos conte um pouco mais sobre a sua ideia e como podemos lhe ajudar." {...register(fields.infos)}></textarea>
                   <label htmlFor="info">Informações Adicionais</label>
                 </div>
-                <Button id="form-submit" btnElement type="submit" className="lg form-submit" RightIcon={Arrow}>Enviar Solicitação</Button>
+                <Button id="form-submit" btnElement type="submit" className="form-submit" RightIcon={Arrow}>Enviar Solicitação</Button>
                 <Spinner style={{ display: isSubmitting ? 'block' : 'none' }} />
-                <span style={{ opacity: isSubmitSuccessful ? '1' : '0' }}>✓ Enviada com sucesso!</span>
+                <span style={{ display: isSubmitSuccessful ? 'block' : 'none' }}>✓ Enviada com sucesso!</span>
               </form>
             </div>
           </div>

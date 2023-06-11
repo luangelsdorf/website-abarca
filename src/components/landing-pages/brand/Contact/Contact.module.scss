@@ -1,4 +1,4 @@
-@use "../../../../styles/scss/mixins";
+@use "src/styles/scss/mixins";
 
 .section {
   position: relative;
@@ -36,6 +36,30 @@
       background-color: rgb(var(--white));
     }
   }
+
+  @include mixins.xl {
+    padding-top: 80px;
+    & > :global(.container) {
+      margin-bottom: 80px;
+    }
+
+    &::after {
+      content: none;
+    }
+
+    &.light {
+      footer {
+        p {
+          &:last-child {
+            color: rgb(var(--default-sea));
+          }
+        }
+        &::after {
+          background-color: rgb(var(--default-sea));
+        }
+      }
+    }
+  }
 }
 
 .textContent {
@@ -45,12 +69,14 @@
   height: 100%;
 
   h2 {
+    font: var(--heading-large);
     margin-bottom: 72px;
+    white-space: pre;
   }
 
   p {
     &:first-of-type {
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     span {
@@ -59,12 +85,25 @@
     }
   }
 
-  @include mixins.lg {
-    margin-bottom: 56px;
-
+  @include mixins.xl {
+    height: auto;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 48px;
+    text-align: center;
     h2 {
       margin-bottom: 40px;
+      white-space: break-spaces;
     }
+    p {
+      &:first-of-type {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  @include mixins.md {
+    max-width: none;
   }
 }
 
@@ -75,6 +114,7 @@
     gap: 24px;
     flex-wrap: wrap;
     width: 100%;
+    border-radius: 32px;
     background-color: rgb(var(--darker-blue));
     transition: 500ms;
 
@@ -96,7 +136,7 @@
         margin-bottom: 24px;
       }
 
-      @include mixins.xl {
+      @include mixins.lg {
         &:nth-child(n) {
           flex-grow: 1;
           width: 100%;
@@ -104,11 +144,14 @@
       }
     }
 
-    @include mixins.lg {
+    @include mixins.xl {
       justify-content: center;
+      padding: 32px 24px;
+
+      [type="submit"] {
+        width: 100%;
+        justify-content: center;
+      }
     }
-  }
-  @include mixins.lg {
-    padding: 0 16px;
   }
 }

@@ -56,7 +56,7 @@ export default function Idea() {
           <FAQ />
         </Section>
 
-        <Section id="contact" pt="0 80" pb="0 0">
+        <Section id="contact">
           <Contact />
         </Section>
       </main>

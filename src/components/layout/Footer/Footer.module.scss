@@ -48,6 +48,7 @@
     }
 
     .social {
+      display: flex;
       gap: 16px;
 
       a {
@@ -58,10 +59,21 @@
   }
 
   @include mixins.lg {
-    padding: 28px 0;
-
     .inner {
-      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 14px;
+
+      p {
+        &:last-child {
+          flex: none;
+          text-align: center;
+        }
+      }
+
+      .social {
+        gap: 24px;
+      }
     }
   }
 
