@@ -65,13 +65,13 @@ export default function FAQ() {
       }
     }
 
-    faq.current?.firstChild.childNodes.forEach(q => {
+    faqElement?.querySelectorAll('article').forEach(q => {
       q.addEventListener('shown.bs.collapse', handleCollapse);
       q.addEventListener('hidden.bs.collapse', handleCollapse);
     });
 
     return () => {
-      faqElement?.firstChild.childNodes.forEach(q => {
+      faqElement?.querySelectorAll('article').forEach(q => {
         q.removeEventListener('shown.bs.collapse', handleCollapse);
         q.removeEventListener('hidden.bs.collapse', handleCollapse);
       });

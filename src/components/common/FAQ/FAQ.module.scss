@@ -41,7 +41,10 @@
     }
 
     @include mixins.lg {
+      gap: 40px;
       & > div {
+        gap: 40px;
+        text-align: left;
         &:nth-child(odd) {
           article {
             margin-right: 0;
