@@ -101,23 +101,24 @@ export default function FAQ() {
           <Overline lineLength={336}>Criação de Websites</Overline>
           <h2>Perguntas Frequentes</h2>
         </header>
-        <div className="container">
-          <div className="row" ref={faq}>
-            <div className="col-12 col-lg-6" data-reveal-parent={0.2}>
-              {
-                firstHalf.map((question, index) => (
-                  <Question {...question} id={'first-' + index} key={index} />
-                ))
-              }
-            </div>
+      </div>
 
-            <div className="col-12 col-lg-6" data-reveal-parent={0.4}>
-              {
-                secondHalf.map((question, index) => (
-                  <Question {...question} id={'second-' + index} key={index} />
-                ))
-              }
-            </div>
+      <div className="container">
+        <div className="row" ref={faq}>
+          <div className="col-12 col-lg-6" data-reveal-parent={0.2}>
+            {
+              firstHalf.map((question, index) => (
+                <Question {...question} id={'first-' + index} key={index} />
+              ))
+            }
+          </div>
+
+          <div className="col-12 col-lg-6" data-reveal-parent={0.4}>
+            {
+              secondHalf.map((question, index) => (
+                <Question {...question} id={'second-' + index} key={index} />
+              ))
+            }
           </div>
         </div>
       </div>

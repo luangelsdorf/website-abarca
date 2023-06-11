@@ -1,3 +1,5 @@
+@use "src/styles/scss/mixins";
+
 .section {
   & > div {
     & > header {
@@ -10,6 +12,13 @@
 
       p {
         margin-bottom: 40px;
+      }
+
+      @include mixins.lg {
+        margin-bottom: 48px;
+        p {
+          margin-bottom: 24px;
+        }
       }
     }
   }
@@ -27,6 +36,21 @@
       &:nth-child(even) {
         article {
           margin-left: 14px;
+        }
+      }
+    }
+
+    @include mixins.lg {
+      & > div {
+        &:nth-child(odd) {
+          article {
+            margin-right: 0;
+          }
+        }
+        &:nth-child(even) {
+          article {
+            margin-left: 0;
+          }
         }
       }
     }
@@ -89,6 +113,12 @@
       h3 {
         color: rgb(var(--white));
       }
+    }
+  }
+
+  @include mixins.lg {
+    header {
+      padding: 24px 24px 24px 24px;
     }
   }
 }
