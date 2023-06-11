@@ -31,6 +31,7 @@
   .icon path {
     transition: 250ms;
     transform: translateY(-100%);
+    opacity: 0;
   }
 
   & + h2 {
@@ -67,10 +68,6 @@
         height: 40px;
         rx: 20px;
       }
-
-      & > text {
-        transform: translateY(-5px);
-      }
     }
   }
 }
@@ -79,6 +76,7 @@
   .icon path,
   text {
     transform: translateY(0);
+    opacity: 1;
   }
 
   &::before {
@@ -104,6 +102,10 @@
   @include mixins.lg {
     .icon path {
       transform: translateY(-4px);
+      opacity: 1;
+    }
+    text {
+      transform: translateY(-5px);
     }
   }
 }
