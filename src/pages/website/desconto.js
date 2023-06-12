@@ -1,10 +1,16 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
-import Overline from 'src/components/common/Overline';
+import FAQ from 'src/components/common/FAQ';
 import Section from 'src/components/common/Section';
+import Pricing from 'src/components/landing-pages/brand-b/Pricing';
+import Contact from 'src/components/landing-pages/brand/Contact';
 import Hero from 'src/components/landing-pages/brand/Hero';
+import Testimonials from 'src/components/landing-pages/brand/Testimonials';
 import Projects from 'src/components/landing-pages/web/common/Projects';
+import Features from 'src/components/landing-pages/web/idea/Features';
+import Mobile from 'src/components/landing-pages/web/idea/Mobile';
+import Support from 'src/components/landing-pages/web/idea/Support';
 import styles from 'src/styles/pages/landingpages.module.scss';
 
 export default function Remember() {
@@ -43,8 +49,36 @@ export default function Remember() {
           </Hero>
         </Section>
 
-        <Section pt="160" pb="88">
+        <Section id="mobile" pt="120 80" pb="120 80">
+          <Mobile />
+        </Section>
+
+        <Section pt="120 80" pb="120 80">
           <Projects />
+        </Section>
+
+        <Section id="testimonials" pt="120 80" pb="120 80">
+          <Testimonials />
+        </Section>
+
+        <Section id="features" pt="120 80" pb="120 80">
+          <Features />
+        </Section>
+
+        <Section id="support" pt="120 80" pb="120 80">
+          <Support />
+        </Section>
+
+        <Section id="pricing" pt="120 80" pb="146 80">
+          <Pricing />
+        </Section>
+
+        <Section id="faq" pt="120 80" pb="200 80">
+          <FAQ />
+        </Section>
+
+        <Section id="contact">
+          <Contact />
         </Section>
       </main>
     </div>
