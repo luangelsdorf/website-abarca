@@ -4,11 +4,7 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  height: 78vh;
-
-  &[data-small] {
-    height: 535px;
-  }
+  aspect-ratio: 1/0.89;
 
   a {
     position: relative;
@@ -111,11 +107,6 @@
   }
 
   @include mixins.lg {
-    &,
-    &[data-small] {
-      height: 340px;
-    }
-
     img {
       border-radius: 8px;
     }

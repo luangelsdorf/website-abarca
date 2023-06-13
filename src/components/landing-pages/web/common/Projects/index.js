@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './Projects.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
@@ -6,6 +6,7 @@ import ProjectCard from 'src/components/common/ProjectCard';
 import PresentationModal from 'src/components/common/PresentationModal';
 import ModalWrapper from 'src/components/portfolio/structures/ModalWrapper';
 import { useRouter } from 'next/router';
+import Overline from 'src/components/common/Overline';
 
 export default function Projects() {
   const portfolio = [
@@ -103,73 +104,94 @@ export default function Projects() {
 
   const router = useRouter();
   const topSwiper = useRef(null);
-  const [isMobile, setIsMobile] = useState(true);
 
   useEffect(() => {
-    let mobile = window.matchMedia('(max-width: 992px)').matches;
-    setIsMobile(mobile);
-
-    if (mobile) {
-      topSwiper.current.swiper.destroy();
+    function callback(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.body.classList.add('dark');
+        } else {
+          document.body.classList.remove('dark');
+        }
+      });
     }
+
+    const observer = new IntersectionObserver(callback, { rootMargin: '0% 0% -60% 0%' });
+    const targets = document.querySelectorAll(`.${styles.section}`);
+    targets.forEach(target => observer.observe(target));
+
+    return () => targets.forEach(target => observer.unobserve(target));
   }, []);
 
   return (
-    <section className={styles.section} id='slider'>
-      <div className={`row gy-4 ${styles.row1}`}>
-        <Swiper
-          ref={topSwiper}
-          spaceBetween={24}
-          slidesPerView={'auto'}
-          modules={[Autoplay]}
-          loop
-          speed={1800}
-          centeredSlides
-          autoplay={{
-            delay: 200,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-            reverseDirection: false,
-          }}
-        >
-          {
-            portfolio.map((project, index) => {
-              return (
-                <SwiperSlide key={`top-row-${index}`} className="col-12 col-lg-8">
-                  <ProjectCard modal {...project} />
-                </SwiperSlide>
-              )
-            })
-          }
-        </Swiper>
+    <section className={styles.section} id="slider">
+      <div className="col-12">
+        <header>
+          <Overline lineLength={440} icon>
+            <tspan className="d-none d-lg-inline">Projetos em Todo o Mundo</tspan>
+            <tspan className="d-inline d-lg-none">Nossos Projetos</tspan>
+          </Overline>
+          <h2>
+            <span>Conheça o que </span>
+            <span>criamos por aqui</span>
+          </h2>
+        </header>
       </div>
 
-      <div style={{ display: isMobile ? 'none' : 'flex' }} className={`row gy-4 flex-nowrap ${styles.row2}`}>
-        <Swiper
-          initialSlide={4}
-          spaceBetween={24}
-          slidesPerView={'auto'}
-          modules={[Autoplay]}
-          loop
-          speed={1800}
-          centeredSlides
-          autoplay={{
-            delay: 200,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-            reverseDirection: true,
-          }}
-        >
-          {
-            portfolio.map((project, index) => {
-              return (
-                <SwiperSlide key={`bottom-row-${index}`} className="col-12 col-lg-8">
-                  <ProjectCard modal {...project} />
-                </SwiperSlide>
-              )
-            })
-          }
-        </Swiper>
+      <div className="container">
+        <div className={`row gy-4 ${styles.row1}`}>
+          <Swiper
+            ref={topSwiper}
+            spaceBetween={24}
+            slidesPerView={'auto'}
+            modules={[Autoplay]}
+            speed={1800}
+            centeredSlides
+            autoplay={{
+              delay: 200,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+              reverseDirection: false,
+            }}
+          >
+            {
+              portfolio.map((project, index) => {
+                return (
+                  <SwiperSlide key={`top-row-${index}`} className="col-md-8 col-xl-6">
+                    <ProjectCard modal {...project} />
+                  </SwiperSlide>
+                )
+              })
+            }
+          </Swiper>
+        </div>
+        <div className={`row gy-4 flex-nowrap ${styles.row2}`}>
+          <Swiper
+            initialSlide={4}
+            spaceBetween={24}
+            slidesPerView={'auto'}
+            modules={[Autoplay]}
+            loop
+            speed={1800}
+            centeredSlides
+            autoplay={{
+              delay: 200,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+              reverseDirection: true,
+            }}
+          >
+            {
+              portfolio.map((project, index) => {
+                return (
+                  <SwiperSlide key={`bottom-row-${index}`} className="col-md-8 col-xl-6">
+                    <ProjectCard modal {...project} />
+                  </SwiperSlide>
+                )
+              })
+            }
+          </Swiper>
+        </div>
       </div>
 
       <PresentationModal open={!!router.query.project} toggleOpen={() => router.push(router.pathname, router.asPath, { scroll: false })}>

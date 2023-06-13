@@ -118,7 +118,7 @@
       &:nth-child(4) {
         flex-grow: 1;
 
-        @media (max-width: 1600px) {
+        @media (max-width: 1599px) {
           flex-basis: 0%;
         }
         @include mixins.xl {

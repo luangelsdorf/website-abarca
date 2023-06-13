@@ -1,17 +1,37 @@
 @use "../../../../../styles/scss/mixins";
 
 .section {
-  img {
-    width: 100%;
+  header {
+    text-align: center;
+    margin-bottom: 96px;
+
+    p {
+      margin-bottom: 40px;
+
+      svg {
+        color: var(--white);
+      }
+    }
+
+    h2 {
+      font: var(--heading-sans-medium);
+      color: rgb(var(--white));
+    }
+
+    @include mixins.lg {
+      margin-bottom: 64px;
+      p {
+        margin-bottom: 24px;
+        &::before {
+          content: none;
+        }
+      }
+    }
   }
 
-  :global {
-    .swiper-slide {
-      height: 84vh;
-
-      & > div {
-        height: 100%;
-      }
+  @include mixins.sm {
+    :global(.container) {
+      padding: 0 24px;
     }
   }
 }
@@ -42,25 +62,6 @@
 
 .row1 {
   margin-bottom: 24px;
-
-  @include mixins.lg {
-    :global {
-      .swiper-wrapper {
-        flex-direction: column;
-        row-gap: 24px;
-      }
-
-      .swiper-slide {
-        width: 100%;
-        height: 344px;
-        padding: 0 24px;
-      }
-    }
-  }
-}
-
-.row2 {
-  margin-bottom: 100px;
 }
 
 .row1,

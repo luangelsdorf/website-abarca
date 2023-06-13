@@ -16,8 +16,8 @@ export default function ProjectCard({ client, segment, services, local, cover, h
         href={modal ? `?project=${slug}` : `/portfolio/${slug}?referrer=${referrer}`}
         scroll={modal ? false : true}
       >
-        <Image loading="eager" sizes="100vw" src={`/images/portfolio/${slug}/${hover}`} width="200" height="200" alt="" />
-        <Image loading="eager" sizes="100vw" src={`/images/portfolio/${slug}/${cover}`} width="200" height="200" alt="" />
+        <Image loading="eager" sizes="100vw" src={`/images/portfolio/${slug}/${hover}`} fill alt="" />
+        <Image loading="eager" sizes="100vw" src={`/images/portfolio/${slug}/${cover}`} fill alt="" />
       </Link>
       <div className={styles.infos}>
         <div>
