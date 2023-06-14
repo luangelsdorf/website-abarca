@@ -8,7 +8,6 @@
   position: relative;
 
   header {
-    padding-top: 72px;
     text-align: center;
     position: relative;
     display: flex;
@@ -47,13 +46,6 @@
         transform: rotate(90deg);
       }
 
-      @include mixins.lg {
-        padding: 12px !important;
-        span {
-          display: none;
-        }
-      }
-
       :global(.arrow-shaft) {
         animation: infinite-arrow-shaft 2s infinite alternate;
       }
@@ -64,7 +56,25 @@
     }
 
     @include mixins.lg {
-      padding-top: 128px;
+      a {
+        padding: 12px !important;
+        span {
+          display: none;
+        }
+      }
+
+      & > p {
+        &:first-of-type {
+          font: var(--body-default-sm);
+          padding: 8px 20px;
+        }
+      }
+    }
+
+    @include mixins.sm {
+      h1 {
+        font: var(--display-ext);
+      }
     }
   }
 
@@ -79,7 +89,7 @@
     pointer-events: none;
 
     @include mixins.lg {
-      background: linear-gradient(180deg, rgba(1, 1, 1, 0) 0%, #010101 100%);
+      background: linear-gradient(180deg, rgba(0, 30, 98, 0) 0%, #001E62 100%);
       bottom: 0;
       top: auto;
       height: 760px;
@@ -178,6 +188,7 @@
 
     @include mixins.lg {
       width: calc(50% + 12px);
+      margin: 0 6px;
     }
   }
 }

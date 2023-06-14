@@ -6,6 +6,7 @@ import ShortForm from 'src/components/common/ShortForm';
 import { useRouter } from 'next/router';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import HeroForm from 'src/components/common/HeroForm';
 
 export default function Hero({
   children,
@@ -65,15 +66,20 @@ export default function Hero({
   return (
     <div className={styles.section}>
       <div className="container">
-        <div className="col-12">
-          <header>
-            {children}
-            <div className="col-12 col-sm-8 col-lg-6 mx-auto p-0">
-              <ShortForm light />
-            </div>
-            <p>{`Preencha o formulário acima e deixe sua \n${web ? 'empresa' : 'marca'} se destacar no mercado.`}</p>
-            <Button id="hero-projects" className="outline white sm" href="#projects" RightIcon={Arrow} />
-          </header>
+        <div className="row">
+          <div className="col-12">
+            <header>
+              {children}
+              <div className="col-12 col-sm-8 col-xl-6 mx-auto p-0 d-none d-lg-block">
+                <ShortForm light />
+              </div>
+              <div className="d-block d-lg-none">
+                <HeroForm short />
+              </div>
+              <p>{`Preencha o formulário acima e deixe sua \n${web ? 'empresa' : 'marca'} se destacar no mercado.`}</p>
+              <Button id="hero-projects" className="outline white sm" href="#projects" RightIcon={Arrow} />
+            </header>
+          </div>
         </div>
       </div>
 

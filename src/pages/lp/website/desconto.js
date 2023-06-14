@@ -26,7 +26,7 @@ export default function Remember() {
       </Head>
 
       <main>
-        <Section>
+        <Section pt="72 80">
           <Hero
             web
             slot01={<Image data-project="rodrigo-carvalho" fill src="/images/hero/rodrigo-carvalho/cover.jpg" alt="" />}
@@ -40,10 +40,14 @@ export default function Remember() {
             slot09={<Image data-project="robtec" fill src="/images/hero/robtec/cover.jpg" alt="" />}
             slot10={<Image data-project="util" fill src="/images/hero/util/cover.jpg" alt="" />}
           >
-            <p>Oferta por tempo limitado: <span>0h 59min 28s</span></p>
+            <p>
+              <span className="d-none d-lg-inline">Oferta por tempo limitado: </span>
+              <span className="d-inline d-lg-none">Oferta termina em: </span>
+              <span>0h 59min 28s</span>
+            </p>
             <h1>
-              <span>Seu website com</span>
-              <br />
+              <span>Seu website com </span>
+              <br className="d-none d-sm-block" />
               <span className="h-sans">até 60% de desconto</span>
             </h1>
           </Hero>
