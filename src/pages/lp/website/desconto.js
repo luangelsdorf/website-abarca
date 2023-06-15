@@ -12,9 +12,12 @@ import Projects from 'src/components/landing-pages/web/common/Projects';
 import Features from 'src/components/landing-pages/web/idea/Features';
 import Mobile from 'src/components/landing-pages/web/idea/Mobile';
 import Support from 'src/components/landing-pages/web/idea/Support';
+import useTimer from 'src/hooks/useTimer';
 import styles from 'src/styles/pages/landingpages.module.scss';
 
 export default function Remember() {
+  const timerString = useTimer();
+
   return (
     <div className={styles.page}>
       <Head>
@@ -27,7 +30,7 @@ export default function Remember() {
       </Head>
 
       <main>
-        <DiscountAlert />
+        <DiscountAlert timer={timerString} />
 
         <Section pt="72 80">
           <Hero
@@ -46,7 +49,7 @@ export default function Remember() {
             <p>
               <span className="d-none d-lg-inline">Oferta por tempo limitado: </span>
               <span className="d-inline d-lg-none">Oferta termina em: </span>
-              <span>0h 59min 28s</span>
+              <span>{timerString}</span>
             </p>
             <h1>
               <span>Seu website com </span>
