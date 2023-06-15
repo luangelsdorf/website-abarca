@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
+import DiscountAlert from 'src/components/common/DiscountAlert';
 import FAQ from 'src/components/common/FAQ';
 import Section from 'src/components/common/Section';
 import Pricing from 'src/components/landing-pages/brand-b/Pricing';
@@ -26,6 +27,8 @@ export default function Remember() {
       </Head>
 
       <main>
+        <DiscountAlert />
+
         <Section pt="72 80">
           <Hero
             web

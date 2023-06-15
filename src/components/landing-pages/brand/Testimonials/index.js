@@ -40,7 +40,7 @@ export default function Testimonials({ content }) {
               <h2>
                 <span>O seu sucesso é </span>
                 <br />
-                <span className="h-sans"> o nosso sucesso</span>
+                <span className="h-sans">o nosso sucesso</span>
               </h2>
               <p>
                 Veja depoimentos de como a <span>Abarca</span> tem

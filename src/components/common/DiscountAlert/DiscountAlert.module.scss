@@ -1,5 +1,8 @@
+@use "src/styles/scss/mixins";
+
 .alert[open] {
   position: relative;
+  z-index: 10;
   display: flex;
   position: fixed;
   bottom: 0;
@@ -44,5 +47,36 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+  }
+
+  @include mixins.lg {
+    width: 100%;
+    border-radius: 0;
+    padding: 16px 24px;
+
+    .timer {
+      font: var(--body-default-lg);
+      gap: 8px;
+    }
+
+    strong {
+      font: var(--body-default-lg);
+      color: rgb(var(--white));
+
+      span {
+        color: rgb(var(--dark-blue));
+      }
+    }
+
+    & > button {
+      border-radius: 0;
+      width: 24px;
+      height: 24px;
+
+      svg {
+        width: 10px;
+        height: 10px;
+      }
+    }
   }
 }
