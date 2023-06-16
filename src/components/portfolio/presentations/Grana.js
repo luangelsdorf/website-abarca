@@ -21,16 +21,16 @@ export default function Grana() {
       <Wrapper light>
         <Section>
           <Cover title="" local="Rio de Janeiro | Brasil" info={{ client: 'Grana Capital', segment: 'Fintech', services: ['Website'] }}>
-          <Image quality="100" loading="eager" src={basePath + 'Cover-Grana.jpg'} width="1400" height="800" alt="" />
+            <Image quality="100" loading="eager" src={basePath + 'Cover-Grana.jpg'} width="1400" height="800" alt="" />
           </Cover>
         </Section>
 
         <Section>
           <Intro info={{ client: 'Grana Capital', segment: 'Fintech', services: ['Website'] }}>
-            O Instituto Arca é uma ONG de Proteção Animal localizada no Sul do Brasil. Ela atua insesantemente para resgatar, cuidar e proporcionar uma vida digna aos animais, isto tudo aliado ao trabalho de concientização da população sobre a causa animal.
+            O Grana Capital é uma startup fintech especializada no cálculo de Imposto de Renda para investimentos realizados na bolsa de valores.
             <br />
             <br />
-            Neste projeto desenvolvemos um website intuitivo para divulgar animais disponíveis para adoção e informações sobre o Instituto.
+            No projeto, fomos responsáveis por desenvolver o blog da empresa e realizar ajustes no website principal. Através dessas melhorias, visamos proporcionar uma experiência mais eficiente e intuitiva aos usuários, além de fornecer conteúdo relevante e informativo.
           </Intro>
         </Section>
 

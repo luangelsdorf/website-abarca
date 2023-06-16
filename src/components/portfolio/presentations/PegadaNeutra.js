@@ -27,10 +27,10 @@ export default function PegadaNeutra() {
 
         <Section>
           <Intro info={{ client: 'Pegada Neutra', segment: 'Compensação Ambiental', services: ['Website'] }}>
-            O Instituto Arca é uma ONG de Proteção Animal localizada no Sul do Brasil. Ela atua insesantemente para resgatar, cuidar e proporcionar uma vida digna aos animais, isto tudo aliado ao trabalho de concientização da população sobre a causa animal.
+            A Pegada Neutra® acredita no desenvolvimento sustentável, no qual o crescimento econômico caminha junto com a justiça social e o equilíbrio ambiental. Oferecem soluções para empresas que buscam cumprir seu compromisso socioambiental de forma simples e eficiente.
             <br />
             <br />
-            Neste projeto desenvolvemos um website intuitivo para divulgar animais disponíveis para adoção e informações sobre o Instituto.
+            Fomos responsáveis por criar a identidade visual e o website da empresa. Essas iniciativas permitiram que a Pegada Neutra® fortalecesse sua presença online, resultando em maior reconhecimento da marca.
           </Intro>
         </Section>
 

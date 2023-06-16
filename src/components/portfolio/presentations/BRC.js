@@ -21,16 +21,16 @@ export default function BRC() {
       <Wrapper light>
         <Section>
           <Cover title="" local="São Paulo | Brasil" info={{ client: 'Bueno Rios & Consentino', segment: 'Escritório de Advocacia', services: ['Website'] }}>
-          <Image quality="100" loading="eager" src={basePath + 'Cover-BRC.jpg'} width="1400" height="800" alt="" />
+            <Image quality="100" loading="eager" src={basePath + 'Cover-BRC.jpg'} width="1400" height="800" alt="" />
           </Cover>
         </Section>
 
         <Section>
           <Intro info={{ client: 'Bueno Rios & Consentino', segment: 'Escritório de Advocacia', services: ['Website'] }}>
-            O Instituto Arca é uma ONG de Proteção Animal localizada no Sul do Brasil. Ela atua insesantemente para resgatar, cuidar e proporcionar uma vida digna aos animais, isto tudo aliado ao trabalho de concientização da população sobre a causa animal.
+            O escritório Bueno Rios & Consentino Advogados é uma empresa renomada localizada em São Paulo. Com advogados altamente capacitados e vasta experiência, oferecem soluções jurídicas personalizadas para atender aos interesses dos clientes.
             <br />
             <br />
-            Neste projeto desenvolvemos um website intuitivo para divulgar animais disponíveis para adoção e informações sobre o Instituto.
+            Como parte do projeto, criamos a identidade visual e o website multi-idiomas, fortalecendo a presença online da empresa e proporcionando uma experiência profissional aos visitantes.
           </Intro>
         </Section>
 

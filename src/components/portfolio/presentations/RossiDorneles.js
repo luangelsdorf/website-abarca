@@ -21,16 +21,16 @@ export default function RossiDorneles() {
       <Wrapper light>
         <Section>
           <Cover title="" local="Canoas | Brasil" info={{ client: 'Rossi & Dorneles', segment: 'Escritório de Advocacia', services: ['Website'] }}>
-          <Image quality="100" loading="eager" src={basePath + 'Cover-RD.jpg'} width="1400" height="800" alt="" />
+            <Image quality="100" loading="eager" src={basePath + 'Cover-RD.jpg'} width="1400" height="800" alt="" />
           </Cover>
         </Section>
 
         <Section>
           <Intro info={{ client: 'Rossi & Dorneles', segment: 'Escritório de Advocacia', services: ['Website'] }}>
-            O Instituto Arca é uma ONG de Proteção Animal localizada no Sul do Brasil. Ela atua insesantemente para resgatar, cuidar e proporcionar uma vida digna aos animais, isto tudo aliado ao trabalho de concientização da população sobre a causa animal.
+            O escritório Rossi & Dorneles foi fundado com base na afinidade das sócias com a área jurídica, na qual acumularam experiência ao longo de 20 anos de trabalho em escritórios renomados e no Judiciário.
             <br />
             <br />
-            Neste projeto desenvolvemos um website intuitivo para divulgar animais disponíveis para adoção e informações sobre o Instituto.
+            Criamos o website do escritório, além de desenvolver landing pages para cada um dos serviços oferecidos.Os resultados incluíram um aumento significativo na visibilidade da empresa, bem como uma maior geração de leads e conversões.
           </Intro>
         </Section>
 

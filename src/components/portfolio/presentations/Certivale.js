@@ -21,16 +21,16 @@ export default function Certivale() {
       <Wrapper light>
         <Section>
           <Cover title="" local="São Leopoldo | Brasil" info={{ client: 'Certivale', segment: 'Certificação Digital', services: ['Website'] }}>
-          <Image quality="100" loading="eager" src={basePath + 'Certivale.jpg'} width="1400" height="800" alt="" />
+            <Image quality="100" loading="eager" src={basePath + 'Certivale.jpg'} width="1400" height="800" alt="" />
           </Cover>
         </Section>
 
         <Section>
           <Intro info={{ client: 'Certivale', segment: 'Certificação Digital', services: ['Website'] }}>
-            O Instituto Arca é uma ONG de Proteção Animal localizada no Sul do Brasil. Ela atua insesantemente para resgatar, cuidar e proporcionar uma vida digna aos animais, isto tudo aliado ao trabalho de concientização da população sobre a causa animal.
+            A Certivale é uma renomada Autoridade de Registro (AR) credenciada para emitir certificados digitais padrão ICP Brasil, como e-CNPJ e e-CPF. Com filiais nas principais cidades do Sul do Brasil, a empresa é reconhecida por seu padrão de excelência em todos os seus serviços.
             <br />
             <br />
-            Neste projeto desenvolvemos um website intuitivo para divulgar animais disponíveis para adoção e informações sobre o Instituto.
+            No projeto da Certivale, fomos responsáveis por trabalhar em sua estratégia de marca, desenvolver o website e criar uma identidade visual consistente. Por meio dessas iniciativas, buscamos fortalecer a presença online da Certivale e transmitir sua credibilidade e profissionalismo aos clientes.
           </Intro>
         </Section>
 

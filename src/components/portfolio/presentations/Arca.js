@@ -21,7 +21,7 @@ export default function Arca() {
       <Wrapper light>
         <Section>
           <Cover title="" local="Campo Bom | Brasil" info={{ client: 'Instituto Arca', segment: 'ONG de Proteção Animal', services: ['Website'] }}>
-          <Image quality="100" loading="eager" src={basePath + 'Cover-Arca.jpg'} width="1400" height="800" alt="" />
+            <Image quality="100" loading="eager" src={basePath + 'Cover-Arca.jpg'} width="1400" height="800" alt="" />
           </Cover>
         </Section>
 
@@ -40,8 +40,8 @@ export default function Arca() {
           </Picture>
         </Section>
 
-        <Section pt="96" style={{ backgroundColor: '#F3A801'}}>
-          <Picture style={{ backgroundColor: '#F3A801'}}>
+        <Section pt="96" style={{ backgroundColor: '#F3A801' }}>
+          <Picture style={{ backgroundColor: '#F3A801' }}>
             <video src={basePath + 'Loop-Arca.mp4'} autoPlay muted loop style={{ width: '100%', height: '100%', borderRadius: '16px' }} />
           </Picture>
         </Section>

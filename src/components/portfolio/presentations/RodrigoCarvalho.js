@@ -21,16 +21,16 @@ export default function RodrigoCarvalho() {
       <Wrapper light>
         <Section>
           <Cover title="" local="Bristol | Inglaterra" info={{ client: 'Rodrigo Carvalho', segment: 'Barbearia', services: ['Website'] }}>
-          <Image quality="100" loading="eager" src={basePath + 'Cover-Rodrigo-Carvalho.png'} width="1400" height="800" alt="" />
+            <Image quality="100" loading="eager" src={basePath + 'Cover-Rodrigo-Carvalho.png'} width="1400" height="800" alt="" />
           </Cover>
         </Section>
 
         <Section>
           <Intro info={{ client: 'Rodrigo Carvalho', segment: 'Barbearia', services: ['Website'] }}>
-            O Instituto Arca é uma ONG de Proteção Animal localizada no Sul do Brasil. Ela atua insesantemente para resgatar, cuidar e proporcionar uma vida digna aos animais, isto tudo aliado ao trabalho de concientização da população sobre a causa animal.
+            A barbearia Rodrigo Carvalho é um local exclusivo situado em Bristol, Inglaterra, que se destaca por oferecer uma experiência completa de cuidados masculinos. Além dos serviços de qualidade, o ambiente é cuidadosamente projetado para proporcionar um momento de relaxamento e descontração, com mesas de sinuca e um bar bem abastecido.
             <br />
             <br />
-            Neste projeto desenvolvemos um website intuitivo para divulgar animais disponíveis para adoção e informações sobre o Instituto.
+            Neste projeto, fomos responsáveis por desenvolver o website da barbearia, cujo objetivo é apresentar os serviços oferecidos, os valores da empresa e proporcionar aos clientes a comodidade de agendar seus atendimentos online. O website serve como uma plataforma para promover nossas ofertas exclusivas e criar uma experiência de reserva perfeita para os clientes.
           </Intro>
         </Section>
 

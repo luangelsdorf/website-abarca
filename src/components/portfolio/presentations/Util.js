@@ -21,16 +21,16 @@ export default function Util() {
       <Wrapper light>
         <Section>
           <Cover title="" local="Rio de Janeiro | Brasil" info={{ client: 'Útil (Agência Asas)', segment: 'Facilities', services: ['Website'] }}>
-          <Image quality="100" loading="eager" src={basePath + 'Cover-Util-Facilities.jpg'} width="1400" height="800" alt="" />
+            <Image quality="100" loading="eager" src={basePath + 'Cover-Util-Facilities.jpg'} width="1400" height="800" alt="" />
           </Cover>
         </Section>
 
         <Section>
           <Intro info={{ client: 'Útil (Agência Asas)', segment: 'Facilities', services: ['Website'] }}>
-            O Instituto Arca é uma ONG de Proteção Animal localizada no Sul do Brasil. Ela atua insesantemente para resgatar, cuidar e proporcionar uma vida digna aos animais, isto tudo aliado ao trabalho de concientização da população sobre a causa animal.
+            A Útil Facilities é uma empresa especializada em serviços de facilities, oferecendo soluções abrangentes para o gerenciamento e operação de infraestruturas e serviços em ambientes corporativos. Com uma equipe altamente capacitada e experiente está comprometida em fornecer soluções eficientes para os seus clientes.
             <br />
             <br />
-            Neste projeto desenvolvemos um website intuitivo para divulgar animais disponíveis para adoção e informações sobre o Instituto.
+            Desenvolvemos o website da empresa, adotando uma abordagem onepage para oferecer uma experiência intuitiva aos visitantes. A parceria resultou em maior visibilidade e sucesso para a Útil Facilities no mercado.
           </Intro>
         </Section>
 
@@ -47,7 +47,7 @@ export default function Util() {
         </Section>
 
         <Section>
-          <Picture style={{backgroundColor: '#002F5D'}}>
+          <Picture style={{ backgroundColor: '#002F5D' }}>
             <video src={basePath + 'Loop-Util-Facilities.mp4'} autoPlay muted loop style={{ width: '100%', height: '100%', borderRadius: '16px' }} />
           </Picture>
         </Section>

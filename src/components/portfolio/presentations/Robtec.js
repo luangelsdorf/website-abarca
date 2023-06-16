@@ -21,16 +21,16 @@ export default function Robtec() {
       <Wrapper light>
         <Section>
           <Cover title="" local="São Paulo | Brasil" info={{ client: 'Robtec', segment: 'Segurança', services: ['Website'] }}>
-          <Image quality="100" loading="eager" src={basePath + 'Cover-Robtec.jpg'} width="1400" height="800" alt="" />
+            <Image quality="100" loading="eager" src={basePath + 'Cover-Robtec.jpg'} width="1400" height="800" alt="" />
           </Cover>
         </Section>
 
         <Section>
           <Intro info={{ client: 'Robtec', segment: 'Segurança', services: ['Website'] }}>
-            O Instituto Arca é uma ONG de Proteção Animal localizada no Sul do Brasil. Ela atua insesantemente para resgatar, cuidar e proporcionar uma vida digna aos animais, isto tudo aliado ao trabalho de concientização da população sobre a causa animal.
+            A RobTec atua no mercado de integração de sistemas para radiocomunicação profissional, com quase 30 anos de experiência. Ao longo desse período, a empresa tem se destacado por fornecer soluções abrangentes de voz, dados, imagens, segurança eletrônica, infraestrutura e sinalização áudio visual para grandes empresas e governos em todo o Brasil.
             <br />
             <br />
-            Neste projeto desenvolvemos um website intuitivo para divulgar animais disponíveis para adoção e informações sobre o Instituto.
+            No projeto em questão, fomos responsáveis por desenvolver o website da empresa, cujo objetivo é apresentar de forma clara e atraente os produtos e serviços oferecidos pela RobTec.
           </Intro>
         </Section>
 
