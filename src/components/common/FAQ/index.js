@@ -6,8 +6,51 @@ import Overline from '../Overline';
 export default function FAQ({ questions }) {
   const faq = useRef(null);
 
-  let firstHalf = questions.slice(0, Math.ceil(questions.length / 2));
-  let secondHalf = questions.slice(Math.ceil(questions.length / 2));
+  const data = questions ?? [
+    {
+      title: 'O que é site One Page?',
+      text: 'O site One Page é uma solução moderna e funcional que exibe todo o conteúdo em uma página com seções bem definidas e conectadas.\n\nCom um design minimalista e foco em informações importantes, essa solução é ideal para empresas que desejam apresentar seus serviços ou produtos de forma clara e objetiva.'
+    },
+    {
+      title: 'Título da Pergunta 2',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+      title: 'Título da Pergunta 3',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+      title: 'Título da Pergunta 4',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+      title: 'Título da Pergunta 5',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+      title: 'Título da Pergunta 6',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+      title: 'Título da Pergunta 7',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+      title: 'Título da Pergunta 8',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+      title: 'Título da Pergunta 9',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+      title: 'Título da Pergunta 10',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+  ];
+
+  let firstHalf = data.slice(0, Math.ceil(data.length / 2));
+  let secondHalf = data.slice(Math.ceil(data.length / 2));
 
   useEffect(() => {
     require('bootstrap/js/dist/collapse');

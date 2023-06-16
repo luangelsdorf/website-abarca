@@ -33,9 +33,9 @@ export default function PricingPage() {
           <Testimonials />
         </Section>
 
-        <Section id="pricing" pt="120" pb="96">
+        {/* <Section id="pricing" pt="120" pb="96">
           <Pricing />
-        </Section>
+        </Section> */}
 
         <Section id="contact" pt="120 96" pb="160 0">
           <Contact />
