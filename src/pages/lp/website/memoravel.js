@@ -144,12 +144,12 @@ export default function Idea() {
   return (
     <>
       <Head>
-        <title>Title | Abarca</title>
-        <meta property="og:title" content="Deixe sua Marca no Mundo | Abarca" />
+        <title>Criação de Sites Memoráveis | Abarca</title>
+        <meta property="og:title" content="Criação de Sites Memoráveis | Abarca" />
         <meta name="description" content="A Abarca é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
         <meta property="og:description" content="A Abarca é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
         <meta property="og:image" content="https://abarca.net.br/images/preview.jpg" />
-        <meta property="og:url" content="https://web.brstorm.design" />
+        <meta property="og:url" content="https://abarca.net.br/lp/website/memoravel" />
       </Head>
 
       <main>

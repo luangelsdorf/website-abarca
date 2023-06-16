@@ -56,7 +56,7 @@ export default function FAQ({ questions }) {
       <div className="col-12">
         <header>
           <Overline lineLength={336}>Criação de Websites</Overline>
-          <h2>Perguntas Frequentes</h2>
+          <h2><span>Perguntas</span> <span>Frequentes</span></h2>
         </header>
       </div>
 
