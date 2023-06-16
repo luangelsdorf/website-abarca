@@ -4,6 +4,7 @@ import React from 'react';
 import DiscountAlert from 'src/components/common/DiscountAlert';
 import FAQ from 'src/components/common/FAQ';
 import Section from 'src/components/common/Section';
+import Timer from 'src/components/common/Timer';
 import Pricing from 'src/components/landing-pages/brand-b/Pricing';
 import Contact from 'src/components/landing-pages/brand/Contact';
 import Hero from 'src/components/landing-pages/brand/Hero';
@@ -12,12 +13,9 @@ import Projects from 'src/components/landing-pages/web/common/Projects';
 import Features from 'src/components/landing-pages/web/idea/Features';
 import Mobile from 'src/components/landing-pages/web/idea/Mobile';
 import Support from 'src/components/landing-pages/web/idea/Support';
-import useTimer from 'src/hooks/useTimer';
 import styles from 'src/styles/pages/landingpages.module.scss';
 
 export default function Remember() {
-  const timerString = useTimer();
-
   return (
     <div className={styles.page}>
       <Head>
@@ -30,7 +28,7 @@ export default function Remember() {
       </Head>
 
       <main>
-        <DiscountAlert timer={timerString} />
+        <DiscountAlert />
 
         <Section pt="72 80">
           <Hero
@@ -49,7 +47,7 @@ export default function Remember() {
             <p>
               <span className="d-none d-lg-inline">Oferta por tempo limitado: </span>
               <span className="d-inline d-lg-none">Oferta termina em: </span>
-              <span>{timerString}</span>
+              <Timer />
             </p>
             <h1>
               <span>Seu website com </span>
