@@ -8,7 +8,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Overline from 'src/components/common/Overline';
 
-export default function Support() {
+export default function Support({ discount }) {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -70,15 +70,15 @@ export default function Support() {
       <div className="container">
         <div className="col-12 col-lg-10 mx-auto">
           <header>
-            <Overline lineLength={390}>Suporte Abarca</Overline>
+            <Overline lineLength={390}>{discount ? 'Condições de Pagamento' : 'Suporte Abarca'}</Overline>
             <div>
               <div className={styles.seal}>
                 <Seal />
               </div>
               <h2 className="supportHeading">
-                <span id="line1">Sempre prontos</span>
+                <span id="line1">{discount ? 'Pague em até' : 'Sempre prontos'}</span>
                 <br />
-                <span id="line2">para lhe ajudar</span>
+                <span id="line2">{discount ? '12x sem juros' : 'para lhe ajudar'}</span>
               </h2>
             </div>
           </header>

@@ -16,6 +16,94 @@ import Support from 'src/components/landing-pages/web/idea/Support';
 import styles from 'src/styles/pages/landingpages.module.scss';
 
 export default function Remember() {
+
+  const packages = [
+    {
+      name: 'Básico',
+      fromValue: '1.490',
+      value: '1.090',
+      hosting: '65',
+      shortText: 'Website Onepage',
+      longText: 'Apresente sua empresa em uma página única com visual moderno e dinâmico.',
+      mostSold: false,
+      included: [
+        {
+          name: 'Layout Exclusivo',
+          note: 'Sob medida',
+        },
+        {
+          name: 'Design Responsivo',
+          note: 'Desktop e Mobile',
+        },
+        { name: 'Otimização de SEO para Google' },
+      ],
+    },
+
+    {
+      name: 'Essencial',
+      fromValue: '4.980',
+      value: '1.980',
+      hosting: '95',
+      shortText: 'Website Pro',
+      longText: 'Alcance o reconhecimento e fortaleça sua empresa com website completo.',
+      mostSold: true,
+      included: [
+        {
+          name: 'Múltiplas Páginas',
+        },
+        {
+          name: 'Layout Exclusivo',
+          note: 'Sob medida',
+        },
+        {
+          name: 'Design Responsivo',
+          note: 'Desktop e Mobile',
+        },
+        {
+          name: 'Gerenciador de Conteúdo',
+        },
+        {
+          name: 'Formulários e Integrações',
+        },
+      ],
+    },
+
+    {
+      name: 'Comercial',
+      fromValue: '6.980',
+      value: '4.980',
+      hosting: '145',
+      shortText: 'E-commerce',
+      longText: 'Venda produtos online através de uma plataforma feita para gerar resultados.',
+      mostSold: false,
+      included: [
+        {
+          name: 'Páginas de Produtos',
+        },
+        {
+          name: 'Integração com Correios',
+        },
+        {
+          name: 'Carrinho de Compras Avançado',
+        },
+        {
+          name: 'Área do Cliente e Suporte',
+        },
+        {
+          name: 'Layout Exclusivo',
+          note: 'Sob medida',
+        },
+        {
+          name: 'Design Responsivo',
+          note: 'Desktop e Mobile',
+        },
+        {
+          name: 'Gerenciador de Conteúdo',
+        },
+      ],
+    },
+  ];
+
   return (
     <div className={styles.page}>
       <Head>
@@ -74,11 +162,11 @@ export default function Remember() {
         </Section>
 
         <Section id="support" pt="120 80" pb="120 80">
-          <Support />
+          <Support discount />
         </Section>
 
-        <Section id="pricing" pt="120 80" pb="146 80">
-          <Pricing />
+        <Section id="pricing" pt="120 80" pb="120 80">
+          <Pricing packages={packages} />
         </Section>
 
         <Section id="faq" pt="120 80" pb="200 80">

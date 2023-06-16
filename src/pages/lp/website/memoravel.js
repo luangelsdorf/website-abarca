@@ -12,6 +12,92 @@ import Mobile from 'src/components/landing-pages/web/idea/Mobile';
 import Support from 'src/components/landing-pages/web/idea/Support';
 
 export default function Idea() {
+
+  const packages = [
+    {
+      name: 'Básico',
+      value: '1.490',
+      hosting: '65',
+      shortText: 'Website Onepage',
+      longText: 'Apresente sua empresa em uma página única com visual moderno e dinâmico.',
+      mostSold: false,
+      included: [
+        {
+          name: 'Layout Exclusivo',
+          note: 'Sob medida',
+        },
+        {
+          name: 'Design Responsivo',
+          note: 'Desktop e Mobile',
+        },
+        { name: 'Otimização de SEO para Google' },
+      ],
+    },
+
+    {
+      name: 'Essencial',
+      fromValue: '4.890',
+      value: '2.980',
+      hosting: '95',
+      shortText: 'Website Pro',
+      longText: 'Alcance o reconhecimento e fortaleça sua empresa com website completo.',
+      mostSold: true,
+      included: [
+        {
+          name: 'Múltiplas Páginas',
+        },
+        {
+          name: 'Layout Exclusivo',
+          note: 'Sob medida',
+        },
+        {
+          name: 'Design Responsivo',
+          note: 'Desktop e Mobile',
+        },
+        {
+          name: 'Gerenciador de Conteúdo',
+        },
+        {
+          name: 'Formulários e Integrações',
+        },
+      ],
+    },
+
+    {
+      name: 'Comercial',
+      value: '4.890',
+      hosting: '145',
+      shortText: 'E-commerce',
+      longText: 'Venda produtos online através de uma plataforma feita para gerar resultados.',
+      mostSold: false,
+      included: [
+        {
+          name: 'Páginas de Produtos',
+        },
+        {
+          name: 'Integração com Correios',
+        },
+        {
+          name: 'Carrinho de Compras Avançado',
+        },
+        {
+          name: 'Área do Cliente e Suporte',
+        },
+        {
+          name: 'Layout Exclusivo',
+          note: 'Sob medida',
+        },
+        {
+          name: 'Design Responsivo',
+          note: 'Desktop e Mobile',
+        },
+        {
+          name: 'Gerenciador de Conteúdo',
+        },
+      ],
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -49,7 +135,7 @@ export default function Idea() {
         </Section>
 
         <Section id="pricing" pt="120 80" pb="146 80">
-          <Pricing />
+          <Pricing packages={packages} />
         </Section>
 
         <Section id="faq" pt="120 80" pb="200 80">

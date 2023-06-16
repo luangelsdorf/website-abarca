@@ -29,10 +29,6 @@ export default function Features({ content }) {
           scrub: true,
           pin: true,
           invalidateOnRefresh: true,
-          onEnter: () => document.querySelector('[data-navigation]').classList.add('floatingHeader'),
-          onLeave: () => document.querySelector('[data-navigation]').classList.remove('floatingHeader'),
-          onEnterBack: () => document.querySelector('[data-navigation]').classList.add('floatingHeader'),
-          onLeaveBack: () => document.querySelector('[data-navigation]').classList.remove('floatingHeader'),
         },
       });
 
