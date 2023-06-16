@@ -104,6 +104,57 @@ export default function Remember() {
     },
   ];
 
+  const questions = [
+    {
+      title: 'Como funciona o desconto?',
+      text: 'A Abarca é parceira do Sebrae RS, oferecemos nosso serviço através da plataforma Unio, onde após um cadastro simples e rápido você pode usufruir de um subsídio de até 60% através dos cupons da Unio.',
+    },
+    {
+      title: 'O site vai estar de acordo com a LGPD?',
+      text: 'A lei geral de proteção de dados impõe uma série de normas para garantir a privacidade dos usuários que visitam seu site, e o não cumprimento pode levar a processos e multas. Desenvolvemos nossos projetos de acordo com as normas da LGPD, incluindo política de privacidade, avisos de cookies, bloqueio de scripts sem consentimento, entre outros.',
+    },
+    {
+      title: 'Sites onepage são bons para minha empresa?',
+      text: 'Se busca um site com conteúdo mais conciso, os modelos onpage são ideais. Mas se deseja uma presença forte nos resultados de busca do Google, é fundamental ter páginas internas repletas de informações relevantes e otimizadas com palavras-chave estratégicas',
+    },
+    {
+      title: 'Como funciona o processo para contratar os serviços?',
+      text: 'Entre em contato conosco através do formulário no final da página ou solicite um orçamento. Faremos uma análise da sua demanda e marcaremos uma reunião. O próximo passo é o envio de uma proposta com valores e prazos detalhados.',
+    },
+    {
+      title: 'Qual o prazo de entrega?',
+      text: 'O prazo de entrega vai variar de acordo com a complexidade da sua demanda, Landing Pages cerca de 15 dias, Sites Institucionais cerca de 25 dias e E-commerces cerca de 40 dias.',
+    },
+    {
+      title: 'Qual a forma de pagamento?',
+      text: 'O pagamento pode ser feito via boleto, ou parcelado em até 12x sem juros. Toda a parte contratual e os pagamentos são intermediados pelo Sebrae RS através da plataforma Unio onde os serviços da Abarca estão disponibilizados.',
+    },
+    {
+      title: 'Existe algum valor mensal obrigatório?',
+      text: 'Não cobramos mensalidade dos sites criados pela Abarca. Os valores que você deverá pagar mensalmente são referentes a hospedagem do site. A manutenção contínua é cobrada à parte e fica a seu critério contratar ou não.',
+    },
+    {
+      title: 'Meu site vai aparecer no Google?',
+      text: 'Sim, nosso processo de desenvolvimento e criação de sites é otimizado com base nas boas práticas exigidas pelo Google para indexação em sua ferramenta.',
+    },
+    {
+      title: 'O que devo colocar no meu site?',
+      text: 'Fica a seu critério decidir o conteúdo de cada seção do site, mas caso você não saiba o que colocar podemos lhe ajudar através do serviço de copywriting, fale conosco para saber mais.',
+    },
+    {
+      title: 'Vocês usam templates?',
+      text: 'Não, nossos projetos são construídos totalmente do zero, personalizados para o seu negócio. Entendemos que cada negócio é único e cada solução deve ser assim também.',
+    },
+    {
+      title: 'Consigo atualizar meu site facilmente?',
+      text: 'Sim, nossos projetos são desenvolvidos para que, após o treinamento, você ou sua equipe, possam atualizar todas as informações de forma rápida e clara.',
+    },
+    {
+      title: 'Qual o canal de contato com vocês durante o projeto?',
+      text: 'Você terá contato direto com o responsável pela equipe de design e o time de desenvolvimento. Podendo nos acionar pelo WhatsApp, Telefone e E-mail sempre que precisar.',
+    },
+  ];
+
   return (
     <div className={styles.page}>
       <Head>
@@ -170,7 +221,7 @@ export default function Remember() {
         </Section>
 
         <Section id="faq" pt="120 80" pb="200 80">
-          <FAQ />
+          <FAQ questions={questions} />
         </Section>
 
         <Section id="contact">
