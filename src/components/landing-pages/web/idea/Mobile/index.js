@@ -7,6 +7,8 @@ import { useForm } from 'react-hook-form';
 import Button from 'src/components/common/Button';
 import Arrow from 'public/images/icons/Arrow.svg';
 import Spinner from 'src/components/common/Spinner';
+import { onChange } from 'src/utils/phoneMask';
+import fields from 'src/data/formFields.json';
 
 export default function Mobile({ content }) {
   const { register, handleSubmit, setValue, formState: { errors, isSubmitting, isSubmitSuccessful } } = useForm();
@@ -51,30 +53,30 @@ export default function Mobile({ content }) {
                   Por que esperar para ter um site incrível, vamos começar a criar seu site hoje mesmo? Entre em contato agora!
                 </p>
                 <form onSubmit={handleSubmit(submitForm)}>
-                  <div className={`floating${!errors.entry_443452100 ? '' : ' ' + 'error'}`}>
-                    <input id={`name_${formId}`} placeholder="Como podemos lhe chamar?" type="text" {...register('entry_443452100', { required: errorMessage })} />
+                  <div className={`floating${!errors[fields.name] ? '' : ' ' + 'error'}`}>
+                    <input id={`name_${formId}`} placeholder="Como podemos lhe chamar?" type="text" {...register(fields.name, { required: errorMessage })} />
                     <label htmlFor={`name_${formId}`}>Nome</label>
-                    <span>{errors.entry_443452100 && errorMessage}</span>
+                    <span>{errors[fields.name] && errorMessage}</span>
                   </div>
-                  <div className={`floating${!errors.entry_2104795631 ? '' : ' ' + 'error'}`}>
-                    <input id={`business_${formId}`} placeholder="Qual o nome do seu negócio" type="text" {...register('entry_2104795631', { required: errorMessage })} />
+                  <div className={`floating${!errors[fields.business] ? '' : ' ' + 'error'}`}>
+                    <input id={`business_${formId}`} placeholder="Qual o nome do seu negócio" type="text" {...register(fields.business, { required: errorMessage })} />
                     <label htmlFor={`business_${formId}`}>Empresa</label>
-                    <span>{errors.entry_2104795631 && errorMessage}</span>
+                    <span>{errors[fields.business] && errorMessage}</span>
                   </div>
-                  <div className={`floating${!errors.entry_1354793341 ? '' : ' ' + 'error'} prefixed`}>
-                    <input id={`phone_${formId}`} placeholder="(51) 98983.6186" type="tel" {...register('entry_1354793341', { required: errorMessage, minLength: 14, onChange: e => onChange(e, setValue) })} />
+                  <div className={`floating${!errors[fields.phone] ? '' : ' ' + 'error'} prefixed`}>
+                    <input id={`phone_${formId}`} placeholder="(51) 98983.6186" type="tel" {...register(fields.phone, { required: errorMessage, minLength: 14, onChange: e => onChange(e, setValue) })} />
                     <label htmlFor={`phone_${formId}`}>Telefone</label>
                     <span className="prefix">+55</span>
-                    <span>{errors.entry_1354793341 && errorMessage}</span>
+                    <span>{errors[fields.phone] && errorMessage}</span>
                   </div>
-                  <div className={`floating${!errors.entry_1305055579 ? '' : ' ' + 'error'}`}>
-                    <input id={`email_${formId}`} placeholder="contato@brstorm.design" type="email" {...register('entry_1305055579', { required: errorMessage })} />
+                  <div className={`floating${!errors[fields.email] ? '' : ' ' + 'error'}`}>
+                    <input id={`email_${formId}`} placeholder="contato@brstorm.design" type="email" {...register(fields.email, { required: errorMessage })} />
                     <label htmlFor={`email_${formId}`}>E-mail</label>
-                    <span>{errors.entry_1305055579 && errorMessage}</span>
+                    <span>{errors[fields.email] && errorMessage}</span>
                   </div>
                   <Button id="form-submit" btnElement type="submit" className="lg form-submit" RightIcon={Arrow}>Enviar Solicitação</Button>
                   <Spinner style={{ display: isSubmitting ? 'block' : 'none' }} />
-                  <span style={{ display: isSubmitting ? 'block' : 'none' }}>✓ Enviada com sucesso!</span>
+                  <span style={{ display: isSubmitSuccessful ? 'block' : 'none' }}>✓ Enviada com sucesso!</span>
                 </form>
               </div>
             </div>

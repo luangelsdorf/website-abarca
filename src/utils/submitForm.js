@@ -5,7 +5,7 @@ export default async (data, event) => {
   
   const fields = Array.from(event.target.elements);
   fields.forEach(field => field.disabled = true);
-  await new Promise(r => setTimeout(r, 2000));
+  await new Promise(r => setTimeout(r, 1500));
 
   const request = await fetch('https://docs.google.com/forms/d/e/1FAIpQLSeZQP_Nepxa8YX1ZYSQbP2sRTpbXaoF-oGrG5N7c0bsYw7qkA/formResponse', {
     method: 'POST',
