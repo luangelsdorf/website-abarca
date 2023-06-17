@@ -78,22 +78,6 @@ export default function FAQ({ questions }) {
     }
   }, []);
 
-  const Question = ({ id, title, text }) => (
-    <article className={styles.question} data-bs-toggle="collapse" data-bs-target={`#faq-collapse-${id}`}>
-      <header>
-        <h3>{title}</h3>
-        <div>
-          <Caret />
-        </div>
-      </header>
-      <div className="collapse" id={`faq-collapse-${id}`}>
-        <div className={styles.answer}>
-          <p>{text}</p>
-        </div>
-      </div>
-    </article>
-  )
-
   return (
     <div className={styles.section}>
       <div className="col-12">
@@ -108,7 +92,19 @@ export default function FAQ({ questions }) {
           <div className="col-12 col-lg-6" data-reveal-parent={0.2}>
             {
               firstHalf.map((question, index) => (
-                <Question {...question} id={'first-' + index} key={index} />
+                <article className={styles.question} data-bs-toggle="collapse" data-bs-target={`#faq-collapse-first-${index}`} key={index}>
+                  <header>
+                    <h3>{question.title}</h3>
+                    <div>
+                      <Caret />
+                    </div>
+                  </header>
+                  <div className="collapse" id={`faq-collapse-first-${index}`}>
+                    <div className={styles.answer}>
+                      <p>{question.text}</p>
+                    </div>
+                  </div>
+                </article>
               ))
             }
           </div>
@@ -116,7 +112,19 @@ export default function FAQ({ questions }) {
           <div className="col-12 col-lg-6" data-reveal-parent={0.4}>
             {
               secondHalf.map((question, index) => (
-                <Question {...question} id={'second-' + index} key={index} />
+                <article className={styles.question} data-bs-toggle="collapse" data-bs-target={`#faq-collapse-second-${index}`} key={index}>
+                  <header>
+                    <h3>{question.title}</h3>
+                    <div>
+                      <Caret />
+                    </div>
+                  </header>
+                  <div className="collapse" id={`faq-collapse-second-${index}`}>
+                    <div className={styles.answer}>
+                      <p>{question.text}</p>
+                    </div>
+                  </div>
+                </article>
               ))
             }
           </div>
