@@ -67,7 +67,7 @@ export default function Header({ floating = false, scroll, links }) {
                 <Logo />
               </Link>
               <div>
-                <Button className="sm" id="header-contact" href="/#contact" RightIcon={Arrow}>Iniciar Projeto</Button>
+                <Button nativeLink className="sm" id="header-contact" href="#contact" RightIcon={Arrow}>Iniciar Projeto</Button>
                 {/* <Button className={`${scroll ? 'd-none' : 'd-flex d-lg-none'}`} onClick={handleClick} type="button" floating btnElement /> */}
               </div>
             </nav>

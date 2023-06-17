@@ -78,7 +78,7 @@ export default function Testimonials({ content }) {
               ))
             }
           </Swiper>
-          <Button style={{width: 'max-content', margin: 'auto', marginTop: '40px'}} className="d-flex d-lg-none" RightIcon={Arrow} href="#contact">Iniciar um Projeto</Button>
+          <Button nativeLink style={{width: 'max-content', margin: 'auto', marginTop: '40px'}} className="d-flex d-lg-none" RightIcon={Arrow} href="#contact">Iniciar um Projeto</Button>
         </div>
       </div>
     </div>

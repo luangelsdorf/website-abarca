@@ -169,7 +169,7 @@ export default function Remember() {
       <main>
         <DiscountAlert />
 
-        <Section pt="72 80">
+        <Section id="home" pt="72 80">
           <Hero
             web
             slot01={<Image data-project="rodrigo-carvalho" fill src="/images/hero/rodrigo-carvalho/cover.jpg" alt="" />}
@@ -200,7 +200,7 @@ export default function Remember() {
           <Mobile />
         </Section>
 
-        <Section pt="120 80" pb="120 80">
+        <Section id="projects" pt="120 80" pb="120 80">
           <Projects />
         </Section>
 

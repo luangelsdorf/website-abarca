@@ -88,7 +88,7 @@ export default function Pricing({ packages }) {
                           </div>
                         </div>
                       </div>
-                      <Button className="btn outline">Contratar Agora</Button>
+                      <Button nativeLink className="btn outline" href="#contact">Contratar Agora</Button>
                       <small>
                         <div>Hospedagem e Suporte - R${pack.hosting}/mês</div>
                         <div>Para saber mais sobre nossos prazos e condições de pagamento entre em contato conosco.</div>

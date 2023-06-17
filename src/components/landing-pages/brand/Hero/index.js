@@ -77,7 +77,7 @@ export default function Hero({
                 <HeroForm short />
               </div>
               <p>{`Preencha o formulário acima e deixe sua \n${web ? 'empresa' : 'marca'} se destacar no mercado.`}</p>
-              <Button id="hero-projects" className="outline white sm" href="#projects" RightIcon={Arrow} />
+              <Button nativeLink id="hero-projects" className="outline white sm" href="#projects" RightIcon={Arrow} />
             </header>
           </div>
         </div>
