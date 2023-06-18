@@ -56,7 +56,7 @@ export default function App({ Component, pageProps }) {
   /*** Push sucess page when any form finishes submitting ***/
   useEffect(() => {
     function onSubmitted() {
-      router.push('/success');
+      router.push(router.route + '/success');
     }
     window.addEventListener('submitted', onSubmitted);
     return () => window.removeEventListener('submitted', onSubmitted);

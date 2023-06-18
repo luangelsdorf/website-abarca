@@ -107,6 +107,7 @@
   width: calc(100% + ((8.228%) * 2));
   left: -8.228%;
   margin-top: -214px;
+  pointer-events: none;
 
   @include mixins.lg {
     width: 285.5%;
@@ -214,4 +215,8 @@
   @include mixins.md {
     height: 195px;
   }
+}
+
+.sm, .md, .lg {
+  pointer-events: all;
 }

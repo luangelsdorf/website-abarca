@@ -5,8 +5,8 @@ import CallToAction from 'src/components/success/CallToAction';
 
 export default function Success() {
   useEffect(() => {
-    document.querySelector('#content').classList.add('success');
-    return () => document.querySelector('#content').classList.remove('success');
+    document.querySelectorAll('#content, #viewport').forEach(el => el.classList.add('success'));
+    return () => document.querySelectorAll('#content, #viewport').forEach(el => el.classList.remove('success'));
   }, []);
 
   return (

@@ -34,7 +34,7 @@
     opacity: 0;
   }
 
-  & + h2 {
+  & + h2, & + h1 {
     overflow: hidden;
 
     span {
@@ -87,7 +87,7 @@
     stroke-dashoffset: 0;
   }
 
-  & + h2 {
+  & + h2, & + h1 {
     span {
       opacity: 1;
       transform: translateY(0);

@@ -7,7 +7,7 @@ export default async (data, event) => {
   fields.forEach(field => field.disabled = true);
   await new Promise(r => setTimeout(r, 1500));
 
-  const request = await fetch('https://docs.google.com/forms/d/e/1FAIpQLSeZQP_Nepxa8YX1ZYSQbP2sRTpbXaoF-oGrG5N7c0bsYw7qkA/formResponse', {
+  /* const request = await fetch('https://docs.google.com/forms/d/e/1FAIpQLSeZQP_Nepxa8YX1ZYSQbP2sRTpbXaoF-oGrG5N7c0bsYw7qkA/formResponse', {
     method: 'POST',
     mode: 'no-cors',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -18,7 +18,7 @@ export default async (data, event) => {
   if (!request) {
     window.location.reload();
     return;
-  }
+  } */
 
   window?.dispatchEvent(new Event('submitted'));
 }
