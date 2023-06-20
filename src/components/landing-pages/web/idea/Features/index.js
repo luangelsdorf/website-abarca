@@ -29,6 +29,10 @@ export default function Features({ content }) {
           scrub: true,
           pin: true,
           invalidateOnRefresh: true,
+          onEnter: () => document.querySelector('dialog[open]')?.classList.remove('visible'),
+          onLeave: () => document.querySelector('dialog[open]')?.classList.add('visible'),
+          onEnterBack: () => document.querySelector('dialog[open]')?.classList.remove('visible'),
+          onLeaveBack: () => document.querySelector('dialog[open]')?.classList.add('visible'),
         },
       });
 

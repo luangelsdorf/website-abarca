@@ -153,11 +153,11 @@ export default function Idea() {
       </Head>
 
       <main>
-        <Section id="home" pb="0 80">
+        <Section id="home" pb="186 80">
           <Hero />
         </Section>
 
-        <Section id="mobile" pt="120 80" pb="120 80">
+        <Section id="mobile" pt="0 0" pb="120 80">
           <Mobile />
         </Section>
 

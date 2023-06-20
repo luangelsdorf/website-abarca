@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
 import styles from './Contact.module.scss';
-import ArrowLarge from 'public/images/icons/ArrowLarge.svg';
 import Arrow from 'public/images/icons/Arrow.svg';
 import Button from 'src/components/common/Button';
 import ArrowCircle from 'src/components/common/ArrowCircle';
@@ -18,9 +17,9 @@ export default function Contact({ noLinks }) {
                 <span className="d-inline d-lg-none">Inicie seu <br />Projeto</span>
               </h2>
               <p>Quer saber mais sobre como podemos lhe ajudar ou sanar alguma dúvida? <strong>Marque uma reunião</strong>, será um prazer lhe atender.</p>
-              <Link href="/#contact" className={`d-none d-lg-flex ${styles.circleButton}`}>
+              <a href="#contact" className={`d-none d-lg-flex ${styles.circleButton}`} >
                 <ArrowCircle id="projectfooter" />
-              </Link>
+              </a>
               <Button RightIcon={Arrow} className="outline large d-flex d-lg-none">Solicite uma Proposta</Button>
             </div>
             <div className={`${styles.links} ${noLinks ? 'd-none' : 'd-none d-lg-flex'}`}>

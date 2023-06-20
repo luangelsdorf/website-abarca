@@ -88,7 +88,7 @@
     }
   }
 
-  &.visible {
+  &:global(.visible) {
     transform: initial;
   }
 }

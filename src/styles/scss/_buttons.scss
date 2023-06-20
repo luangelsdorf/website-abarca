@@ -25,7 +25,7 @@
 
   &:hover {
     color: rgb(var(--default-cyan));
-    background-color: transparent;
+    background-color: rgb(var(--blue));
     scale: 0.95 !important;
 
     & > div {

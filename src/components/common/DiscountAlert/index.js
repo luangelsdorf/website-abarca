@@ -14,9 +14,9 @@ export default function DiscountAlert() {
       if (entries.length > 1) return;
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          document.querySelector(`.${styles.alert}`)?.classList.remove(styles.visible);
+          document.querySelector(`.${styles.alert}`)?.classList.remove('visible');
         } else {
-          document.querySelector(`.${styles.alert}`)?.classList.add(styles.visible);
+          document.querySelector(`.${styles.alert}`)?.classList.add('visible');
         }
       });
     }
