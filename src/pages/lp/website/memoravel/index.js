@@ -65,7 +65,7 @@ export default function Idea() {
 
     {
       name: 'Comercial',
-      value: '4.890',
+      value: '6.980',
       hosting: '145',
       shortText: 'E-commerce',
       longText: 'Venda produtos online através de uma plataforma feita para gerar resultados.',
@@ -113,7 +113,7 @@ export default function Idea() {
     },
     {
       title: 'Qual a forma de pagamento?',
-      text: 'O pagamento pode ser feito via transferência bancária ou boleto. 50% antecipado e o restante na apresentação do projeto.',
+      text: 'O pagamento pode ser feito à vista via pix ou transferência bancária, ou ainda, pode ser feito no boleto com entrada mais uma parcela em 30 dias.',
     },
     {
       title: 'Existe algum valor mensal obrigatório?',

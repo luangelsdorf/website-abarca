@@ -15,12 +15,12 @@ import Mobile from 'src/components/landing-pages/web/idea/Mobile';
 import Support from 'src/components/landing-pages/web/idea/Support';
 import styles from 'src/styles/pages/landingpages.module.scss';
 
-export default function Remember() {
+export default function Discount() {
 
   const packages = [
     {
       name: 'Básico',
-      fromValue: '1.490',
+      fromValue: '2.780',
       value: '1.090',
       hosting: '65',
       shortText: 'Website Onepage',
@@ -70,7 +70,7 @@ export default function Remember() {
 
     {
       name: 'Comercial',
-      fromValue: '6.980',
+      fromValue: '12.480',
       value: '4.980',
       hosting: '145',
       shortText: 'E-commerce',
@@ -163,7 +163,7 @@ export default function Remember() {
         <meta name="description" content="A Abarca é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
         <meta property="og:description" content="A Abarca é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
         <meta property="og:image" content="https://abarca.net.br/images/preview.jpg" />
-        <meta property="og:url" content="https://abarca.net.br/lp/website/memoravel" />
+        <meta property="og:url" content="https://abarca.net.br/lp/website/desconto" />
       </Head>
 
       <main>
