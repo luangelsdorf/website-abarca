@@ -15,11 +15,6 @@ export default function Testimonials({ content }) {
       business: 'Bronzo',
     },
     {
-      quote: 'O melhor time com quem já trabalhei, entendem muito sobre design e cuidaram de cada detalhe para que o resultado ficasse único como eu queria.',
-      client: 'Kétlin Pacheco',
-      business: 'Abarca',
-    },
-    {
       quote: 'Vocês são incríveis! A gente não pode mensurar a alegria dessa parceria, sabemos que estamos amparadas na caminhada pra chegar onde queremos. Obrigada!',
       client: 'Thabata & Denise',
       business: 'Casulo',
