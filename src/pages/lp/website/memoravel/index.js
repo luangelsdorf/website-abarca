@@ -146,8 +146,8 @@ export default function Idea() {
       <Head>
         <title>Criação de Sites Memoráveis | Abarca</title>
         <meta property="og:title" content="Criação de Sites Memoráveis | Abarca" />
-        <meta name="description" content="A Abarca é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
-        <meta property="og:description" content="A Abarca é um estúdio de design especializado na criação e perpetuação de marcas e produtos digitais." />
+        <meta name="description" content="Somos um Escritório de Relações Públicas, formado por profissionais da comunicação especialistas em suas áreas. Construímos relações entre as marcas e seus públicos." />
+        <meta property="og:description" content="Somos um Escritório de Relações Públicas, formado por profissionais da comunicação especialistas em suas áreas. Construímos relações entre as marcas e seus públicos." />
         <meta property="og:image" content="https://abarca.net.br/images/preview.jpg" />
         <meta property="og:url" content="https://abarca.net.br/lp/website/memoravel" />
       </Head>
