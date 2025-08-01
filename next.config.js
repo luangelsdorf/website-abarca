@@ -8,14 +8,14 @@ const nextConfig = withBundleAnalyzer({
   reactStrictMode: true,
   swcMinify: true,
 
-  async rewrites() {
+  /*async rewrites() {
     return [
       {
         source: '/',
         destination: '/lp/website/desconto',
       },
     ]
-  },
+  },*/
 
   webpack(config) {
     config.module.rules.push({
